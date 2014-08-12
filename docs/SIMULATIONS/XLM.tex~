@@ -1,0 +1,1485 @@
+\documentclass[useAMS,usenatbib]{mn2e}
+
+\def\aap{AA}
+\def\aapr{AA Rev}
+\def\apjl{ApJL}
+\def\apss{APSS}
+\def\mnras{MNRAS}
+\def\apj{ApJ}
+\def\apjs{ApJS}
+\def\aj{AJ}
+\def\pasp{PASP}
+\def\pasj{PASJ}
+\def\nat{Nat}
+\def\memsai{MmSAI}
+
+%\def\RDM{{R_{\rm dm}}}
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath} 
+\usepackage{color}
+%\usepackage{hyperref}
+
+\input{addresses}
+
+\title[Mining for lensed QSOs]{Golden Needles in the Hay: Data Mining for Gravitationally Lensed Quasars} 
+\author[Agnello et al.]{
+  Adriano Agnello$^{1,2}$\thanks{\aaemail},
+  Brandon C. Kelly$^1$,
+  Tommaso Treu$^{1,2}$,
+  and Philip J. Marshall$^{3}$
+  \medskip\\
+  $^1$\ucsb\\
+  $^2$\ucla\\
+  $^3$\kipac\\
+}
+
+\begin{document}
+
+\voffset-.6in
+
+\date{Accepted . Received }
+
+\pagerange{\pageref{firstpage}--\pageref{lastpage}} 
+
+\maketitle
+
+\label{firstpage}
+
+\begin{abstract}
+Gravitationally lensed (GL) quasars are brighter than their unlensed
+counterparts and produce images with distinctive morphological
+signatures. Past searches and target selection algorithms, in
+particular the Sloan Quasar Lens Search (SQLS), have relied on %very
+basic morphological criteria, which were applied to samples of bright,
+spectroscopically confirmed quasars.  The SQLS techniques are not
+sufficient for searching into new surveys (e.g. DES, PS1, LSST),
+because spectroscopic information is not readily available and the
+large data volume requires higher purity in target/candidate
+selection. Conversely, principled automatic lens finding algorithms in
+imaging datasets, like the ones proposed by SL2S and Haggles, require
+large amounts of CPU and scientist time that seem prohibitive for
+upcoming surveys. To overcome these limitations we carry out a
+systematic exploration of machine learning techniques and demonstrate
+that a two step strategy can be highly effective. In the first step we
+use catalog-level information ($griz$+WISE magnitudes, second moments)
+to preselect targets, using artificial neural networks.  The accepted
+targets are then inspected with pixel-by-pixel pattern recognition
+algorithms (Gradient-Boosted Trees), to form a final set of
+candidates.  Both methods are tested against the SQLS sample and
+suitably interpreted in terms of selection bias, thereby obtaining a
+robust characterization of candidates selected this way.  The results
+from this procedure can be used to further refine the simpler SQLS
+algorithms, with a twofold (or threefold) gain in purity and the same
+(or $80\%$) completeness at target-selection stage, or a purity of
+$70\%$ and a completeness of $60\%$ after the candidate-selection step
+. Our catalog level selection alone is significantly more effective
+than simple color cuts. For comparison, simpler photometric searches in $griz$+WISE
+ would provide samples with $7\%$ purity or less. Our technique is extremely fast: for example,
+a list of candidates can be obtained from a stage III
+experiment like DES catalog/database in {a few} CPU hours.
+ The techniqus are easily extendable to Stage IV experiments like LSST with the addition
+of time domain information.
+
+
+\end{abstract}
+\begin{keywords}
+...
+\end{keywords}
+
+\section{Introduction}
+
+\input{introfirst}% Adjust the bibliography in introfirst
+
+Systematic searches of lensed quasars in the optical have been applied
+to the Sloan Digital Sky Survey (SDSS)\footnote{Surveys referred to
+here: SDSS, Sloan Digital Sky Survey \citep{yor00}; PS1, the first of
+Panoramic Survey Telescope and Rapid Response System (Pan-STARRS)
+telescopes, {http://pan-starrs.ifa.hawaii.edu/public/}; DES, Dark
+Energy Survey \citep{san10} ; Gaia \citep{per01}; LSST, Large Synoptic
+Survey Telescope, \citep{ive08}; HSC, Hyper-Suprime Cam,
+ {http://subarutelescope.org/Observing/Instruments/HSC/index.html};
+  and WISE, the Wide-field InfraredSurvey Explorer \citep{wri10}.}.
+\citet{pin03} examined objects in the
+Early Data Release, flagged as quasars based on spectroscopic
+criteria, whose image cutouts showed evidence of multiple sources,
+parameterized by the best-fit $\chi^{2}.$ The SDSS Quasar Lens Search
+\citep[hereafter SQLS,][]{ogu06} extended that approach, exploiting
+the information already available at catalogue level before cutouts
+were inspected, with a strategy tailored on two different regimes. The
+search for systems with large image separation (approx.$\geq3''$)
+selected spectroscopically confirmed quasars with nearby companions
+with similar colours (\textit{colour} selection).  For
+small-separation systems, which are not succesfully deblended by the
+SDSS pipeline, the algorithm selects spectroscopically-confirmed
+quasars with an extended morphology, signaled by a low stellarity
+likelihood in $ugri$ bands (\textit{morphological} selection).  This
+procedure brought to a valuable sample of lensed quasars brighter
+than 19.1 in $i-$band by the SDSS seventh Data Release
+\citep[DR7][]{aba09}, 26 of which with well defined population
+properties \citep{ina12}.  In particular, out of 54
+morphologically-selected candidates, 10 were true small-separation
+lensed quasars.
+
+New or upcoming surveys will deliver a wealth of new systems, thanks
+to improved depth and larger footprint. Oguri and Marshall (2010,
+hereafter OM10) have predicted the distribution of strongly lensed
+QSOs, providing estimates of the abundance of these systems as a
+function of survey depth. Similar (although somewhat simpler)
+estimates have been made {by \citet{fin12}} for the Gaia space
+mission, adopting a $G-$band limiting magnitude of 20. The results are
+summarised in Table \ref{tab:numbers}.  While the total numbers can
+vary among different surveys, in general we can expect one lensed QSO
+every five square degrees at an $i-$band depth of 24. Most of the
+lensed QSOs will be doubly imaged, while about a sixth of the
+population consists of highly informative quad configurations (OM10).
+Approximately a tenth of the expected systems are brighter than 21 in
+$i-$band.
+ 
+Given these numbers, sharp techniques are required in order to obtain
+a sample of targets with sufficient purity.  If the ratios of true and
+false positives in SQLS hold for new surveys as well, such a strategy
+soon becomes unfeasible in surveys deeper or wider than SDSS. In fact,
+the true positive rate is doomed to increase in new surveys, due to
+the lack of ready spectroscopic confirmation for QSO-like objects.
+
+Fortunately, some aspects of the SQLS strategy can be improved. For
+example, survey catalogues offer better morphological information
+(i.e. second moments, axis ratio and position angle) besides the mere
+stellarity likelihood. In principle, this can be used to skim the
+catalogue for \textit{targets}, without significant slow-down. Once
+the targets are selected, their image cutouts can be examined with
+pixel-by-pixel pattern recognition techniques, which mimic the common
+practice of selecting candidates (or rejecting obvious outliers)
+through eyeballing. The final result is a pool of \textit{candidates},
+which can then be followed up with better imaging. 
+
+Data mining is a useful instrument to uncover relations between
+observables, and therefore isolate relevant information, from large
+samples of objects. In particular, from the viewpoint of the lensed
+QSO search, pattern recognition algorithms help isolate the promising
+targets and candidates. Similar approaches have been followed in other
+areas of astrophysics, such as variable stars and transients
+\citep{bel03,bla14}, galaxy classification \citep{kel05} or in general
+object classification and photometric redshift \citep{bal10, car14} for SDSS
+objects, as well as supernova lightcurve classification \citep[and
+references therein]{ish13}, but not yet to the search for lensed
+quasars. Here we illustrate a first step in this direction. We note
+that variability provides additional information which might be very
+effective in identifying lensed quasars (e.g. Pindor 2005; Kochanek et
+al. 2006). Since this information is not always available we do not
+include it in this first exploratory study. However, our procedure is
+easily generalizable to multi-epoch data in order to take advantage of
+this additional feature for selection.
+
+In order to assess the performance of machine learning in this area,
+we examine the problem of finding strongly lensed quasars in SDSS,
+focussing on the small-separation regime, when the multiple images and
+the deflector are expected to be blended. This is the regime where we
+expect most of the candidates to be found and also the one that is
+most challenging, from a conceptual and computational viewpoint, since
+both the QSO images and the galaxy are blended together. Of course,
+our data mining approach can easily be extended to systems with larger
+image-separation as briefly discussed in Section \ref{sect:deblended}.
+
+This paper is structured as follows.  In Section 2 we describe the
+data sets used for training, validating and testing our machinery.  In
+Section 3 we introduce the techniques used in this work, leaving a
+more detailed discussion in the Appendices for the interested reader,
+and illustrate applications to biased samples as well as the deblended
+regime.  Section 4 shows the results of target- and
+candidate-selection on simulated data, with an application to the SQLS
+sample of morphologically selected targets from {SDSS DR7
+\citep{ina12}.} Finally, we conclude in Section 5.
+%
+%
+%
+\begin{table} 
+\centering
+\begin{tabular}{|c|c||c|c|}
+\hline
+survey & depth & lensed & unlensed\\
+\hline
+DES & 24.0 & 0.23 & 740\\
+PS1 & 22.7 & 0.07 & 250\\
+Gaia & 20.0 & 0.06 & 12.5\\
+LSST and HSC & 24.9 & 0.4 & 1175 \\
+%HSC & 24.9 & 0.41 & 1173 \\
+%Skymapper & ... & ... & ...\\
+\hline
+\end{tabular}
+\caption{Number of lensed and unlensed QSOs per square degree in new or upcoming surveys,
+ adapted {from \citet{om10} and \citet{fin12}}. The depth is in $G-$band for Gaia and $i-$band for the other surveys.}
+\label{tab:numbers}
+\end{table}
+\section{SDSS and WISE data}
+
+%
+%
+\begin{figure*}
+ \centering
+ \includegraphics[width=0.33\textwidth]{pics/pdf/ColCol2.pdf}
+ \includegraphics[width=0.33\textwidth]{pics/pdf/ColCol1.pdf}
+ \includegraphics[width=0.33\textwidth]{pics/pdf/ColCol3.pdf}\\
+ \includegraphics[width=0.33\textwidth]{pics/pdf/ColCol5.pdf}
+ \includegraphics[width=0.33\textwidth]{pics/pdf/ColCol4.pdf}
+ \includegraphics[width=0.33\textwidth]{pics/pdf/ColCol6.pdf}\\
+\caption{\small{Colour-colour plots for some objects of interest in this search. Green (resp. purple, yellow) contours
+ delimit the $68\%$ and $95\%$ of lensed QSO (resp.unlensed QSO plus LRG, QSO alignment) populations, with blended images.
+ Orange (resp. light blue) dots mark the Luminous Red and Blue Cloud galaxy populations. Red stars (resp. black triangles)
+ mark the true (resp. false) positives in the SQLS morphologically selected sample from {SDSS DR7 \citep{ina12}}. The
+ candidates cover predominantly the locus of QSO alignments, which is also contaminated by B.C.galaxies even when the WISE
+ bands are used.}}
+\label{fig:colcolplots}
+\end{figure*}
+%
+%
+\begin{table} 
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+\multicolumn{3}{c}{SDSS imaging conditions} \\
+\hline
+band & sky & PSF FWHM\\
+ & $(ABmag/arcsec^{2})$ & $arcsec$ \\
+\hline
+ $g$ & $21.9\pm0.3$ & $1.65\pm0.4$ \\
+ $r$ & $20.9\pm0.3$ & $1.4\pm0.3$ \\
+ $i$ & $20.2\pm0.4$ & $1.4\pm0.3$ \\
+ $z$ & $18.9\pm0.5$ & $1.4\pm0.3$ \\
+\hline
+\end{tabular}
+\caption{Imaging conditions for SDSS simulated objects. We list the mean value and standard deviation
+ of sky brightness (magnitudes per square arcsecond) and image quality (PSF FWHM) in the four $griz$ bands.
+ SDSS image quality is typically worse in the bluest ($g$) band, which is also where the sky is typically fainter.}
+\label{tab:SDSSimg}
+\end{table}
+%
+In order to compare our methods with past searches, in particular the SQLS, we operate within
+ SDSS-like imaging conditions, which are summarized in Table \ref{tab:SDSSimg}.
+ For the target-selection step, the photometry is given by SDSS $griz$ bands, plus the infrared bands
+ $W1$ and $W2$ from WISE.
+ We do not make use of the SDSS $u$ band, because this is not always available in upcoming surveys (like DES and PS1).
+ The morpholgical parameters (axis ratios, p.a.s) are computed from $25\times25$ pixel simulated cutouts in $griz$
+ bands, which are produced as described in Section \ref{sect:simpop} and Appendix A. WISE has a PSF with FWHM$\approx6'',$
+ which makes it of limited use for evaluating morphologies. For the candidate-selection step, we consider just the
+ cutouts in $griz$ bands, without additional information from WISE photometry.
+ 
+We use a classification scheme resembling the outcome of the SQLS. For the target selection, a simulated system
+ can be: a lensed quasar, with a Luminous Red Galaxy (LRG) as the deflector (labelled \textit{l.QSO}); a pair of closely aligned quasars,
+ with different redshifts (\textit{2QSO}); or an alignment of LRG and unlensed quasar (\textit{QSO+LRG}).
+ Due to the absence of a spectroscopic selection stage, we add
+ as a contaminant a class of Blue Cloud galaxies (\textit{BC}), with observables taken directly from
+ SDSS\footnote{The queries for Blue-Cloud and Luminous-Red galaxies are adapted to our needs from a publicly available version on the
+ SDSS website.}. The BC class is also useful for dealing with objects with a strong stellar
+ component, e.g. an alignment of QSO and nearby star, that would be harder to properly simulate. Figure \ref{fig:colcolplots}
+ shows these systems in colour-colour space. The need for WISE photometry is evident from the overlap of BC objects
+ with our targets of interest. Also, simple two-colour cuts in SDSS/WISE bands cannot prevent the leakage of BC objects in the
+ quasar locus, whence the necessity of considering nontrivial combinations of bands, which are naturally selected
+ by data mining algorithms. 
+ %
+\subsection{Simulated populations}\label{sect:simpop}
+ %
+\begin{figure*}
+ \centering
+ \includegraphics[width=0.475\textwidth]{pics/png/lQSO60.png}
+ \includegraphics[width=0.475\textwidth]{pics/png/lQSO676.png}\\
+ \includegraphics[width=0.475\textwidth]{pics/png/lQSO681.png}
+ \includegraphics[width=0.475\textwidth]{pics/png/lQSO695.png}\\
+ \includegraphics[width=0.475\textwidth]{pics/png/unlQSO60.png}
+ \includegraphics[width=0.475\textwidth]{pics/png/unlQSO669.png}\\
+ \includegraphics[width=0.475\textwidth]{pics/png/unlQSO672.png}
+ \includegraphics[width=0.475\textwidth]{pics/png/unlQSO695.png}\\
+ \includegraphics[width=0.475\textwidth]{pics/png/pQSO68.png}
+ \includegraphics[width=0.475\textwidth]{pics/png/pQSO633.png}\\
+ \includegraphics[width=0.475\textwidth]{pics/png/pQSO636.png}
+ \includegraphics[width=0.475\textwidth]{pics/png/pQSO698.png}\\
+ \includegraphics[width=0.475\textwidth]{pics/png/sinQSO69.png}
+ \includegraphics[width=0.475\textwidth]{pics/png/sinQSO611.png}\\
+ \includegraphics[width=0.475\textwidth]{pics/png/sinQSO642.png}
+ \includegraphics[width=0.475\textwidth]{pics/png/sinQSO664.png}\\
+\caption{\small{Example of the systems simulated in this work. Rows 1 and 2: lensed QSOs; rows 3 and 4: a QSO+LRG alignment,
+ rows 5 and 6: a QSO+QSO alignment; rows 7 and 8: a single (isolated, not-lensed) QSO.
+ Bands are $griz$ from left to right, the last sub-panel in each sequence is a $gri$ composite.}}
+\label{fig:puppies}
+\end{figure*}
+%
+%
+In order to reproduce the systems that are expected in a survey, we need to draw the quasars and galaxies
+ from a distribution in redshift and intrinsic properties.
+ % In most of the known galaxy-scale gravitational lenses, the  deflector is a Luminous Red Galaxy (LRG).
+ We adhere to the common choices for QSO and LRG distributions, as reviewed by OM10,
+ who also used them to generate a mock population of lensed quasars.
+ In particular:
+ \begin{equation}
+ n_{gal}(\sigma,z_{g})\mathrm{d}\sigma\mathrm{d}z_{g}\propto (\sigma/\sigma_{\star}(z_{g}))^{\alpha}\exp[-(\sigma/\sigma_{\star}(z_{g}))^{\beta}]\mathrm{d}z_{g}\mathrm{d}\sigma/\sigma
+ \label{eq:lrg}
+ \end{equation}
+ \begin{equation}
+ n_{qso}(m_{i,q},z_{q})\mathrm{d}m_{i,q}\mathrm{d}z_{q}\propto \frac{10^{-0.4(\alpha+1)(M_{i}-M_{\star}(z_{q}))}}{1+10^{0.4(\beta-\alpha)(M_{i}-M_{\star}(z_{q}))}}\mathrm{d}m_{i,q}\mathrm{d}z_{q}
+ \label{eq:qso}
+ \end{equation}
+ (parameters further discussed in OM10), where $M_{i}$ is the $i-$band magnitude that the QSO would have at $z_{q}=2$
+ as computed by \citet{ric06}.
+ For the population of lensed quasars, we directly use the mock catalogue created by OM10. This provides, for each system:
+ the redshift $z_g,$ velocity dispersion $\sigma_g,$ axis ratio and position angle of the lensing galaxy; and the redshift
+ $z_{q},$ unlensed $i-$band magnitude $m_{i,q},$ image positions (relative to the lens) and magnifications of the source quasar.
+ 
+In order to generate mock observations of these systems, one needs a procedure to prescribe fluxes in different bands,
+ for both the QSO and LRG, and the effective radius of the LRG. The \textit{primary} observables
+ $\mathbf{p}=(z_{q},z_{g},m_{i,q},\sigma_g)$ are at our disposal, either drawn from equations (\ref{eq:lrg},\ref{eq:qso})
+ or from the mock sample of OM10.
+ The remaining observables $\mathbf{r}$ must be matched to those, taking account of intrinsic scatter
+ in those properties \citep[see][for the role of scatter in population properties]{mit05}.
+ In other words, if the entries of $\mathbf{p}$ are given, then $\mathbf{r}$ must be
+ drawn from a conditional distribution $\theta(\mathbf{r}|\mathbf{p}).$
+
+The detailed procedure is described in the Appendix, here we summarize its main steps.
+ First, we assemble a sample of LRGs and QSOs, with all the relevant observables, 
+ from SDSS and WISE. Then, once values of $\mathbf{p}$ are assigned, a sparse interpolation procedure
+ allows us to build a smooth $\theta(\mathbf{r}|\mathbf{p})$ from the objects within the sample
+ in the vicinity of $\mathbf{p}.$
+ This way, every time the primary observables are assigned, we can
+ properly draw the other observables within the whole range of LRGs (resp. QSOs) that match
+ $z_g$ and $\sigma$ (resp. $z_q$ and $m_i$).
+ 
+When simulating data sets, we retain just those systems that are brighter than the survey limit
+ ($i-$band magnitude brighter than 21) and with signal-to-noise ratio at least $5,$ which helps prune extreme fluctuations
+ in the simulated sky noise. The cutouts are not necessarily aligned with the p.a. of the image,
+ which forces the learners to concentrate just on those features that are intrinsic to the systems and physically relevant.
+ For the same reason, they are slightly off-centered in different bands -- by at most two pixels,
+ a common situation that occurs when downloading image cutouts. We emphasize that the populations simulated here
+ are more general than the SQLS dataset, which relied on a heavy (albeit convenient) selection bias. This point will be
+ discussed further. Some examples of simulated cutouts are shown in figure \ref{fig:puppies}.
+%
+%
+ \section{Data mining}
+ In a classification problem, one is given a training set of $N_t$ objects, each of which has a \textit{probability vector}
+ whose entries are the probabilities of belonging to certain classes. The aim is a best fit to the probability
+ vectors in the training set, together with predictive power on other, new objects.
+ Many techniques have been developed for machine learning and classification \citep[see][for a general review]{bal10}.
+ We will briefly introduce two of them, Artificial Neural Networks (ANNs) and Gradient-Boosted Trees (GBTs),
+ whose choice reflects just our personal preference (see also Sect.4.2). 
+ 
+We trained the learners on mock samples because the amount of lensed quasars and false positives in past searches
+ is not sufficient to the purpose. Furthermore, the searches for lensed quasars are
+ often biased to bright objects with QSO-like photometry, which are not a complete representation
+ of the whole population (cf fig.\ref{fig:colcolplots}).
+ Then, as a last check, the performance of the learners must also be
+ tested against samples from past searches, such as the SQLS candidates. In particular, we will
+ test our alogithms on the SQLS morphologically selected sample of lensed QSO targets {from
+ SDSS DR3 by \citet{ina12}.}
+
+Regardless of the technique, however, a preliminary step of \textit{dimensional reduction} on the data is necessary.
+ If we examine 10-arcsecond wide cutouts in $griz$ bands,
+ then each source has a $25 \times 25$ image for $g, r, i,$ and $z$, implying a feature space of 2500
+ dimensions for the raw pixel values. This \textit{curse of dimensionality} presents a computational challenge,
+ while also leading to an increase in variance and degraded classifier performance.
+ Fortunately, there is significant structure in the images, so that the information %contained in the images
+ can be compressed onto a lower-dimensional manifold.
+ Instead of using the raw data themselves, we first identify \textit{features}.
+ Some of them are available at catalogue level and reflect some rough physical intuition about the photometry
+ and morphology of the systems, others are \textit{data driven}, i.e. can be extracted by suitable combinations
+ of pixel values from the cutouts without imposing any physical intuition.
+ This simply generalizes the common procedure of drawing cuts and wedges in colour-magnitude space,
+ in which case the feature array $\mathbf{f}\in\mathbb{R}^{p}$ would simply contain the magnitudes in different bands.
+ Given our mining strategy, we first apply techniques with features extracted
+ from the survey catalogue, then we use data-driven features and pattern recognition on the cutouts of those
+ systems that pass the first selection stage. 
+%
+%
+\subsection{Dimensional reduction: catalogue parameters}
+%
+\begin{figure*}
+ \centering
+ \includegraphics[width=0.33\textwidth]{pics/pdf/KPC4v5.pdf}
+ \includegraphics[width=0.33\textwidth]{pics/pdf/KPC4v6.pdf}
+ \includegraphics[width=0.33\textwidth]{pics/pdf/KPC5v6.pdf}
+\caption{\small{Correlations among the projections of the simulated cutouts onto some of the first kernel-PCs.
+ Green (resp. purple, yellow, blue) delimits the lensed QSO (resp. QSO+LRG, 2QSO, single QSO) simulated populations.
+ The label $\mathrm{KPC}j$ denotes the $j-$th kernel principal component. The populations extend in different directions
+ and partially overlap in kernel-PC space. The separation into classes is attained by modelling the first 200 kernel-PCs simultaneously.}}
+\label{f-kpca}
+\end{figure*}
+%
+When skimming a whole catalogue for targets, we generalize the SQLS idea of searching for objects with
+ promising photometry and morphological information. 
+ In this work, we exploit the magnitudes in $griz$
+ bands (AB system) and WISE $W1,W2$ bands (Vega system) for the photometric information.
+ The morphology is encoded via the second moments, ultimately the axis ratios and position angles (p.a.s)
+ in the four $griz$ bands. The underlying idea is that the quasar images and the lensing galaxy, when blended
+ toghether, will still have some distinctive features in the morphology and in how it varies with observing band. For example, in the case of a double we may expect the red deflector to be in the middle and be more relevant in the redder bands. Therefore the elongation should decrease with wavelength, barring uncertainties from noise and pixel-size.
+ Since one p.a. is arbitrary, we use the three differences $(\delta{\phi}_{r},\delta{\phi}_{i},\delta{\phi}_{z})$
+ between the p.a. in $g$ band and those in the other ones. In the end, this leaves us with $p=13$ features per object,
+ thus mapping the highly dimensional space of raw pixels in a 13-dimensional feature space.
+%
+%
+\subsection{Dimensional reduction: Kernel PCA}
+\label{s-dim_reduce}
+
+%Before training our classifier we also reduced the dimensionality of the otherwise 2500-dimensional feature space.
+Once the targets have been identified in catalog space,
+ for the candidate selection step, we investigated both principal component analysis (PCA)
+ and kernel principal component analysis \citep[KPCA,][]{Scholkopf1998a} on the image cutouts. 
+ In PCA, the feature vectors are expressed as combinations of the eigenvectors of the data covariance matrix. This is useful
+ in order to isolate the directions of maximum variance and set simple boundaries in feature space.
+ KPCA is similar to PCA, but it uses a kernel $k$ and a map $\Phi$
+ to embed the feature space $\mathbb{R}^{p}$ into a higher-dimensional space $\mathcal{H},$
+ such that
+\begin{equation}
+ k(\mathbf{x},\mathbf{y})=\langle\Phi(\mathbf{x}),\Phi(\mathbf{y})\rangle
+\end{equation} 
+is a scalar product in $\mathcal{H},$ and then perform the PCA there.
+ There is no need to compute the map $\Phi:\mathbb{R}^{p}\rightarrow\mathbb{R}^{D}$
+ explicitly -- a fact known in jargon as \textit{kernel trick}.
+ Because of this, KPCA can perform non-linear dimension reduction, while PCA is a linear dimension reduction technique.
+ Further details on KPCA are given in the Appendix and can be found in \citet{Scholkopf1998a}. 
+
+For PCA, we found that the first 500 principal components contain about $90\%$
+ of the variance in the raw pixel feature space.
+% The first ten PCs of the simulated sample are shown in Figure \ref{f-pca}.
+We can further reduce the number of components by means of the kernel trick.
+% Different functional forms can be used for the kernel in KPCA.
+ To this aim we used the \textit{radial basis function} kernel,
+\begin{equation}
+k(\mathbf{x},\mathbf{y})\ \propto\ \exp\left[-||\mathbf{x}-\mathbf{y}||^{2}/(2\delta^{2})\right]
+\end{equation}
+%  which is equivalent to a Gaussian function in the Euclidean distance between data points
+ in the 2500-dimensional feature space.
+ The width $\delta$ of the kernel is a tuning parameter.
+ We experimented with a few different values of the kernel width, and found that a value of 0.25 times the median
+ nearest-neighbour distance gave good separation of the classes, as projected onto the first several KPCs. We did not tune this
+ parameter further, choosing rather to use our degrees of freedom for tuning the classifiers as described below.
+ For reference, the projections of the data set classes onto some KPCs are shown in Figure \ref{f-kpca}.
+%
+\subsection{Techniques: Artificial Neural Networks}
+\label{sect:techn1}
+%
+%
+\begin{table} 
+\centering
+\begin{tabular}{ll}
+\hline
+symbol & meaning\\
+\hline
+$p$ & number of features per object \\
+$K$ & number of classes of objects \\
+$\mathbf{f}$ & feature vector (in $\mathbb{R}^{p}$) \\
+$\mathbf{y}$ & membership probability vector (in $\mathbb{R}^{K}$) \\
+$N_{t}$ & objects in a training set \\
+$N_{v}$ & objects in a validating set \\
+$R_{err}$ & error loss function \\
+$R_{dev}$ & deviance loss function \\
+$R_{reg}$ & regularization \\
+$M$ & number of hidden nodes (in ANNs)\\
+$\lambda$ & regularization parameter (in ANNs)\\
+\hline
+\end{tabular}
+\caption{Nomenclature used here for our machine-learning techniques (Section \ref{sect:techn1}).}
+\label{tab:names}
+\end{table}
+%
+\begin{table} 
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+class & training & validating\\
+\hline
+l.QSO & 245 & 100\\
+2QSO & 150 & 80\\
+QSO+LRG & 265 & 100\\
+BC & 90 & 75\\
+\hline
+\end{tabular}
+\caption{Objects in the training and validation sets for each class. When training the
+ ANNs, the error and deviance metrics are evaluated on ten different
+ validating sets, so as to have a better grasp on sample-to-sample variance.}
+\label{tab:testval}
+\end{table}
+%
+%
+Different populations of objects can be separated by setting boundaries in feature space\footnote{For the reader's convenience,
+ Table \ref{tab:names} summarizes the nomenclature introduced in this Section.}.
+ The accuracy of the classification depends on how many boundaries are set and how
+ flexible they are. The simplest separation relies on linear and affine boundaries, i.e. the
+ partition of feature space ($\mathbf{f}\in\mathbb{R}^{p}$) in regions delimited by hyperplanes,
+ each with \textit{weight vector} $\boldsymbol{\alpha}$ and \textit{bias} $a_{0}:$
+ \begin{equation}
+ \boldsymbol{\alpha}\cdot\mathbf{f}+a_{0}=0\ .
+ \end{equation}
+%
+ If different populations overlap in feature space, drawing many boundaries enables the construction of
+ membership probabilities. Finally, a concatenation of classification steps enables the construction
+ of non-linear classifiers.
+ The details of these procedures are specific to different machine learning algorithms.
+
+For target selection, we use Artificial Neural Networks (ANN). In the simplest ANN scheme, given the feature vectors
+ $\mathbf{x}_{i}$ in the test set ($i=1,...,N_t$), the probability vectors $\mathbf{y}_{i}\in\mathbb{R}^{k}$ are fit by combinations
+\begin{equation}
+\mathbf{t}_{i}=\sum\limits_{m=1}^{M}\boldsymbol{\beta}_{m}g(\boldsymbol{\alpha}_{m}\cdot\mathbf{x}_{i}+a_{0,m})
+\end{equation}
+ with every weight  $\boldsymbol{\beta}_{m}\in\mathbb{R}^{K}$ and $\boldsymbol{\alpha}_{m}\in\mathbb{R}^{p},$
+ over a \textit{layer} of $M$ \textit{hidden nodes}, where $g$ is a smooth \textit{activation function} such that
+ $g(\pm\infty)=1/2\pm1/2.$ One further passage is made in order to ensure that the entries of each $\mathbf{t}_{i},$
+ being membership probabilities, be positive and sum to unity. Appendix B gives a detailed description of the ANN
+ architecture. The ANN is \textit{trained} to minimize the loss function
+\begin{equation}
+R_{err}=\frac{1}{N_t}\sum\limits_{i=1}^{N_t}||\mathbf{y}_{i}-\mathbf{t}_{i}||^{2}
+\label{eq:Rerr}
+\end{equation}
+%
+Another commonly used loss function is the deviance, defined as the conditional entropy of
+ the output probabilities w.r.to the true ones:
+\begin{equation}
+R_{dev}\ =-\sum\limits_{i=1}^{N_{v}}\sum\limits_{k=1}^{4}y_{i,k}\log(t_{i,k})\ .
+\label{eq:Rdev}
+\end{equation}
+Here, we train the ANNs to minimize $R_{err},$ while $R_{dev}$ is considered in a subsequent stage.
+
+We also create ten \textit{validating} sets, where $R_{err}$ is computed but not minimized.
+ We use \textit{early stopping}, i.e. interrupt the training when the mean error on the validating sets
+ stops decreasing. This is commonly interpreted as a symptom that the learner is becoming \textit{greedy}
+ to imitate the training set, whilst not improving in predicting the classification of objects in the
+ validating set. 
+ The number of objects per class in training and validating sets is given in Table \ref{tab:testval}.
+ The different proportions of objects were adapted so that the machines would learn to correctly recognise most of them,
+ especially the lensed quasars. For this reason, the fraction of lensed quasars is slightly higher than in the SQLS target
+ sample.
+ 
+To avoid overfitting, a regularization term
+\begin{equation}
+R_{reg}=\lambda\sum_{m}\left(||\boldsymbol{\alpha}_{m}||^{2}+||\boldsymbol{\beta}_{m}||^{2}+a_{0,m}^{2}\right)
+\end{equation}
+ is added to $R_{err}.$ The performance of the ANN will ultimately depend on $M$ and $\lambda$ (see Sect.\ref{sect:ANNtarg}).
+ 
+\subsection{Techniques: Gradient-Boosted Trees}
+% \textbf{AA: This is BCK's territory}
+
+Gradient boosting \citep{Friedman2001a} is a general machine learning technique
+ that produces a prediction model using an ensemble of weak learners, where a weak learner is a simple predictive model that may only do slightly better than random guessing. The gradient boosting classifier is built up slowly by fitting a sequence of weak learners to minimize a loss function, which for classification is typically chosen to be the deviance (\ref{eq:Rdev}). The output for the predictive model is the ensemble average of the prediction for each weak learner. At each iteration of the algorithm, a new weak learner is trained on the residuals for the current model, and this weak learner is added to the ensemble with a contribution proportional to a learning rate parameter. The tuning parameters for the gradient boosting algorithm are the learning rate and the number of weak learners in the ensemble. When the learning rate is smaller, the model is built up more slowly and a larger number of weak learners is needed. % in order to achieve a similar level of accuracy.
+ Smaller learning rates tend to lead to better test error as they build up the model in a more controlled manner, although they lead to longer computations as they require a higher number of learners. Gradient boosting has been found to be powerful and robust in a variety of different prediction problems \citep[e.g.,][]{Hastie2009a}, and is very slow to overfit. Further details are given in the Appendix, as well as \citet{Friedman2001a} and \citet{Hastie2009a}.
+
+In our case we use shallow decision trees for the weak learners. A decision tree is made up of a set of binary splits that partition the feature space into a set of constant functions. For classification, the output from the tree is the probability that a data point belongs to a given class given the partition of the input feature space that the data point falls into. For example, the first split in the tree could be, say, that all sources with $g < 20$ go into one partition, while all sources with $g \geq 20$ are placed in a different partition. Then, for the $g < 20$ partition we could make another partition at $r = 19$, such that if $r < 19$ there is a $90\%$ probability that a source is a lens, while for $r \geq 19$ there is only a $10\%$ probability that the source is a lens. A similar split would occur for the $g \geq 20$ partition at a different value of $r$, or for an entirely different feature. Moreover, we need not stop at this point, but could partition the space even more by growing the tree to a larger depth. Within the context of gradient boosting, the class probabilities are obtained from the average over the ensemble of shallow decision trees. Because of this, the depth of the trees is an additional tuning parameter in this classification model.
+ 
+In addition, in our analysis we use a stochastic variant of the original gradient boosting algorithm \citep{Friedman2002a}.
+In stochastic gradient boosting only a random subsample of the training data is used at each iteration to build the decision tree;
+note that this subsample is randomly chosen at each iteration of the gradient boosting algorithm,
+ and is not constant throughout the algorithm.
+\citep{Friedman2002a} found empirically that random subsampling tended to improve the test errors. In addition, we use random subsampling because it enables us to monitor the deviance loss on the subset of the data that is not used in the fit at each iteration.
+This yields an estimate of the prediction error of the model as a function of the number of trees,
+and we choose the number of trees to minimize this estimated prediction error. Other tuning parameters are typically chosen using cross-validation.
+
+%
+%
+
+\subsection{Techniques: Cross-validation}
+\label{s-cv}
+
+Cross-validation is a statistical technique for estimating the prediction error of a model.
+ The basic idea is to divide the training set into $K$ separate subsamples.
+ Then, one subsample is withheld and the model is trained on the remaining $K-1$ subsamples.
+ The prediction error from this model is calculated for the subsample that was withheld from training the model.
+ The procedure is repeated for each of the other $K-1$ subsamples as well, and the cross-validation error is
+ obtained as the average prediction error over the subsamples.
+
+%While cross-validation may be used to obtain an estimate of the test error, \textbf{it is typically a biased estimate
+% [AA: ?!]}.
+ For most applications, the tuning parameters are chosen to minimize the cross-validation error.
+ In addition, cross-validation is often used to choose the number of features to include in a regression or classification model.
+ Finally, it also helps control overfitting, by attempting to find the tuning parameters and feature set
+ that minimize an average out-of-sample prediction error.
+
+\subsection{Selection bias}
+\begin{figure*}
+ \centering
+ \includegraphics[width=0.45\textwidth]{pics/pdf/ELMunbiasSED.pdf}
+ \includegraphics[width=0.45\textwidth]{pics/pdf/ELMbiasSED.pdf}\\
+ \includegraphics[width=0.45\textwidth]{pics/pdf/ELMunbiasAll.pdf}
+ \includegraphics[width=0.45\textwidth]{pics/pdf/ELMbiasAll.pdf}
+\caption{\small{Exploration of the ELMs performance on training and validating sets as a function of nodes. Full black lines:
+ test-set error; grey stripes: average and dispersion of the validating-set error within $1\sigma.$
+ Top (resp.bottom) panels show the performance of ELMs on the $griz+W1+W2$ bands (resp.adding the second moments),
+ without (left) or with (right) a heavy selection bias towards objects with the photometry of bright quasars. Axes cross at
+ the best validation-set error and at the number of nodes that is required to attain it.}}
+\label{fig:ELMnodes}
+\end{figure*}
+%
+The simplest searches for lensed targets exploit magnification bias, since the brightest objects in a
+ population are likely lensed. On the other hand, this way just the stretched, bright tail of the QSO population
+ is considered, which is not representative of most of the lensed quasars in a survey. Such an effect must be
+ accounted for when tailoring the data mining techniques to a particular survey, such as the SQLS, which can be
+ strongly biased. In the next Section, we will do so \textit{ex post} by suitably interpreting the membership probabilities
+ that are predicted by the learners, where this is possible. Here, we briefly analyse the effect of a strong selection bias
+ on the performance and demands of the learners.
+
+We have simulated different sets of objects, retaining just those systems that satisfy the following,
+ common cuts\footnote{As usual, $griz$ magnitudes in the AB system, WISE in the Vega system.}:
+ %
+\begin{eqnarray}
+\nonumber 16<i<20,\ g-r<0.6,\ r-i<0.45,\ i-z<0.4,\\
+\nonumber 2.5<i-W1<5,\ 0.5<W1-W2<1.5,\\
+g-i<1.2(i-W1)-2.8\ .
+\label{eq:cuts}
+\end{eqnarray}
+%
+We trained a faster, although less accurate, variant of ANNs called \textit{Extreme Learning Machines} (ELMs),
+ described in Appendix \ref{sect:annelm}. We varied the number of nodes $M$ between 2 and 150.
+ For each choice of $M,$ we have drawn random values of the hidden weights $\boldsymbol{\alpha}$
+ a hundred times, solved for the output weights $\boldsymbol{\beta}$
+ on the test set for each of those realizations, evaluated $R_{err}$ on five validation sets and
+ selected just the $(\boldsymbol{\alpha},\boldsymbol{\beta})$ that minimize the average error,
+ which simply defined as $\sqrt{R_{err}}$ on every validation set.
+ This mimics the early stopping criterion of ANNs, while training just on the output weights. The features are standardised
+ and the entries of each $\boldsymbol{\alpha}$ are of the kind $\alpha_{m,l}=\arcsin^{3}(u),$ where $u$ is drawn
+ uniformly in $[0,1].$ This ensures that most of the separating hyperplanes in feature space
+ pass through the bulk of the dataset, while also covering the tails of the distribution.
+ 
+The results are shown in figure \ref{fig:ELMnodes}, in four cases: test and validation sets drawn as in the rest of this work
+ or with a heavier selection bias in optical/IR bands (eq.~\ref{eq:cuts}), considering just the magnitudes 
+ ($p=6$ features per object) or also the second moments ($p=13$). If a dataset is unbiased, it offers a complete description of
+ a population, so that most objects will occupy different regions of feature space and the classifiers manage to separate
+ most of them, which is reflected in the smaller validation-set error for the unbiased simulated sample. On the other hand,
+ learners that are trained on heavily biased samples are tailored on simple and lean catalog searches, where they can
+ repay their modest theoretical performance. The information carried by the morphological parameters is not always
+ useful to the learners, especially in the biased case. In fact, the average distance between objects increases rapidly as the
+ dimensionality of feature space is increased, making the data sets too sparse and stretching the differences
+ between objects in the training and validating sets to fictitious levels.
+
+The main advantage of ANNs over ELMs is that the latter's output
+ are not necessarily probability vectors, i.e. they do not always have positive entries summing to unity.
+ This can be troublesome when new objects are considered, since the ELMs could extrapolate the outputs to values
+ well outside the $[0,1]$ range. The amenable property of ANNs to output probability vectors is the main reason
+ why we have preferred them over ELMs for target selection (cf Sect.\ref{sect:ANNtarg}).
+%
+%
+\subsection{Larger separations or better image quality}
+\label{sect:deblended}
+%
+
+\begin{figure}
+ \centering
+ \includegraphics[width=0.45\textwidth]{pics/pdf/debphoto.pdf}\\
+ \includegraphics[width=0.45\textwidth]{pics/pdf/debPlens.pdf}\\
+ \includegraphics[width=0.45\textwidth]{pics/pdf/debsep.pdf}
+\caption{\small{Simulated systems in the deblended regime, with dark green (resp.yellow, dark red)
+ representing \textit{l.QSO} (resp. \textit{2QSO}, \textit{ndd}) objects.
+ Top: $g-i$ and $i-W1$ colours of the brightest QSO image. Middle: output $p(l.QSO)$ versus $i-W1$ colour
+ of the bright image. Bottom: output $p(l.QSO)$ versus image separation in arcseconds. A depth $i=24.0$
+ and PSF FWHM$=0.85''$ have been adopted here.
+ }}
+\label{fig:deblended}
+\end{figure}
+%
+Depending on the image separation and imaging quality of a survey, an appreciable fraction of lensed quasars
+ can appear as close ($\theta_{sep}\leq4''$) QSO pairs. This can be the case, for example, with the claimed depth
+ ($i\approx24$) and image quality (median FWHM$\approx 0.85$) of DES and will be even dominant for
+ Gaia (resolution $\approx 0.15''$). Here we illustrate how the same techniques, specifically ELMs (Sect.s \ref{sect:techn1},
+ \ref{sect:annelm}), can be used to study the search for lensed quasars in the deblended regime.
+
+We have simulated two classes of objects, lensed quasars (l.QSO) and line-of-sight quasar pairs (2QSO), with the same
+ procedures as for the blended case, plus a third class that will be described below.
+ As the fainter image of a lensed QSO is also closer to the deflector, one must add a
+ differential reddening between multiple images, since colour comparison is a criterion for colour selection of
+ close-by, quasar-like objects. We refer to \citet{ogu06} for more detail on the acceptable region for the reddening vector
+ in $griz$ bands. Also, the PSF-photometry and morphology of the faintest QSO image are more contaminated by the deflector's flux.
+ Still, we can safely suppose that the QSO images will not appear as extended, as is confirmed in practice by previous searches.
+
+For these reasons, the data mining in the deblended regime is trained on the following features: PSF magnitudes in $griz$
+ of the images; overall $W1,W2$ magnitudes; flattening and position angle of the faint image in $griz$ bands; and faint-to-bright
+ image position angle. When simulating l.QSO systems, we compare the overall $i-$band magnitude of the simulated cutout
+ with the global PSF magnitudes of the QSO images to estimate the mean surface-brightness $SB(R_{E})$ of the deflector
+ within the Einstein radius. The distribution of $SB(R_{E})$ shows a secondary peak beyond $\approx 18.5,$ 
+ so if a simulated object has $SB(R_{E})>18.5,$ we store it in a third class (\textit{ndd}, no detected deflector).
+ 
+The results of this procedure are displayed in figure \ref{fig:deblended}, for the test set only for visual convenience.
+ If the $g-i$ and $i-W1$ colours of the bright QSO image are considered, regardless of the class,
+ the $i-W1$ colour is larger than in eq.~(\ref{eq:cuts}), simply because the $W1$ magnitude
+ encloses the flux from the whole system, because of the large WISE FWHM. The full lines in the top panel show the colour cuts as
+ in eq.~(\ref{eq:cuts}), the dashed line is simply shifted by $1.2\times2.5\log_{10}(2)\approx 0.9,$ as would be expected in
+ a QSO pair with comparable $i-$band fluxes between the two objects. The middle panel shows the output $p(l.QSO)$ as a function
+ of bright image $i-W1,$ whereas in the bottom panel $p(l.QSO)$ is examined against the image separation. It becomes evident that,
+ even if 2QSO systems become more frequent and dominate at larger separations, data mining on the photo-morphological features
+ is still effective at separating the classes, except for those few systems where the deflector is not bright enough -- as exemplified by
+ the \textit{ndd} systems, which are unrecognised lensed quasars.
+
+%
+\begin{figure*}
+ \centering
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/1.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/2.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/3.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/4.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/5.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/6.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/7.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/8.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/9.jpeg}\\
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/10.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/11.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/12.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/13.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/14.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/15.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/16.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/17.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/18.jpeg}\\
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/19.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/20.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/45.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/22.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/23.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/24.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/25.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/26.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/27.jpeg}\\
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/28.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/29.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/30.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/31.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/32.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/33.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/34.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/35.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/36.jpeg}\\
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/37.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/38.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/39.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/40.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/41.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/42.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/21.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/44.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/45.jpeg}\\
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/46.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/47.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/48.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/49.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/50.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/51.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/52.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/53.jpeg}
+ \includegraphics[width=0.1\textwidth]{pics/SQLSpics/54.jpeg}
+\caption{\small{The morphologically-selected candidates in SDSS DR7 by \citet{ina12}.}}
+\label{fig:SQLSmontage}
+\end{figure*}
+%
+\section{Results and testing against SQLS}
+We have run different learning algorithms and varied their structural parameters,
+ in order to quantify their performance on simulated and real data sets.
+ The performance of each learner is quantified in terms of classification error statistics,
+ deviance, false-vs-true positive rates and purity-vs-completeness, as specified below.
+ Our metrics are built both on the simulated data and on the SQLS sample by \citet{ina12}.
+ While examples of the former are displayed in figure \ref{fig:puppies}, here we show the SQLS
+ objects in figure \ref{fig:SQLSmontage}. Once again, the blended nature and similar colours of the
+ objects are the main obstacles against simple separations between true and false positives.
+%
+%
+\begin{table} 
+ \centering
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+$\lambda$ & $M$ & $error$ & $deviance$ & \multicolumn{2}{c}{SQLS first test} \\
+ &  & per system & per system & purity & completeness \\
+\hline
+$\lambda=0$  & 13 & $0.56\pm0.03$ & $0.63\pm0.07$ & 0.5 & 0.625 \\
+ & 17 & $0.59\pm0.03$ & $0.74\pm0.09$ & 0.22 & 0.225 \\
+ & 20 & $0.62\pm0.04$ & $0.69\pm0.11$ & 0.30 & 0.5 \\
+ & 23 & $0.56\pm0.04$ & $0.64\pm0.14$ & 0.5 & 0.625 \\
+ & 25 & $0.57\pm0.03$ & $0.61\pm0.09$ & 0.45 & 0.625 \\
+\hline
+$\lambda=0.01$  & 13 & $0.61\pm0.03$ & $1.10\pm0.44$ & 0.33 & 0.25 \\
+ & 17 & $0.58\pm0.04$ & $0.84\pm0.36$ & 0.44 & 0.5 \\ 
+ & 20 & $0.58\pm0.04$ & $0.94\pm0.42$ & 0.475 & 0.375 \\ 
+ & 23 & $0.57\pm0.04$ & $0.96\pm0.42$ & 0.42 & 0.375 \\ 
+ & 25 & $0.60\pm0.03$ & $0.76\pm0.10$ & 0.42 & 0.62 \\ 
+\hline
+$\lambda=0.2$  & 13 & $0.56\pm0.03$ & $0.64\pm0.15$ & 0.375 & 0.75 \\
+  & 17 & $0.56\pm0.03$ & $0.65\pm0.15$ & 0.46 & 0.75 \\
+  & 20 & $0.56\pm0.03$ & $0.64\pm0.15$ & 0.4 & 0.625 \\
+  & 23 & $0.56\pm0.03$ & $0.62\pm0.13$ & 0.4 & 0.75 \\
+  & 25 & $0.56\pm0.03$ & $0.69\pm0.20$ & 0.36 & 0.625 \\
+\hline
+$\lambda=0.5$  & 13 & $0.57\pm0.03$ & $0.59\pm0.05$ & 0.4 & 1 \\
+ & 17 & $0.57\pm0.03$ & $0.59\pm0.05$ & 0.4 & 0.875 \\
+ & 20 & $0.57\pm0.03$ & $0.59\pm0.05$ & 0.4 & 0.875 \\
+ & 23 & $0.58\pm0.02$ & $0.62\pm0.04$ & 0.44 & 0.875 \\
+ & 25 & $0.57\pm0.02$ & $0.59\pm0.05$ & 0.35 & 0.75 \\
+\hline
+$\lambda=1$  & 13 & $0.59\pm0.02$ & $0.65\pm0.04$ & 0.36 & 1 \\
+ & 17 & $0.59\pm0.02$ & $0.65\pm0.04$ & 0.36 & 1 \\
+ & 20 & $0.59\pm0.02$ & $0.65\pm0.04$ & 0.36 & 1 \\
+ & 23 & $0.59\pm0.02$ & $0.65\pm0.04$ & 0.38 & 1 \\
+ & 25 & $0.59\pm0.02$ & $0.65\pm0.04$ & 0.4 & 1 \\
+ \hline
+\end{tabular}
+\caption{Performance of the ANNs with different choices of the regularization parameter
+ $\lambda$ and number of nodes $M,$ according to different quantifiers.
+ Columns `error' and `deviance'  list the mean loss quantifiers
+ $\sqrt{R_{err}}$ and $R_{dev}$ over the validation set, run on ten different validation sets.
+ The `SQLS' columns list the purity and completeness for the sample of SQLS objects whose output probabilities
+ satisfy $p(QSO+LRG)<0.35,$ $p(BC)<0.35,$ $p(2QSO)<0.8,$ without any further restriction on $p(l.QSO).$
+}
+ \label{tab:ANN}
+\end{table}
+\begin{figure}
+ \centering
+ \includegraphics[width=0.45\textwidth]{pics/pdf/TargetROC.pdf}\\
+ \includegraphics[width=0.45\textwidth]{pics/pdf/TargetPurComp.pdf}
+\caption{\small{Performance of the target selection, with progressive cuts in the output probabilities, displayed
+ as a ROC (top) or purity-completeness plot (bottom). The long-dashed, 1:1 straight line in the bottom panel
+ marks the performance of random classifiers. Grey lines: performance of an ANN with $M=13$
+ and $\lambda=1$ on the ten validating sets. Other lines mark the performance of the four best ANNs:
+ full (resp short-dashed, dotted, dot-dashed) stands for $M=13$ and $\lambda=1$ (resp. $M=13$ and
+ $\lambda=0.5,$ $M=20$ and $\lambda=0.5,$ $M=20$ and $\lambda=1$). Bullets mark the performance
+ of other ANNs, accepting all objects regardless of $p(l.QSO).$
+ }}
+\label{fig:ANNperf}
+\end{figure}
+\subsection{Neural networks and target selection}
+\label{sect:ANNtarg}
+ANNs are used to skim the catalogue and obtain a list of targets, which can then be
+ inspected pixel by pixel for candidate selection. 
+The structural parameters are the number $M$ of nodes and the regularisation
+ parameter $\lambda.$ We varied $\lambda$ between $0$ and $1,$ whilst
+ $M$ was varied between $13$ and $25.$ The results are shown in Table \ref{tab:ANN},
+ where the performance is quantified by means of four metrics explained below. These are:
+ rms error and deviance on the validating sets; purity and completeness when run on the SQLS 
+ {morphologically selected objects \citep{ina12}.}
+   
+The performance on the validating set is quantified by the classification error and deviance per system.
+ The error per system is defined as the r.m.s. distance of the output probability vectors from
+ their true value, for points in the validating set, i.e. $\sqrt{R_{err}}$ for each validating set as in Section \ref{sect:deblended}.
+ Similarly, the deviance per system is $R_{dev}/N_{v}$.
+
+When training the ANNs, we have followed the behaviour of error and deviance on ten different validating sets.
+ This allows us to assess how the performance of a classifier may vary in practice, if a different validating set
+ were chosen. The values with errorbars in Table \ref{tab:ANN} then show the average performance on a validating
+ set and its typical (r.m.s.) variability.
+ 
+The performance on the SQLS objects is measured in terms of purity and completeness of the selected targets.
+ Alternatively the true- and false-positive rates can be considered, being the fraction of true or false
+ positives that are flagged as possible l.QSO targets by the ANNs.
+ For those, one further step is necessary. Since the classifier outputs probabilities for each object to belong to
+ any of the classes, one needs to define a probability threshold in order to select a system as a target or reject it.
+ Objects with $p(QSO+LRG)>0.35,$ $p(BC)>0.35,$ $p(2QSO)>0.8,$ are always flagged as non-targets and rejected. 
+ Such a skimming produces a sample of putative lensed QSOs, whose purity and completeness can be used to
+ quantify the efficiency of the ANNs to separate into classes when presented with real data. These are listed in
+ the last column of Table \ref{tab:ANN}.
+ 
+Finally, a minimum threshold must be chosen
+ in order to select just those candidates whose output $p(l.QSO)$ is sufficiently high. By varying the acceptance probability threshold,
+ we can increase the purity of the target set at the expense of completeness -- or vice versa.
+ Figure \ref{fig:ANNperf} shows the \textit{receiver operating characteristic} (ROC), i.e. the relation between true positive rate and
+ false positive rate, once the acceptance threshold on $p(l.QSO)$ is varied, as well as a plot of purity versus completeness.
+ The black lines display the performance of the best four ANNs (cf Table \ref{tab:ANN}) on SQLS as the threshold is varied.
+ The bullets mark the
+ performance of all the other ANNs at maximum completeness, i.e. without cuts in $p(l.QSO).$ The ten grey lines in each panel
+ show the performance of an ANN (with $M=13$ and $\lambda=1$) on the ten validating sets. When plotting these, the weight
+ of lensed quasars in the validating set has been slightly reduced, in order to match the $20\%$ overall fraction of true positives
+ in SQLS and offer a fair comparison.
+  
+
+%
+\subsection{Gradient-Boosted Trees and candidate selection}
+
+We trained a classifier directly on the pixel-by-pixel values of the images using several different algorithms.
+ The first step in this process was to normalize all of the images such that the sum of their flux values for each pixel
+ over all of the observational bands was equal to unity. This normalization implies that the classifier will focus on the
+ colour-morphological information for each source. Then, we randomly split the set of simulated images into a training
+ and test set, where the test set contained $25\%$ of the sources. The test set was used to provide an estimate of
+ the test error and was set aside until the end of the analysis; it was not used in the dimension reduction step, nor in
+ the training step.
+%
+%
+\begin{table}
+\begin {center}
+\footnotesize
+\begin{tabular}{|r|cccc|}
+\hline
+\multicolumn{5}{c}{Unbiased simulated sample.} \\
+\hline
+\multicolumn{1}{c}{} & \multicolumn{4}{c}{percentage classified as...} \\
+  & l.QSO & 2QSOs & QSO+ETG & s.QSO  \\
+ true l.QSO & 88.0 & 6.7 & 4.9 & 0.4 \\
+ true 2QSO & 6.1 & 57.5 & 7.3 & 29.1 \\
+ true QSO+ETG & 6.6 & 5.8 & 84.7 & 2.9 \\
+ true s.QSO & 2.4 & 13.8 & 3.2 & 80.6 \\
+\hline
+\hline
+\multicolumn{5}{c}{Biased simulated sample (eq.s~\ref{eq:cuts}).} \\
+\hline
+\multicolumn{1}{c}{} & \multicolumn{4}{c}{percentage classified as...} \\
+  & l.QSO & 2QSOs & QSO+ETG & s.QSO  \\
+ true l.QSO & 84.5 & 6.5 & 8.6 & 0.4 \\
+ true 2QSO & 2.7 & 84.2 & 10.9 & 2.2 \\
+ true QSO+ETG & 6.1 & 15.3 & 77.1 & 1.5 \\
+ true s.QSO & 2.6 & 59.5 & 10.3 & 27.6 \\
+\hline
+\end{tabular}
+\end{center}
+\vspace{-0.3cm}
+\caption{ Confusion matrix for classification of the simulated cutouts with gradient-boosted trees, using KPCA for the
+ dimensional reduction. Top sub-table: unbiased simulated samples; bottom: biased samples following the cuts in eq.s~(\ref{eq:cuts}).
+}
+\label{tab:confmat}
+\end{table}
+%
+\begin{table}
+\begin {center}
+\footnotesize
+\begin{tabular}{|r|cc|}
+\hline
+\hline
+dim.red. & purity & completeness \\
+ PCA (500) & 6/8 (=75\%) & 6/10 (=60\%) \\
+ KPCA (200) & 7/10 & 7/10   (=70\%)\\
+\hline
+\end{tabular}
+\end{center}
+\vspace{-0.3cm}
+\caption{ Performance of Gradient-Boosted Trees, trained on biased simulated samples, when classifying
+ targets (from Sect.\ref{sect:techn1}) in the SQLS dataset.
+}
+\label{tab:finalGBTs}
+\end{table}
+%
+\subsubsection{Training a Gradient Boosted Decision Tree}
+\label{s-gbc}
+We used the stochastic gradient boosting algorithm, with decision tree classifiers as the base weak learners,
+ to train a classifier using the first 200 KPCs derived from the pixel-level information in the images.
+ We set the learning rate to be $\nu = 0.01$, a typical value. At each stage 
+ we trained the new tree on $80\%$ of the data, while the remaining $20\%$ were used to monitor the validation error.
+ The number of trees in the ensemble were chosen to minimize this validation error, leading to an ensemble of 1190 trees.
+ Since the learning rate is intertwined with the number of trees in the ensemble, there is little to gain from tuning both.
+ The depth of the trees was chosen to minimize the 7-fold cross-validation misclassification error rate,
+ leading to trees with a depth of 5 nodes.
+ 
+Having exploited much of the photo-morphological information when selecting targets,
+ the classification bottleneck is encountered at this stage. We first ran the classifiers on cutouts from
+ the same simulated dataset as in Sect.\ref{sect:ANNtarg} and they were effective in separating the four different classes,
+ as summarised by the confusion matrix in Table\ref{tab:confmat}. However, the algorithm performed poorly on the
+ SQLS dataset, classifying every object as a QSO pair or lensed QSO, thus missing the single quasars and QSO+LRG
+ alignments. However, there is a clear selection bias in the SQLS sample, towards objects whose photometry resembles
+ closely that of bright quasars or quasar pairs, as is evident from fig.\ref{fig:colcolplots}.
+ 
+To test the effect of selection bias, we trained the classifiers on cutouts of simulated objects whose photometry satisfied
+ the constraints in eq.~(\ref{eq:cuts}). When applied to the SQLS sample, the new classifiers exhibit a wider range of
+ classification probabilities. To quantify their performance, we considered just those objects that are flagged as targets
+ from the ANNs (Sect.\ref{sect:techn1}), since in a realistic search those are the systems that would be inspected with
+ pixel-by-pixel techniques. The results are summarised in Table~\ref{tab:finalGBTs}. The importance of PCA versus KPCA is secondary,
+ although the GBTs trained on KPCA use a smaller number of components and produce smoother classification probabilities,
+ which are then more reliable for prediction purposes.
+
+\subsubsection{Other Classification Models}
+
+We also investigated using the first 500 PCs instead of the first 200 KPCs, but the KPCs sill gave better accuracy.
+ In addition, we also investigated the performance of logistic regression, a single deep decision tree, support vector machines,
+ random forests, and neural networks for classification using the first 200 KPCs. As with the gradient boosted decision tree
+ classifier, the tuning parameters for each classifier were chosen with cross-validation, with the exception of the neural network.
+ We chose the tuning parameters of neural network after some initial exploration and employed
+ early stopping with a validating set of $25\%$ of the training data. Gradient boosting gave the best performance,
+ although the performance of support vector machines, random forests, and neural networks were all comparable to the
+ gradient boosting classifier. 
+
+\section{Conclusions}
+
+We have applied machine-learning techniques to the search for gravitationally lensed quasars in large catalogues.
+ The problem is structured in two stages. In the target selection stage, promising systems are selected based solely
+ on information available at catalogue level, using thirteen parameters: the magnitudes in $griz$ and WISE $W1,W2$ bands;
+ and the axis ratios and position angles in $griz$ bands. In the candidate selection stage, $25\times25$ pixel cutouts
+ ($10\times10$ arcseconds) in $griz$ bands are considered,
+ reducing the dimensionality of the feature space (from 2500 to 200) via kernel-PCA.
+
+In order to have a large set of training and validating objects, we used a mixture of simulated and real objects,
+ with SDSS imaging conditions. In particular, we have simulated systems in three classes (lensed QSO, QSO+LRG
+  alignment, QSO+QSO alignment) and added a sample of Blue Cloud (BC) galaxies from SDSS. For the candidate selection
+  stage, we have discarded the BC galaxies and included a simulated sample of single quasars. This allowed us to explore the
+  range of true- and false-positives in a strategy following the Sloan Quasar Lens Search but without spectroscopic
+  information.
+
+Artificial Neural Networks are used to separate lensed quasar targets from false positives. In particular we have relied
+ on single-hidden layer, feed-forward networks, which are trained with backpropagation and early stopping. When tested on the
+ SQLS morphologically-selected sample, which is biased towards bright quasars, the best ANNs give a twofold (up to threefold)
+ increase in purity at the prize of a $10\%$ (or $20\%$) reduction of the completeness. The use of ANNs on the photo-morphological
+ features enables the separation of QSO-like objects from Blue-Cloud galaxies, which would otherwise be a dominant source
+ of contamination for samples of extended objects selected in $griz+W1+W2$ bands. In particular, with hard cuts in optical/IR
+ bands (eq.\ref{eq:cuts}) and the requirement of extended morphology, about a tenth of the Blue Cloud galaxies leak
+ into the sample of targets with extended morphology brighter than 19 in $i-$band.
+  Use of ANNs prunes these away effectively, reducing the leakage to the percent level.
+
+Once a set of targets is selected, their cutouts are inspected with pattern recognition techniques. In particular, here we
+ have trained Gradient-Boosted Trees on simulated samples, whose photometry obeys a selection bias similar to that of
+ SQLS objects (eq.s~\ref{eq:cuts}). When tested on the targets selected from the previous step, these
+ give a final purity of $70\%$ and correctly recognize $70\%$ of the true positives - i.e. final completeness between
+ $56\%$ and $63\%.$
+
+In the broader context, our novel technique is highly complementary
+and synergistic with alternative approaches that are or have been
+proposed. For example the ANN catalog level selection could be used to
+pre-select targets for human classifiers in a citizen scientist
+project. Or, the same list could be fed to robots aimed at modeling
+the lensing features in pixel space \citep[e.g.][]{mar09}. These approaches could be run in
+parallel to the kPCA method proposed here. Similarly, the target list
+could be compiled from variability arguments, or simple color cuts,
+and then fed into the kPCA machinery to identify lensing
+candidates. In order to find reliably large samples of lensed quasars
+it is possible that many of these techniques will have to be used in
+parallel.  The great advantage of machine learning techniques over
+other methods is that they are fast and can easily be updated. As
+follow-up efforts provide larger and larger samples of false and true
+positives for each survey, they will provide new training sets to
+improve the algorithms. Furthermore, as data are reprocessed and
+improved the search can also be repeated with minimal
+expense. Finally, these techniques are inherently repeatable so that
+the results can be reproduced by independent users, and also can be
+used on simulated data to recover absolute completeness and purity,
+which is hard to achieve with algorithms requiring human intervention.
+
+The speed of these machine learning techniques will be essential to
+find large sample of lensed quasars in ongoing and upcoming imaging
+surveys, such as PS1, DES, HSC, LSST. Such surveys would hardly be tractable
+with traditional lens finding techniques, requiring several seconds of
+CPU or investigator time, whereas they are completely accessible with
+machine learning. %For example, extrapolating from current science verification numbers,
+With a run-time of $\approx10^{-3}$ seconds per system, the selection from a catalog search
+ over the DES-wide footprint is just a few hours hours on a simple 12 core desktop workstation.
+ Also, assuming conservatively a purity between 20\% and 50\% from the catalog search, finding the
+brightest 100 lenses in DES would require running the pixel based
+algorithm on only a few hundred cutouts, which is a trivial
+computational task.
+
+In conclusion, we have used SQLS and simulated samples to illustrate
+the power of machine learning techniques in finding gravitational lens
+quasars.  We have illustrated how it works on blended (hence difficult)
+objects, but it can be naturally applied also to the deblended regime
+(Sect.~\ref{sect:deblended}). Even though these techniques might seem
+cumbersome (perhaps even ``Rococo''), it is striking how much
+improvement is afforded over simpler and traditional techniques. For
+example the ANN catalog-level search yields a purity of $\approx 60\%,$
+which is appreciably better than what was achieved by SQLS
+and an order of magnitude higher than what can be achieved with simple
+ colour cuts in $griz$+WISE + the requirement of spatial extension.
+ This means reducing the follow-up effort by the same amount,
+ a crucial goal if one wants to identify large samples of lenses.
+  For example, in order to find of order 100
+lensed quasars from a Stage III experiment like DES one would have to
+follow-up only $\approx$200 candidates, as opposed with the thousands
+required for purities below 10\%. With the addition of time domain
+information, the methods should further improve their performance in
+terms of purity, which will be key to containing follow-up costs.
+
+
+\begin{thebibliography}{}
+
+\bibitem[Abazajian et al.(2009)]{aba09} Abazajian, K.~N., 
+ Adelman-McCarthy, J.~K., Ag\"{u}eros, M.~A., et al.\ 2009, \apjs, 182, 543 
+ 
+\bibitem[Ball et al.(2008)]{bal08} Ball, N.~M., Brunner, R.~J., 
+\& Myers, A.~D.\ 2008, Astronomical Data Analysis Software and Systems XVII, 394, 201 
+\bibitem[Ball \& Brunner(2010)]{bal10} Ball, N.~M., \& Brunner, R.~J.\ 2010,
+ International Journal of Modern Physics D, 19, 1049  
+
+\bibitem[Blagorodnova et al.(2014)]{bla14} Blagorodnova, N., Koposov, S.~E., Wyrzykowski, {\L}., Irwin, M., 
+ \& Walton, N.~A.\ 2014, \mnras, 442, 327 
+
+\bibitem[Belokurov et al.(2003)]{bel03} Belokurov, V., Evans, N.~W., \& Du, Y.~L.\ 2003, \mnras, 341, 1373 
+
+\bibitem[Blackburne et al.(2014)]{bla14} Blackburne, J.~A., 
+Kochanek, C.~S., Chen, B., Dai, X., \& Chartas, G.\ 2014, \apj, 789, 125 
+
+\bibitem[Carrasco Kind \& Brunner(2014)]{car14} Carrasco Kind, M., \& Brunner, R.~J.\ 2014, \mnras, 442, 3380 
+
+%\bibitem[Chang \& Suyu(2014)]{james} Chang, JM., \& Suyu, S.~H., in preparaiton % James' source-plane robot
+
+\bibitem[Courbin et al.(2002)]{cou02} Courbin, F., Saha, P., 
+\& Schechter, P.~L.\ 2002, Gravitational Lensing: An Astrophysical Tool, 608, 1 
+
+\bibitem[Dai et al.(2006)]{dai06} Dai, X., Kochanek, C.~S., 
+Chartas, G., \& Mathur, S.\ 2006, \apj, 637, 53 
+
+\bibitem[Dalal \& Kochanek(2002)]{dal02} Dalal, N., \& Kochanek, C.~S.\ 2002, \apj, 572, 25 
+
+\bibitem[Ferreira and Menegatto(2009)]{mer19} Ferreira, J. C., Menegatto, V. A.\ 2009,
+ Integral equation and Operator Theory, 64 no. 1, 61–81.
+
+\bibitem[Finet et al.(2012)]{fin12} Finet, F., Elyiv, A.,  \& Surdej, J.\ 2012, \memsai, 83, 944 
+  
+\bibitem[Friedman (2001)]{Friedman2001a} Friedman, J.~H.\ 2001, The Annals of Statistics, Volume 29, Issue 5, Pages 1189--1232
+\bibitem[Friedman (2002)]{Friedman2002a} Friedman, J.~H.\ 2002, Computational Statistics \& Data Analysis,
+ Volume 38, Issue 4,Pages 367–378
+%@book{Hastie2009a,
+%	Author = {Hastie, Trevor and Tibshirani, Robert and Friedman, Jerome},
+%	Publisher = {Springer},
+%	Title = {The elements of statistical learning: data mining, inference and prediction},
+%	Url = {http://www-stat.stanford.edu/~tibs/ElemStatLearn/},
+%	Year = 2009,
+%	Bdsk-Url-1 = {http://www-stat.stanford.edu/~tibs/ElemStatLearn/}
+%	}
+
+\bibitem[Guerras et al.(2013)]{gue13} Guerras, E., Mediavilla, E., Jimenez-Vicente, J., et al.\ 2013, \apj, 764, 160 
+\bibitem[Hastie et al.(2009)]{Hastie2009a} Hastie, T., Tibshirani, R., and Friedman, J.~H.\ 2009, {\it The elements of statistical learning:
+ data mining, inference and prediction}, Springer
+
+\bibitem[Huang et al.(2006)]{elms} Huang, G.-B., Zhu, Q.-Y., and Siew, C.-K.\ 2006, Neurocomputing, vol. 70, pp. 489-501 
+ 
+\bibitem[Inada et al.(2012)]{ina12} Inada, N., Oguri, M., 
+ Shin, M.-S., et al.\ 2012, \aj, 143, 119 
+
+\bibitem[Inada et al.(2014)]{ina14} Inada, N., Oguri, M., 
+Rusu, C.~E., Kayo, I., \& Morokuma, T.\ 2014, \aj, 147, 153 
+
+\bibitem[Ishida \& de Souza(2013)]{ish13} Ishida, E.~E.~O., \& de Souza, R.~S.\ 2013, \mnras, 430, 509 
+
+\bibitem[Ivezic et al.(2008)]{ive08} Ivezic, Z., Axelrod, T., 
+Brandt, W.~N., et al.\ 2008, Serbian Astronomical Journal, 176, 1  
+ 
+\bibitem[Jackson(2013)]{jac13} Jackson, N.\ 2013, Bulletin of 
+the Astronomical Society of India, 41, 19  
+ 
+\bibitem[Kelly \& McKay(2005)]{kel05} Kelly, B.~C., \& McKay, T.~A.\ 2005, \aj, 129, 1287 
+ 
+\bibitem[Kochanek(1993)]{koc93} Kochanek, C.~S.\ 1993, \apj, 417, 438  
+ 
+%\bibitem[Lindegren et al.(2008)]{lin08} Lindegren, L., 
+%Babusiaux, C., Bailer-Jones, C., et al.\ 2008, IAU Symposium, 248, 217  
+% 
+\bibitem[Mao 
+\& Schneider(1998)]{mao98} Mao, S., \& Schneider, P.\ 1998, \mnras, 295, 587 
+
+\bibitem[Marshall et al.(2009)]{mar09} Marshall, P.~J., Hogg, D.~W., Moustakas, L.~A., et al.\ 2009, \apj, 694, 924 
+%\bibitem[Marshall et al.(2014)]{mar14} Marshall, P.~J. et al, in preparation % LensTractor
+
+\bibitem[Metcalf \& Madau(2001)]{met01} Metcalf, R.~B., \& Madau, P.\ 2001, \apj, 563, 9 
+
+\bibitem[Mitchell et al.(2005)]{mit05} Mitchell, J.~L.,  Keeton, C.~R., Frieman, J.~A., \& Sheth, R.~K.\ 2005, \apj, 622, 81  
+
+\bibitem[Nierenberg et al.(2014)]{nie14} Nierenberg, A.~M., 
+Treu, T., Wright, S.~A., Fassnacht, C.~D., \& Auger, M.~W.\ 2014, \mnras, 442, 2434 
+
+\bibitem[Oguri et al.(2006)]{ogu06} Oguri, M., Inada, N.,  Pindor, B., et al.\ 2006, \aj, 132, 999 
+\bibitem[Oguri \& Marshall(2010)]{om10} Oguri, M., \& Marshall, P.~J.\ 2010, \mnras, 405, 2579 
+\bibitem[Oguri et al.(2014)]{ogu14} Oguri, M., Rusu, C.~E., \& Falco, E.~E.\ 2014, \mnras, 439, 2494 
+
+%\bibitem[Peng et al.(2006)]{pen06} Peng, C.~Y., Impey, C.~D., Rix, H.-W., et al.\ 2006, \nar, 50, 689 
+\bibitem[Peng et al.(2006)]{pen06} Peng, C.~Y., Impey, C.~D., Rix, H.-W., et al.\ 2006, \apj, 649, 616 
+
+\bibitem[Perryman et al.(2001)]{per01} Perryman, M.~A.~C., de Boer, K.~S., Gilmore, G., et al.\ 2001, \aap, 369, 339 
+
+\bibitem[Pindor et al.(2003)]{pin03} Pindor, B., Turner, E.~L., Lupton, R.~H., \& Brinkmann, J.\ 2003, \aj, 125, 2325 
+
+\bibitem[Richards et al.(2006)]{ric06} Richards, G.~T., Strauss, M.~A., Fan, X., et al.\ 2006, \aj, 131, 2766 
+
+\bibitem[Rozo et al.(2006)]{roz06} Rozo, E., Zentner, A.~R., Bertone, G., \& Chen, J.\ 2006, \apj, 639, 573 
+
+\bibitem[S{\'a}nchez \& Des Collaboration(2010)]{san10} S{\'a}nchez, E., \& DES Collaboration 2010,
+ Journal of Physics Conference Series, 259, 012080 
+
+\bibitem[Sch\"{o}lkopf et al.(1998)]{Scholkopf1998a} Sch\"{o}lkopf, B., Smola, A., M\"{u}ller,K.~R.\ 1998,
+ Neural computation 10 (5), 1299-1319
+ 
+\bibitem[Sluse et al.(2012)]{slu12} Sluse, D., Hutsem{\'e}kers, D., Courbin, F.,
+ Meylan, G., \& Wambsganss, J.\ 2012, \aap, 544, A62  
+ 
+\bibitem[Suyu et al.(2014)]{suy14} Suyu, S.~H., Treu, T., Hilbert, S., et al.\ 2014, \apjl, 788, L35  
+ 
+\bibitem[York et al.(2000)]{yor00} York, D.~G., Adelman, J., 
+  Anderson, J.~E., Jr., et al.\ 2000, \aj, 120, 1579 
+
+\bibitem[Wright et al.(2010)]{wri10} Wright, E.~L., 
+ Eisenhardt, P.~R.~M., Mainzer, A.~K., et al.\ 2010, \aj, 140, 1868 
+ 
+\end{thebibliography}
+
+\onecolumn
+\appendix
+\section{Simulated galaxies and quasars}
+%
+\begin{figure}
+ \centering
+ \includegraphics[width=0.6\textwidth]{pics/pdf/SparseInterp.pdf}
+\caption{\small{Schema of the empirical matching procedure, in this case for the quasars.
+ The primary observables are binned; the conditional probability $\theta(\mathbf{r}|\mathbf{p})$ is constructed
+ in each bin; when a new system is considered, the conditional distribution of its observables is interpolated
+ among its nearest neighbours in the space of primary observables.}}
+\label{fig:sparseinterp}
+\end{figure}
+%
+For the simulated systems the systems for this work, we needed the magnitudes of QSOs and LRG in $griz$ and $W1,W2$ bands,
+ the effective radii of the LRGs and a prescription to link those to the primary observables in eq.s (\ref{eq:lrg}) and (\ref{eq:qso}).
+ We proceed by assembling a catalogue of QSOs and one of LRGs (spectroscopically-confirmed) from SDSS and WISE. For each
+ of the quasars, we retrieve the redshift $z_{q}$ and apparent magnitudes in $(g,r,i,z,W1,W2)$ optical/IR bands. For each
+ LRG, we retrieve its redshift $z_{g},$ magnitudes in optical/IR bands, velocity dispersion $\sigma$ and $r-$band effective radius
+ $R_e.$ Both the QSO and LRG queries are split into redshift bins of width $\delta z=0.1,$ with $10^3$ objects in each bin,
+ so as to ensure an even coverage of the redshift range.
+
+From the SDSS+WISE catalogues we can build the conditional probability $\theta(\mathrm{r}|\mathrm{p})$
+ that a QSO (resp.LRG) with observables $\mathrm{p}=(z_{q},m_{i})$ (resp. $z_{g},\sigma$) has some values
+ of the remaining observables $\mathrm{r}.$
+ We first bin the QSO (resp.LRG) catalogue in redshift and $m_{i}$ (resp. $\sigma$), so that in each bin the mean and covariance
+ of the remaining observables can be easily computed. In other words, we have a characterization of the conditional probability at
+ some discrete locations, $\theta(\mathbf{r}|\mathbf{p}_{l})_{l=1,...,N_{bins}}.$
+ The next step is to build a smooth interpolation of those, across the whole range of redshift and $m_{i}$ (or $\sigma$).
+ This is needed in order to assign values of $\mathbf{r}$ also to systems whose primary observables $\mathbf{p}$ are not
+ well represented by the SDSS+WISE catalogue. Figure \ref{fig:sparseinterp} summarizes the main steps.
+ 
+Given a pair $\mathbf{p}=(z_{q},m_{i})$ for a QSO in the simulated catalogue, we find its corresponding bin,
+ say $\mathbf{p}_{n,m}=(z_{q,n},m_{i,m}),$ and build a sparse interpolation for $\theta(\mathbf{r}|\mathbf{p})$ as
+\begin{equation}
+\theta(\mathbf{r}|\mathbf{p})=
+\frac{ \sum\limits_{i,j}\theta(\mathbf{r}|\mathbf{p}_{i,j})\exp[-|i-n|-|j-m|] }{ \sum\limits_{i,j}\exp[-|i-n|-|j-m|]  }\ .
+\label{eq:spint}
+\end{equation}
+The fast exponential fall-off of the weights ensures that just the nearest (populated) neighbour bins give a contribution to the
+ interpolated probability. This is useful in order to smooth out bin-to-bin noise and obtain a smooth probability also for bins
+ that are not well populated.
+ In practice, instead of computing the whole probability distribution in each bin,
+ we compute the mean and dispersions of $\mathrm{r}$ and interpolate those similarly to eq.~(\ref{eq:spint}).
+ The procedure is the same for LRGs, with the obvious changes, and allows us to draw magnitudes (and effective radii)
+ that are as close as possible to the ones found in SDSS and WISE.
+
+\begin{figure}
+ \centering
+ \includegraphics[width=0.45\textwidth]{pics/pdf/PC_images_gri_1.pdf}
+ \includegraphics[width=0.45\textwidth]{pics/pdf/PC_images_gri_2.pdf}
+\caption{\small{Composite $gri$ plots of the first 18 principal components of the simulated sample.}}
+\label{fig:pcapics}
+\end{figure}
+%
+%
+\section{Dimensional reduction and Machine-learning algorithms}
+In all of the machine-learning techniques the features are standardized, i.e. we subtract the test-set average and
+ divide by the variance. This way, we operate on feature vectors with entries typically within $[-1,1],$ overcoming
+ issues related to the choice of units of measure and zero-points.
+
+\subsection{PCA and kPCA}
+%\textbf{AA: I'll write this.}
+%\begin{itemize}
+%\item Basic formulae for PCA
+%\item Obs: we just use the PC projections
+%\item Sometimes objects can be better separated in a higher-dimensional feature space,
+% of which ours is an unfortunate projection.
+%\item Kernel trick, supposing that $\Phi$ exists
+%\item Briefly mention Mercer's theorem and kernel representer Hilbert space, positivitiy condition on kernel to ensure existence of $\Phi.$
+%\end{itemize}
+When separating objects in different classes, we tacitly suppose that their features are linked to one another through relations
+ that, in general, must be found. In other words, the data features are usually correlated and we may seek new combinations of features
+ that naturally follow these correlations. In Principal Component Analysis (PCA), a training set of vectors
+ $\left\{\mathbf{x}_{i}\right\}_{i=1,...,N}$ is linearly transformed into a set $\left\{\mathbf{f}_{i}\right\}_{i=1,...,N}$
+ whose new features are uncorrelated, i.e. $\langle f_{n}f_{m}\rangle=(1/N)\sum_{i}f_{i,n}f_{i,m}=0.$ This is
+ simply achieved by diagonalizing the data covariance matrix $C_{n,m}=\langle x_{n}x_{m}\rangle.$ The principal components
+ are the eigenvectors $\mathbf{w}_{1},...,\mathbf{w}_{p}$ of $C_{n,m},$ and the coordinates of a vector $\mathbf{x}_{i}$
+ in this basis are the projections $t_{i,r}=\mathbf{w}_{r}\cdot\mathbf{x}_{i}.$
+ 
+The sum
+\begin{equation}
+var(r)=\frac{\sum_{m=1}^{r}\langle t_{m}^{2}\rangle}{\sum_{m=1}^{p}\langle t_{m}^{2}\rangle}
+\end{equation}
+is the \textit{fraction of explained variance} within the dataset up to the $r-$th component. Because of this, PCA can also be
+ used to de-noise and reduce the dimensionality of the problem at hand, by retaining just the projections onto the first $r$ components,
+ at the price of encompassing just a fraction $var(r)$ of the whole feature variability.
+ 
+In our case, each feature vector consists of four concatenated $25\times25$ pixel cutouts, one per band, normalized to the total flux.
+ Hence, the principal components are combinations of shapelet images in the four $griz$ bands. Figure \ref{fig:pcapics} shows
+ $gri$ composites of the first $18$ principal components for our training set of simulated cutouts.
+ 
+%\textbf{AA: Add kPCA, two formulae and quick justification through Mercer's theorem.}
+Kernel Principal Component Analysis \citep[kPCA,][]{Scholkopf1998a} provides a very elegant extention of the PCA approach,
+ by supposing that the feature space is a (perhaps unfortunate)
+ projection of a $p-$dimensional manifold which resides in a higher-dimensional feature space. In fact, in PCA-based classification
+ one relies just on the coordinates $t_{i,r}=\mathbf{w}_{r}\cdot\mathbf{x}_{i}$ rather than the principal component vectors themselves.
+ Within kPCA, the scalar product $\mathbf{x}\cdot\mathbf{w}$ in $\mathbb{R}^{p}$ is replaced with a semi-positive definite kernel
+ $k:\mathbb{R}^{p}\times\mathbb{R}^{p}\rightarrow \mathbb{R},$ provided there is a nonlinear map
+ $\Phi:\mathbb{R}^{p}\rightarrow\mathcal{H}$ onto a higher-dimensional Hilbert space, such that
+ $k(\mathbf{x},\mathbf{y})=\langle\Phi(\mathbf{x}),\Phi(\mathbf{y})\rangle$ is a scalar product in $\mathcal{H}.$
+ Now the task it so diagonalize the new covariance matrix operator\footnote{Here the `dagger' apex denotes the hermitian conjugate
+ in $\mathcal{H},$ such that $\mathbf{v}^{\dag}\mathbf{u}=\langle\mathbf{v},\mathbf{u}\rangle$}
+ in $\mathcal{H}$
+\begin{equation}
+\tilde{\mathrm{C}}=\frac{1}{N}\sum\limits_{i=1}^{N}\Phi(\mathbf{x}_{i})\Phi(\mathbf{x}_{i})^{\dag}
+\end{equation}
+The eigenvectors $\mathbf{v}_{r}$ of $\tilde{\mathrm{C}}$ must be linear combinations of the new feature vectors in $\mathcal{H},$
+\begin{equation}
+\mathbf{v}_{r}=\sum\limits_{i=1}^{N}a_{r,i}\Phi(\mathbf{x_{i}})\ ,
+\end{equation}
+ which gives a new eigenvalue equation for $K_{i,j}=(1/N)\langle\Phi(\mathbf{x}_{i}),\Phi(\mathbf{x}_{j})\rangle\equiv(1/N) k(\mathbf{x}_{i},\mathbf{x}_{j})$
+ and the weights $a_{j,i}$
+\begin{equation}
+\mathrm{K}\mathbf{a}=\lambda\mathbf{a}\ .
+\end{equation}
+Once the (orthonormal) weight vectors $a_{r,i}$ are found, the kPCA components in $\mathcal{H}$
+ of a feature vector $\mathbf{f}\in\mathbb{R}^{p}$ are simply
+\begin{equation}
+\tilde{t}_{r}=\ 
+\langle \mathbf{v}_{r},\Phi(\mathbf{f})\rangle=\sum\limits_{i=1}^{N}a_{r,i}\langle\Phi(\mathbf{x}_{i}),\Phi(\mathbf{f})\rangle\ 
+=\  \sum\limits_{i=1}^{N}a_{r,i}k(\mathbf{x}_{i},\mathbf{f})\ .
+\label{eq:ktrick}
+\end{equation}
+ 
+ A suitable adaptation of Mercer's theorem \citep{mer19} ensures that $\Phi$ exists whenever $k$ is semi-positive definite,
+ however it will generally map $\mathbb{R}^{p}$ into an infinite-dimensional Hilbert space. Fortunately, since just the
+ kPCA components are used for classification, we never need to compute the map $\Phi$ explicitly and the non-linear
+ structure of the data is simply encoded in the kernel $k$ via eq.(\ref{eq:ktrick}).
+  
+
+\subsection{Artificial Neural Networks and Extreme Learning Machines}
+\label{sect:annelm}
+%
+%\textbf{AA: Brief description of how they work. Define $R_{err}$ in terms of target $y_{i,k},$
+% output $f_{i,k},$ structural parameters ($\underline{\alpha},\underline{\beta},a_{0},b_{0}$)...
+% For a  totally random classifier, one would have $f_{i,k}=1/K$ and so $R_{err}=(K-1)/K.$}
+Let us consider a smooth, increasing \textit{activation function} $g:\mathbb{R}\rightarrow\mathbb{R}$ such that
+\begin{equation}
+\lim\limits_{x\rightarrow+\infty}g(x)=1\ ,\ \lim\limits_{x\rightarrow-\infty}g(x)=0\ .
+\end{equation}
+The idea underlying ANNs is to use $g$ to construct arbitrarily good approximations to given functions over the feature space
+ $\mathbf{x}\in\mathbb{R}^{p}.$
+In particular, any piecewise continuous function $g:\mathbb{R}^{p}\rightarrow\mathbb{R},$
+ defined on a compact subset of $\mathbb{R}^{p},$ can be approximated by combinations of the kind
+\begin{equation}
+t=\sum\limits_{m=1}^{M}\beta_{m}g(\boldsymbol{\alpha}_{m}\cdot\mathbf{x}+a_{0,m})\ .
+\label{eq:elm}
+\end{equation}
+The \textit{number of nodes} M depends just on the tolerance that is desired in order to fit $y.$
+ The same holds, quite naturally, for multidimensional (piecewise continuous) functions $\mathbf{y}=(y_{1},...,y_{K}),$
+ mapping a compact subset of $\mathbb{R}^{p}$ into $\mathbb{R}^{K}.$ This is the case of classification problems,
+ where $\mathbf{y}$ gives the membership probabilities to different classes for an object in feature space.
+ A common choice for the activation function is the sigmoid $g(x)=1/(1+\mathrm{e}^{-x}).$
+
+Approximations as in eq.(\ref{eq:elm}) are the core of \textit{Extreme Learning Machines} \citep[ELMs,][]{elms},
+  where the weights and biases  $(\boldsymbol{\alpha}_{m},a_{0,m})$ are held fixed and the parameters
+  $\beta_{m}$ are adjusted. Specifically, operating a test set
+  $\left\{\mathbf{x}_{i}\right\}_{i=1,...,N_{t}}$ with probability vectors $\left\{\mathbf{y}_{i}\right\}_{i=1,...,N_{t}},$
+  the weights $\boldsymbol{\beta}_{m}$ can be found as:
+\begin{equation}
+\boldsymbol{\beta}_{m}=W^{\dag}_{i,m}\mathbf{y}_{i}\ ,
+\label{eq:elm}
+\end{equation}
+ where $W^{\dag}$ is the pseudo-inverse of a matrix $W$ with entries
+ $W_{i,j}=g(\boldsymbol{\alpha}_{j}\cdot\mathbf{j}+a_{0,j}).$
+ We can also add a constant vector $\beta_{0}$ in the approximation $\mathbf{t}$, which is equivalent to having
+ (at least) one of the activation functions $g(\boldsymbol{\alpha}_{j}\cdot\mathbf{x}+a_{0,j})$ equal to one. Similarly, we can
+ regard the coefficients $a_{m,0}$ as part of the weight vectors $\boldsymbol{\alpha}_{m},$ if we embed $\mathbb{R}^{p}$
+ in $\mathbb{R}^{p+1}$ as $(x_{1},...,x_{p})\mapsto(x_{1},...,x_{p},1).$ This is the convention that we will adopt in what follows.
+ 
+The approximating solutions $\mathbf{t}(\mathbf{x})=(t_{1},...,t_{k})$ from ELMs are not necessarily probability vectors,
+ which are required to have positive entries that sum to unity. Hence, when using ANNs for classification a final transformation
+ $t_k\mapsto g_{k}(\mathbf{t})$ is made, with $g_{k}$ commonly chosen as the \textit{soft-max}
+\begin{equation}
+g_{k}(\mathbf{t})=\frac{\exp[t_{k}]}{\exp[t_{1}]+...+\exp[t_{K}]}\ .
+\end{equation}
+
+The ANNs are trained by minimizing a loss function, wich can be either $R_{err}+R_{reg}$ or $R_{dev}+R_{reg},$
+ which can be simply implemented by means of steepest descent methods since the derivatives with respect to the
+ weights $(\boldsymbol{\beta},\boldsymbol{\alpha})$ can be computed analytically:
+\begin{eqnarray}
+R_{err}=\frac{1}{N}\sum_{i,k}(y_{i,k}-g_{k}(\mathbf{t}_{i}))^{2}\ \equiv\ \frac{1}{N}\sum_{i}R_{i}\\
+\partial_{\beta_{m,k}}R_{i}=\frac{2}{N}(g_{k}(\mathbf{t}_{i})-y_{i,k})g^{\prime}_{k}(\mathbf{t}_{i})
+g(\boldsymbol{\alpha}_{m}\cdot\mathbf{x}_{i})\ \equiv\ \delta_{k,i}g(\boldsymbol{\alpha}_{m}\cdot\mathbf{x}_{i})\\
+\partial_{\alpha_{m,l}}R_{i}=\sum\limits_{k=1}^{K}\frac{2}{N}(g_{k}(\mathbf{t}_{i})-y_{i,k})g^{\prime}_{k}(\mathbf{t}_{i})
+\beta_{k,m}g^{\prime}(\boldsymbol{\alpha}_{m}\cdot\mathbf{x}_{i})x_{i,l}\ \equiv\ s_{m,i}x_{l,i}\\
+\end{eqnarray}
+ Given the structure of the ANNs illustrated here, some convenient \textit{back-propagation relations} hold among the coefficients,
+ which descend from the additive nature of the loss function.
+ For example, when the loss function is just $R_{err},$ one has
+\begin{equation}
+s_{m,i}=g^{\prime}(\boldsymbol{\alpha}_{m}\cdot\mathbf{x}_{i})\sum_{k=1}^{K}\beta_{k,m}\delta_{k,i}\ .
+%
+\end{equation}
+ The gradients and back-propagation relations can be computed also for other choices of the loss function along these lines.
+
+If a large number of nodes is used, or if the coefficients are completely unconstrained, one can \textit{overfit}
+ peculiar behaviours of observables in the test-set, which are not necessarily present in other datasets,
+ thus losing predictive power. To avoid this, the loss function is also computed on some \textit{validating} sets,
+ with objects drawn from the same parent distributions as in the test set,
+ and the optimization on the test set is stopped when the error on the validating sets does not decrease any more.
+ For the analysis in Sect.\ref{sect:ANNtarg} we have assembled ten validating sets, as to have a characterization of the
+ typical error and its variation over different datasets.
+The addition of a regularization term has a similar effect. In fact, the classification problem corresponds to mapping the
+ feature space into a classification manifold, parameterized by the membership probabilities $(y_{1},...,y_{K}),$ and
+ regularization helps ensure that new objects will be mapped smoothly on the classification space.
+ %
+ %
+
+%
+Extreme Learning Machines offer an alternative to early stopping and regularization. First, the $\boldsymbol{\beta}$ coefficients
+ from eq.(\ref{eq:elm}) have the smallest possible norm among all those that minimize the test-set error $R_{err},$ a similar outcome to
+ regularization. Second, if a node has $\boldsymbol{\alpha}$ weights that are not well discriminatory, it will automatically
+ have a small $\boldsymbol{\beta}$ coefficient, avoiding the need to back-propagate in $\boldsymbol{\alpha}.$
+ Third, since $W^{\dag}$ in eq.(\ref{eq:elm}) is computed very fast, one can draw many random
+ combinations of $\alpha$ weights and retain just the $\beta$ solution that minimizes the validation error
+ -- it also minimizes the test-set error, by construction. 
+\subsection{Gradient-Boosted Trees}
+
+For completeness, we summarize the gradient boosting algorithm for classification using decision trees. Our description follows that of \citet{Hastie2009a}, to which we refer the reader for further details. 
+
+In gradient boosted decision trees the predicted output, $f(x)$, is modeled as a function of the inputs $x$ as a sum of $M$ trees
+\begin{equation}
+f(x) = \sum_{i=1}^M \nu T(x, \Theta_m).
+\label{eq-sum_of_trees}
+\end{equation}
+The parameter $\nu$ is called the learning rate, and regularizes the model by controlling how much each tree contributes to the sum. A tree is formally expressed as
+\begin{equation}
+T(x, \Theta) = \sum_{j=1}^J \gamma_j I(x \in R_j),
+\label{eq-tree}
+\end{equation}
+where $I(\cdot)$ denotes the indicator function that returns 1 if the argument is true, and 0 otherwise. The parameters $\Theta = \{R_j, \gamma_j\}$ represent the partition of the input space and the output for each partition, respectively, and are fit using a training set. The meta-parameter $J$ controls the number of partitions of the input space, and can be estimated through cross-validation, or using a separate validating set. From Equation (\ref{eq-tree}) one sees that a decision tree is a piecewise constant model.
+
+Gradient boosting is an algorithm for minimizing a loss function that is modeled after techniques from numerical optimization. For classification, the functions $f_k(x)$ represent the unnormalized log-probability for the $k^{\rm th}$ class. They are related to the class probabilities $p_k$ by
+\begin{equation}
+p_k = \frac{\exp(f_k(x))}{\sum_{l=1}^K \exp(f_l(x))}.
+\label{eq-classprobs}
+\end{equation}
+When there are more than two classes, gradient boosting fits a separate sum of trees to each class, and com,es them using Equation (\ref{eq-classprobs}). The training set outputs $y_1, \ldots, y_n$ are integer values representing the class labels, which take values from the set $\{G_1, \ldots, G_K\}$. 
+
+The typical loss function for classification problems is the multinomial deviance
+\begin{equation}
+L(f) = -\sum_{i=1}^n \sum_{k=1}^K I(y_i = G_k) f_k(x_i) + \sum_{i=1}^n \log\left( \sum_{k=1}^K e^{f_k(x_i)} \right).
+\label{eq-multinom_deviance}
+\end{equation}
+ (cf. eq.\ref{eq:Rdev}).
+The optimization problem is to find the values of ${\bf f}_k = [f_k(x_1), \ldots, f_k(x_n)]^T$ that minimize Equation (\ref{eq-multinom_deviance}). Note that at this point it is not necessary that the functions $f_k(x)$ be a sum of trees. Sequential numerical optimization algorithms would express the solution as a sum of vectors
+\begin{equation}
+	\hat{\bf f}_{kM} = \sum_{m=0}^M {\bf h}_{km},
+	\label{eq-optimization}
+\end{equation}
+where the first vector ${\bf h}_{k0}$ represent the initial guess, and the remaining $M$ vectors represent the updates as the algorithm evolves. It is common to choose the next vector in the minimization procedure as proportional to the gradient of the loss function, meaning that the algorithm evolves by stepping in the direction of largest negative change in the loss function. For example, using the initial guess ${\bf h}_{k0}$ the estimated function that minimizes the loss function would simply be $\hat{\bf f}_{k0} = {\bf h}_{k0}$. We can improve upon this estimate as
+\begin{equation}
+	\hat{\bf f}_{k1} = \hat{\bf f}_{k0} - \rho_1 {\bf g}_{k1},
+	\label{eq-first_gbt_step}
+\end{equation}
+where $\rho_1$ represents the step size and ${\bf g}_1$ is the gradient vector evaluated at $\hat{\bf f}_{k0}$:
+\begin{align}
+	g_{ik1} =& \left. \frac{\partial L(y_i, f_k(x_i))}{\partial f_k(x_i)} \right|_{f_k(x_i) = \hat{f}_{k0}(x_i)} \nonumber \\
+		    =& -I(y_i = G_k) + p_k(x_i).
+	\label{eq-first_gradient}
+\end{align}
+The step size may be chosen to minimize the loss function $L(\hat{\bf f}_{k1})$. The procedure is repeated $M$ times, leading to Equation (\ref{eq-optimization}) where ${\bf h}_m = -\rho_m {\bf g}_{km}$. 
+
+If we were only interested minimizing the loss on the training data, then we have everything we need in Equations (\ref{eq-optimization})--(\ref{eq-first_gradient}). However, we want to generalize our model to make new predictions, so we want to also minimize the loss function with respect to data outside of the training set. We could do this if we had the values of the gradient at other data points as well. The principal idea behind gradient boosting is to fit a tree to the negative gradient at each iteration, which then allows us to generalize the gradient beyond the training set.  In this case, the updates ${\bf h}_{km}$ are trees, leading to a solution (Eq. \ref{eq-optimization}) which is a sum of trees (Eq. \ref{eq-sum_of_trees}). The learning rate $\nu$ is analogous to the role of the step size $\rho_m$, as it controls how fast the optimization algorithm proceeds, and thus how much each tree contributes to the sum. Smaller values of $\nu$ ($\rho_m$) lead to better models (optimization solutions), but require more trees (optimization steps).
+
+\label{lastpage}
+
+\end{document}
+
+%"The machine learning techniques tested here may appear to some to be somewhat rococo. We now quantify the value of them compared to simple cuts..."
+
+
+%\begin{figure}
+% \centering
+% \vspace{0.5\textwidth}
+%% \includegraphics[width=0.25\textwidth]{ELM1.png}
+%% \includegraphics[width=0.25\textwidth]{ELM2.png}
+%% \includegraphics[width=0.25\textwidth]{ELM3.png}
+%% \includegraphics[width=0.25\textwidth]{ELM4.png}\\
+%% \includegraphics[width=0.25\textwidth]{ANN1.png}
+%% \includegraphics[width=0.25\textwidth]{ANN2.png}
+%% \includegraphics[width=0.25\textwidth]{ANN3.png}
+%% \includegraphics[width=0.25\textwidth]{ANN4.png}\\
+%\caption{\small{Projections of the target probabilities for simulated objects,
+% as fit either from ELMs (top row) or ANNs (bottom row).}}
+%\label{fig:ELMsANNs}
+%\end{figure}
+%
