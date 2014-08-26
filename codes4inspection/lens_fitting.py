@@ -17,16 +17,18 @@ from SampleOpt import AMAOpt,Sampler
 from scipy import optimize
 
 #======================================================================================================================
-def wrapper(sys_para, instr_para, ep_para, psf_name, Nsample=1500, flag=True):
+def wrapper(sys_para, instr_para, ep, psf_name, Nsample, burnin, flag):
     """
     This subroutine modulizes the main function "example4xiaolei.py" of the pylens software package
     
     --- INPUT ---
     sys_para    :   an ndim=1 array containing parameters for the lens+source systems
     instr_para  :   an ndim=1 array containing parameters for the observational instruments (HST, LSST, etc.)
-    ep_para     :   an ndim=1 array containing parameters for the exposures
+    ep          :   a float (>1) number giving the exposure time
     psf_name    :   a string leading to the path+name of the psf fits file
-    Nsample     :   an int number giving the sample size of MCMC fitting
+    Nsample     :   an int giving the sample size of MCMC fitting
+    burnin      :   - an int (>=1) which is the number of points to be burnt        *or*
+                    - a float (<1) which is the portion of Nsample to be burnt
     flag        :   a boolean deciding whether to run MCMC ('True') ot not ('False', in this case showing simulated images instead)
 
     === OUTPUT ===
@@ -36,7 +38,8 @@ def wrapper(sys_para, instr_para, ep_para, psf_name, Nsample=1500, flag=True):
                             [2] - result : dict type quantity, basically the same with [1], but with header info included
     """
     zp_1s = instr_para[2]       # zero point for 1s
-    ep = ep_para[0]             # exposre
+#    ep = ep_para[0]             # exposre
+    assert (ep > 1), 'You input erroneous exposure time = %s sec' + str(ep)
     pix_num = instr_para[5]     # pixel number
     read_val = instr_para[3]    # readout noise 1s
     bg_val = instr_para[4]      # background noise 1s
@@ -47,11 +50,13 @@ def wrapper(sys_para, instr_para, ep_para, psf_name, Nsample=1500, flag=True):
     lensGal = SBModels.Sersic('lens',{'x':sys_para[1],'y':sys_para[2],'re':sys_para[3],'q':sys_para[4],'pa':sys_para[5],'n':sys_para[6]})
     mag_lens = sys_para[7]
     zp = zp_1s+2.5*log10(ep)
+#    print '---- below for lensMag'
     lensMag = lensGal.Mag(zp)
     lensGal.amp = 10.**(-0.4*(mag_lens-lensMag))
 
     src = SBModels.Sersic('src',{'x':sys_para[8],'y':sys_para[9],'re':sys_para[10],'q':sys_para[11],'pa':sys_para[12],'n':sys_para[13]})
     mag_src = sys_para[14]
+#    print '---- below for srcMag'
     srcMag = src.Mag(zp)
     src.amp = 10.**(-0.4*(mag_src-srcMag))
 
@@ -74,13 +79,13 @@ def wrapper(sys_para, instr_para, ep_para, psf_name, Nsample=1500, flag=True):
     # add AGN
     agn1 = SBModels.PointSource('agn1',psf,{'x':sys_para[25],'y':sys_para[26]})
     mag_AGN = sys_para[31]
-    zp = zp_1s+2.5*log10(ep)
+#    zp = zp_1s+2.5*log10(ep)
     AGNMag = agn1.Mag(zp)
     agn1.amp = 10.**(-0.4*(mag_AGN-AGNMag))*sys_para[27]
 
     agn2 = SBModels.PointSource('agn2',psf,{'x':sys_para[28],'y':sys_para[29]})
     mag_AGN = sys_para[31]
-    zp = zp_1s+2.5*log10(ep)
+#    zp = zp_1s+2.5*log10(ep)
     AGNMag = agn2.Mag(zp)
     agn2.amp = 10.**(-0.4*(mag_AGN-AGNMag))*sys_para[30]
 
@@ -120,6 +125,7 @@ def wrapper(sys_para, instr_para, ep_para, psf_name, Nsample=1500, flag=True):
     normal_array = numpy.array(normal)
     noise_random = noise*normal_array
     img +=noise_random
+#    print 'exposure time = %s, signal-noise-ratio =%s' % (str(ep),str(img.sum()/abs(noise_random.sum())))
 
     #--------------------------------------------------------------------------------------    
     # a switch to turn on (flag=True) MCMC or not
@@ -195,34 +201,39 @@ def wrapper(sys_para, instr_para, ep_para, psf_name, Nsample=1500, flag=True):
 
         # Finally define the optimization function; this evaluates the model and the
         #   current parameter values and returns the residual
-        print 'marker before pymc.observed'
         @pymc.observed
-        def logP(value=0.,tmpXXX=GX): # This is a non-standard use of pymc....
-##################### QUESTION 1: is the passing of "tmpXXX=GX" ok for my MCMC sampling of parameters LB and LE?
-#        def logP(value=0.,sampleparam=[LB,LE]):
-            chi = getModel(img, noise, lensGal, src, lenses, x, y, agn1, agn2, psf)[0]
-            print '-2ln(likelihood) = chi^2 = %s' % str(chi**2)
+        def logP(value=0,tmpXXX=pars): # This is a non-standard use of pymc....
+            chi = getModel(img, noise_random, lensGal, src, lenses, x, y, agn1, agn2, psf)[0]
             return -0.5*chi**2
 
-##################### QUESTION 2: does the following switch reflect the points in your email?
-# Now optimize
-#        print 'I''m just before the optimizer loop'
+        # Now optimize twice to locate the global maximum of llh
 #        for i in range(2):
 #            print '-------------------------- optimizer loop i=%s' % str(i+1)
 #            sampler = AMAOpt(pars,[logP],[],cov=numpy.array(cov))
 #            sampler.sample(Nsample)
-        # Switch from optimizer to sampler
+
+        # Below switch from optimizer to sampler
+#        print '----------------- 1st step: obtain optm proposal mat'
         sampler = Sampler(pars,[logP],[])
         sampler.setCov(numpy.array(cov))
         sampler.sample(Nsample)
-
-        # Get results from sampler -- "trace" contains samples from the posterior, calc cov/mean/median on it!
-        rslt = sampler.result()
-
-##################### QUESTION 3: can I simply comment out the following part?
+        # setting up burnin number
+        assert (burnin > 0), 'You input negative burnin value = %s' + str(burnin)
+        if burnin < 1:
+            burnin = int(Nsample * burnin)
+        # updating optm proposal mat        
         logp,trace,result = sampler.result()
+        cov_optm = numpy.cov(trace[burnin:].T)
+#        print '================= 2nd step: begin to do true MCMC sampling!'
+        # updating the start values
         for i in range(len(pars)):
             pars[i].value = trace[-1][i]
+        # sample Nsample times to obtain the final MCMC data
+        sampler = Sampler(pars,[logP],[])
+        sampler.setCov(numpy.array(cov_optm))
+        sampler.sample(Nsample)
+        # Get results from sampler -- "trace" contains samples from the posterior, calc cov/mean/median on it!
+        rslt = sampler.result()
 
     return rslt
 
@@ -230,9 +241,9 @@ def wrapper(sys_para, instr_para, ep_para, psf_name, Nsample=1500, flag=True):
 #======================================================================================================================
 def getModel(img, noise, lensGal, src, lenses, x, y, agn1, agn2, psf):
     """
+    This subroutine calculates the value of chi
     cut from the original built-in subroutine at pylens main function
     """
-#    print '--------- enter getModel'
 # This evaluates the model at the given parameters and finds the best amplitudes for the surface brightness components
     I = img.flatten()
     S = noise.flatten()
@@ -251,27 +262,26 @@ def getModel(img, noise, lensGal, src, lenses, x, y, agn1, agn2, psf):
     model[:,1] = convolve.convolve(src.pixeval(xl,yl),psf,False)[0].ravel()/S
 
     amps,chi = optimize.nnls(model,I/S)
-#    print '========= exit getModel'
     return chi,amps*(model.T*S).T
 
 
 #======================================================================================================================
-def run(sys_para, instr_para, ep_para, psf_name, outputFileName, Nsample=1500, flag=True):
+def run(sys_para, instr_para, ep_para, psf_name, outputFileName=None, Nsample=2000, burnin=500, flag=True):
     """
-    To conduct simulation and MCMC fitting iteratively
+    This subroutine conducts simulation and MCMC fitting iteratively
     *NOTE: here sys_para.ndim can be any int value besides 1!
     
     === OUTPUT ===
         a file in cPickle(protocol=2) format with the name given by "outputFileName" recording all MCMC fitting results,
         after reading in, it manifests as a tuple with n=sys_para.ndim (including 1!), 
         each element is an n=3 tuple reflecting the MCMC result given by "sampler.result()" in _wrapper_
-        
+
         *NOTE: the current concatenation method of tuples is just a tempory trick, 
                suggestions on more sophisticated method greatly welcome!
     """
     mcmcrslt = ()
     if sys_para.ndim == 1:
-        mcmcrslt_new = wrapper(sys_para, instr_para, ep_para, psf_name, Nsample, flag)
+        mcmcrslt_new = wrapper(sys_para, instr_para, ep_para, psf_name, Nsample, burnin, flag)
         mcmcrslt = mcmcrslt + (mcmcrslt_new,)
         mcmcrslt_new = None
 
@@ -279,13 +289,31 @@ def run(sys_para, instr_para, ep_para, psf_name, outputFileName, Nsample=1500, f
         Nobj=len(sys_para)
         for i in xrange(Nobj):
             print '#------------------------ begin run No. %s' % str(i+1)
-            mcmcrslt_new=wrapper(sys_para[i,:], instr_para, ep_para, psf_name, Nsample, flag)
+            mcmcrslt_new=wrapper(sys_para[i,:], instr_para, ep_para, psf_name, Nsample, burnin, flag)
             print 'simulation and MCMC fitting No. '+str(i+1)+' completed!'
             mcmcrslt = mcmcrslt + (mcmcrslt_new,)
             mcmcrslt_new = None
 
     # dump the tuple (containing all results) into a pickle in the most compact format (protocol=2)
-    f = open(outputFileName,'wb')
-    cPickle.dump(mcmcrslt,f,2)
-    f.close()
+    if outputFileName != None and flag == True:
+        f = open(outputFileName,'wb')
+        cPickle.dump(mcmcrslt,f,2)
+        f.close()
 
+#===================================================================================================
+#getting the mean and standard deviation (what deviation?)
+def stats(data):
+#    load = numpy.loadtxt("name_file")
+    data_array = numpy.array(data)
+    if data_array.ndim == 1:
+        sum = 0.0
+#    stat_mean = numpy.sum(file_array,axis=None)/Nval
+        for i in xrange(len(data)):
+            sum += data_array[i]
+        mean = sum/len(data)
+        variance = numpy.sum((data_array-mean)**2.)/len(data)
+        stdev = numpy.sqrt(variance)
+        return (mean,stdev)
+    else:
+        print 'the ndim of the file is not N*1!'
+        
