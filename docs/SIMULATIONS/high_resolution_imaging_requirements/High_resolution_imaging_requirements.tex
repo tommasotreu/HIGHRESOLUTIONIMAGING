@@ -43,7 +43,7 @@ based adaptive optics images taken with Keck or the Thirty Meter
 Telescope (TMT). We compare the performance of these pointed observations
 with that of images taken by the Euclid-VIS, Wide-Field Infrared Survey Telescope (WFIRST) and  Large Synoptic Survey Telescope (LSST) surveys. Using
 as our metric the precision with which the slope of the mass density
-profile for the main deflector can be measured we find that...
+profile for the main deflector can be measured \textbf{we find that...}
 }
 
 \keywords{}
@@ -54,30 +54,49 @@ profile for the main deflector can be measured we find that...
 
 
 \section{Introduction}
-This paper is organized as follows. We first introduce our lens sample in Section 2. Next, we briefly summarize a variety of telescopes properties used in this work and show how simulate realistic lens systems as imaged by these telescopes in Section 3, and present the results from simulation in Section 4. Finally, we discuss and summarize our work in Section 5. Throughout this paper, all magnitudes are given in AB scale. We assume spatially flat $\Lambda$CDM model with $\Omega_{\rm{m}} = 0.3$, $\Omega_{\Lambda} = 0.7$, and the Hubble constant $H_{0} = 70~\rm km~s^{-1}~Mpc^{-1}$ when calculating distances.
+\textbf{[TT to put introfirst here, introduce `informative pixels' that will be referred to in Sect.s 2 and 3]}
 
+This paper is organized as follows. We first introduce our lens sample in Section 2. Next, we briefly summarize a variety of telescopes properties used in this work and show simulated realistic lens systems as imaged by these telescopes in Section 3. The results from simulation in Section 4. Finally, we discuss and summarize our work in Section 5. Throughout this paper, all magnitudes are given in the AB system. Even though it is not crucial to our findings, we adopt a spatially flat $\Lambda$CDM cosmology with $\Omega_{\rm{m}} = 0.3$, $\Omega_{\Lambda} = 0.7$, and the Hubble constant $H_{0} = 70~\rm km~s^{-1}~Mpc^{-1}$ when calculating distances.
 
 \section{The Lens Sample}
-The gravitational lens systems presented in this work were all selected intensively. Here we introduce our sample, a set of 4 lens systems, including 2 realistic systems from observational data and 2 assumed systems based on realistic ones.
 
-\subsection{Selected Realistic Lens Systems}
-For wider analysis we plan to We choose a lens from the Sloan Lens ACS Survey (SLACS; Bolton et al. 2008 \cite{2008ApJ...682..964B}; Auger et al. 2009 \cite{2009ApJ...705.1099A})
+We have chosen four prototypical systems for this exploration, characterized as \textit{faint} or \textbf{bright} and \textbf{double} or \textbf{quad} depending on the photometry and image configuration. Their structural parameters are listed in Table \ref{tab:SBProfile}. This set of four main choices covers regimes with different numbers of informative pixels, which depend on the S/N ratio and on the number of images produced by the lens.
 
-\section{Simulations}
+To remain as realistic as possible, the mocks are based upon lenses in the SLACS \textbf{(...)} and SL2S \textbf{(...)} samples. When not explicitly known from existing data, mock model parameters are assigned via plausibility arguments as specified below. The source and deflector of the \textit{bright} configurations are built along SLACS J0330-0020 as modelled by \textbf{Auger et al.(SLACS11)}. For the \textit{faint} configuration, the deflector has parameters from the \textbf{Sonnenfeld et al. (????)} model of SL2S J135949+553550.
+ Source magnitudes in the \textit{faint} case are arbitrarily set to 25.0 in all bands, whence the source effective radius $R_{eff}$ is assigned along the size-magnitude relation given by \textbf{Newton et al. (2011?).} In all cases, the source positions are assigned so as to map the source in either two or four images. Unknown magnitudes in $K$ band are assigned from $H$-band ones via $K_{AB}=H_{AB}.$
+ 
+\textbf{Question}: What are the point-source magnitudes, even if they're not specifically modelled? How were they assigned?
+ Based on the recipe that Kai and I assembled? Also, magnitudes in the tables are not necessarily the instrument ones, how are they converted? With the XLM's template-based table from AA?
 
+Then: say that source is mapped onto lens plane with formalism illustrated later on, lens light is summed to it, noise added. Refer to one example of puppies, \textbf{including TMT with kernel smoothing.}
 
-\subsection{Hubble Space Telescope}
-\subsubsection{ACS}
-\subsubsection{WFC3}
-\subsection{JWST}
-\subsection{Keck 10m Telescope}
-\subsubsection{LGSAO-NIRC2}
-\subsubsection{NGAO}
-\subsection{Thirty Meter Telescope}
-\subsubsection{IRIS}
-\subsection{Euclid}
-\subsection{WFIRST}
-\subsection{LSST}
+\section{Instrument Simulations}
+Here we introduce the telescopes and instruments with their bands... D some of them need special remarks?
+ We should show a cutout of the PSF for each of them.
+
+%\subsection{Hubble Space Telescope}
+%\subsubsection{ACS}
+%\subsubsection{WFC3}
+%\subsection{JWST}
+%\subsection{Keck 10m Telescope}
+%\subsubsection{LGSAO-NIRC2}
+%\subsubsection{NGAO}
+%\subsection{Thirty Meter Telescope}
+%\subsubsection{IRIS}
+%\subsection{Euclid}
+%\subsection{WFIRST}
+%\subsection{LSST}
+
+\section{Lens Reconstruction}
+The deflector is assigned within a class of power-law density profiles,
+\begin{equation}
+\Sigma(x,y)=...
+\end{equation}
+
+Here, illustrate the conventions used for deflection angles (refer to Barkana for fastell), hence define $R_E.$ The mock deflector parameters are listed in Table~\ref{tab:lenspars}...
+Lensed image profiles are obtained by Inverse Ray Shooting: each pixel position in the image plane is mapped back to the source plane via eq~... and surface-brightness conservation is exploited \textbf{(insert equations $SB(theta-beta)...$)}.
+
+The same code is used to generate the mock models and to fit them. The model fits the following parameters: \textbf{which ones?}  Goodness of fit is assessed through the image-plane $\chi^{2},$ comparing the model and mock data surface brightness profiles. The quasar images are not used in the fit, which is made just on the lensed host. Uncertainties are obtained via MCMC exploration of the likelihood, which in this case is simply given by $\mathcal{L}\propto\exp[-\chi^{2}/2].$
 
 \section{Results}
 
@@ -145,16 +164,14 @@ brighter system$^a$ & 0.12 & 0.77 & 120.0 & 1.33 & 0.01 & -0.005 & 22.73 & 22.0 
 \hline\noalign{\smallskip}
 \multicolumn{11}{c}{Parameters for the lens}
 \tabularnewline \hline \noalign{\smallskip}
-fainter system$^a$ & 1.76 & 0.61 & -9.6 & 4.0 & --- & --- & 20.69 & 19.7 & 21.13 & 19.7 \\
-fainter system$^b$ & 1.76 & 0.61 & -9.6 & 4.0 & --- & --- & 20.69 & 19.7 & 21.13 & 19.7 \\
-brighter system$^b$ & 0.91 & 0.81 & 113.2 & 4.0 & --- & --- & 17.99 & 16.5 & 18.84 & 16.5 \\
-brighter system$^a$ & 0.91 & 0.81 & 113.2 & 4.0 & --- & --- & 17.99 & 16.5 & 18.84 & 16.5 \\
+fainter system & 1.76 & 0.61 & -9.6 & 4.0 & --- & --- & 20.69 & 19.7 & 21.13 & 19.7 \\
+brighter system & 0.91 & 0.81 & 113.2 & 4.0 & --- & --- & 17.99 & 16.5 & 18.84 & 16.5 \\
 \hline
 \hline
 \end{tabular}
 \begin{tablenotes}
 \item 
-The effective radius $R_\textrm{eff}$ is the radius at which the major axis contains half of the total flux. $q$ denotes the axis ratio. P.A. is with respect to the x-axis. S$\acute{e}$rsic index $n$ controls the degree of curvature of the galaxy light profile. $\Delta x$, $\Delta y$ quoted in this table mean the position of the source galaxy with respect to the lens galaxy. Magnitude $m$ is given in the ABmag system. \\
+The effective radius $R_\textrm{eff}$ is the radius at which the major axis contains half of the total flux. $q$ denotes the axis ratio. P.A. is with respect to the x-axis. The S$\acute{e}$rsic index $n$ controls the degree of curvature of the galaxy light profile. Magnitudes $m$ are given in the ABmag system. The only difference among sources of different brightness is in the source-position, which is set to produce either two or four images.\\
 $^a$ 4 QSO images exist in the lens plane. \\
 $^b$ 2 QSO images exist in the lens plane. \\
 \end{tablenotes}
@@ -173,18 +190,17 @@ $^b$ 2 QSO images exist in the lens plane. \\
 Lens Name & z & $R_\textrm{Ein}$ & q & P.A. & $\gamma'$\\
 & & (arcsec) & & (deg) \\
 \hline
-fainter system$^a$ & 0.783 & 1.14   &   0.6  &   14.7  &  2.0 \\
-fainter system$^b$ &  0.783 & 1.14   &   0.6  &   14.7  &  2.0 \\
-brighter system$^b$ & 0.351 &  1.1    &   0.81  &   113.2  &  2.0 \\
-brighter system$^a$ &  0.351 & 1.1    &   0.81  &   113.2   &  2.0 \\
+fainter system & 0.783 & 1.14   &   0.6  &   14.7  &  2.0 \\
+brighter system & 0.351 &  1.1    &   0.81  &   113.2  &  2.0 \\
 \hline
 \hline
 \end{tabular}
 \begin{tablenotes}
 \item 
-$R_\textrm{Ein}$ is the radius of a ring which is taken from a lensing phenomenon if a point source is located on the viewing direction extending from the observer. $q$ denotes the axis ratio. P.A. is with respect to the x-axis. Here, singular isothermal sphere lens (SIEs) cases ($\gamma'$ = 2) are assumed.\\
+\textbf{Rephrase}[$R_\textrm{Ein}$ is the radius of a ring which is taken from a lensing phenomenon if a point source is located on the viewing direction extending from the observer]. $q$ denotes the axis ratio. P.A. is anti-clockwise from the x-axis. The underlying deflector is a Singular Isothermal Ellipsoid ($\gamma'$=2), which will be fit using power-law models.\\
 $^a$ 4 QSO images exist in the lens plane. \\
 $^b$ 2 QSO images exist in the lens plane. \\
+\label{tab:lenspars}
 \end{tablenotes}
 \end{center}
 \end{table*}
@@ -307,3 +323,7 @@ $^b$ 2 QSO images exist in the lens plane. \\
 % ======================================================
 
 \end{document}
+
+
+\subsection{Selected Realistic Lens Systems}
+For wider analysis we plan to We choose a lens from the Sloan Lens ACS Survey (SLACS; Bolton et al. 2008 \cite{2008ApJ...682..964B}; Auger et al. 2009 \cite{2009ApJ...705.1099A})
