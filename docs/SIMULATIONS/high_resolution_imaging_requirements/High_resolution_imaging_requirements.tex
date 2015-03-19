@@ -58,20 +58,8 @@ profile for the main deflector can be measured \textbf{we find that...}
 
 This paper is organized as follows. We first introduce our lens sample in Section 2. Next, we briefly summarize a variety of telescopes properties used in this work and show simulated realistic lens systems as imaged by these telescopes in Section 3. The results from simulation in Section 4. Finally, we discuss and summarize our work in Section 5. Throughout this paper, all magnitudes are given in the AB system. Even though it is not crucial to our findings, we adopt a spatially flat $\Lambda$CDM cosmology with $\Omega_{\rm{m}} = 0.3$, $\Omega_{\Lambda} = 0.7$, and the Hubble constant $H_{0} = 70~\rm km~s^{-1}~Mpc^{-1}$ when calculating distances.
 
-\section{The Lens Sample}
-
-We have chosen four prototypical systems for this exploration, characterized as \textit{faint} or \textbf{bright} and \textbf{double} or \textbf{quad} depending on the photometry and image configuration. Their structural parameters are listed in Table \ref{tab:SBProfile}. This set of four main choices covers regimes with different numbers of informative pixels, which depend on the S/N ratio and on the number of images produced by the lens.
-
-To remain as realistic as possible, the mocks are based upon lenses in the SLACS \textbf{(...)} and SL2S \textbf{(...)} samples. When not explicitly known from existing data, mock model parameters are assigned via plausibility arguments as specified below. The source and deflector of the \textit{bright} configurations are built along SLACS J0330-0020 as modelled by \textbf{Auger et al.(SLACS11)}. For the \textit{faint} configuration, the deflector has parameters from the \textbf{Sonnenfeld et al. (????)} model of SL2S J135949+553550.
- Source magnitudes in the \textit{faint} case are arbitrarily set to 25.0 in all bands, whence the source effective radius $R_{eff}$ is assigned along the size-magnitude relation given by \textbf{Newton et al. (2011?).} In all cases, the source positions are assigned so as to map the source in either two or four images. Unknown magnitudes in $K$ band are assigned from $H$-band ones via $K_{AB}=H_{AB}.$
- 
-\textbf{Question}: What are the point-source magnitudes, even if they're not specifically modelled? How were they assigned?
- Based on the recipe that Kai and I assembled? Also, magnitudes in the tables are not necessarily the instrument ones, how are they converted? With the XLM's template-based table from AA?
-
-Then: say that source is mapped onto lens plane with formalism illustrated later on, lens light is summed to it, noise added. Refer to one example of puppies, \textbf{including TMT with kernel smoothing.}
-
 \section{Instrument Simulations}
-Here we introduce the telescopes and instruments with their bands... D some of them need special remarks?
+Here we introduce the telescopes and instruments with their bands... Do some of them need special remarks?
  We should show a cutout of the PSF for each of them.
 
 %\subsection{Hubble Space Telescope}
@@ -86,6 +74,19 @@ Here we introduce the telescopes and instruments with their bands... D some of t
 %\subsection{Euclid}
 %\subsection{WFIRST}
 %\subsection{LSST}
+
+
+\section{The Lens Sample}
+
+We have chosen four prototypical systems for this exploration, characterized as \textit{faint} or \textbf{bright} and \textbf{double} or \textbf{quad} depending on the photometry and image configuration. Their structural parameters are listed in Table \ref{tab:SBProfile}. This set of four main choices covers regimes with different numbers of informative pixels, which depend on the S/N ratio and on the number of images produced by the lens.
+
+To remain as realistic as possible, the mocks are based upon lenses in the SLACS \textbf{(...)} and SL2S \textbf{(...)} samples. When not explicitly known from existing data, mock model parameters are assigned via plausibility arguments as specified below. The source and deflector of the \textit{bright} configurations are built along SLACS J0330-0020 as modelled by \textbf{Auger et al.(SLACS11)}. For the \textit{faint} configuration, the deflector has parameters from the \textbf{Sonnenfeld et al. (????)} model of SL2S J135949+553550.
+ Source magnitudes in the \textit{faint} case are arbitrarily set to 25.0 in all bands, whence the source effective radius $R_{eff}$ is assigned along the size-magnitude relation given by \textbf{Newton et al. (2011?).} In all cases, the source positions are assigned so as to map the source in either two or four images. Unknown magnitudes in $K$ band are assigned from $H$-band ones via $K_{AB}=H_{AB}.$
+ 
+\textbf{Question}: What are the point-source magnitudes, even if they're not specifically modelled? How were they assigned?
+ Based on the recipe that Kai and I assembled? Also, magnitudes in the tables are not necessarily the instrument ones, how are they converted? With the XLM's template-based table from AA or something different?
+
+Then: say that source is mapped onto lens plane with formalism illustrated later on, lens light is summed to it, noise added. Refer to one example of puppies, \textbf{including TMT with kernel smoothing.}
 
 \section{Lens Reconstruction}
 The deflector is assigned within a class of power-law density profiles,
@@ -118,25 +119,26 @@ The same code is used to generate the mock models and to fit them. The model fit
 \begin{table*}\footnotesize
 \begin{center}
 \caption{Telescope Properties}
-\begin{tabular}{lcccccccccccccc|}
+\begin{tabular}{lccccccccccccccc|}
 \hline \hline
-Telescope Name & Filter & Zero Point & Readout & Background & Pixel Scale \\
-& & & (-e/pixel/s) & (-e/pixel/s) & (arcsec) \\
+Telescope & Instrument & Filter & Zero Point & Readout Noise & Background Noise & Pixel Size \\
+ & & & & (e$^-$/pixel/s) & (e$^-$/pixel/s) & (arcsec) \\
 \hline
-HST    &   F814W   &   25.94    &   4.20      &    0.11     &     0.050    \\
-  JWST   &   F200W   &    27.85   &    9.00     &     0.20    &      0.032  \\
-  Keck   &   NIRC2/K &   28.04    &   5.75     &  25.94      &  0.010      \\
-  NGAO   &   K       &     28.04  &     5.75   &    25.94    &    0.010     \\
-  TMT    &   IRIS    &    31.10   &      2.00   &     21.20    &      0.004  \\
-  Euclid &   VIS     &    25.58   &      4.50   &     0.43    &      0.100   \\
-  WFIRST &   F184    &   26.18    &     5.00    &    0.11     &     0.110   \\
-  LSST   &   I      &     28.35  &       5.00  &      68.00   &        0.200  \\
+HST  & ...  &   F814W   &   25.94    &   4.20      &    0.11     &     0.050    \\
+  JWST & ...  &   F200W   &    27.85   &    9.00     &     0.20    &      0.032  \\
+  Keck & NIRC2/NGSAO  &  $K^\prime$ &   28.04    &   5.75     &  25.94      &  0.010      \\
+%  NGAO & NGSAO  &   $K$       &     28.04  &     5.75   &    25.94    &    0.010     \\
+  TMT & IRIS  &  nIR   &    31.10   &      2.00   &     21.20    &      0.004  \\
+  Euclid & VIS & $r+i+z$  &    25.58   &      4.50   &     0.43    &      0.100   \\
+  WFIRST &  ... & F184    &   26.18    &     5.00    &    0.11     &     0.110   \\
+  LSST   & ---  &   $I$    &     28.35  &       5.00  &      68.00   &        0.200  \\
 \hline
 \hline
 \end{tabular}
 \begin{tablenotes}
 \item 
-Zero points used in this work are given in the ABmag system. \\
+Observational facilities (telescopes or cadenced surveys) considered in this work.
+ Zero points are given in the ABmag system. The near-IR wavelength coverage of IRIS is $0.85-2.5~\mu m,$ the VIS imager of Euclid spans the whole $r+i+z$ wavelength range. \\
 \end{tablenotes}
 \label{tab:telescopes parameters}
 \end{center}
