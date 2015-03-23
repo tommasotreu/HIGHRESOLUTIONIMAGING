@@ -101,8 +101,8 @@ We have chosen four prototypical systems for this exploration, characterized as 
 To remain as realistic as possible, the mocks are based upon lenses in the SLACS \textbf{(...)} and SL2S \textbf{(...)} samples. When not explicitly known from existing data, mock model parameters are assigned via plausibility arguments as specified below. The source and deflector of the \textit{bright} configurations are built along SLACS J0330-0020 as modelled by \textbf{Auger et al.(SLACS11)}. For the \textit{faint} configuration, the deflector has parameters from the \textbf{Sonnenfeld et al. (????)} model of SL2S J135949+553550.
  Source magnitudes in the \textit{faint} case are arbitrarily set to 25.0 in all bands, whence the source effective radius $R_{eff}$ is assigned along the size-magnitude relation given by \textbf{Newton et al. (2011?).} In all cases, the source positions are assigned so as to map the source in either two or four images. Unknown magnitudes in $K$ band are assigned from $H$-band ones via $K_{AB}=H_{AB}.$
  
-\textbf{Question}: What are the point-source magnitudes, even if they're not specifically modelled? How were they assigned?
- Based on the recipe that Kai and I assembled? Also, magnitudes in the tables are not necessarily the instrument ones, how are they converted? With the XLM's template-based table from AA or something different?
+\textbf{Question}: What are the point-source magnitudes, even if they're not specifically modelled? How were they assigned? (They are in the Table 4. For the fainter systems, they are all 24.0 for all the filters except for TMT. The magnitude of point source is 26.0 for TMT, that's because TMT has an amazing detecting ability. For the brighter systems, they are assigned with magnitude of source galaxy - 0.5 for filter K, VIS, and H; - 1.0 for filter I.)
+ Based on the recipe that Kai and I assembled? Also, magnitudes in the tables are not necessarily the instrument ones, how are they converted? With the XLM's template-based table from AA or something different? (For fainter systems, lens magnitude for I filter is from Ale's paper III, mag for K filter is estimated by TT based on the other colors, mag for VIS filter is evaluated by $mag(r,i,z)=-2.5*log((10^{-0.4r}+10^{-0.4i}+10^{-0.4z})/2)$ (there are r, i, z filters informations in Ale's paper III), $H_{AB}=K_{AB}$. For brighter systems, lens mag for I filter and V filter are from Auger's paper; mag for K band is determined by TT;  $H_{AB}=K_{AB}$) (For fainter systems, the source galaxy magnitude for filters are all 25.0 which is determined by TT. For brighter systems, the source galaxy magnitude for I and V filters are from Newton's paper, the source galaxy magnitude for K filter is 22.0 which is determined by TT)
 
 Then: say that source is mapped onto lens plane with formalism illustrated later on, lens light is summed to it, noise added. Refer to one example of puppies, \textbf{including TMT with kernel smoothing.}
 
@@ -246,6 +246,34 @@ $^b$ 2 QSO images exist in the lens plane. \\
 \end{center}
 \end{table*}
 % ===============================================
+
+
+% ===============================================
+\begin{table*}\footnotesize
+\begin{center}
+\caption{Point Source Parameters}
+\begin{tabular}{lcccccccccccccc|}
+\hline \hline
+Lens Name & magnitude & magnitude & magnitude & magnitude & magnification & magnification & magnification & magnification\\
+&  (I) &  (K) &  (VIS) & (H) & (I) & (II) & (III) & (IV) \\
+\hline
+fainter system$^a$   &24.0  &   24.0 &  24.0 &  24.0 &  2.84 &  3.75 & 6.59 & 2.78  \\
+fainter system$^b$   &24.0  &  24.0  &  24.0 &  24.0 &  2.78 &  2.48 &  ---   &  ---\\
+brighter system$^b$ &21.7  &  21.5 &  22.9  & 21.5  & 1.22  & 6.10  & ---   &  ---\\
+brighter system$^a$ &21.7  &  21.5 & 22.9  &  21.5  & 6.09  & 8.22 & 6.86  & 7.53\\
+\hline
+\hline
+\end{tabular}
+\begin{tablenotes}
+\item 
+Magnitude m is given in the ABmag system.\\
+$^a$ 4 QSO images exist in the lens plane. \\
+$^b$ 2 QSO images exist in the lens plane. \\
+\end{tablenotes}
+\end{center}
+\end{table*}
+% ===============================================
+
 
 % ===============================================
 \begin{figure}
