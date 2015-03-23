@@ -161,13 +161,13 @@ The same code is used to generate the mock models and to fit them. The model fit
 \begin{tabular}{lccccccccccccccc|}
 \hline \hline
 Telescope & Instrument & Filter & Zero Point & Readout Noise & Background Noise & Pixel Size \\
- & & & & (e$^-$/pixel/s) & (e$^-$/pixel/s) & (arcsec) \\
+ & & & & (e$^-$/pixel) & (e$^-$/pixel/s) & (arcsec) \\
 \hline
-HST  & ...  &   F814W   &   25.94    &   4.20      &    0.11     &     0.050    \\
-  JWST & ...  &   F200W   &    27.85   &    9.00     &     0.20    &      0.032  \\
-  Keck & NIRC2/NGSAO  &  $K^\prime$ &   28.04    &   5.75     &  25.94      &  0.010      \\
-%  NGAO & NGSAO  &   $K$       &     28.04  &     5.75   &    25.94    &    0.010     \\
-  TMT & IRIS  &  nIR   &    31.10   &      2.00   &     21.20    &      0.004  \\
+HST  & WFC3  &   F814W   &   25.94    &   4.20      &    0.11     &     0.050    \\
+  JWST & NIRCAM  &   F200W   &    27.85   &    9.00     &     0.20    &      0.032  \\
+  Keck & NIRC2  &  $K^\prime$ &   28.04    &   5.75     &  25.94      &  0.010      \\
+ NGAO & NGSAO  &   $K^\prime$  &     28.04  &     5.75   &    25.94    &    0.010     \\
+  TMT & IRIS  &  $K^\prime$   &  31.10   &  2.00   &     21.20    &      0.004  \\
   Euclid & VIS & $r+i+z$  &    25.58   &      4.50   &     0.43    &      0.100   \\
   WFIRST &  ... & F184    &   26.18    &     5.00    &    0.11     &     0.110   \\
   LSST   & ---  &   $I$    &     28.35  &       5.00  &      68.00   &        0.200  \\
@@ -177,7 +177,7 @@ HST  & ...  &   F814W   &   25.94    &   4.20      &    0.11     &     0.050    
 \begin{tablenotes}
 \item 
 Observational facilities (telescopes or cadenced surveys) considered in this work.
- Zero points are given in the ABmag system. The near-IR wavelength coverage of IRIS is $0.85-2.5~\mu m,$ the VIS imager of Euclid spans the whole $r+i+z$ wavelength range. \\
+ Zero points are given in the ABmag system. The near-IR wavelength coverage of IRIS is $0.85-2.5~\mu m,$ the VIS imager of Euclid spans the whole $r+i+z$ wavelength range. Keck 10-m telescope is considered both with current (NIRC2) and next-generation (NGAO) adaptive-optics capabilities.\\
 \end{tablenotes}
 \label{tab:telescopes parameters}
 \end{center}
