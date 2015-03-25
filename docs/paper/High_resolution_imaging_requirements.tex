@@ -6,6 +6,7 @@
 \usepackage{aas_macros}
 \usepackage{graphicx}
 \usepackage{subfigure}
+\usepackage{url}
 
 
 \title{Precision cosmology with time delay lenses: high resolution imaging requirements}
@@ -59,12 +60,10 @@ main deflector can be measured \textbf{we find that...}  }
 
 In the past few years, gravitational time delays have emerged as a...
 
-This paper is organized as follows. We first introduce our lens sample
-in Section 2. Next, we briefly summarize a variety of telescopes
-properties used in this work and show simulated realistic lens systems
-as imaged by these telescopes in Section 3. The results from
-simulation in Section 4. Finally, we discuss and summarize our work in
-Section 5. Throughout this paper, all magnitudes are given in the AB
+This paper is organized as follows. We first introduce a variety of instrument informations in Section 2. Next, we briefly summarize the lens sample used in this work in Section 3 and show how to reconstruct lens models
+as imaged by these instruments in Section 4. The results from
+simulation in Section 5. Finally, we discuss and summarize our work in
+Section 6. Throughout this paper, all magnitudes are given in the AB
 system. Even though it is not crucial to our findings, we adopt a
 spatially flat $\Lambda$CDM cosmology with $\Omega_{\rm{m}} = 0.3$,
 $\Omega_{\Lambda} = 0.7$, and the Hubble constant $H_{0} = 70~\rm
@@ -77,7 +76,16 @@ The way a lens is observed and modelled, whence the parameter uncertainties, are
 Here we illustrate the main properties of instruments that will be considered in the simulations. For the sake of completeness, they can either be ground-based or space-based telescopes, or even cadenced surveys where the total exposure cannot set arbitrarilly.
 Table~\ref{tab:telescopes parameters} and figure~\ref{fig:zp_wavelength} display the main properties of the telescopes that are needed when generating images of mock gravitational lenses. Figure~\ref{fig:PSF_montage}\textbf{[XLM, can you do it? Sure! have done!]} shows the typical PSF of each instrument.
 
+    1. The instrument properties of HST used are taken from Space Telescope Science Institute and HST Exposure Time Calculator (\url{http://etc.stsci.edu}). We are interested in F814W band. The pixel size is $0.05^{\prime\prime}$/pixel.
+    
+    2. We determinate JWST instrument properties by JWST Exposure Time Calculator (\url{http://jwstetc.stsci.edu}). F200W band is selected to considered. The pixel size is $0.032^{\prime\prime}$/pixel. Zero point, readout noise, and background noise are calculated from count rates at fixed exposure time.
+    
+    3. According to the informations given by Keck NIRC2 Observer's Manual (\url{http://www2.keck.hawaii.edu/inst/nirc2/Manual/ObserversManual.html#Section2.2}), properties of Keck can be deduced, both with LGSAO and NGSAO. Here, we choose MCDS as the readout mode of the detector, meanwhile read number N = 16. 
+    
+    4.  The selected filter's zero point and background noise of TMT is obtained according to a prospect work (Do et al. 2014 \cite{2014AJ....147...93D}). The pixel size is $0.004^{\prime\prime}$/pixel. Using TMT ETC (\url{http://tmt.mtk.nao.ac.jp/ETC_readme.html}), readout noise can be calculated (please note that the total efficiency is around 0.4). 
+
 \textbf{For TT:} A sentence or two on HST and ACS; similarly for JWST (what it's planned to do and when it's expected to start); similarly for TMT and IRIS; Keck, both with LGSAO and NGSAO and why we must consider both; then Euclid, WFIRST, LSST.
+
 
 
 %\subsection{Hubble Space Telescope}
@@ -151,7 +159,7 @@ The same code is used to generate the mock models and to fit them. The model fit
 
 
 \bibliographystyle{JHEP}
-\bibliography{references}
+\bibliography{reference}
 
 \clearpage
 % ===============================================
@@ -163,13 +171,13 @@ The same code is used to generate the mock models and to fit them. The model fit
 Telescope & Instrument & Filter & Zero Point & Readout Noise & Background Noise & Pixel Size \\
  & & & & (e$^-$/pixel/s) & (e$^-$/pixel/s) & (arcsec) \\
 \hline
-HST  & ...  &   F814W   &   25.94    &   4.20      &    0.11     &     0.050    \\
-  JWST & ...  &   F200W   &    27.85   &    9.00     &     0.20    &      0.032  \\
+HST  & ACS  &   F814W   &   25.94    &   4.20      &    0.11     &     0.050    \\
+  JWST & NIRCAM  &   F200W   &    27.85   &    9.00     &     0.20    &      0.032  \\
   Keck & NIRC2/NGSAO  &  $K^\prime$ &   28.04    &   5.75     &  25.94      &  0.010      \\
 %  NGAO & NGSAO  &   $K$       &     28.04  &     5.75   &    25.94    &    0.010     \\
   TMT & IRIS  &  nIR   &    31.10   &      2.00   &     21.20    &      0.004  \\
   Euclid & VIS & $r+i+z$  &    25.58   &      4.50   &     0.43    &      0.100   \\
-  WFIRST &  ... & F184    &   26.18    &     5.00    &    0.11     &     0.110   \\
+  WFIRST &  DRM(?) & F184    &   26.18    &     5.00    &    0.11     &     0.110   \\
   LSST   & ---  &   $I$    &     28.35  &       5.00  &      68.00   &        0.200  \\
 \hline
 \hline
