@@ -1,4 +1,187 @@
-\providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{1}
+\providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{10}
+
+\bibitem{2006SSRv..123..485G}
+J.~P. {Gardner}, J.~C. {Mather}, M.~{Clampin}, R.~{Doyon}, M.~A. {Greenhouse},
+  H.~B. {Hammel}, J.~B. {Hutchings}, P.~{Jakobsen}, S.~J. {Lilly}, K.~S.
+  {Long}, J.~I. {Lunine}, M.~J. {McCaughrean}, M.~{Mountain}, J.~{Nella}, G.~H.
+  {Rieke}, M.~J. {Rieke}, H.-W. {Rix}, E.~P. {Smith}, G.~{Sonneborn},
+  M.~{Stiavelli}, H.~S. {Stockman}, R.~A. {Windhorst}, and G.~S. {Wright}, {\it
+  {The James Webb Space Telescope}},  {\em \ssr} {\bf 123} (Apr., 2006)
+  485--606, [\href{http://xxx.lanl.gov/abs/astro-ph/0606175}{{\tt
+  astro-ph/0606175}}].
+
+\bibitem{2006PASP..118..297W}
+P.~L. {Wizinowich}, D.~{Le Mignant}, A.~H. {Bouchez}, R.~D. {Campbell},
+  J.~C.~Y. {Chin}, A.~R. {Contos}, M.~A. {van Dam}, S.~K. {Hartman}, E.~M.
+  {Johansson}, R.~E. {Lafon}, H.~{Lewis}, P.~J. {Stomski}, D.~M. {Summers},
+  C.~G. {Brown}, P.~M. {Danforth}, C.~E. {Max}, and D.~M. {Pennington}, {\it
+  {The W. M. Keck Observatory Laser Guide Star Adaptive Optics System:
+  Overview}},  {\em \pasp} {\bf 118} (Feb., 2006) 297--309.
+
+\bibitem{2010SPIE.7736E..0KW}
+P.~{Wizinowich}, S.~{Adkins}, R.~{Dekany}, D.~{Gavel}, C.~{Max}, R.~{Bartos},
+  J.~{Bell}, A.~{Bouchez}, J.~{Chin}, A.~{Conrad}, A.~{Delacroix},
+  E.~{Johansson}, R.~{Kupke}, C.~{Lockwood}, J.~{Lyke}, F.~{Marchis},
+  E.~{McGrath}, D.~{Medeiros}, M.~{Morris}, D.~{Morrison}, C.~{Neyman},
+  S.~{Panteleev}, M.~{Pollard}, M.~{Reinig}, T.~{Stalcup}, S.~{Thomas},
+  M.~{Troy}, K.~{Tsubota}, V.~{Velur}, K.~{Wallace}, and E.~{Wetherell}, {\it
+  {W. M. Keck Observatory's next-generation adaptive optics facility}},  in
+  {\em Society of Photo-Optical Instrumentation Engineers (SPIE) Conference
+  Series}, vol.~7736 of {\em Society of Photo-Optical Instrumentation Engineers
+  (SPIE) Conference Series}, p.~0, July, 2010.
+
+\bibitem{2010SPIE.7735E..29L}
+J.~E. {Larkin}, A.~M. {Moore}, E.~J. {Barton}, B.~{Bauman}, K.~{Bui},
+  J.~{Canfield}, D.~{Crampton}, A.~{Delacroix}, M.~{Fletcher}, D.~{Hale},
+  D.~{Loop}, C.~{Niehaus}, A.~C. {Phillips}, V.~{Reshetov}, L.~{Simard},
+  R.~{Smith}, R.~{Suzuki}, T.~{Usuda}, and S.~A. {Wright}, {\it {The infrared
+  imaging spectrograph (IRIS) for TMT: instrument overview}},  in {\em Society
+  of Photo-Optical Instrumentation Engineers (SPIE) Conference Series},
+  vol.~7735 of {\em Society of Photo-Optical Instrumentation Engineers (SPIE)
+  Conference Series}, p.~29, July, 2010.
+\newblock \href{http://xxx.lanl.gov/abs/1007.1973}{{\tt arXiv:1007.1973}}.
+
+\bibitem{2014AJ....147...93D}
+T.~{Do}, S.~A. {Wright}, A.~J. {Barth}, E.~J. {Barton}, L.~{Simard}, J.~E.
+  {Larkin}, A.~M. {Moore}, L.~{Wang}, and B.~{Ellerbroek}, {\it {Prospects for
+  Measuring Supermassive Black Hole Masses with Future Extremely Large
+  Telescopes}},  {\em \aj} {\bf 147} (Apr., 2014) 93,
+  [\href{http://xxx.lanl.gov/abs/1401.7988}{{\tt arXiv:1401.7988}}].
+
+\bibitem{2010SPIE.7731E..1KS}
+M.~{Schweitzer}, R.~{Bender}, R.~{Katterloher}, F.~{Eisenhauer}, R.~{Hofmann},
+  R.~{Saglia}, R.~{Holmes}, O.~{Krause}, H.-W. {Rix}, J.~{Booth},
+  P.~{Fagrelius}, J.~{Rhodes}, S.~{Seshadri}, A.~{Refregier}, J.~{Amiaux},
+  J.-L. {Augueres}, O.~{Boulade}, C.~{Cara}, A.~{Amara}, S.~{Lilly},
+  E.~{Atad-Ettedgui}, A.-M. {di Giorgio}, L.~{Duvet}, C.~{Kuehl}, and
+  M.~{Syed}, {\it {NIP: the near infrared imaging photometer for Euclid}},  in
+  {\em Society of Photo-Optical Instrumentation Engineers (SPIE) Conference
+  Series}, vol.~7731 of {\em Society of Photo-Optical Instrumentation Engineers
+  (SPIE) Conference Series}, p.~1, July, 2010.
+
+\bibitem{2013MNRAS.434....2P}
+M.~T. {Penny}, E.~{Kerins}, N.~{Rattenbury}, J.-P. {Beaulieu}, A.~C. {Robin},
+  S.~{Mao}, V.~{Batista}, S.~{Calchi Novati}, A.~{Cassan}, P.~{Fouqu{\'e}},
+  I.~{McDonald}, J.~B. {Marquette}, P.~{Tisserand}, and M.~R. {Zapatero
+  Osorio}, {\it {ExELS: an exoplanet legacy science proposal for the ESA Euclid
+  mission - I. Cold exoplanets}},  {\em \mnras} {\bf 434} (Sept., 2013) 2--22,
+  [\href{http://xxx.lanl.gov/abs/1206.5296}{{\tt arXiv:1206.5296}}].
+
+\bibitem{2014SPIE.9143E..0JC}
+M.~{Cropper}, S.~{Pottinger}, S.-M. {Niemi}, J.~{Denniston}, R.~{Cole},
+  M.~{Szafraniec}, Y.~{Mellier}, M.~{Berth{\'e}}, J.~{Martignac}, C.~{Cara},
+  A.~M. {di Giorgio}, A.~{Sciortino}, S.~{Paltani}, L.~{Genolet}, J.-J.
+  {Fourmand}, M.~{Charra}, P.~{Guttridge}, B.~{Winter}, J.~{Endicott},
+  A.~{Holland}, J.~{Gow}, N.~{Murray}, D.~{Hall}, J.~{Amiaux}, R.~{Laureijs},
+  G.~{Racca}, J.-C. {Salvignol}, A.~{Short}, J.~{Lorenzo Alvarez},
+  T.~{Kitching}, H.~{Hoekstra}, and R.~{Massey}, {\it {VIS: the visible imager
+  for Euclid}},  in {\em Society of Photo-Optical Instrumentation Engineers
+  (SPIE) Conference Series}, vol.~9143 of {\em Society of Photo-Optical
+  Instrumentation Engineers (SPIE) Conference Series}, p.~0, Aug., 2014.
+
+\bibitem{2012arXiv1208.4012G}
+J.~{Green}, P.~{Schechter}, C.~{Baltay}, R.~{Bean}, D.~{Bennett}, R.~{Brown},
+  C.~{Conselice}, M.~{Donahue}, X.~{Fan}, B.~S. {Gaudi}, C.~{Hirata},
+  J.~{Kalirai}, T.~{Lauer}, B.~{Nichol}, N.~{Padmanabhan}, S.~{Perlmutter},
+  B.~{Rauscher}, J.~{Rhodes}, T.~{Roellig}, D.~{Stern}, T.~{Sumi}, A.~{Tanner},
+  Y.~{Wang}, D.~{Weinberg}, E.~{Wright}, N.~{Gehrels}, R.~{Sambruna},
+  W.~{Traub}, J.~{Anderson}, K.~{Cook}, P.~{Garnavich}, L.~{Hillenbrand},
+  Z.~{Ivezic}, E.~{Kerins}, J.~{Lunine}, P.~{McDonald}, M.~{Penny},
+  M.~{Phillips}, G.~{Rieke}, A.~{Riess}, R.~{van der Marel}, R.~K. {Barry},
+  E.~{Cheng}, D.~{Content}, R.~{Cutri}, R.~{Goullioud}, K.~{Grady}, G.~{Helou},
+  C.~{Jackson}, J.~{Kruk}, M.~{Melton}, C.~{Peddie}, N.~{Rioux}, and
+  M.~{Seiffert}, {\it {Wide-Field InfraRed Survey Telescope (WFIRST) Final
+  Report}},  {\em ArXiv e-prints} (Aug., 2012)
+  [\href{http://xxx.lanl.gov/abs/1208.4012}{{\tt arXiv:1208.4012}}].
+
+\bibitem{2008arXiv0805.2366I}
+Z.~{Ivezic}, J.~A. {Tyson}, B.~{Abel}, E.~{Acosta}, R.~{Allsman},
+  Y.~{AlSayyad}, S.~F. {Anderson}, J.~{Andrew}, R.~{Angel}, G.~{Angeli},
+  R.~{Ansari}, P.~{Antilogus}, K.~T. {Arndt}, P.~{Astier}, E.~{Aubourg},
+  T.~{Axelrod}, D.~J. {Bard}, J.~D. {Barr}, A.~{Barrau}, J.~G. {Bartlett},
+  B.~J. {Bauman}, S.~{Beaumont}, A.~C. {Becker}, J.~{Becla}, C.~{Beldica},
+  S.~{Bellavia}, G.~{Blanc}, R.~D. {Blandford}, J.~S. {Bloom}, J.~{Bogart},
+  K.~{Borne}, J.~F. {Bosch}, D.~{Boutigny}, W.~N. {Brandt}, M.~E. {Brown},
+  J.~S. {Bullock}, P.~{Burchat}, D.~L. {Burke}, G.~{Cagnoli}, D.~{Calabrese},
+  S.~{Chandrasekharan}, S.~{Chesley}, E.~C. {Cheu}, J.~{Chiang}, C.~F.
+  {Claver}, A.~J. {Connolly}, K.~H. {Cook}, A.~{Cooray}, K.~R. {Covey},
+  C.~{Cribbs}, W.~{Cui}, R.~{Cutri}, G.~{Daubard}, G.~{Daues}, F.~{Delgado},
+  S.~{Digel}, P.~{Doherty}, R.~{Dubois}, G.~P. {Dubois-Felsmann}, J.~{Durech},
+  M.~{Eracleous}, H.~{Ferguson}, J.~{Frank}, M.~{Freemon}, E.~{Gangler},
+  E.~{Gawiser}, J.~C. {Geary}, P.~{Gee}, M.~{Geha}, R.~R. {Gibson}, D.~K.
+  {Gilmore}, T.~{Glanzman}, I.~{Goodenow}, W.~J. {Gressler}, P.~{Gris},
+  A.~{Guyonnet}, P.~A. {Hascall}, J.~{Haupt}, F.~{Hernandez}, C.~{Hogan},
+  D.~{Huang}, M.~E. {Huffer}, W.~R. {Innes}, S.~H. {Jacoby}, B.~{Jain},
+  J.~{Jee}, J.~G. {Jernigan}, D.~{Jevremovic}, K.~{Johns}, R.~L. {Jones},
+  C.~{Juramy-Gilles}, M.~{Juric}, S.~M. {Kahn}, J.~S. {Kalirai},
+  N.~{Kallivayalil}, B.~{Kalmbach}, J.~P. {Kantor}, M.~M. {Kasliwal},
+  R.~{Kessler}, D.~{Kirkby}, L.~{Knox}, I.~{Kotov}, V.~L. {Krabbendam},
+  S.~{Krughoff}, P.~{Kubanek}, J.~{Kuczewski}, S.~{Kulkarni}, R.~{Lambert},
+  L.~{Le Guillou}, D.~{Levine}, M.~{Liang}, K.~{Lim}, C.~{Lintott}, R.~H.
+  {Lupton}, A.~{Mahabal}, P.~{Marshall}, S.~{Marshall}, M.~{May},
+  R.~{McKercher}, M.~{Migliore}, M.~{Miller}, D.~J. {Mills}, D.~G. {Monet},
+  M.~{Moniez}, D.~R. {Neill}, J.~{Nief}, A.~{Nomerotski}, M.~{Nordby},
+  P.~{O'Connor}, J.~{Oliver}, S.~S. {Olivier}, K.~{Olsen}, S.~{Ortiz}, R.~E.
+  {Owen}, R.~{Pain}, J.~R. {Peterson}, C.~E. {Petry}, F.~{Pierfederici},
+  S.~{Pietrowicz}, R.~{Pike}, P.~A. {Pinto}, R.~{Plante}, S.~{Plate}, P.~A.
+  {Price}, M.~{Prouza}, V.~{Radeka}, J.~{Rajagopal}, A.~{Rasmussen},
+  N.~{Regnault}, S.~T. {Ridgway}, S.~{Ritz}, W.~{Rosing}, C.~{Roucelle}, M.~R.
+  {Rumore}, S.~{Russo}, A.~{Saha}, B.~{Sassolas}, T.~L. {Schalk}, R.~H.
+  {Schindler}, D.~P. {Schneider}, G.~{Schumacher}, J.~{Sebag}, G.~H.
+  {Sembroski}, L.~G. {Seppala}, I.~{Shipsey}, N.~{Silvestri}, J.~A. {Smith},
+  R.~C. {Smith}, M.~A. {Strauss}, C.~W. {Stubbs}, D.~{Sweeney}, A.~{Szalay},
+  P.~{Takacs}, J.~J. {Thaler}, R.~{Van Berg}, D.~{Vanden Berk}, K.~{Vetter},
+  F.~{Virieux}, B.~{Xin}, L.~{Walkowicz}, C.~W. {Walter}, D.~L. {Wang},
+  M.~{Warner}, B.~{Willman}, D.~{Wittman}, S.~C. {Wolff}, W.~M. {Wood-Vasey},
+  P.~{Yoachim}, H.~{Zhan}, and {for the LSST Collaboration}, {\it {LSST: from
+  Science Drivers to Reference Design and Anticipated Data Products}},  {\em
+  ArXiv e-prints} (May, 2008) [\href{http://xxx.lanl.gov/abs/0805.2366}{{\tt
+  arXiv:0805.2366}}].
+
+\bibitem{2007ApJ...671.1196M}
+P.~J. {Marshall}, T.~{Treu}, J.~{Melbourne}, R.~{Gavazzi}, K.~{Bundy}, S.~M.
+  {Ammons}, A.~S. {Bolton}, S.~{Burles}, J.~E. {Larkin}, D.~{Le Mignant}, D.~C.
+  {Koo}, L.~V.~E. {Koopmans}, C.~E. {Max}, L.~A. {Moustakas}, E.~{Steinbring},
+  and S.~A. {Wright}, {\it {Superresolving Distant Galaxies with Gravitational
+  Telescopes: Keck Laser Guide Star Adaptive Optics and Hubble Space Telescope
+  Imaging of the Lens System SDSS J0737+3216}},  {\em \apj} {\bf 671} (Dec.,
+  2007) 1196--1211, [\href{http://xxx.lanl.gov/abs/0710.0637}{{\tt
+  arXiv:0710.0637}}].
+
+\bibitem{2009ApJ...691..277S}
+S.~H. {Suyu}, P.~J. {Marshall}, R.~D. {Blandford}, C.~D. {Fassnacht}, L.~V.~E.
+  {Koopmans}, J.~P. {McKean}, and T.~{Treu}, {\it {Dissecting the Gravitational
+  Lens B1608+656. I. Lens Potential Reconstruction}},  {\em \apj} {\bf 691}
+  (Jan., 2009) 277--298, [\href{http://xxx.lanl.gov/abs/0804.2827}{{\tt
+  arXiv:0804.2827}}].
+
+\bibitem{2006ApJ...638..703B}
+A.~S. {Bolton}, S.~{Burles}, L.~V.~E. {Koopmans}, T.~{Treu}, and L.~A.
+  {Moustakas}, {\it {The Sloan Lens ACS Survey. I. A Large Spectroscopically
+  Selected Sample of Massive Early-Type Lens Galaxies}},  {\em \apj} {\bf 638}
+  (Feb., 2006) 703--724, [\href{http://xxx.lanl.gov/abs/astro-ph/0511453}{{\tt
+  astro-ph/0511453}}].
+
+\bibitem{2006ApJ...640..662T}
+T.~{Treu}, L.~V. {Koopmans}, A.~S. {Bolton}, S.~{Burles}, and L.~A.
+  {Moustakas}, {\it {The Sloan Lens ACS Survey. II. Stellar Populations and
+  Internal Structure of Early-Type Lens Galaxies}},  {\em \apj} {\bf 640}
+  (Apr., 2006) 662--672, [\href{http://xxx.lanl.gov/abs/astro-ph/0512044}{{\tt
+  astro-ph/0512044}}].
+
+\bibitem{2006ApJ...649..599K}
+L.~V.~E. {Koopmans}, T.~{Treu}, A.~S. {Bolton}, S.~{Burles}, and L.~A.
+  {Moustakas}, {\it {The Sloan Lens ACS Survey. III. The Structure and
+  Formation of Early-Type Galaxies and Their Evolution since z \~{} 1}},  {\em
+  \apj} {\bf 649} (Oct., 2006) 599--615,
+  [\href{http://xxx.lanl.gov/abs/astro-ph/0601628}{{\tt astro-ph/0601628}}].
+
+\bibitem{2007ApJ...667..176G}
+R.~{Gavazzi}, T.~{Treu}, J.~D. {Rhodes}, L.~V.~E. {Koopmans}, A.~S. {Bolton},
+  S.~{Burles}, R.~J. {Massey}, and L.~A. {Moustakas}, {\it {The Sloan Lens ACS
+  Survey. IV. The Mass Density Profile of Early-Type Galaxies out to 100
+  Effective Radii}},  {\em \apj} {\bf 667} (Sept., 2007) 176--190,
+  [\href{http://xxx.lanl.gov/abs/astro-ph/0701589}{{\tt astro-ph/0701589}}].
 
 \bibitem{2008ApJ...682..964B}
 A.~S. {Bolton}, S.~{Burles}, L.~V.~E. {Koopmans}, T.~{Treu}, R.~{Gavazzi},
@@ -7,11 +190,88 @@ A.~S. {Bolton}, S.~{Burles}, L.~V.~E. {Koopmans}, T.~{Treu}, R.~{Gavazzi},
   2008) 964--984, [\href{http://xxx.lanl.gov/abs/0805.1931}{{\tt
   arXiv:0805.1931}}].
 
+\bibitem{2008ApJ...677.1046G}
+R.~{Gavazzi}, T.~{Treu}, L.~V.~E. {Koopmans}, A.~S. {Bolton}, L.~A.
+  {Moustakas}, S.~{Burles}, and P.~J. {Marshall}, {\it {The Sloan Lens ACS
+  Survey. VI. Discovery and Analysis of a Double Einstein Ring}},  {\em \apj}
+  {\bf 677} (Apr., 2008) 1046--1059,
+  [\href{http://xxx.lanl.gov/abs/0801.1555}{{\tt arXiv:0801.1555}}].
+
+\bibitem{2008ApJ...684..248B}
+A.~S. {Bolton}, T.~{Treu}, L.~V.~E. {Koopmans}, R.~{Gavazzi}, L.~A.
+  {Moustakas}, S.~{Burles}, D.~J. {Schlegel}, and R.~{Wayth}, {\it {The Sloan
+  Lens ACS Survey. VII. Elliptical Galaxy Scaling Laws from Direct
+  Observational Mass Measurements}},  {\em \apj} {\bf 684} (Sept., 2008)
+  248--259, [\href{http://xxx.lanl.gov/abs/0805.1932}{{\tt arXiv:0805.1932}}].
+
+\bibitem{2009ApJ...690..670T}
+T.~{Treu}, R.~{Gavazzi}, A.~{Gorecki}, P.~J. {Marshall}, L.~V.~E. {Koopmans},
+  A.~S. {Bolton}, L.~A. {Moustakas}, and S.~{Burles}, {\it {The SLACS Survey.
+  VIII. The Relation between Environment and Internal Structure of Early-Type
+  Galaxies}},  {\em \apj} {\bf 690} (Jan., 2009) 670--682,
+  [\href{http://xxx.lanl.gov/abs/0806.1056}{{\tt arXiv:0806.1056}}].
+
 \bibitem{2009ApJ...705.1099A}
 M.~W. {Auger}, T.~{Treu}, A.~S. {Bolton}, R.~{Gavazzi}, L.~V.~E. {Koopmans},
   P.~J. {Marshall}, K.~{Bundy}, and L.~A. {Moustakas}, {\it {The Sloan Lens ACS
   Survey. IX. Colors, Lensing, and Stellar Masses of Early-Type Galaxies}},
   {\em \apj} {\bf 705} (Nov., 2009) 1099--1115,
   [\href{http://xxx.lanl.gov/abs/0911.2471}{{\tt arXiv:0911.2471}}].
+
+\bibitem{2010ApJ...724..511A}
+M.~W. {Auger}, T.~{Treu}, A.~S. {Bolton}, R.~{Gavazzi}, L.~V.~E. {Koopmans},
+  P.~J. {Marshall}, L.~A. {Moustakas}, and S.~{Burles}, {\it {The Sloan Lens
+  ACS Survey. X. Stellar, Dynamical, and Total Mass Correlations of Massive
+  Early-type Galaxies}},  {\em \apj} {\bf 724} (Nov., 2010) 511--525,
+  [\href{http://xxx.lanl.gov/abs/1007.2880}{{\tt arXiv:1007.2880}}].
+
+\bibitem{2011ApJ...734..104N}
+E.~R. {Newton}, P.~J. {Marshall}, T.~{Treu}, M.~W. {Auger}, R.~{Gavazzi}, A.~S.
+  {Bolton}, L.~V.~E. {Koopmans}, and L.~A. {Moustakas}, {\it {The Sloan Lens
+  ACS Survey. XI. Beyond Hubble Resolution: Size, Luminosity, and Stellar Mass
+  of Compact Lensed Galaxies at Intermediate Redshift}},  {\em \apj} {\bf 734}
+  (June, 2011) 104, [\href{http://xxx.lanl.gov/abs/1104.2608}{{\tt
+  arXiv:1104.2608}}].
+
+\bibitem{2014arXiv1407.2240S}
+Y.~{Shu}, A.~S. {Bolton}, J.~R. {Brownstein}, A.~D. {Montero-Dorta}, L.~V.~E.
+  {Koopmans}, T.~{Treu}, R.~{Gavazzi}, M.~W. {Auger}, O.~{Czoske}, P.~J.
+  {Marshall}, and L.~A. {Moustakas}, {\it {The Sloan Lens ACS Survey. XII.
+  Extending Strong Lensing to Lower Masses}},  {\em ArXiv e-prints} (July,
+  2014) [\href{http://xxx.lanl.gov/abs/1407.2240}{{\tt arXiv:1407.2240}}].
+
+\bibitem{2012ApJ...749...38M}
+A.~{More}, R.~{Cabanac}, S.~{More}, C.~{Alard}, M.~{Limousin}, J.-P. {Kneib},
+  R.~{Gavazzi}, and V.~{Motta}, {\it {The CFHTLS-Strong Lensing Legacy Survey
+  (SL2S): Investigating the Group-scale Lenses with the SARCS Sample}},  {\em
+  \apj} {\bf 749} (Apr., 2012) 38,
+  [\href{http://xxx.lanl.gov/abs/1109.1821}{{\tt arXiv:1109.1821}}].
+
+\bibitem{2011ApJ...727...96R}
+A.~J. {Ruff}, R.~{Gavazzi}, P.~J. {Marshall}, T.~{Treu}, M.~W. {Auger}, and
+  F.~{Brault}, {\it {The SL2S Galaxy-scale Lens Sample. II. Cosmic Evolution of
+  Dark and Luminous Mass in Early-type Galaxies}},  {\em \apj} {\bf 727} (Feb.,
+  2011) 96, [\href{http://xxx.lanl.gov/abs/1008.3167}{{\tt arXiv:1008.3167}}].
+
+\bibitem{2013ApJ...777...97S}
+A.~{Sonnenfeld}, R.~{Gavazzi}, S.~H. {Suyu}, T.~{Treu}, and P.~J. {Marshall},
+  {\it {The SL2S Galaxy-scale Lens Sample. III. Lens Models, Surface
+  Photometry, and Stellar Masses for the Final Sample}},  {\em \apj} {\bf 777}
+  (Nov., 2013) 97, [\href{http://xxx.lanl.gov/abs/1307.4764}{{\tt
+  arXiv:1307.4764}}].
+
+\bibitem{2013ApJ...777...98S}
+A.~{Sonnenfeld}, T.~{Treu}, R.~{Gavazzi}, S.~H. {Suyu}, P.~J. {Marshall}, M.~W.
+  {Auger}, and C.~{Nipoti}, {\it {The SL2S Galaxy-scale Lens Sample. IV. The
+  Dependence of the Total Mass Density Profile of Early-type Galaxies on
+  Redshift, Stellar Mass, and Size}},  {\em \apj} {\bf 777} (Nov., 2013) 98,
+  [\href{http://xxx.lanl.gov/abs/1307.4759}{{\tt arXiv:1307.4759}}].
+
+\bibitem{2015ApJ...800...94S}
+A.~{Sonnenfeld}, T.~{Treu}, P.~J. {Marshall}, S.~H. {Suyu}, R.~{Gavazzi}, M.~W.
+  {Auger}, and C.~{Nipoti}, {\it {The SL2S Galaxy-scale Lens Sample. V. Dark
+  Matter Halos and Stellar IMF of Massive Early-type Galaxies Out to Redshift
+  0.8}},  {\em \apj} {\bf 800} (Feb., 2015) 94,
+  [\href{http://xxx.lanl.gov/abs/1410.1881}{{\tt arXiv:1410.1881}}].
 
 \end{thebibliography}\endgroup
