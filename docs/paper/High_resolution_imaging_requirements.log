@@ -1,15 +1,14 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  23 MAR 2015 21:39
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  1 APR 2015 18:20
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
 **High_resolution_imaging_requirements.tex
 (./High_resolution_imaging_requirements.tex
-LaTeX2e <2014/05/01>
-Babel <3.9k> and hyphenation patterns for 78 languages loaded.
-(/usr/local/texlive/2014/texmf-dist/tex/latex/base/article.cls
+LaTeX2e <2011/06/27>
+Babel <3.9f> and hyphenation patterns for 78 languages loaded.
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/local/texlive/2014/texmf-dist/tex/latex/base/size11.clo
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/size11.clo
 File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -26,24 +25,24 @@ File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 ) (./jcappub.sty
 Package: jcappub 2012/08/02 r458
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsmath.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsgen.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks14
 \ex@=\dimen103
 ))
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsbsy.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen104
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsopn.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count87
@@ -84,44 +83,44 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/epsfig.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/epsfig.sty
 Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks19
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/trig.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/graphics.cfg
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/pdftex-def/pdftex.def
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count99
@@ -132,29 +131,29 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \epsfxsize=\dimen114
 \epsfysize=\dimen115
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/natbib/natbib.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip46
 \bibsep=\skip47
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count100
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2014/04/23 v1.1a Standard LaTeX Color (DPC)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: pdftex.def on input line 137.
+Package color Info: Driver file: pdftex.def on input line 130.
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
-(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
 Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
 
 
-(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
 Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
@@ -195,25 +194,25 @@ Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
-(/usr/local/texlive/2014/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+(/usr/local/texlive/2013/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/auxhook.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
 \@linkdim=\dimen116
 \Hy@linkcounter=\count101
 \Hy@pagecounter=\count102
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/pd1enc.def
+(/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count103
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 4319.
@@ -231,9 +230,9 @@ Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
 \c@Hy@tempcnt=\count104
-(/usr/local/texlive/2014/texmf-dist/tex/latex/url/url.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
-Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5041.
 \XeTeXLinkMargin=\dimen117
@@ -256,13 +255,13 @@ LaTeX Info: Redefining \pageref on input line 6369.
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
 Package hyperref Info: \pdfminorversion:=4 on input line 215.
 \Fld@listcount=\count109
 \c@bookmark@seq@number=\count110
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
@@ -277,10 +276,10 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 LaTeX Font Info:    Try loading font information for OT1+phv on input line 137.
 
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1phv.fd
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 ))
-(/usr/local/texlive/2014/texmf-dist/tex/latex/txfonts/txfonts.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/txfonts/txfonts.sty
 Package: txfonts 2008/01/22 v3.2.1
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 21.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
@@ -365,11 +364,11 @@ LaTeX Font Info:    Overwriting symbol font `largesymbolsA' in version `bold'
 (Font)                  U/txexa/m/n --> U/txexa/bx/n on input line 129.
 LaTeX Info: Redefining \not on input line 1043.
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/threeparttable/threeparttable.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/threeparttable/threeparttable.sty
 Package: threeparttable 2003/06/13  v 3.0
 \@tempboxb=\box28
 ) (./aas_macros.sty)
-(/usr/local/texlive/2014/texmf-dist/tex/latex/subfigure/subfigure.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/subfigure/subfigure.sty
 Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfigtopskip=\skip50
 \subfigcapskip=\skip51
@@ -385,56 +384,56 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
-(/usr/local/texlive/2014/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/subfigure/subfigure.cfg)
 \subfig@top=\skip54
 \subfig@bottom=\skip55
 )
 (./High_resolution_imaging_requirements.aux)
 \openout1 = `High_resolution_imaging_requirements.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 52.
-LaTeX Font Info:    Try loading font information for OML+txmi on input line 52.
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 53.
+LaTeX Font Info:    Try loading font information for OML+txmi on input line 53.
 
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/txfonts/omltxmi.fd
+(/usr/local/texlive/2013/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 52.
-LaTeX Font Info:    Try loading font information for OMS+txsy on input line 52.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 53.
+LaTeX Font Info:    Try loading font information for OMS+txsy on input line 53.
 
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/txfonts/omstxsy.fd
+(/usr/local/texlive/2013/texmf-dist/tex/latex/txfonts/omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 52.
-LaTeX Font Info:    Try loading font information for OMX+txex on input line 52.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 53.
+LaTeX Font Info:    Try loading font information for OMX+txex on input line 53.
 
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/txfonts/omxtxex.fd
+(/usr/local/texlive/2013/texmf-dist/tex/latex/txfonts/omxtxex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 52.
-LaTeX Font Info:    Try loading font information for U+txexa on input line 52.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 53.
+LaTeX Font Info:    Try loading font information for U+txexa on input line 53.
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/txfonts/utxexa.fd
+(/usr/local/texlive/2013/texmf-dist/tex/latex/txfonts/utxexa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Try loading font information for OT1+txr on input line 52.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Try loading font information for OT1+txr on input line 53.
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/txfonts/ot1txr.fd
+(/usr/local/texlive/2013/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
-(/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
+(/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count116
 \scratchdimen=\dimen122
@@ -447,10 +446,10 @@ File: ot1txr.fd 2000/12/15 v3.1
 \MPnumerator=\count120
 \makeMPintoPDFobject=\count121
 \everyMPtoPDFconversion=\toks24
-) (/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+) (/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/grfext.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 )
 Package grfext Info: Graphics extension search list:
@@ -458,349 +457,356 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box30
-Package hyperref Info: Link coloring ON on input line 52.
+Package hyperref Info: Link coloring ON on input line 53.
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
-(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count122
 )
-LaTeX Info: Redefining \ref on input line 52.
-LaTeX Info: Redefining \pageref on input line 52.
-LaTeX Info: Redefining \nameref on input line 52.
+LaTeX Info: Redefining \ref on input line 53.
+LaTeX Info: Redefining \pageref on input line 53.
+LaTeX Info: Redefining \nameref on input line 53.
 
 (./High_resolution_imaging_requirements.out)
 (./High_resolution_imaging_requirements.out)
 \@outlinefile=\write3
 \openout3 = `High_resolution_imaging_requirements.out'.
 
-LaTeX Font Info:    Try loading font information for OT1+txss on input line 53.
+LaTeX Font Info:    Try loading font information for OT1+txss on input line 54.
 
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/txfonts/ot1txss.fd
+(/usr/local/texlive/2013/texmf-dist/tex/latex/txfonts/ot1txss.fd
 File: ot1txss.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
-(Font)              scaled to size 23.63593pt on input line 53.
+(Font)              scaled to size 23.63593pt on input line 54.
 LaTeX Font Info:    Font shape `OT1/txss/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/txss/b/n' tried instead on input line 53.
+(Font)              Font shape `OT1/txss/b/n' tried instead on input line 54.
 LaTeX Font Info:    Font shape `OT1/txss/b/n' will be
-(Font)              scaled to size 23.63593pt on input line 53.
+(Font)              scaled to size 23.63593pt on input line 54.
 LaTeX Font Info:    Font shape `OT1/txss/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/txss/b/n' tried instead on input line 53.
+(Font)              Font shape `OT1/txss/b/n' tried instead on input line 54.
 LaTeX Font Info:    Font shape `OT1/txss/b/n' will be
-(Font)              scaled to size 13.67995pt on input line 53.
-LaTeX Font Info:    Try loading font information for U+txsya on input line 53.
+(Font)              scaled to size 13.67995pt on input line 54.
+LaTeX Font Info:    Try loading font information for U+txsya on input line 54.
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/txfonts/utxsya.fd
+(/usr/local/texlive/2013/texmf-dist/tex/latex/txfonts/utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsyb on input line 53.
+LaTeX Font Info:    Try loading font information for U+txsyb on input line 54.
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/txfonts/utxsyb.fd
+(/usr/local/texlive/2013/texmf-dist/tex/latex/txfonts/utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txmia on input line 53.
+LaTeX Font Info:    Try loading font information for U+txmia on input line 54.
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/txfonts/utxmia.fd
+(/usr/local/texlive/2013/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsyc on input line 53.
+LaTeX Font Info:    Try loading font information for U+txsyc on input line 54.
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/txfonts/utxsyc.fd
+(/usr/local/texlive/2013/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OT1/txss/bx/n' in size <12> not available
-(Font)              Font shape `OT1/txss/b/n' tried instead on input line 53.
+(Font)              Font shape `OT1/txss/b/n' tried instead on input line 54.
 LaTeX Font Info:    Font shape `OT1/txss/b/n' will be
-(Font)              scaled to size 11.39996pt on input line 53.
+(Font)              scaled to size 11.39996pt on input line 54.
  [0
 
-{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 (./High_resolution_imaging_requirements.toc)
 \tf@toc=\write4
 \openout4 = `High_resolution_imaging_requirements.toc'.
 
- [1] [2]
-(./High_resolution_imaging_requirements.bbl
-LaTeX Font Info:    Try loading font information for OT1+txtt on input line 8.
+LaTeX Font Info:    Try loading font information for OT1+txtt on input line 79.
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/txfonts/ot1txtt.fd
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/txfonts/ot1txtt.fd
 File: ot1txtt.fd 2000/12/15 v3.1
-)) [3]
-Overfull \hbox (77.23799pt too wide) in paragraph at lines 255--268
+) [1] [2]
+[3] [4] (./High_resolution_imaging_requirements.bbl [5] [6] [7]) [8]
+Overfull \hbox (77.23799pt too wide) in paragraph at lines 277--290
  [] 
  []
 
-<figures/wavelength_zp.png, id=79, 586.8324pt x 442.2924pt>
+<figures/wavelength_zp.png, id=206, 586.8324pt x 442.2924pt>
 File: figures/wavelength_zp.png Graphic file (type png)
 
 <use figures/wavelength_zp.png>
-Package pdftex.def Info: figures/wavelength_zp.png used on input line 281.
+Package pdftex.def Info: figures/wavelength_zp.png used on input line 303.
 (pdftex.def)             Requested size: 395.99731pt x 298.467pt.
 
-<figures/fainter_system_4QSOimages_all.png, id=81, 1927.2pt x 900.36375pt>
+<figures/PSF_montage.png, id=208, 1284.8pt x 424.58624pt>
+File: figures/PSF_montage.png Graphic file (type png)
+
+<use figures/PSF_montage.png>
+Package pdftex.def Info: figures/PSF_montage.png used on input line 314.
+(pdftex.def)             Requested size: 440.0pt x 145.40695pt.
+
+<figures/fainter_system_4QSOimages_all.png, id=209, 1927.2pt x 900.36375pt>
 File: figures/fainter_system_4QSOimages_all.png Graphic file (type png)
 
 <use figures/fainter_system_4QSOimages_all.png>
 Package pdftex.def Info: figures/fainter_system_4QSOimages_all.png used on inpu
-t line 292.
+t line 326.
 (pdftex.def)             Requested size: 440.0pt x 205.55434pt.
 
-<figures/fainter_system_2QSOimages_all.png, id=82, 1927.2pt x 900.36375pt>
+<figures/fainter_system_2QSOimages_all.png, id=210, 1927.2pt x 900.36375pt>
 File: figures/fainter_system_2QSOimages_all.png Graphic file (type png)
 
 <use figures/fainter_system_2QSOimages_all.png>
 Package pdftex.def Info: figures/fainter_system_2QSOimages_all.png used on inpu
-t line 303.
+t line 337.
 (pdftex.def)             Requested size: 440.0pt x 205.55434pt.
 
-<figures/brighter_system_2QSOimages_all.png, id=83, 1927.2pt x 900.36375pt>
+<figures/brighter_system_2QSOimages_all.png, id=211, 1927.2pt x 900.36375pt>
 File: figures/brighter_system_2QSOimages_all.png Graphic file (type png)
 
 <use figures/brighter_system_2QSOimages_all.png>
 Package pdftex.def Info: figures/brighter_system_2QSOimages_all.png used on inp
-ut line 314.
+ut line 348.
 (pdftex.def)             Requested size: 440.0pt x 205.55434pt.
 
-<figures/brighter_system_4QSOimages_all.png, id=84, 1927.2pt x 900.36375pt>
+<figures/brighter_system_4QSOimages_all.png, id=212, 1927.2pt x 900.36375pt>
 File: figures/brighter_system_4QSOimages_all.png Graphic file (type png)
 
 <use figures/brighter_system_4QSOimages_all.png>
 Package pdftex.def Info: figures/brighter_system_4QSOimages_all.png used on inp
-ut line 325.
+ut line 359.
 (pdftex.def)             Requested size: 440.0pt x 205.55434pt.
 
-<figures/gamma_135949_4QSOimages_HST.png, id=85, 586.8324pt x 442.2924pt>
+<figures/gamma_135949_4QSOimages_HST.png, id=213, 586.8324pt x 442.2924pt>
 File: figures/gamma_135949_4QSOimages_HST.png Graphic file (type png)
 
 <use figures/gamma_135949_4QSOimages_HST.png>
 Package pdftex.def Info: figures/gamma_135949_4QSOimages_HST.png used on input 
-line 336.
+line 370.
 (pdftex.def)             Requested size: 211.19812pt x 159.1779pt.
 
-<figures/gamma_135949_4QSOimages_JWST.png, id=86, 586.8324pt x 442.2924pt>
+<figures/gamma_135949_4QSOimages_JWST.png, id=214, 586.8324pt x 442.2924pt>
 File: figures/gamma_135949_4QSOimages_JWST.png Graphic file (type png)
 
 <use figures/gamma_135949_4QSOimages_JWST.png>
 Package pdftex.def Info: figures/gamma_135949_4QSOimages_JWST.png used on input
- line 337.
+ line 371.
 (pdftex.def)             Requested size: 211.19812pt x 159.1779pt.
 
-<figures/gamma_135949_4QSOimages_Keck.png, id=87, 586.8324pt x 442.2924pt>
+<figures/gamma_135949_4QSOimages_Keck.png, id=215, 586.8324pt x 442.2924pt>
 File: figures/gamma_135949_4QSOimages_Keck.png Graphic file (type png)
 
 <use figures/gamma_135949_4QSOimages_Keck.png>
 Package pdftex.def Info: figures/gamma_135949_4QSOimages_Keck.png used on input
- line 338.
+ line 372.
 (pdftex.def)             Requested size: 211.19812pt x 159.1779pt.
 
-<figures/gamma_135949_4QSOimages_NGAO.png, id=88, 586.8324pt x 442.2924pt>
+<figures/gamma_135949_4QSOimages_NGAO.png, id=216, 586.8324pt x 442.2924pt>
 File: figures/gamma_135949_4QSOimages_NGAO.png Graphic file (type png)
 
 <use figures/gamma_135949_4QSOimages_NGAO.png>
 Package pdftex.def Info: figures/gamma_135949_4QSOimages_NGAO.png used on input
- line 339.
+ line 373.
 (pdftex.def)             Requested size: 211.19812pt x 159.1779pt.
 
-<figures/gamma_135949_4QSOimages_E_W_L.png, id=89, 586.8324pt x 442.2924pt>
+<figures/gamma_135949_4QSOimages_E_W_L.png, id=217, 586.8324pt x 442.2924pt>
 File: figures/gamma_135949_4QSOimages_E_W_L.png Graphic file (type png)
 
 <use figures/gamma_135949_4QSOimages_E_W_L.png>
 Package pdftex.def Info: figures/gamma_135949_4QSOimages_E_W_L.png used on inpu
-t line 340.
+t line 374.
 (pdftex.def)             Requested size: 211.19812pt x 159.1779pt.
 
-<figures/gamma_135949_4QSOimages_TMT.png, id=90, 586.8324pt x 442.2924pt>
+<figures/gamma_135949_4QSOimages_TMT.png, id=218, 586.8324pt x 442.2924pt>
 File: figures/gamma_135949_4QSOimages_TMT.png Graphic file (type png)
 
 <use figures/gamma_135949_4QSOimages_TMT.png>
 Package pdftex.def Info: figures/gamma_135949_4QSOimages_TMT.png used on input 
-line 341.
+line 375.
 (pdftex.def)             Requested size: 211.19812pt x 159.1779pt.
 
-<figures/gamma_135949_anti_2QSOimages_HST.png, id=91, 586.8324pt x 442.2924pt>
+<figures/gamma_135949_anti_2QSOimages_HST.png, id=219, 586.8324pt x 442.2924pt>
 File: figures/gamma_135949_anti_2QSOimages_HST.png Graphic file (type png)
-
 <use figures/gamma_135949_anti_2QSOimages_HST.png>
 Package pdftex.def Info: figures/gamma_135949_anti_2QSOimages_HST.png used on i
-nput line 352.
+nput line 386.
 (pdftex.def)             Requested size: 211.19812pt x 159.1779pt.
 
-<figures/gamma_135949_anti_2QSOimages_JWST.png, id=92, 586.8324pt x 442.2924pt>
+<figures/gamma_135949_anti_2QSOimages_JWST.png, id=220, 586.8324pt x 442.2924pt
+>
 File: figures/gamma_135949_anti_2QSOimages_JWST.png Graphic file (type png)
-<use figures/gamma_135949_anti_2QSOimages_JWST.png>
+ <use figures/gamma_135949_anti_2QSOimages_JWST.png>
 Package pdftex.def Info: figures/gamma_135949_anti_2QSOimages_JWST.png used on 
-input line 353.
+input line 387.
 (pdftex.def)             Requested size: 211.19812pt x 159.1779pt.
 
-<figures/gamma_135949_anti_2QSOimages_Keck.png, id=93, 586.8324pt x 442.2924pt>
+<figures/gamma_135949_anti_2QSOimages_Keck.png, id=221, 586.8324pt x 442.2924pt
+>
 File: figures/gamma_135949_anti_2QSOimages_Keck.png Graphic file (type png)
-<use figures/gamma_135949_anti_2QSOimages_Keck.png>
+ <use figures/gamma_135949_anti_2QSOimages_Keck.png>
 Package pdftex.def Info: figures/gamma_135949_anti_2QSOimages_Keck.png used on 
-input line 354.
+input line 388.
 (pdftex.def)             Requested size: 211.19812pt x 159.1779pt.
 
-<figures/gamma_135949_anti_2QSOimages_NGAO.png, id=94, 586.8324pt x 442.2924pt>
+<figures/gamma_135949_anti_2QSOimages_NGAO.png, id=222, 586.8324pt x 442.2924pt
+>
 File: figures/gamma_135949_anti_2QSOimages_NGAO.png Graphic file (type png)
-<use figures/gamma_135949_anti_2QSOimages_NGAO.png>
+ <use figures/gamma_135949_anti_2QSOimages_NGAO.png>
 Package pdftex.def Info: figures/gamma_135949_anti_2QSOimages_NGAO.png used on 
-input line 355.
+input line 389.
 (pdftex.def)             Requested size: 211.19812pt x 159.1779pt.
 
-<figures/gamma_135949_anti_2QSOimages_EWL.png, id=95, 586.8324pt x 442.2924pt>
+<figures/gamma_135949_anti_2QSOimages_EWL.png, id=223, 586.8324pt x 442.2924pt>
 File: figures/gamma_135949_anti_2QSOimages_EWL.png Graphic file (type png)
-
 <use figures/gamma_135949_anti_2QSOimages_EWL.png>
 Package pdftex.def Info: figures/gamma_135949_anti_2QSOimages_EWL.png used on i
-nput line 356.
+nput line 390.
 (pdftex.def)             Requested size: 211.19812pt x 159.1779pt.
 
-<figures/gamma_135949_anti_2QSOimages_TMT.png, id=96, 586.8324pt x 442.2924pt>
+<figures/gamma_135949_anti_2QSOimages_TMT.png, id=224, 586.8324pt x 442.2924pt>
 File: figures/gamma_135949_anti_2QSOimages_TMT.png Graphic file (type png)
-
 <use figures/gamma_135949_anti_2QSOimages_TMT.png>
 Package pdftex.def Info: figures/gamma_135949_anti_2QSOimages_TMT.png used on i
-nput line 357.
+nput line 391.
 (pdftex.def)             Requested size: 211.19812pt x 159.1779pt.
 
-<figures/gamma_0330_2QSOimages_HST.png, id=97, 586.8324pt x 442.2924pt>
+<figures/gamma_0330_2QSOimages_HST.png, id=225, 586.8324pt x 442.2924pt>
 File: figures/gamma_0330_2QSOimages_HST.png Graphic file (type png)
 
 <use figures/gamma_0330_2QSOimages_HST.png>
 Package pdftex.def Info: figures/gamma_0330_2QSOimages_HST.png used on input li
-ne 368.
+ne 402.
 (pdftex.def)             Requested size: 211.19812pt x 159.1779pt.
 
-<figures/gamma_0330_2QSOimages_JWST.png, id=98, 586.8324pt x 442.2924pt>
+<figures/gamma_0330_2QSOimages_JWST.png, id=226, 586.8324pt x 442.2924pt>
 File: figures/gamma_0330_2QSOimages_JWST.png Graphic file (type png)
 
 <use figures/gamma_0330_2QSOimages_JWST.png>
 Package pdftex.def Info: figures/gamma_0330_2QSOimages_JWST.png used on input l
-ine 369.
+ine 403.
 (pdftex.def)             Requested size: 211.19812pt x 159.1779pt.
 
-<figures/gamma_0330_2QSOimages_Keck.png, id=99, 586.8324pt x 442.2924pt>
+<figures/gamma_0330_2QSOimages_Keck.png, id=227, 586.8324pt x 442.2924pt>
 File: figures/gamma_0330_2QSOimages_Keck.png Graphic file (type png)
 
 <use figures/gamma_0330_2QSOimages_Keck.png>
 Package pdftex.def Info: figures/gamma_0330_2QSOimages_Keck.png used on input l
-ine 370.
+ine 404.
 (pdftex.def)             Requested size: 211.19812pt x 159.1779pt.
 
-<figures/gamma_0330_2QSOimages_NGAO.png, id=100, 586.8324pt x 442.2924pt>
+<figures/gamma_0330_2QSOimages_NGAO.png, id=228, 586.8324pt x 442.2924pt>
 File: figures/gamma_0330_2QSOimages_NGAO.png Graphic file (type png)
 
 <use figures/gamma_0330_2QSOimages_NGAO.png>
 Package pdftex.def Info: figures/gamma_0330_2QSOimages_NGAO.png used on input l
-ine 371.
+ine 405.
 (pdftex.def)             Requested size: 211.19812pt x 159.1779pt.
 
-<figures/gamma_0330_2QSOimages_E_W_L.png, id=101, 586.8324pt x 442.2924pt>
+<figures/gamma_0330_2QSOimages_E_W_L.png, id=229, 586.8324pt x 442.2924pt>
 File: figures/gamma_0330_2QSOimages_E_W_L.png Graphic file (type png)
 
 <use figures/gamma_0330_2QSOimages_E_W_L.png>
 Package pdftex.def Info: figures/gamma_0330_2QSOimages_E_W_L.png used on input 
-line 372.
+line 406.
 (pdftex.def)             Requested size: 211.19812pt x 159.1779pt.
 
-<figures/gamma_0330_anti_4QSOimages_HST.png, id=102, 586.8324pt x 442.2924pt>
+<figures/gamma_0330_anti_4QSOimages_HST.png, id=230, 586.8324pt x 442.2924pt>
 File: figures/gamma_0330_anti_4QSOimages_HST.png Graphic file (type png)
 
 <use figures/gamma_0330_anti_4QSOimages_HST.png>
 Package pdftex.def Info: figures/gamma_0330_anti_4QSOimages_HST.png used on inp
-ut line 383.
+ut line 417.
 (pdftex.def)             Requested size: 211.19812pt x 159.1779pt.
 
-<figures/gamma_0330_anti_4QSOimages_JWST.png, id=103, 586.8324pt x 442.2924pt>
+<figures/gamma_0330_anti_4QSOimages_JWST.png, id=231, 586.8324pt x 442.2924pt>
 File: figures/gamma_0330_anti_4QSOimages_JWST.png Graphic file (type png)
 
 <use figures/gamma_0330_anti_4QSOimages_JWST.png>
 Package pdftex.def Info: figures/gamma_0330_anti_4QSOimages_JWST.png used on in
-put line 384.
+put line 418.
 (pdftex.def)             Requested size: 211.19812pt x 159.1779pt.
 
-<figures/gamma_0330_anti_4QSOimages_Keck.png, id=104, 586.8324pt x 442.2924pt>
+<figures/gamma_0330_anti_4QSOimages_Keck.png, id=232, 586.8324pt x 442.2924pt>
 File: figures/gamma_0330_anti_4QSOimages_Keck.png Graphic file (type png)
 
 <use figures/gamma_0330_anti_4QSOimages_Keck.png>
 Package pdftex.def Info: figures/gamma_0330_anti_4QSOimages_Keck.png used on in
-put line 385.
+put line 419.
 (pdftex.def)             Requested size: 211.19812pt x 159.1779pt.
 
-<figures/gamma_0330_anti_4QSOimages_NGAO.png, id=105, 586.8324pt x 442.2924pt>
+<figures/gamma_0330_anti_4QSOimages_NGAO.png, id=233, 586.8324pt x 442.2924pt>
 File: figures/gamma_0330_anti_4QSOimages_NGAO.png Graphic file (type png)
 
 <use figures/gamma_0330_anti_4QSOimages_NGAO.png>
 Package pdftex.def Info: figures/gamma_0330_anti_4QSOimages_NGAO.png used on in
-put line 386.
+put line 420.
 (pdftex.def)             Requested size: 211.19812pt x 159.1779pt.
 
-<figures/gamma_0330_anti_4QSOimages_EWL.png, id=106, 694.5147pt x 442.2924pt>
+<figures/gamma_0330_anti_4QSOimages_EWL.png, id=234, 694.5147pt x 442.2924pt>
 File: figures/gamma_0330_anti_4QSOimages_EWL.png Graphic file (type png)
 
 <use figures/gamma_0330_anti_4QSOimages_EWL.png>
 Package pdftex.def Info: figures/gamma_0330_anti_4QSOimages_EWL.png used on inp
-ut line 387.
+ut line 421.
 (pdftex.def)             Requested size: 211.19812pt x 134.49742pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 394.
- [4] [5 <./figures/wavelength_zp.png>] [6 <./figures/fainter_system_4QSOimages_
-all.png> <./figures/fainter_system_2QSOimages_all.png>] [7 <./figures/brighter_
-system_2QSOimages_all.png> <./figures/brighter_system_4QSOimages_all.png>] [8 <
-./figures/gamma_135949_4QSOimages_HST.png> <./figures/gamma_135949_4QSOimages_J
-WST.png> <./figures/gamma_135949_4QSOimages_Keck.png> <./figures/gamma_135949_4
-QSOimages_NGAO.png> <./figures/gamma_135949_4QSOimages_E_W_L.png> <./figures/ga
-mma_135949_4QSOimages_TMT.png>] [9 <./figures/gamma_135949_anti_2QSOimages_HST.
-png> <./figures/gamma_135949_anti_2QSOimages_JWST.png> <./figures/gamma_135949_
-anti_2QSOimages_Keck.png> <./figures/gamma_135949_anti_2QSOimages_NGAO.png> <./
-figures/gamma_135949_anti_2QSOimages_EWL.png> <./figures/gamma_135949_anti_2QSO
-images_TMT.png>] [10 <./figures/gamma_0330_2QSOimages_HST.png> <./figures/gamma
-_0330_2QSOimages_JWST.png> <./figures/gamma_0330_2QSOimages_Keck.png> <./figure
-s/gamma_0330_2QSOimages_NGAO.png> <./figures/gamma_0330_2QSOimages_E_W_L.png>] 
-[11 <./figures/gamma_0330_anti_4QSOimages_HST.png> <./figures/gamma_0330_anti_4
-QSOimages_JWST.png> <./figures/gamma_0330_anti_4QSOimages_Keck.png> <./figures/
-gamma_0330_anti_4QSOimages_NGAO.png> <./figures/gamma_0330_anti_4QSOimages_EWL.
-png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 394.
-
-(./High_resolution_imaging_requirements.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 394.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 394.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 428.
+ [9] [10 <./figures/wavelength_zp.png>] [11 <./figures/PSF_montage.png> <./figu
+res/fainter_system_4QSOimages_all.png>] [12 <./figures/fainter_system_2QSOimage
+s_all.png> <./figures/brighter_system_2QSOimages_all.png>] [13 <./figures/brigh
+ter_system_4QSOimages_all.png>] [14 <./figures/gamma_135949_4QSOimages_HST.png>
+ <./figures/gamma_135949_4QSOimages_JWST.png> <./figures/gamma_135949_4QSOimage
+s_Keck.png> <./figures/gamma_135949_4QSOimages_NGAO.png> <./figures/gamma_13594
+9_4QSOimages_E_W_L.png> <./figures/gamma_135949_4QSOimages_TMT.png>] [15 <./fig
+ures/gamma_135949_anti_2QSOimages_HST.png> <./figures/gamma_135949_anti_2QSOima
+ges_JWST.png> <./figures/gamma_135949_anti_2QSOimages_Keck.png> <./figures/gamm
+a_135949_anti_2QSOimages_NGAO.png> <./figures/gamma_135949_anti_2QSOimages_EWL.
+png> <./figures/gamma_135949_anti_2QSOimages_TMT.png>] [16 <./figures/gamma_033
+0_2QSOimages_HST.png> <./figures/gamma_0330_2QSOimages_JWST.png> <./figures/gam
+ma_0330_2QSOimages_Keck.png> <./figures/gamma_0330_2QSOimages_NGAO.png> <./figu
+res/gamma_0330_2QSOimages_E_W_L.png>] [17 <./figures/gamma_0330_anti_4QSOimages
+_HST.png> <./figures/gamma_0330_anti_4QSOimages_JWST.png> <./figures/gamma_0330
+_anti_4QSOimages_Keck.png> <./figures/gamma_0330_anti_4QSOimages_NGAO.png> <./f
+igures/gamma_0330_anti_4QSOimages_EWL.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 428.
+ (./High_resolution_imaging_requirements.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 428.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 428.
 Package rerunfilecheck Info: File `High_resolution_imaging_requirements.out' ha
 s not changed.
 (rerunfilecheck)             Checksum: 1C7B8A837EF2426443A3BBACB78D7C12;292.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 394.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 428.
  ) 
 Here is how much of TeX's memory you used:
- 7542 strings out of 493117
- 110722 string characters out of 6135433
- 210011 words of memory out of 5000000
- 10779 multiletter control sequences out of 15000+600000
- 63695 words of font info for 148 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 41i,12n,30p,972b,329s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2014/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb></usr/local/texlive/
-2014/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/local/texlive/2014/t
-exmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local/texlive/2014/texmf-di
-st/fonts/type1/public/txfonts/rtxsc.pfb></usr/local/texlive/2014/texmf-dist/fon
-ts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2014/texmf-dist/fonts/type
-1/public/txfonts/txtt.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/h
-elvetic/uhvb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/ut
-mb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><
-/usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on High_resolution_imaging_requirements.pdf (12 pages, 4902687 b
+ 7672 strings out of 493315
+ 113848 string characters out of 6137904
+ 211218 words of memory out of 5000000
+ 10857 multiletter control sequences out of 15000+600000
+ 63971 words of font info for 149 fonts, out of 8000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 41i,12n,30p,2924b,583s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2013/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb></usr/local/texlive/
+2013/texmf-dist/fonts/type1/public/txfonts/rtxi.pfb></usr/local/texlive/2013/te
+xmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/local/texlive/2013/texmf-di
+st/fonts/type1/public/txfonts/rtxr.pfb></usr/local/texlive/2013/texmf-dist/font
+s/type1/public/txfonts/rtxsc.pfb></usr/local/texlive/2013/texmf-dist/fonts/type
+1/public/txfonts/txsy.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/publi
+c/txfonts/txtt.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/helvetic
+/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmb8a.pf
+b></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/lo
+cal/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on High_resolution_imaging_requirements.pdf (18 pages, 5085234 b
 ytes).
 PDF statistics:
- 218 PDF objects out of 1000 (max. 8388607)
- 42 named destinations out of 1000 (max. 500000)
- 184 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 361 PDF objects out of 1000 (max. 8388607)
+ 82 named destinations out of 1000 (max. 500000)
+ 189 words of extra memory for PDF output out of 10000 (max. 10000000)
 
