@@ -138,23 +138,6 @@ Z.~{Ivezic}, J.~A. {Tyson}, B.~{Abel}, E.~{Acosta}, R.~{Allsman},
   ArXiv e-prints} (May, 2008) [\href{http://xxx.lanl.gov/abs/0805.2366}{{\tt
   arXiv:0805.2366}}].
 
-\bibitem{2007ApJ...671.1196M}
-P.~J. {Marshall}, T.~{Treu}, J.~{Melbourne}, R.~{Gavazzi}, K.~{Bundy}, S.~M.
-  {Ammons}, A.~S. {Bolton}, S.~{Burles}, J.~E. {Larkin}, D.~{Le Mignant}, D.~C.
-  {Koo}, L.~V.~E. {Koopmans}, C.~E. {Max}, L.~A. {Moustakas}, E.~{Steinbring},
-  and S.~A. {Wright}, {\it {Superresolving Distant Galaxies with Gravitational
-  Telescopes: Keck Laser Guide Star Adaptive Optics and Hubble Space Telescope
-  Imaging of the Lens System SDSS J0737+3216}},  {\em \apj} {\bf 671} (Dec.,
-  2007) 1196--1211, [\href{http://xxx.lanl.gov/abs/0710.0637}{{\tt
-  arXiv:0710.0637}}].
-
-\bibitem{2009ApJ...691..277S}
-S.~H. {Suyu}, P.~J. {Marshall}, R.~D. {Blandford}, C.~D. {Fassnacht}, L.~V.~E.
-  {Koopmans}, J.~P. {McKean}, and T.~{Treu}, {\it {Dissecting the Gravitational
-  Lens B1608+656. I. Lens Potential Reconstruction}},  {\em \apj} {\bf 691}
-  (Jan., 2009) 277--298, [\href{http://xxx.lanl.gov/abs/0804.2827}{{\tt
-  arXiv:0804.2827}}].
-
 \bibitem{2006ApJ...638..703B}
 A.~S. {Bolton}, S.~{Burles}, L.~V.~E. {Koopmans}, T.~{Treu}, and L.~A.
   {Moustakas}, {\it {The Sloan Lens ACS Survey. I. A Large Spectroscopically
@@ -273,5 +256,35 @@ A.~{Sonnenfeld}, T.~{Treu}, P.~J. {Marshall}, S.~H. {Suyu}, R.~{Gavazzi}, M.~W.
   Matter Halos and Stellar IMF of Massive Early-type Galaxies Out to Redshift
   0.8}},  {\em \apj} {\bf 800} (Feb., 2015) 94,
   [\href{http://xxx.lanl.gov/abs/1410.1881}{{\tt arXiv:1410.1881}}].
+
+\bibitem{1963BAAA....6...41S}
+J.~L. {S{\'e}rsic}, {\it {Influence of the atmospheric and instrumental
+  dispersion on the brightness distribution in a galaxy}},  {\em Boletin de la
+  Asociacion Argentina de Astronomia La Plata Argentina} {\bf 6} (1963) 41.
+
+\bibitem{1968adga.book.....S}
+J.~L. {S{\'e}rsic}, {\em {Atlas de galaxias australes}}.
+\newblock 1968.
+
+\bibitem{1993MNRAS.265.1013C}
+N.~{Caon}, M.~{Capaccioli}, and M.~{D'Onofrio}, {\it {On the Shape of the Light
+  Profiles of Early Type Galaxies}},  {\em \mnras} {\bf 265} (Dec., 1993) 1013,
+  [\href{http://xxx.lanl.gov/abs/astro-ph/9309013}{{\tt astro-ph/9309013}}].
+
+\bibitem{2006AJ....132.2685M}
+D.~{Merritt}, A.~W. {Graham}, B.~{Moore}, J.~{Diemand}, and B.~{Terzi{\'c}},
+  {\it {Empirical Models for Dark Matter Halos. I. Nonparametric Construction
+  of Density Profiles and Comparison with Parametric Models}},  {\em \aj} {\bf
+  132} (Dec., 2006) 2685--2700,
+  [\href{http://xxx.lanl.gov/abs/astro-ph/0509417}{{\tt astro-ph/0509417}}].
+
+\bibitem{1998ApJ...502..531B}
+R.~{Barkana}, {\it {Fast Calculation of a Family of Elliptical Mass
+  Gravitational Lens Models}},  {\em \apj} {\bf 502} (Aug., 1998) 531--537,
+  [\href{http://xxx.lanl.gov/abs/astro-ph/9802002}{{\tt astro-ph/9802002}}].
+
+\bibitem{1994MNRAS.267..333E}
+N.~W. {Evans}, {\it {The power-law galaxies}},  {\em \mnras} {\bf 267} (Mar.,
+  1994) 333--360.
 
 \end{thebibliography}\endgroup
