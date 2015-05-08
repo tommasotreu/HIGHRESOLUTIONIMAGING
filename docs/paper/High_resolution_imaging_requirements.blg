@@ -3,44 +3,46 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: High_resolution_imaging_requirements.aux
 The style file: JHEP.bst
 Database file #1: rebuilt_gamma.bib
-You've used 29 entries,
+Warning--empty publisher in 1968adga.book.....S
+You've used 33 entries,
             2195 wiz_defined-function locations,
-            716 strings with 18298 characters,
-and the built_in function-call counts, 15662 in all, are:
-= -- 943
-> -- 1735
+            744 strings with 18539 characters,
+and the built_in function-call counts, 16455 in all, are:
+= -- 1044
+> -- 1706
 < -- 0
-+ -- 588
-- -- 559
-* -- 1832
-:= -- 2726
-add.period$ -- 30
-call.type$ -- 29
-change.case$ -- 29
++ -- 581
+- -- 548
+* -- 1866
+:= -- 2816
+add.period$ -- 35
+call.type$ -- 33
+change.case$ -- 32
 chr.to.int$ -- 0
-cite$ -- 29
-duplicate$ -- 472
-empty$ -- 900
-format.name$ -- 559
-if$ -- 3349
+cite$ -- 34
+duplicate$ -- 534
+empty$ -- 1009
+format.name$ -- 548
+if$ -- 3581
 int.to.chr$ -- 0
-int.to.str$ -- 29
-missing$ -- 104
-newline$ -- 91
-num.names$ -- 29
-pop$ -- 119
+int.to.str$ -- 33
+missing$ -- 118
+newline$ -- 104
+num.names$ -- 33
+pop$ -- 137
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 320
+skip$ -- 361
 stack$ -- 0
-substring$ -- 581
-swap$ -- 195
+substring$ -- 617
+swap$ -- 219
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 70
-width$ -- 31
-write$ -- 312
+warning$ -- 1
+while$ -- 78
+width$ -- 35
+write$ -- 351
+(There was 1 warning)
