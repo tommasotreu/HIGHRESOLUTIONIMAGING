@@ -1,10 +1,10 @@
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}
 \contentsline {section}{\numberline {2}Instrument Simulations}{1}{section.2}
 \contentsline {section}{\numberline {3}The Lens Sample}{3}{section.3}
-\contentsline {subsection}{\numberline {3.1}Sample Selection}{3}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.1}Survey Selection}{3}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}Sample Parameters}{3}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Image Generating Progress}{4}{subsection.3.3}
-\contentsline {subsubsection}{\numberline {3.3.1}Light Model}{4}{subsubsection.3.3.1}
-\contentsline {section}{\numberline {4}Lens Reconstruction}{5}{section.4}
+\contentsline {section}{\numberline {4}Lens Reconstruction}{4}{section.4}
+\contentsline {subsection}{\numberline {4.1}Light Model}{5}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Mass Model}{5}{subsection.4.2}
 \contentsline {section}{\numberline {5}Results}{6}{section.5}
 \contentsline {section}{\numberline {6}Summary}{6}{section.6}
