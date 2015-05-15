@@ -136,11 +136,16 @@ Then: say that source is mapped onto lens plane with formalism illustrated later
 
 \section{Lens Reconstruction}
 
-The lens image can be decomposed into four components: source image, lens image, point-source image, and noise image. We now briefly describe the image generating progress for each component. 
+%The lens image can be decomposed into four components: source image, lens image, point-source image, and noise image. We now briefly describe the image generating progress in this section.  The .. image in Figure.. shows the light from the source and point-source as lensed by the lens galaxy. 
 
-The .. image in Figure.. shows the light from the source and point-source as lensed by the lens galaxy. First, we need a model to describe the surface brightness distribution of the source galaxy. To map the source onto the lens plane, the mass model for the lens mass distribution is needed to build to represent the deflection angle of the source galaxy and point-source light. Similarly, we also need a model for the light distribution of the lens galaxy. A PSF is needed to convolve the light of lens galaxy and lensed source galaxy and point-source. To get a truer image of lens system using telescopes, it is impossible to keep clear of noise. We introduce three terms to describe the the noise adding to the image, including counts noise, readout noise, and background noise. We will make a detailed description of surface brightness light model, lens model, point-source model, PSF, and instrument noise information in this section.
+In this section, we briefly present the progress of modeling the mock lens systems using defined models. By comparing the difference between the real data value and output best fit value of each parameter, the precision with parameters, especially which the slope of the mass density profile for the deflector can be measured.
 
-\subsection{Light Model}
+
+\subsection{Image generating progress}
+
+Before we fit the mock lens system we need to define the models to describe the source galaxy light, the lens galaxy light, and the lens mass. We start with the surface brightness distribution of the galaxies. To remap the source image onto the source plane, the mass model for the lens mass distribution is needed to build to represent the deflection angle. Similarly, we also need a model for the light distribution of the lens galaxy. A PSF is used to convolve the light of lens galaxy, lensed source galaxy and point-source. To get a truer image of lens system using instruments, it is impossible to keep clear of noise. We introduce three terms to describe the the noise adding to the image, including counts noise, readout noise, and background noise. As described above, we will make a detailed description of surface brightness light model, lens model, point-source model, PSF, and instrument noise information in this subsection.
+
+\subsubsection{Light Model}
 
 We use S\'ersic profile (S\'ersic 1963 \cite{1963BAAA....6...41S}; 1968 \cite{1968adga.book.....S}) which is created to represent how the intensity I of a galaxy varies with distance R from its center to describe the light distributions of source and lens galaxies,
 
@@ -149,16 +154,73 @@ We use S\'ersic profile (S\'ersic 1963 \cite{1963BAAA....6...41S}; 1968 \cite{19
    &I(R) = I_{\mathrm{e}} \exp\left[-k\left(\left(\frac{R}{R_{\mathrm{eff}}}\right)^{\frac{1}{\mathrm{n}}}-1\right)\right] ,\\
    &R(x,y,q) = \sqrt{qx^2+y^2/q},
 \end{eqnarray}
-(see Caon et al. 1993 \cite{1993MNRAS.265.1013C}). The amplitude $I_{\mathrm{e}}$ is the intensity at the effective $R_{\mathrm{eff}}$, the constant $k$ is usually determined based on $R_{\mathrm{eff}}$ is the radius at which the major axis contains half of the total flux, the parameter $n$ is named S\'ersic index which is used to control the degree of the curvature of the radial light profile, the $\left\{x,y\right\}$ represents the galaxy positions, and $q$ denotes the axis ratio. An additional explanation is necessary here: the best-fit value of $n$ correlates with galaxy size and luminosity. Most galaxies are fitted by S\'ersic index in the range $0.6 \le n \le 10.0$ (Merritt et al. 2006 \cite{2006AJ....132.2685M}). For giant elliptical galaxies, $n = 4$ is a good description. 
+(see Caon et al. 1993 \cite{1993MNRAS.265.1013C}). The amplitude $I_{\mathrm{e}}$ is the intensity at the effective $R_{\mathrm{eff}}$, the constant $k$ is usually determined based on $R_{\mathrm{eff}}$ is the radius at which the major axis contains half of the total flux, the parameter $n$ is named S\'ersic index which is used to control the degree of the curvature of the radial light profile, the $\left\{x,y\right\}$ represents the galaxy positions, and $q$ denotes the axis ratio.
+
+An additional explanation is necessary here: the best-fit value of $n$ correlates with galaxy size and luminosity. Most galaxies are fitted by S\'ersic index in the range $0.6 \le n \le 10.0$ (Merritt et al. 2006 \cite{2006AJ....132.2685M}). More centrally concentrated profile matches larger value of S\'ersic index. For example, for giant elliptical galaxies, $n = 4$ is a good description. 
 
 
-\subsection{Mass Model}
+\subsubsection{Mass Model}
+
+Here we describe the distribution of the surface mass density for the lens galaxy. The deflector’s mass profile is assigned within a class of power-law models,
+
+\begin{equation}
+\Sigma(x,y)=\Sigma_{0}(q X^{2}+q^{-1}Y^{2})^{-\gamma^{\prime}},
+\end{equation}
+where $q$ is the axis ratio, $\gamma'$ represents the radial power-law slope, the $\left\{X,Y\right\}$ axes are rotated by some position angle w.r.to the canonical $x$ (increasing to the West) and $y$ (increasing to the North). This means that the $\left\{X,Y\right\}$ deflections scale as ..., where $g(\theta)$ a just function of the relative angle west-of-north. Fast methods to compute deflections from power-law profiles have been given by Barkana 1998 \cite{1998ApJ...502..531B}. Power-law models of elliptical galaxies (Evans 1994 \cite{1994MNRAS.267..333E}) have often been used with success over the years to model gravitational lenses. In utter generality, the lensing deflections are given by
+\begin{equation}
+\alpha(\theta) = \frac{2}{\theta} \int_{0}^{\theta} \theta d\theta \Sigma (\theta) /\Sigma_{\mathrm{cr}}
+\end{equation}
+where $\theta$ is the position angle, and 
+\begin{equation}
+\Sigma_{\mathrm{cr}} = \frac{c^{2}D_{\mathrm{s}}}{4\pi G D_{\mathrm{d}} D_{\mathrm{ds}}}
+\end{equation}
+encompasses the relative positions of source, deflector and observer (the angular diameter to the deflector ($D_{\mathrm{d}}$), to the source ($D_{\mathrm{s}}$), and between the deflector and the source ($D_{\mathrm{ds}}$)). Then, in our power-law case the deflections can be rewritten conveniently as
+\begin{eqnarray}
+   \label{eq:Intensity}
+   &\alpha(\vartheta) = \theta_{\mathrm{E}}\left(\frac{\theta_{\mathrm{E}}}{\vartheta}\right)^{\gamma'-2} ,\\
+   
+\end{eqnarray}
+where $\vartheta = R/D_{\mathrm{d}}$, and $R$ is the two-dimensional projected radius. $\theta_{\mathrm{E}}$ here is the Einstein radius $R_{\mathrm{E}},$ which is such that in the spherical case ($q=1$) the mean dimensionless density $\langle\Sigma\rangle/\Sigma_{cr}$ within a circle of radius $R_E$ is exactly 1. This is also the radius of a ring traced by the host of the quasar when this is exactly aligned with the lens galaxy.
+
+Lensed image profiles are obtained by Inverse Ray Shooting:. First, each pixel position in the image plane is mapped back to the source plane via the deflections in eq~... Then, we exploit the fact that surface-brightness is preserved by lensing, i.e.
+\begin{equation}
+...
+\end{equation}
+In general, when dealing with more complex caustics from substructure \textbf{Vegetti (????)} or microlensing \textbf{Mediavilla (????)},
+ rays are shot through an adaptive, triangular tessellation in the image place.
+ Here, we can simply use a rectangular grid in the image-plane to obtain sufficiently accurate results.
+
+
+\subsubsection{Point-Source Model}
+
+
+
+
+\subsubsection{PSF}
+
+For modeling the light of the lens galaxies, the lensed background galaxies and the lensed point sources, we use simulated PSFs for every instrument except for LGSAO. On the other hand, for Euclid, WFIRST, and LSST, Gaussian PSFs are adopted to generate mock data in this work by lack of sufficient information. The typical full width at half maximum (FWHM) of PSF with selected filter are 0.18′′, 0.15′′, and 0.7′′ respectively.
+
+
+\subsubsection{Image Noise}
+
+As mentioned above, clean lens system image can be created if light, mass and PSF model are defined precisely. However, noise also contributes pixel counts in a given exposure time except for the signals from lensed galaxy, deflector and point-source. To derive the noise in each pixel, there are three principle ingredients, include counts noise from the clean image, background noise depends on the instrument and wavelength, and readout noise based on instrument. The variance of total noise is given by
+
+\begin{equation}
+   \label{eq:noise}
+   \mathrm{Var}_{\mathrm{noise}} = \sqrt{Ct+(B_{\mathrm{sky}}+B_{\mathrm{det}}) t N_{\mathrm{pix}} + N_{\mathrm{read}} R^{2} N_{\mathrm{pix}}}
+\end{equation}
+where $C$ is the signal from clean lens system in electrons per second from the CCD, $t$ is the integration time in seconds, $B_{\mathrm{sky}}$ is the sky background in electrons per second per pixel, $B_{\mathrm{det}}$ is the detector dark current in electrons per second per pixel, $N_{\mathrm{pix}}$ is the total number of detector pixels which are integrated over to achieve $C$, $N_{\mathrm{read}}$ is the number of CCD readouts, and $R$ is the read noise in electrons. 
+
+Normally, comparing with $B_{\mathrm{sky}}$, the value of detector's dark current is negligibly small, so in this case we will only consider the former. For the high precision in observation, sufficiently long integrations should be given so that the CCD readout noise is not important. It should be note that as a consequence of atmospheric disturbance, the background noise in ground-based telescopes have greatly exceeded that in space telescopes.
+
+
+The same code is used to generate the mock models and to fit them. The model fits the following parameters: \textbf{which ones?}  Goodness of fit is assessed through the image-plane $\chi^{2},$ comparing the model and mock data surface brightness profiles. The quasar images are not used in the fit, which is performed just on the lensed host. This is because in reality, even in the absence of substructure lensing, the relative fluxes of the point-like images of the quasar can be appreciably affected by microlensing or dust lanes in the foreground. Uncertainties are obtained via MCMC exploration of the likelihood, which in this case is simply given by $\mathcal{L}\propto\exp[-\chi^{2}/2].$
+
+We reconstruct the galaxy's position, effective radii, axis ratio, position angle, and mass power law slope for the lens galaxy light and source light. 
+
+
 
 Here we describe how the mock lens models are generated, using power-law lenses. The deflector’s mass profile is assigned within a class of power-law models,
-
-
-
-
 
 We fix the source morphology parameters (position angle, inclination, ... and S\'ersic index) to
 
@@ -169,36 +231,12 @@ is well described by the power-law...
 Here we describe how the mock lens models are generated, using power-law lenses. The reader familiar with this topic can easily skip to the next Section.
 
 The deflector's mass profile is assigned within a class of power-law models,
-\begin{equation}
-\Sigma(x,y)=\Sigma_{0}(q X^{2}+q^{-1}Y^{2})^{-\gamma^{\prime}},
-\end{equation}
-where the $\left\{X,Y\right\}$ axes are rotated by some position angle w.r.to the canonical $x$ (increasing to the West) and $y$ (increasing to the North). This means that the $\left\{X,Y\right\}$ deflections scale as ..., where $g(\theta)$ a just function of the relative angle west-of-north. Fast methods to compute deflections from power-law profiles have been given by Barkana 1998 \cite{1998ApJ...502..531B}. Power-law models of elliptical galaxies Evans 1994 \cite{1994MNRAS.267..333E} have often been used with success over the years to model gravitational lenses. In utter generality, the lensing deflections are given by
-\begin{equation}
-\alpha(\theta) = \frac{2}{\theta} \int_{0}^{\theta} \theta d\theta \Sigma (\theta) /\Sigma_{\mathrm{cr}}
-\end{equation}
-where $\theta$ is the position angle, and 
-\begin{equation}
-\Sigma_{\mathrm{cr}} = \frac{c^{2}D_{\mathrm{s}}}{4\pi G D_{\mathrm{d}} D_{\mathrm{ds}}}
-\end{equation}
-encompasses the relative positions of source, deflector and observer. Then, in our power-law case the deflections can be rewritten conveniently as
-\begin{equation}
-\alpha(\vartheta) = \theta_{E}\left(\frac{\theta_{E}}{\vartheta}\right)^{\gamma'-2}
-\end{equation}
-This introduces the Einstein radius $R_E,$ which is such that in the spherical case ($q=1$) the mean dimensionless density $\langle\Sigma\rangle/\Sigma_{cr}$ within a circle of radius $R_E$ is exactly 1. This is also the radius of a ring traced by the host of the quasar when this is exactly aligned with the lens galaxy.
 
-Lensed image profiles are obtained by Inverse Ray Shooting:. First, each pixel position in the image plane is mapped back to the source plane via the deflections in eq~... Then, we exploit the fact that surface-brightness is preserved by lensing, i.e.
-\begin{equation}
-...
-\end{equation}
-In general, when dealing with more complex caustics from substructure \textbf{Vegetti (????)} or microlensing \textbf{Mediavilla (????)},
- rays are shot through an adaptive, triangular tessellation in the image place.
- Here, we can simply use a rectangular grid in the image-plane to obtain sufficiently accurate results.
-
-The same code is used to generate the mock models and to fit them. The model fits the following parameters: \textbf{which ones?}  Goodness of fit is assessed through the image-plane $\chi^{2},$ comparing the model and mock data surface brightness profiles. The quasar images are not used in the fit, which is performed just on the lensed host. This is because in reality, even in the absence of substructure lensing, the relative fluxes of the point-like images of the quasar can be appreciably affected by microlensing or dust lanes in the foreground. Uncertainties are obtained via MCMC exploration of the likelihood, which in this case is simply given by $\mathcal{L}\propto\exp[-\chi^{2}/2].$
-
-We reconstruct the galaxy's position, effective radii, axis ratio, position angle, and mass power law slope for the lens galaxy light and source light. 
 
 \section{Results}
+
+Using the method described in Section..., we generate 30 simulations for each...
+
 
 \section{Summary}
 
