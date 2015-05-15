@@ -4,7 +4,11 @@
 \BOOKMARK [2][-]{subsection.3.1}{Survey Selection}{section.3}% 4
 \BOOKMARK [2][-]{subsection.3.2}{Sample Parameters}{section.3}% 5
 \BOOKMARK [1][-]{section.4}{Lens Reconstruction}{}% 6
-\BOOKMARK [2][-]{subsection.4.1}{Light Model}{section.4}% 7
-\BOOKMARK [2][-]{subsection.4.2}{Mass Model}{section.4}% 8
-\BOOKMARK [1][-]{section.5}{Results}{}% 9
-\BOOKMARK [1][-]{section.6}{Summary}{}% 10
+\BOOKMARK [2][-]{subsection.4.1}{Image generating progress}{section.4}% 7
+\BOOKMARK [3][-]{subsubsection.4.1.1}{Light Model}{subsection.4.1}% 8
+\BOOKMARK [3][-]{subsubsection.4.1.2}{Mass Model}{subsection.4.1}% 9
+\BOOKMARK [3][-]{subsubsection.4.1.3}{Point-Source Model}{subsection.4.1}% 10
+\BOOKMARK [3][-]{subsubsection.4.1.4}{PSF}{subsection.4.1}% 11
+\BOOKMARK [3][-]{subsubsection.4.1.5}{Image Noise}{subsection.4.1}% 12
+\BOOKMARK [1][-]{section.5}{Results}{}% 13
+\BOOKMARK [1][-]{section.6}{Summary}{}% 14
