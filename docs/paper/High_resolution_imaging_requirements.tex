@@ -68,7 +68,7 @@ probe.}
 
 
 \section{Introduction}
-\textbf{[TT to put introfirst here; introduce `informative pixels' that will be referred to in Sect.s 2 and 3; mention that we're basically observing how radial magnification changes across the lens, so that we need to understand how that is affected by PSF, pixel-size, and S/N ratio.]}
+%\textbf{[TT to put introfirst here; introduce `informative pixels' that will be referred to in Sect.s 2 and 3; mention that we're basically observing how radial magnification changes across the lens, so that we need to understand how that is affected by PSF, pixel-size, and S/N ratio.]}
 
 In the past few years, gravitational time delays have emerged as a
 powerful and cost effective cosmological probe. Studies based on blind
@@ -131,25 +131,41 @@ independently. The monitoring and spectroscopic follow-up requirements
 are described e.g. by (Courbin/Linder).
 
 In order to make the problem tractable and general, we need a single
-and simple metric to evaluate the quality of imaging data. We choose
-to adopt the slope $\gamma'$ of the total mass density profile of the
-form $\rho_{\rm tot}\propto r^{-\gamma'}$ as measured by fitting
-elliptical power law models to the data. This profile is the simplest
-one that provides a realistic description of galaxy scale lenses, and
-the uncertainty $\gamma'$ has been shown to be approximately
-proportional to the uncertainty on the gravitational potential
-differences and thus the time delay distance (Wucknitz, Kochanek,
-Suyu). Clearly, for a real measurement it is important to explore
-different profiles and the role of the choice of the profile in the
+simple metric to evaluate the quality of imaging data. In short, we
+need to quantify our ability to measure how the deflection angle
+(i.e. the derivative of the lensing potential) varies between the
+images, and thus how the extended images of the quasar host galaxy are
+stretched across the image. In practice, our ability to constrain the
+differential magnification will depend on the resolution of the data
+as well as on the number of pixels where the source is detected (the
+number of so-called ``informative pixels''). 
+
+We choose to adopt as our metric the slope $\gamma'$ of the total mass
+density profile of the form $\rho_{\rm tot}\propto r^{-\gamma'}$ as
+measured by fitting elliptical power law models to the data. This
+profile is the simplest one that provides a realistic description of
+galaxy scale lenses, and the uncertainty $\gamma'$ has been shown to
+be approximately proportional to the uncertainty on the gravitational
+potential differences and thus the time delay distance (Wucknitz,
+Kochanek, Suyu). It is easy to understand intuitively why $\gamma'$ is
+directly related to the variations of the lensing potential. If
+$\gamma'=2$, the so-called isothermal profile, the deflection angle is
+constant across the image and therefore all the images will appear to
+have the same radial magnification. If the profile is
+steeper/shallower, radial magnification will vary across the image,
+thus giving rise to images of different widths. 
+
+Naturally, for a real measurement it is important to explore different
+profiles and the role of the choice of the profile in the
 uncertainties. However, our goal is to estimate whether the quality of
-the imaging data is sufficient. Clearly, if the data quality is
+the imaging data is sufficient. However, if the data quality is
 insufficient to constrain $\gamma'$ it will also be insufficient to
 constrain more flexibile models. Thus, in order to leave room for
 additional sources of uncertainty in the error budget, we set a rather
 stringent requirement of 0.02 uncertainty of $\gamma'$ (corresponding
 approximately to 2\% per system on time delay distance). In other
-words we want the statistical error arising from the image quality to
-be subdominant.
+words out target corresponds to requirement that the statistical error
+arising from the image quality be subdominant.
 
 This paper is organized as follows. In Section 2, we summarize the
 characteristics of the telescopes and instruments simulated as part of
