@@ -7,7 +7,7 @@
 \usepackage{graphicx}
 \usepackage{subfigure}
 \usepackage{url}
-
+\usepackage{amsmath}
 
 \title{Precision cosmology with time delay lenses: high resolution imaging requirements}
 %\title{Cosmology with time delay lenses. High resolution imaging requirements}
@@ -28,14 +28,14 @@
 \date{Accepted . Received }
 
 \abstract{
-Gravitational time delays are a powerful probe of cosmology, provided
-that the gravitational potential of the main deflector can be modeled
-with sufficient precision. Recent work has shown that this can be
-achieved by detailed modeling of the host galaxies of lensed
-quasars. The distortion of the images as measured over large number of
-pixels provides tight constraints on the difference between the
-gravitational potential between the two quasars, and thus on cosmology
-in combination with the measured time delay. We carry out a systematic
+Lens time delays are a powerful probe of cosmology, provided that the
+gravitational potential of the main deflector can be modeled with
+sufficient precision. Recent work has shown that this can be achieved
+by detailed modeling of the host galaxies of lensed quasars. The
+distortion of the images as measured over large number of pixels
+provides tight constraints on the difference between the gravitational
+potential between the quasar image positions, and thus on cosmology in
+combination with the measured time delay. We carry out a systematic
 exploration of the high resolution imaging required to eploit the
 thousands of lensed quasars that will be discovered by current and
 upcoming surveys with the next decade. Specifically we simulate
@@ -44,9 +44,21 @@ James Webb Space Telescope (JWST), ground based adaptive optics images
 taken with Keck or the Thirty Meter Telescope (TMT). We compare the
 performance of these pointed observations with that of images taken by
 the Euclid-VIS, Wide-Field Infrared Survey Telescope (WFIRST) and
-Large Synoptic Survey Telescope (LSST) surveys. Using as our metric
-the precision with which the slope of the mass density profile for the
-main deflector can be measured \textbf{we find that...}  }
+Large Synoptic Survey Telescope (LSST) surveys. We use as our metric
+the precision with which the slope $\gamma'$ of the total mass density
+profile $\rho_{tot}\propto r^{-\gamma'}$ for the main deflector can be
+measured. Ideally, we require that the statistical error on $\gamma'$
+be less than 0.02, thus being subdominant with respect to other
+sources of random and systematic uncertainties. We find that survey
+data will likely have sufficient depth and resolution to meet the
+target only for the brighter gravitational lens systems, comparable to
+those discovered by the SDSS survey. For fainter systems, that will be
+discovered by current and future surveys, targeted follow-up will be
+required. However, the exposure time per target will be of order a few
+minutes per system with upcoming facilitites, such as JWST, the Keck
+Next Generation Adaptive Optics System, and TMT, thus making the
+follow-up of hundreds of systems a pratical and efficient cosmological
+probe.}
 
 \keywords{}
 
@@ -56,45 +68,175 @@ main deflector can be measured \textbf{we find that...}  }
 
 
 \section{Introduction}
-\textbf{[TT to put introfirst here; introduce `informative pixels' that will be referred to in Sect.s 2 and 3; mention that we're basically observing how radial magnification changes across the lens, so that we need to understand how that is affected by PSF, pixel-size, and S/N ratio.]}
+%\textbf{[TT to put introfirst here; introduce `informative pixels' that will be referred to in Sect.s 2 and 3; mention that we're basically observing how radial magnification changes across the lens, so that we need to understand how that is affected by PSF, pixel-size, and S/N ratio.]}
 
-In the past few years, gravitational time delays have emerged as a...
+In the past few years, gravitational time delays have emerged as a
+powerful and cost effective cosmological probe. Studies based on blind
+analysis have shown that a single system consisting of multiple images
+of a background quasar (at redshift $z_s$) lensed by a foreground
+massive elliptical galaxy at redshift $z_d$ can be used to measure the
+so-called time delay distance with an uncertainty of 6-7\%. The time
+delay distance $D_{\Delta t}$ gives a direct measurement of the Hubble
+constant and allows one to break some the main degeneracies in the
+interpretation of cosmic microwave background data, thus providing
+tight constraints on parameters such as curvature and dark energy
+equation of state. The time delay distance measurement of H$_0$ is
+comparable in terms of information content to that obtained via the
+cosmic distance ladder, in that is based on absolute distances and
+completely independent on the properties of the universe at $z>z_s$
+\citep{Wei++,Suy}. Importantly, time delay distances are independent of the
+local distance ladder and thus provide a crucial test of any potential
+systematic uncertainties. Furthemore, being independent, the cosmic
+distance ladder and time delay distance constraints on H$_0$ can be
+statistically combined for additional gains in precision.
 
-This paper is organized as follows. We first introduce a variety of instrument informations in Section 2. Next, we briefly summarize the lens sample used in this work in Section 3 and show how to reconstruct lens models
-as imaged by these instruments in Section 4. The results from
-simulation in Section 5. Finally, we discuss and summarize our work in
-Section 6. Throughout this paper, all magnitudes are given in the AB
-system. Even though it is not crucial to our findings, we adopt a
-spatially flat $\Lambda$CDM cosmology with $\Omega_{\rm{m}} = 0.3$,
-$\Omega_{\Lambda} = 0.7$, and the Hubble constant $H_{0} = 70~\rm
-km~s^{-1}~Mpc^{-1}$ when calculating distances.
+From an observational point of view, the attainment of precise and
+accurate time delay measurements relies on a few important
+ingredients. First, monitoring of the lensed quasars is required to
+obtain time delays with a few percent uncertainties. Dedicated
+monitoring campaigns have shown that this precision is achievable with
+1-2m class telescopes at present time. In the future, the exploitation
+of larger samples of lenses will require monitoring campaigns on 2-4m
+telescopes (COSMOGRAIL,Kochanek), or the deployment of long term
+high-cadence monitoring surveys, like the LSST (Liao). Second, the
+spectroscopic redshift of the source and deflector must be
+measured. For current samples, this is typically a relatively
+straightforward step, requiring short exposures on 4-10m class
+telescopes.  Third, the gravitational potential of the main deflector
+needs to be constrained by the data so that the uncertainty on its
+difference between the location of the images is also of order
+3\%. This goal can be achieved by studying the extended structure of
+the lensed quasar host galaxy, and the stellar kinematics of the
+deflector galaxy (). Fourth, the combined effects of the inhomogenous
+mass distribution along the line of sight need to be taken into
+account. Recent work has shown that the line of sight effects can be
+sufficiently characterized by measuring the properties of galaxies and
+weak lensing signal in the field of the main deflector, and comparing
+with simulated lines of sight (Suyu+10,13,14, Greene+13,Collet+13).
+
+However, whereas current samples have been limited to a few lenses,
+current and onging surveys (DES, PANSTARRS, HSC, ATLAS) will discover
+100s of lenses. These large samples will be extremely powerful
+cosmographic probes (Linder11), provided that sufficient follow-up
+data will be available (Treu+13). In this paper we carry out a
+feasibility study for future time delay surveys, focusing on the
+high-resolution imaging requirements. Specifically we aim to
+investigate whether sufficient information will be available from
+survey data, or whether dedicated follow-up will be necessary. If
+dedicated follow-up will be necessary we aim to provide an estimate of
+the amount of time that will be required per system. The multi-pronged
+nature of time delay lens follow-up makes it natural to follow the
+approach of addressing each component of the follow-up
+independently. The monitoring and spectroscopic follow-up requirements
+are described e.g. by (Courbin/Linder).
+
+In order to make the problem tractable and general, we need a single
+simple metric to evaluate the quality of imaging data. In short, we
+need to quantify our ability to measure how the deflection angle
+(i.e. the derivative of the lensing potential) varies between the
+images, and thus how the extended images of the quasar host galaxy are
+stretched across the image. In practice, our ability to constrain the
+differential magnification will depend on the resolution of the data
+as well as on the number of pixels where the source is detected (the
+number of so-called ``informative pixels''). 
+
+We choose to adopt as our metric the slope $\gamma'$ of the total mass
+density profile of the form $\rho_{\rm tot}\propto r^{-\gamma'}$ as
+measured by fitting elliptical power law models to the data. This
+profile is the simplest one that provides a realistic description of
+galaxy scale lenses, and the uncertainty $\gamma'$ has been shown to
+be approximately proportional to the uncertainty on the gravitational
+potential differences and thus the time delay distance (Wucknitz,
+Kochanek, Suyu). It is easy to understand intuitively why $\gamma'$ is
+directly related to the variations of the lensing potential. If
+$\gamma'=2$, the so-called isothermal profile, the deflection angle is
+constant across the image and therefore all the images will appear to
+have the same radial magnification. If the profile is
+steeper/shallower, radial magnification will vary across the image,
+thus giving rise to images of different widths. 
+
+Naturally, for a real measurement it is important to explore different
+profiles and the role of the choice of the profile in the
+uncertainties. However, our goal is to estimate whether the quality of
+the imaging data is sufficient. However, if the data quality is
+insufficient to constrain $\gamma'$ it will also be insufficient to
+constrain more flexibile models. Thus, in order to leave room for
+additional sources of uncertainty in the error budget, we set a rather
+stringent requirement of 0.02 uncertainty of $\gamma'$ (corresponding
+approximately to 2\% per system on time delay distance). In other
+words out target corresponds to requirement that the statistical error
+arising from the image quality be subdominant.
+
+This paper is organized as follows. In Section 2, we summarize the
+characteristics of the telescopes and instruments simulated as part of
+this work. Then, in Section 3, we describe the properties of the
+simulated lenses. Next, in Section 4 we describe the procedure used to
+carry out the inference.  Our results are presented in Section
+5. Finally, we discuss and summarize our work in Section 6. Throughout
+this paper, all magnitudes are given in the AB system. Even though our
+findings are independent of any cosmology, we adopt a spatially flat
+$\Lambda$CDM cosmology with $\Omega_{\rm{m}} = 0.3$, $\Omega_{\Lambda}
+= 0.7$, and the Hubble constant $H_{0} = 70~\rm km~s^{-1}~Mpc^{-1}$
+when calculating distances.
 
 \section{Instrument Simulations}
-The way a lens is observed and modelled, whence the parameter uncertainties, are influenced fundamentally by the instrumental setup itself. First, the signal-to-noise depends on the exposure-time adopted, sky or background noise in a chosen band, and the instrumental readout noise. Second, the pixel-size and the point-spread function (PSF) properties determine how finely one can map the system being observed, hence how robustly
- the deflections on either side of the lens can be quantified.
- 
-Here we illustrate the main properties of instruments that will be considered in the simulations. For the sake of completeness, they can either be ground-based or space-based telescopes, or even cadenced surveys where the total exposure cannot set arbitrarilly.
-Table~\ref{tab:telescopes parameters} and figure~\ref{fig:zp_wavelength} display the main properties of the telescopes that are needed when generating images of mock gravitational lenses. Figure~\ref{fig:PSF_montage}\textbf{[XLM, can you do it? Sure! have done!]} shows the typical PSF of each instrument.
 
-    1. HST. The Advanced Camera for Surveys (ACS) is a third-generation HST instrument with a scale of $0.05^{\prime\prime}$/pixel. Its properties used are taken from Space Telescope Science Institute and HST Exposure Time Calculator \footnote{\url{http://etc.stsci.edu}}. We are interested in F814W band.
+The way a lens is observed and modeled, whence the parameter
+uncertainties, are influenced fundamentally by the instrumental setup
+itself. First, the signal-to-noise depends on the exposure-time
+adopted, sky or background noise in a chosen band, and the
+instrumental readout noise. Second, the pixel-size and the
+point-spread function (PSF) properties determine how finely one can
+map the system being observed, hence how robustly the deflections on
+either side of the lens can be quantified.
+ 
+Here we illustrate the main properties of instruments that will be
+considered in the simulations. For the sake of completeness, they can
+either be ground-based or space-based telescopes, or even cadenced
+surveys where the total exposure cannot be set arbitrarily.
+Table~\ref{tab:telescopes parameters} and
+figure~\ref{fig:zp_wavelength} display the main properties of the
+telescopes that are needed when generating images of mock
+gravitational lenses. Figure~\ref{fig:PSF_montage}\textbf{[XLM, can
+you do it? Sure! have done!]} shows the typical PSF of each
+instrument. The most sensitive band of every instrument is selected
+for this work.
+
+\begin{enumerate}
+
+\item  HST. The Advanced Camera for Surveys (ACS) is a
+    third-generation HST instrument with a scale of
+    $0.05^{\prime\prime}$/pixel. Its properties used are taken from
+    Space Telescope Science Institute and HST Exposure Time Calculator
+    \footnote{\url{http://etc.stsci.edu}}. We are interested in F814W
+    band.
     
-    2. JWST. JWST is a infrared-optimized space telescope which obtains four instruments: near-infrared camera, mid-infrared instrument, near-infrared multi-object spectrograph, and a tunable filter imager. Its scientific goals include exploring planetary systems, star evolution, galaxy-scale theme, and remote dark ages (Gardner et al. 2006 \cite{2006SSRv..123..485G}). We determinate instrument properties by JWST Exposure Time Calculator \footnote{\url{http://jwstetc.stsci.edu}}. F200W band is selected to consider. The pixel size is $0.032^{\prime\prime}$/pixel. Zero point, readout noise, and background noise are calculated from count rates at fixed exposure time.
-    
-	    3. Keck (LGSAO \& NGAO). Keck NIRC2 is a near-infrared camera with Laser Guide Star Adaptive Optics (LGSAO) system, which is designed to explore astronomy fields from planetary system to galactic and extragalactic scale (Wizinowich et al. 2006 \cite{2006PASP..118..297W}).
+\item JWST. JWST is a infrared-optimized space telescope which obtains four instruments: near-infrared camera, mid-infrared instrument, near-infrared multi-object spectrograph, and a tunable filter imager. Its scientific goals include exploring planetary systems, star evolution, galaxy-scale theme, and remote dark ages (Gardner et al. 2006 \cite{2006SSRv..123..485G}). We determinate instrument properties by JWST Exposure Time Calculator \footnote{\url{http://jwstetc.stsci.edu}}. F200W band is selected to consider. The pixel size is $0.032^{\prime\prime}$/pixel. Zero point, readout noise, and background noise are calculated from count rates at fixed exposure time.
+
+\item Keck (LGSAO \& NGAO). Keck NIRC2 is a near-infrared camera with Laser Guide Star Adaptive Optics (LGSAO) system, which is designed to explore astronomy fields from planetary system to galactic and extragalactic scale (Wizinowich et al. 2006 \cite{2006PASP..118..297W}).
+
 	     For improving sensitivity and photometric accuracy, Keck Observatory's next-generation adaptive optics (NGAO) will be proposed to discover important astrophysics problems, for example, dark matter distribution in the Milky Way, galaxy evolution study, general relativity affection at galactic center, the origin and evolution of nearby planetary systems (Wizinowich et al. 2010 \cite{2010SPIE.7736E..0KW}).
+
 	    According to the informations given by Keck NIRC2 Observer's Manual\footnote{\url{http://www2.keck.hawaii.edu/inst/nirc2/Manual/ObserversManual.html{\#}Section2.2}}, properties of Keck can be deduced, both with LGSAO and NGAO. Here, we choose MCDS as the readout mode of the detector, meanwhile read number N = 16. The pixel size is $0.01^{\prime\prime}$/pixel.
     
-    4. TMT. IRIS is a instrument with the imaging and infrared (0.85 - 2.5 micron) integral field spectrograph abilities for TMT. Based on a primary spectral resolution of 4000 and more accurate pixel-size $0.004^{\prime\prime}$, the instrument has the advantage in many fields, from star forming regions to high-redshift galaxy and galactic center study (Larkin et al. 2010 \cite{2010SPIE.7735E..29L}). The selected filter's zero point and background noise are obtained according to a prospect work (Do et al. 2014 \cite{2014AJ....147...93D}). Using TMT ETC \footnote{\url{http://tmt.mtk.nao.ac.jp/ETC_readme.html}}, readout noise can be calculated (please note that the total efficiency is around 0.4 in ETC). 
+\item TMT. IRIS is a instrument with the imaging and infrared (0.85 - 2.5 micron) integral field spectrograph abilities for TMT. Based on a primary spectral resolution of 4000 and more accurate pixel-size $0.004^{\prime\prime}$, the instrument has the advantage in many fields, from star forming regions to high-redshift galaxy and galactic center study (Larkin et al. 2010 \cite{2010SPIE.7735E..29L}). The selected filter's zero point and background noise are obtained according to a prospect work (Do et al. 2014 \cite{2014AJ....147...93D}). Using TMT ETC \footnote{\url{http://tmt.mtk.nao.ac.jp/ETC_readme.html}}, readout noise can be calculated (please note that the total efficiency is around 0.4 in ETC). 
     
-    5. Euclid. This is a space survey telescope designed by the European Space Agency. Euclid has two instruments: a high-resolution visible imager, and a NIR imaging instrument.It aims to investigate the nature of dark energy, dark matter, and gravity by using cosmological probes, such as weak gravitational lensing and baryon acoustic oscillations (Laureijs et al. 2011). The instrument properties are taken from Schweitzer et al. 2010 \cite{2010SPIE.7731E..1KS}, Penny et al. 2013 \cite{2013MNRAS.434....2P} and Cropper et al. 2014 \cite{2014SPIE.9143E..0JC}. The readout noise depends on the number of non-destructive reads. The pixel size is $0.1^{\prime\prime}$/pixel.
+\item Euclid. This is a space survey telescope designed by the European Space Agency. Euclid has two instruments: a high-resolution visible imager, and a NIR imaging instrument.It aims to investigate the nature of dark energy, dark matter, and gravity by using cosmological probes, such as weak gravitational lensing and baryon acoustic oscillations (Laureijs et al. 2011). The instrument properties are taken from Schweitzer et al. 2010 \cite{2010SPIE.7731E..1KS}, Penny et al. 2013 \cite{2013MNRAS.434....2P} and Cropper et al. 2014 \cite{2014SPIE.9143E..0JC}. The readout noise depends on the number of non-destructive reads. The pixel size is $0.1^{\prime\prime}$/pixel.
+  
+\item WFIRST. As a wild field of view and low-resolution spectroscopy observatory, WFIRST with the infrared detector technology is expected to contribute to the following goals in astrophysics: planetary systems in the Milky Way; reionization epoch history by high redshift quasars at $z>10$; and the study of dark energy and modifications to Einstein's gravity (Green et al. 2012 \cite{2012arXiv1208.4012G}). We are interested in the HLS Imaging survey, F184W filter. The pixel size is $0.11^{\prime\prime}$/pixel. The properties are presumed based on WFIRST-Astrophysics Focused Telescope Assets Final Report (by the Science Definition Team (ADT) and WFIRST Project) and WFIRST Exposure Time Calculator \footnote{\url{http://wfirst-web.ipac.caltech.edu/wfDepc/wfDepc.jsp?etc}}.
     
-    6. WFIRST. As a wild field of view and low-resolution spectroscopy observatory, WFIRST with the infrared detector technology is expected to contribute to the following goals in astrophysics: planetary systems in the Milky Way; reionization epoch history by high redshift quasars at $z>10$; and the study of dark energy and modifications to Einstein's gravity (Green et al. 2012 \cite{2012arXiv1208.4012G}). We are interested in the HLS Imaging survey, F184W filter. The pixel size is $0.11^{\prime\prime}$/pixel. The properties are presumed based on WFIRST-Astrophysics Focused Telescope Assets Final Report (by the Science Definition Team (ADT) and WFIRST Project) and WFIRST Exposure Time Calculator \footnote{\url{http://wfirst-web.ipac.caltech.edu/wfDepc/wfDepc.jsp?etc}}.
-    
-    7. LSST. LSST is designed to imaging surveys in the optical bands (out to $\sim$ 1 micron). It is dedicated with dramatic advances across main astrophysics themes: the nature of dark energy and dark matter; optical sky survey to get the data products such as gamma-ray burst, optical bursters, gravitational micro-lensing, new populations of novae and supernova, stellar tidal disruptions and so on; the structure of the Milky Way; and the Solar System exploring (Ivezic et al. 2008 \cite{2008arXiv0805.2366I}). As discussed by Ivezic et al. 2008 and LSST Science Requirements Document \footnote{\url{http://www.lsst.org/files/docs/SRD.pdf}}, LSST properties can be deduced. The pixel size is $0.2^{\prime\prime}$/pixel.
+\item LSST. LSST is designed to imaging surveys in the optical bands (out to $\sim$ 1 micron). It is dedicated with dramatic advances across main astrophysics themes: the nature of dark energy and dark matter; optical sky survey to get the data products such as gamma-ray burst, optical bursters, gravitational micro-lensing, new populations of novae and supernova, stellar tidal disruptions and so on; the structure of the Milky Way; and the Solar System exploring (Ivezic et al. 2008 \cite{2008arXiv0805.2366I}). As discussed by Ivezic et al. 2008 and LSST Science Requirements Document \footnote{\url{http://www.lsst.org/files/docs/SRD.pdf}}, LSST properties can be deduced. The pixel size is $0.2^{\prime\prime}$/pixel.
 
-For modeling the light of the lens galaxies, the lensed background source, and the lensed point source, we use realistic PSFs for HST, JWST, Keck (LGSAO \& NGAO), and TMT getting from stars in the field which has been proved to be a effective method when modeling galaxy-scale strong lenses (Marshall et al. 2007 \cite{2007ApJ...671.1196M}; Suyu et al. 2009 \cite{2009ApJ...691..277S}). On the other hand, for Euclid, WFIRST, and LSST, Gaussian PSFs are adopted to generate mock data in this work by lack of sufficient information. The typical full width at half maximum (FWHM) of PSF with selected filter are $0.18^{\prime\prime}$, $0.15^{\prime\prime}$, and $0.7^{\prime\prime}$ respectively.
+\end{enumerate}
+
+For modeling the light of the lens galaxies, the lensed background galaxies and the lensed point sources,
+%we use realistic PSFs for HST, JWST, Keck (LGSAO \& NGAO), and TMT getting from stars in the field which has been proved to be a effective method when modeling galaxy-scale strong lenses (Marshall et al. 2007 \cite{2007ApJ...671.1196M}; Suyu et al. 2009 \cite{2009ApJ...691..277S}).
+we use simulated PSFs for every instrument except for LGSAO.
+On the other hand, for Euclid, WFIRST, and LSST, Gaussian PSFs are adopted to generate mock data in this work by lack of sufficient information. The typical full width at half maximum (FWHM) of PSF with selected filter are $0.18^{\prime\prime}$, $0.15^{\prime\prime}$, and $0.7^{\prime\prime}$ respectively.
 
 \textbf{For TT:} A sentence or two on HST and ACS; similarly for JWST (what it's planned to do and when it's expected to start); similarly for TMT and IRIS; Keck, both with LGSAO and NGSAO and why we must consider both; then Euclid, WFIRST, LSST. \textbf{(XLM have done this part. Tommaso, please check them.)}
+
+\textbf{For TT:} please a sentence or two to describe the origin of PSFs for HST, JWST, LGSAO, NGAO, and TMT.
 
 
 
@@ -114,23 +256,21 @@ For modeling the light of the lens galaxies, the lensed background source, and t
 
 \section{The Lens Sample}
 
-\subsection{The Lens Sample Parameters}
+Here we introduce our sample, four groups of lens system with galaxies at redshift $z_s = 1.071$ and $2.77$ being multiply imaged by massive lens galaxies lying at $z_d = 0.351$ and $0.783$.
 
-We have chosen four prototypical systems for this exploration, characterized as \textbf{faint} or \textbf{bright} and \textbf{double} or \textbf{quad} depending on the photometry and image configuration. Their structural parameters are listed in Table \ref{tab:SBProfile}. This set of four main choices covers regimes with different numbers of informative pixels, which depend on the S/N ratio and on the number of images produced by the lens.
+\subsection{Survey Selection}
 
-To remain as realistic as possible, the mocks are based upon lenses in the Sloan Lens ACS Survey (SLACS; Bolton et al. 2006 \cite{2006ApJ...638..703B}; Treu et al. 2006 \cite{2006ApJ...640..662T}; Koopmans et al. 2006 \cite{2006ApJ...649..599K}; Gavazzi et al. 2007 \cite{2007ApJ...667..176G}; Bolton et al. 2008a \cite{2008ApJ...682..964B}; Gavazzi et al. 2008 \cite{2008ApJ...677.1046G}; Bolton et al. 2008b \cite{2008ApJ...684..248B}; Treu et al. 2009 \cite{2009ApJ...690..670T}; Auger et al. 2009 \cite{2009ApJ...705.1099A}; Auger et al. 2010 \cite{2010ApJ...724..511A}; Newton et al. 2011 \cite{2011ApJ...734..104N}; Shu et al. 2014 \cite{2014arXiv1407.2240S}; Papers I-XII, respectively) and the Strong Lensing Legacy Survey (SL2S; More et al. 2012 \cite{2012ApJ...749...38M}; Gavazzi et al. 2012{2012ApJ...761..170G}; Ruff et al. 2011 \cite{2011ApJ...727...96R}; Sonnenfeld et al. 2013 \cite{2013ApJ...777...97S}; Sonnenfeld et al. 2013 \cite{2013ApJ...777...98S}; Sonnenfeld et al. 2015 \cite{2015ApJ...800...94S}; Papers I-V, respectively, except for the first citation) samples. When not explicitly known from existing data, mock model parameters are assigned via plausibility arguments as specified below. The source and deflector of the \textit{bright} lens system configurations are built along SLACS J0330-0020 as modelled by Bolton et al. 2008a (SLACS V, \cite{2008ApJ...682..964B}), Auger et al. 2009 (SLACS IX, \cite{2009ApJ...705.1099A}), and Newton et al. 2011 (SLACS XI, \cite{2011ApJ...734..104N}). For the \textit{faint} lens system configuration, the source and deflector have parameters from the Sonnenfeld et al. 2013 (SL2S III, \cite{2013ApJ...777...97S}) model of SL2S J135949+553550 and the discussion with Sonnenfeld. Source and lens magnitudes in the \textit{bright} case for I and V bands are from Newton et al. 2011 (\cite{2011ApJ...734..104N}), for K band we estimated based on the other colors. Meanwhile, source magnitudes in the \textit{faint} case are arbitrarily set to 25.0 in all bands. Lens magnitudes in the \textit{faint} case are more complicated. Its value for I band is based on Sonnenfeld et al. 2013 (SL2S III, \cite{2013ApJ...777...97S}), for K and VIS bands are estimated according to their wavelength and other bands information, i.e., VIS magnitude follows a cast of characters in g, r, and i bands. Unknown magnitudes in $K$ band are assigned from $H$-band ones via $K_{AB}=H_{AB}.$ In addition, the effective (half-light) radius which are fitted in \textit{bright} systems are evaluated in different bands for getting a precise estimate of the effective radius and its uncertainties. Differently, a unique effective radius is asserted across bandpasses for the \textit{faint} systems. That means color gradient in photometric information is man-made ignored as a rough assumption. On the other hand, this fixed effective radius value in all bands facilitates avoiding observational contamination from the lensed source to the most degree. The distinction of fitting quality between precise method (different effective radius in different bands) and robust method (unique effective radius in all bands) is discussed in Sonnenfeld's work (\cite{2013ApJ...777...97S}). In most cases, the typical difference in the $\chi^{2}$ values between the two methods is of order 10\%. In all cases, the source positions are assigned so as to map the source in either two or four images.
+We have chosen four prototypical systems for this exploration, characterized as \textbf{faint} or \textbf{bright} and \textbf{double} or \textbf{quad} depending on the photometry and image configuration. This set of four main choices covers regimes with different numbers of informative pixels, which depend on the S/N ratio and on the number of images produced by the lens.
+
+To remain as realistic as possible, the mocks are based upon lenses in the Sloan Lens ACS Survey (SLACS; Bolton et al. 2006 \cite{2006ApJ...638..703B}; Treu et al. 2006 \cite{2006ApJ...640..662T}; Koopmans et al. 2006 \cite{2006ApJ...649..599K}; Gavazzi et al. 2007 \cite{2007ApJ...667..176G}; Bolton et al. 2008a \cite{2008ApJ...682..964B}; Gavazzi et al. 2008 \cite{2008ApJ...677.1046G}; Bolton et al. 2008b \cite{2008ApJ...684..248B}; Treu et al. 2009 \cite{2009ApJ...690..670T}; Auger et al. 2009 \cite{2009ApJ...705.1099A}; Auger et al. 2010 \cite{2010ApJ...724..511A}; Newton et al. 2011 \cite{2011ApJ...734..104N}; Shu et al. 2015 \cite{2014arXiv1407.2240S}; Papers I-XII, respectively) and the Strong Lensing Legacy Survey (SL2S; More et al. 2012 \cite{2012ApJ...749...38M}; Gavazzi et al. 2012{2012ApJ...761..170G}; Ruff et al. 2011 \cite{2011ApJ...727...96R}; Sonnenfeld et al. 2013 \cite{2013ApJ...777...97S}; Sonnenfeld et al. 2013 \cite{2013ApJ...777...98S}; Sonnenfeld et al. 2015 \cite{2015ApJ...800...94S}; Papers I-V, respectively, except for the first citation) samples. 
+
+\subsection{Sample Parameters}
+
+The structural parameters of four systems are listed in Table \ref{tab:SBProfile}. When not explicitly known from existing data, mock model parameters are assigned via plausibility arguments as specified below. The source and deflector of the \textit{bright} lens system configurations are built along SLACS J0330-0020 as modelled by Bolton et al. 2008a (SLACS V, \cite{2008ApJ...682..964B}), Auger et al. 2009 (SLACS IX, \cite{2009ApJ...705.1099A}), and Newton et al. 2011 (SLACS XI, \cite{2011ApJ...734..104N}). For the \textit{faint} lens system configuration, the source and deflector have parameters from the Sonnenfeld et al. 2013 (SL2S III, \cite{2013ApJ...777...97S}) model of SL2S J135949+553550 and the discussion with Sonnenfeld. Source and lens magnitudes in the \textit{bright} case for I and V bands are from Newton et al. 2011 (\cite{2011ApJ...734..104N}), for K band we estimated based on the other colors. Meanwhile, source magnitudes in the \textit{faint} case are arbitrarily set to 25.0 in all bands. Lens magnitudes in the \textit{faint} case are more complicated. Its value for I band is based on Sonnenfeld et al. 2013 (SL2S III, \cite{2013ApJ...777...97S}), for K and VIS bands are estimated according to their wavelength and other bands information, i.e., VIS magnitude follows a cast of characters in g, r, and i bands. Unknown magnitudes in $K$ band are assigned from $H$-band ones via $K_{AB}=H_{AB}.$ In addition, the effective (half-light) radius which are fitted in \textit{bright} systems are evaluated in different bands for getting a precise estimate of the effective radius and its uncertainties. Differently, a unique effective radius is asserted across bandpasses for the \textit{faint} systems. That means color gradient in photometric information is man-made ignored as a rough assumption. On the other hand, this fixed effective radius value in all bands facilitates avoiding observational contamination from the lensed source to the most degree. The distinction of fitting quality between precise method (different effective radius in different bands) and robust method (unique effective radius in all bands) is discussed in Sonnenfeld's work (\cite{2013ApJ...777...97S}). In most cases, the typical difference in the $\chi^{2}$ values between the two methods is of order 10\%. In all cases, the source positions are assigned so as to map the source in either two or four images.
 
 To describe a hybrid model case, we add point images on the lens plane for the lensed AGNs. In the \textit{bright} case, considered the source and lens light and the difference between different bands, we make a rough assumption that allowing 0.5 mag off the source magnitude as the point-source magnitudes for K, VIS, and H bands, 1.0 mag off the source magnitude for the I band. We simultaneously assign 24.0 mag as the point-source magnitudes for all the bands in the \textit{faint} case except for the TMT simulations. Normally, point-source is supposed to be brighter that the source galaxy. Here, we assume a particular case that the point-source is evaluated 26.0 mag which is fainter compare with the source, resulting from an amazing detecting ability of TMT.
 
-\subsection{Image Generating Progress}
-We decompose the image into four components: source image, lens image, point-source image, and noise image. We now briefly describe the image generating progress for each component. 
 
-The .. image in Figure.. shows the light from the source and point-source as lensed by the lens galaxy. First, we need a model to describe the surface brightness distribution of the source galaxy. To map the source onto the lens plane, the mass model for the lens mass distribution is needed to build to represent the deflection angle of the source galaxy and point-source light. Similarly, we also need a model for the light distribution of the lens galaxy. A PSF is needed to convolve the light of lens galaxy and lensed source galaxy and point-source. To get a truer image of lens system using telescopes, it is impossible to keep clear of noise. We introduce three terms to describe the the noise adding to the image, including counts noise, readout noise, and background noise. We will make a detailed description of surface brightness light model, point-source model, PSF, and instrument noise information in this subsection. Lens model will be described in the next section.
-
-\subsubsection{Light Model}
-
-
-therefore, each QSO image have three parameters: position x,y ..., and amplitude. 
  
 \textbf{{Question}: What are the point-source magnitudes, even if they're not specifically modelled? How were they assigned? (They are in the Table 4. For the fainter systems, they are all 24.0 for all the filters except for TMT. The magnitude of point source is 26.0 for TMT, that's because TMT has an amazing detecting ability. For the brighter systems, they are assigned with magnitude of source galaxy - 0.5 for filter K, VIS, and H; - 1.0 for filter I.)
  Based on the recipe that Kai and I assembled? Also, magnitudes in the tables are not necessarily the instrument ones, how are they converted? With the XLM's template-based table from AA or something different? (For fainter systems, lens magnitude for I filter is from Ale's paper III, mag for K filter is estimated by TT based on the other colors, mag for VIS filter is evaluated by $mag(r,i,z)=-2.5*log((10^{-0.4r}+10^{-0.4i}+10^{-0.4z})/2)$ (there are r, i, z filters informations in Ale's paper III), $H_{AB}=K_{AB}$. For brighter systems, lens mag for I filter and V filter are from Auger's paper; mag for K band is determined by TT;  $H_{AB}=K_{AB}$) (For fainter systems, the source galaxy magnitude for filters are all 25.0 which is determined by TT. For brighter systems, the source galaxy magnitude for I and V filters are from Newton's paper, the source galaxy magnitude for K filter is 22.0 which is determined by TT)}
@@ -138,27 +278,57 @@ therefore, each QSO image have three parameters: position x,y ..., and amplitude
 Then: say that source is mapped onto lens plane with formalism illustrated later on, lens light is summed to it, noise added. Refer to one example of puppies, \textbf{including TMT with kernel smoothing.}
 
 \section{Lens Reconstruction}
-In this section, 
-Here we describe how the mock lens models are generated, using power-law lenses. The reader familiar with this topic can easily skip to the next Section.
 
-The deflector's mass profile is assigned within a class of power-law models,
+%The lens image can be decomposed into four components: source image, lens image, point-source image, and noise image. We now briefly describe the image generating progress in this section.  The .. image in Figure.. shows the light from the source and point-source as lensed by the lens galaxy. 
+
+In this section, we briefly present the progress of modeling the mock lens systems using defined models. By comparing the difference between the real data value and output best fit value of each parameter, the precision with parameters, especially which the slope of the mass density profile for the deflector can be measured.
+
+
+\subsection{Image generating progress}
+
+Before we fit the mock lens system we need to define the models to describe the source galaxy light, the lens galaxy light, and the lens mass. We start with the surface brightness distribution of the galaxies. To remap the source image onto the source plane, the mass model for the lens mass distribution is needed to build to represent the deflection angle. Similarly, we also need a model for the light distribution of the lens galaxy. A PSF is used to convolve the light of lens galaxy, lensed source galaxy and point-source. To get a truer image of lens system using instruments, it is impossible to keep clear of noise. We introduce three terms to describe the the noise adding to the image, including counts noise, readout noise, and background noise. As described above, we will make a detailed description of surface brightness light model, lens model, point-source model, PSF, and instrument noise information in this subsection.
+
+\subsubsection{Light Model}
+
+We use S\'ersic profile (S\'ersic 1963 \cite{1963BAAA....6...41S}; 1968 \cite{1968adga.book.....S}) which is created to represent how the intensity I of a galaxy varies with distance R from its center to describe the light distributions of source and lens galaxies,
+
+\begin{eqnarray}
+   \label{eq:Intensity}
+   &I(R) = I_{\mathrm{e}} \exp\left[-k\left(\left(\frac{R}{R_{\mathrm{eff}}}\right)^{\frac{1}{\mathrm{n}}}-1\right)\right] ,\\
+   &R(x,y,q) = \sqrt{qx^2+y^2/q},
+\end{eqnarray}
+(see Caon et al. 1993 \cite{1993MNRAS.265.1013C}). The amplitude $I_{\mathrm{e}}$ is the intensity at the effective $R_{\mathrm{eff}}$, the constant $k$ is usually determined based on $R_{\mathrm{eff}}$ is the radius at which the major axis contains half of the total flux, the parameter $n$ is named S\'ersic index which is used to control the degree of the curvature of the radial light profile, the $\left\{x,y\right\}$ represents the galaxy positions, and $q$ denotes the axis ratio.
+
+An additional explanation is necessary here: the best-fit value of $n$ correlates with galaxy size and luminosity. Most galaxies are fitted by S\'ersic index in the range $0.6 \le n \le 10.0$ (Merritt et al. 2006 \cite{2006AJ....132.2685M}). More centrally concentrated profile matches larger value of S\'ersic index. For example, for giant elliptical galaxies, $n = 4$ is a good description. 
+
+
+\subsubsection{Mass Model}
+
+Here we describe the distribution of the surface mass density for the lens galaxy. The deflector's mass profile is assigned within a class of power-law models,
+
 \begin{equation}
 \Sigma(x,y)=\Sigma_{0}(q X^{2}+q^{-1}Y^{2})^{-\gamma^{\prime}},
 \end{equation}
-where the $\left\{X,Y\right\}$ axes are rotated by some position angle w.r.to the canonical $x$ (increasing to the West) and $y$ (increasing to the North). This means that the $\left\{X,Y\right\}$ deflections scale as ..., where $g(\theta)$ a just function of the relative angle west-of-north. Fast methods to compute deflections from power-law profiles have been given by \textbf{Barkana (????).} Power-law models of elliptical galaxies \textbf{Evans (1994?)} have often been used with success over the years to model gravitational lenses \textbf{[references!]}.
-In utter generality, the lensing deflections are given by
+where $q$ is the axis ratio, $\gamma'$ represents the radial power-law slope, the $\left\{X,Y\right\}$ axes are rotated by some position angle w.r.to the canonical $x$ (increasing to the West) and $y$ (increasing to the North). This means that the $\left\{X,Y\right\}$ deflections scale as ..., where $g(\theta)$ a just function of the relative angle west-of-north. Fast methods to compute deflections from power-law profiles have been given by Barkana 1998 \cite{1998ApJ...502..531B}. Power-law models of elliptical galaxies (Evans 1994 \cite{1994MNRAS.267..333E}) have often been used with success over the years to model gravitational lenses. In utter generality, the lensing deflections are given by
+%
 \begin{equation}
-...
+\alpha(\theta) = \frac{2}{\theta} \int_{0}^{\theta} \theta d\theta \Sigma (\theta) /\Sigma_{\mathrm{cr}}
 \end{equation}
-where
+%
+where $\theta$ is the position angle, and 
+%
 \begin{equation}
-\Sigma_{cr}=...
+\Sigma_{\mathrm{cr}} = \frac{c^{2}D_{\mathrm{s}}}{4\pi G D_{\mathrm{d}} D_{\mathrm{ds}}}
 \end{equation}
-encompasses the relative positions of source, deflector and observer. Then, in our power-law case the deflections can be rewritten conveniently as
-\begin{equation}
-...
-\end{equation}
-This introduces the Einstein radius $R_E,$ which is such that in the spherical case ($q=1$) the mean dimensionless density $\langle\Sigma\rangle/\Sigma_{cr}$ within a circle of radius $R_E$ is exactly 1. This is also the radius of a ring traced by the host of the quasar when this is exactly aligned with the lens galaxy.
+%
+encompasses the relative positions of source, deflector and observer (the angular diameter to the deflector ($D_{\mathrm{d}}$), to the source ($D_{\mathrm{s}}$), and between the deflector and the source ($D_{\mathrm{ds}}$)). Then, in our power-law case the deflections can be rewritten conveniently as
+%
+\begin{eqnarray}
+   \label{eq:Intensity}
+   &\alpha(\vartheta) = \theta_{\mathrm{E}}\left(\frac{\theta_{\mathrm{E}}}{\vartheta}\right)^{\gamma'-2} ,\\  
+\end{eqnarray}
+%
+where $\vartheta = R/D_{\mathrm{d}}$, and $R$ is the two-dimensional projected radius. $\theta_{\mathrm{E}}$ here is the Einstein radius $R_{\mathrm{E}},$ which is such that in the spherical case ($q=1$) the mean dimensionless density $\langle\Sigma\rangle/\Sigma_{cr}$ within a circle of radius $R_E$ is exactly 1. This is also the radius of a ring traced by the host of the quasar when this is exactly aligned with the lens galaxy.
 
 Lensed image profiles are obtained by Inverse Ray Shooting:. First, each pixel position in the image plane is mapped back to the source plane via the deflections in eq~... Then, we exploit the fact that surface-brightness is preserved by lensing, i.e.
 \begin{equation}
@@ -168,11 +338,53 @@ In general, when dealing with more complex caustics from substructure \textbf{Ve
  rays are shot through an adaptive, triangular tessellation in the image place.
  Here, we can simply use a rectangular grid in the image-plane to obtain sufficiently accurate results.
 
+
+\subsubsection{Point-Source Model}
+
+
+
+
+\subsubsection{PSF}
+
+For modeling the light of the lens galaxies, the lensed background galaxies and the lensed point sources, we use simulated PSFs for every instrument except for LGSAO. On the other hand, for Euclid, WFIRST, and LSST, Gaussian PSFs are adopted to generate mock data in this work by lack of sufficient information. The typical full width at half maximum (FWHM) of PSF with selected filter are 0.18′′, 0.15′′, and 0.7′′ respectively.
+
+
+\subsubsection{Image Noise}
+
+As mentioned above, clean lens system image can be created if light, mass and PSF model are defined precisely. However, noise also contributes pixel counts in a given exposure time except for the signals from lensed galaxy, deflector and point-source. To derive the noise in each pixel, there are three principle ingredients, include counts noise from the clean image, background noise depends on the instrument and wavelength, and readout noise based on instrument. The variance of total noise is given by
+
+\begin{equation}
+   \label{eq:noise}
+   \mathrm{Var}_{\mathrm{noise}} = \sqrt{Ct+(B_{\mathrm{sky}}+B_{\mathrm{det}}) t N_{\mathrm{pix}} + N_{\mathrm{read}} R^{2} N_{\mathrm{pix}}}
+\end{equation}
+where $C$ is the signal from clean lens system in electrons per second from the CCD, $t$ is the integration time in seconds, $B_{\mathrm{sky}}$ is the sky background in electrons per second per pixel, $B_{\mathrm{det}}$ is the detector dark current in electrons per second per pixel, $N_{\mathrm{pix}}$ is the total number of detector pixels which are integrated over to achieve $C$, $N_{\mathrm{read}}$ is the number of CCD readouts, and $R$ is the read noise in electrons. 
+
+Normally, comparing with $B_{\mathrm{sky}}$, the value of detector's dark current is negligibly small, so in this case we will only consider the former. For the high precision in observation, sufficiently long integrations should be given so that the CCD readout noise is not important. It should be note that as a consequence of atmospheric disturbance, the background noise in ground-based telescopes have greatly exceeded that in space telescopes.
+
+
 The same code is used to generate the mock models and to fit them. The model fits the following parameters: \textbf{which ones?}  Goodness of fit is assessed through the image-plane $\chi^{2},$ comparing the model and mock data surface brightness profiles. The quasar images are not used in the fit, which is performed just on the lensed host. This is because in reality, even in the absence of substructure lensing, the relative fluxes of the point-like images of the quasar can be appreciably affected by microlensing or dust lanes in the foreground. Uncertainties are obtained via MCMC exploration of the likelihood, which in this case is simply given by $\mathcal{L}\propto\exp[-\chi^{2}/2].$
 
 We reconstruct the galaxy's position, effective radii, axis ratio, position angle, and mass power law slope for the lens galaxy light and source light. 
 
+
+
+Here we describe how the mock lens models are generated, using power-law lenses. The deflector’s mass profile is assigned within a class of power-law models,
+
+We fix the source morphology parameters (position angle, inclination, ... and S\'ersic index) to
+
+therefore, each QSO image have three parameters: position x,y ..., and amplitude. 
+
+is well described by the power-law...
+
+Here we describe how the mock lens models are generated, using power-law lenses. The reader familiar with this topic can easily skip to the next Section.
+
+The deflector's mass profile is assigned within a class of power-law models,
+
+
 \section{Results}
+
+Using the method described in Section..., we generate 30 simulations for each...
+
 
 \section{Summary}
 
@@ -325,7 +537,7 @@ $^b$ 2 QSO images exist in the lens plane. \\
 \begin{center}
 \includegraphics[width=1.0\textwidth]{figures/PSF_montage.png}
 \end{center}
-\caption{Gaussian PSF are used for Euclid, WFIRST, and LSST.}
+\caption{The typical PSF of each instrument. The upper row, from left to right, represent HST, Keck, NGAO, and JWST. The lower row, from left to right, show TMT, Euclid, WFIRST, and LSST respectively. Realistic PSFs from stars in the field are used for HST, JWST, Keck (LGSAO \& NGAO), and TMT. On the other hand, the Gaussian PSFs are adopted for the other three survey instruments.}
 \label{fig:PSF_montage}
 \end{figure}
 % =================================================
