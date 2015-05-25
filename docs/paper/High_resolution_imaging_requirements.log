@@ -1,16 +1,30 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  23 MAY 2015 17:55
+=======
+This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4) (format=pdflatex 2009.11.15)  25 MAY 2015 15:10
+>>>>>>> 946e8e004308d3e8e34af21378f48d48f166a4a0
 entering extended mode
- restricted \write18 enabled.
- file:line:error style messages enabled.
- %&-line parsing enabled.
 **High_resolution_imaging_requirements.tex
 (./High_resolution_imaging_requirements.tex
+<<<<<<< HEAD
 LaTeX2e <2011/06/27>
 Babel <3.9f> and hyphenation patterns for 78 languages loaded.
 (/usr/local/texlive/2013/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/local/texlive/2013/texmf-dist/tex/latex/base/size11.clo
 File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+=======
+LaTeX2e <2003/12/01>
+Babel <v3.8d> and hyphenation patterns for american, french, german, ngerman, b
+ahasa, basque, bulgarian, catalan, croatian, czech, danish, dutch, esperanto, e
+stonian, finnish, greek, icelandic, irish, italian, latin, magyar, norsk, polis
+h, portuges, romanian, russian, serbian, slovak, slovene, spanish, swedish, tur
+kish, ukrainian, nohyphenation, loaded.
+(/sw/share/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2004/02/16 v1.4f Standard LaTeX document class
+(/sw/share/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2004/02/16 v1.4f Standard LaTeX file (size option)
+>>>>>>> 946e8e004308d3e8e34af21378f48d48f166a4a0
 )
 \c@part=\count79
 \c@section=\count80
@@ -26,6 +40,7 @@ File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 ) (./jcappub.sty
 Package: jcappub 2012/08/02 r458
 
+<<<<<<< HEAD
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip43
@@ -35,32 +50,51 @@ For additional information on amsmath, use the `?' option.
 Package: amstext 2000/06/29 v2.01
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsgen.sty
+=======
+(/sw/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/sw/share/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/sw/share/texmf-dist/tex/latex/amsmath/amsgen.sty
+>>>>>>> 946e8e004308d3e8e34af21378f48d48f166a4a0
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks14
 \ex@=\dimen103
 ))
+<<<<<<< HEAD
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen104
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsopn.sty
+=======
+(/sw/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen104
+)
+(/sw/share/texmf-dist/tex/latex/amsmath/amsopn.sty
+>>>>>>> 946e8e004308d3e8e34af21378f48d48f166a4a0
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count87
-LaTeX Info: Redefining \frac on input line 210.
+LaTeX Info: Redefining \frac on input line 211.
 \uproot@=\count88
 \leftroot@=\count89
-LaTeX Info: Redefining \overline on input line 306.
+LaTeX Info: Redefining \overline on input line 307.
 \classnum@=\count90
 \DOTSCASE@=\count91
-LaTeX Info: Redefining \ldots on input line 378.
-LaTeX Info: Redefining \dots on input line 381.
-LaTeX Info: Redefining \cdots on input line 466.
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
 \Mathstrutbox@=\box26
 \strutbox@=\box27
 \big@size=\dimen105
-LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 \macc@depth=\count92
 \c@MaxMatrixCols=\count93
 \dotsspace@=\muskip10
@@ -81,19 +115,28 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \multlinegap=\skip44
 \multlinetaggap=\skip45
 \mathdisplay@stack=\toks18
-LaTeX Info: Redefining \[ on input line 2665.
-LaTeX Info: Redefining \] on input line 2666.
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
 )
+<<<<<<< HEAD
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+=======
+(/sw/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2002/01/22 v2.2d
+
+(/sw/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2001/10/25 v2.2f
+>>>>>>> 946e8e004308d3e8e34af21378f48d48f166a4a0
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 132.
 ))
+<<<<<<< HEAD
 (/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/epsfig.sty
 Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
 
@@ -112,9 +155,30 @@ Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
-)
-Package graphics Info: Driver file: pdftex.def on input line 91.
+=======
+(/sw/share/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
 
+(/sw/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/sw/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks19
+)
+(/sw/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2001/07/07 v1.0n Standard LaTeX Graphics (DPC,SPQR)
+
+(/sw/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/sw/share/texmf-dist/tex/latex/graphics/graphics.cfg
+File: graphics.cfg 2005/02/03 v1.3 graphics configuration of teTeX/TeXLive
+>>>>>>> 946e8e004308d3e8e34af21378f48d48f166a4a0
+)
+Package graphics Info: Driver file: pdftex.def on input line 80.
+
+<<<<<<< HEAD
 (/usr/local/texlive/2013/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
@@ -124,6 +188,10 @@ Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
+=======
+(/sw/share/texmf-dist/tex/latex/graphics/pdftex.def
+File: pdftex.def 2002/06/19 v0.03k graphics/color for pdftex
+>>>>>>> 946e8e004308d3e8e34af21378f48d48f166a4a0
 \Gread@gobject=\count99
 ))
 \Gin@req@height=\dimen112
@@ -132,13 +200,19 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \epsfxsize=\dimen114
 \epsfysize=\dimen115
 )
+<<<<<<< HEAD
 (/usr/local/texlive/2013/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
+=======
+(/sw/share/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2003/06/06 7.1 (PWD)
+>>>>>>> 946e8e004308d3e8e34af21378f48d48f166a4a0
 \bibhang=\skip46
 \bibsep=\skip47
-LaTeX Info: Redefining \cite on input line 694.
+LaTeX Info: Redefining \cite on input line 518.
 \c@NAT@ctr=\count100
 )
+<<<<<<< HEAD
 (/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 
@@ -203,11 +277,23 @@ Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+=======
+(/sw/share/texmf-dist/tex/latex/graphics/color.sty
+Package: color 1999/02/16 v1.0i Standard LaTeX Color (DPC)
+
+(/sw/share/texmf-dist/tex/latex/graphics/color.cfg
+File: color.cfg 2005/02/03 v1.3 color configuration of teTeX/TeXLive
 )
+Package color Info: Driver file: pdftex.def on input line 125.
+>>>>>>> 946e8e004308d3e8e34af21378f48d48f166a4a0
+)
+(/sw/share/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2003/11/30 v6.74m Hypertext links for LaTeX
 \@linkdim=\dimen116
 \Hy@linkcounter=\count101
 \Hy@pagecounter=\count102
 
+<<<<<<< HEAD
 (/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
@@ -283,88 +369,171 @@ File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 (/usr/local/texlive/2013/texmf-dist/tex/latex/txfonts/txfonts.sty
 Package: txfonts 2008/01/22 v3.2.1
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 21.
+=======
+(/sw/share/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2003/11/30 v6.74m Hyperref: PDFDocEncoding definition (HO)
+)
+(/sw/share/texmf-dist/tex/latex/hyperref/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive and teTeX
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 1830.
+Package hyperref Info: Option `linktocpage' set `true' on input line 1830.
+
+
+! Package keyval Error: pdfa undefined.
+
+See the keyval package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1830 \ProcessOptionsWithKV{Hyp}
+                                 
+? R
+OK, entering \nonstopmode...
+Package hyperref Info: Hyper figures OFF on input line 1880.
+Package hyperref Info: Link nesting OFF on input line 1885.
+Package hyperref Info: Hyper index ON on input line 1888.
+Package hyperref Info: Plain pages ON on input line 1893.
+Package hyperref Info: Backreferencing OFF on input line 1900.
+Implicit mode ON; LaTeX internals redefined
+Package hyperref Info: Bookmarks ON on input line 2004.
+(/sw/share/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2004/03/15  ver 3.1  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 2143.
+\Fld@menulength=\count103
+\Field@Width=\dimen117
+\Fld@charsize=\dimen118
+\Choice@toks=\toks20
+\Field@toks=\toks21
+Package hyperref Info: Hyper figures OFF on input line 2618.
+Package hyperref Info: Link nesting OFF on input line 2623.
+Package hyperref Info: Hyper index ON on input line 2626.
+Package hyperref Info: backreferencing OFF on input line 2633.
+Package hyperref Info: Link coloring ON on input line 2636.
+\c@Item=\count104
+\c@Hfootnote=\count105
+)
+*hyperref using default driver hpdftex*
+(/sw/share/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2003/11/30 v6.74m Hyperref driver for pdfTeX
+
+(/sw/share/texmf-dist/tex/latex/psnfss/pifont.sty
+Package: pifont 2004/09/15 PSNFSS-v9.2 Pi font support (SPQR) 
+LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
+
+(/sw/share/texmf-dist/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Try loading font information for U+psy on input line 64.
+
+(/sw/share/texmf-dist/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+))
+\Fld@listcount=\count106
+\@outlinefile=\write3
+)
+\auth@toks=\toks22
+\affil@toks=\toks23
+\email@toks=\toks24
+\c@email@counter=\count107
+\affiliationsSep=\skip48
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 137.
+
+
+(/sw/share/texmf-dist/tex/latex/psnfss/ot1phv.fd
+File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
+))
+(/sw/share/texmf-dist/tex/latex/txfonts/txfonts.sty
+Package: txfonts 2005/01/03 v3.2
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 20.
+>>>>>>> 946e8e004308d3e8e34af21378f48d48f166a4a0
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/txr/m/n on input line 21.
+(Font)                  OT1/cmr/m/n --> OT1/txr/m/n on input line 20.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/txr/m/n on input line 21.
+(Font)                  OT1/cmr/bx/n --> OT1/txr/m/n on input line 20.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/txr/m/n --> OT1/txr/bx/n on input line 22.
+(Font)                  OT1/txr/m/n --> OT1/txr/bx/n on input line 21.
 \symitalic=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `italic' in version `bold'
-(Font)                  OT1/txr/m/it --> OT1/txr/bx/it on input line 26.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 29.
+(Font)                  OT1/txr/m/it --> OT1/txr/bx/it on input line 25.
+LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 27.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 28.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/txr/bx/n on input line 29.
+(Font)                  OT1/cmr/bx/n --> OT1/txr/bx/n on input line 28.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/txr/bx/n on input line 29.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 30.
+(Font)                  OT1/cmr/bx/n --> OT1/txr/bx/n on input line 28.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 29.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/txr/m/it on input line 30.
+(Font)                  OT1/cmr/m/it --> OT1/txr/m/it on input line 29.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/txr/m/it on input line 30.
+(Font)                  OT1/cmr/bx/it --> OT1/txr/m/it on input line 29.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/txr/m/it --> OT1/txr/bx/it on input line 31.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 40.
+(Font)                  OT1/txr/m/it --> OT1/txr/bx/it on input line 30.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 39.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/txss/m/n on input line 40.
+(Font)                  OT1/cmss/m/n --> OT1/txss/m/n on input line 39.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/txss/m/n on input line 40.
+(Font)                  OT1/cmss/bx/n --> OT1/txss/m/n on input line 39.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/txss/m/n --> OT1/txss/b/n on input line 41.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 50.
+(Font)                  OT1/txss/m/n --> OT1/txss/b/n on input line 40.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 49.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/txtt/m/n on input line 50.
+(Font)                  OT1/cmtt/m/n --> OT1/txtt/m/n on input line 49.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/txtt/m/n on input line 50.
+(Font)                  OT1/cmtt/m/n --> OT1/txtt/m/n on input line 49.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/txtt/m/n --> OT1/txtt/b/n on input line 51.
-LaTeX Font Info:    Redeclaring symbol font `letters' on input line 58.
+(Font)                  OT1/txtt/m/n --> OT1/txtt/b/n on input line 50.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 57.
 LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
-(Font)                  OML/cmm/m/it --> OML/txmi/m/it on input line 58.
+(Font)                  OML/cmm/m/it --> OML/txmi/m/it on input line 57.
 LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
-(Font)                  OML/cmm/b/it --> OML/txmi/m/it on input line 58.
+(Font)                  OML/cmm/b/it --> OML/txmi/m/it on input line 57.
 LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
-(Font)                  OML/txmi/m/it --> OML/txmi/bx/it on input line 59.
+(Font)                  OML/txmi/m/it --> OML/txmi/bx/it on input line 58.
 \symlettersA=\mathgroup7
 LaTeX Font Info:    Overwriting symbol font `lettersA' in version `bold'
-(Font)                  U/txmia/m/it --> U/txmia/bx/it on input line 67.
-LaTeX Font Info:    Redeclaring math alphabet \mathfrak on input line 70.
-LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 77.
+(Font)                  U/txmia/m/it --> U/txmia/bx/it on input line 66.
+LaTeX Font Info:    Redeclaring math alphabet \mathfrak on input line 69.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 76.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  OMS/cmsy/m/n --> OMS/txsy/m/n on input line 77.
+(Font)                  OMS/cmsy/m/n --> OMS/txsy/m/n on input line 76.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/cmsy/b/n --> OMS/txsy/m/n on input line 77.
+(Font)                  OMS/cmsy/b/n --> OMS/txsy/m/n on input line 76.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/txsy/m/n --> OMS/txsy/bx/n on input line 78.
-LaTeX Font Info:    Redeclaring symbol font `AMSa' on input line 93.
+(Font)                  OMS/txsy/m/n --> OMS/txsy/bx/n on input line 77.
+LaTeX Font Info:    Redeclaring symbol font `AMSa' on input line 92.
 LaTeX Font Info:    Overwriting symbol font `AMSa' in version `normal'
-(Font)                  U/msa/m/n --> U/txsya/m/n on input line 93.
+(Font)                  U/msa/m/n --> U/txsya/m/n on input line 92.
 LaTeX Font Info:    Overwriting symbol font `AMSa' in version `bold'
-(Font)                  U/msa/m/n --> U/txsya/m/n on input line 93.
+(Font)                  U/msa/m/n --> U/txsya/m/n on input line 92.
 LaTeX Font Info:    Overwriting symbol font `AMSa' in version `bold'
-(Font)                  U/txsya/m/n --> U/txsya/bx/n on input line 94.
-LaTeX Font Info:    Redeclaring symbol font `AMSb' on input line 102.
+(Font)                  U/txsya/m/n --> U/txsya/bx/n on input line 93.
+LaTeX Font Info:    Redeclaring symbol font `AMSb' on input line 101.
 LaTeX Font Info:    Overwriting symbol font `AMSb' in version `normal'
-(Font)                  U/msb/m/n --> U/txsyb/m/n on input line 102.
+(Font)                  U/msb/m/n --> U/txsyb/m/n on input line 101.
 LaTeX Font Info:    Overwriting symbol font `AMSb' in version `bold'
-(Font)                  U/msb/m/n --> U/txsyb/m/n on input line 102.
+(Font)                  U/msb/m/n --> U/txsyb/m/n on input line 101.
 LaTeX Font Info:    Overwriting symbol font `AMSb' in version `bold'
-(Font)                  U/txsyb/m/n --> U/txsyb/bx/n on input line 103.
+(Font)                  U/txsyb/m/n --> U/txsyb/bx/n on input line 102.
+LaTeX Font Info:    Redeclaring math alphabet \mathbb on input line 105.
 \symsymbolsC=\mathgroup8
 LaTeX Font Info:    Overwriting symbol font `symbolsC' in version `bold'
-(Font)                  U/txsyc/m/n --> U/txsyc/bx/n on input line 113.
-LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 120.
+(Font)                  U/txsyc/m/n --> U/txsyc/bx/n on input line 112.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 119.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/cmex/m/n --> OMX/txex/m/n on input line 120.
+(Font)                  OMX/cmex/m/n --> OMX/txex/m/n on input line 119.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/cmex/m/n --> OMX/txex/m/n on input line 120.
+(Font)                  OMX/cmex/m/n --> OMX/txex/m/n on input line 119.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/txex/m/n --> OMX/txex/bx/n on input line 121.
+(Font)                  OMX/txex/m/n --> OMX/txex/bx/n on input line 120.
 \symlargesymbolsA=\mathgroup9
 LaTeX Font Info:    Overwriting symbol font `largesymbolsA' in version `bold'
-(Font)                  U/txexa/m/n --> U/txexa/bx/n on input line 129.
-LaTeX Info: Redefining \not on input line 1043.
+(Font)                  U/txexa/m/n --> U/txexa/bx/n on input line 128.
+LaTeX Info: Redefining \not on input line 1042.
 )
+<<<<<<< HEAD
 (/usr/local/texlive/2013/texmf-dist/tex/latex/threeparttable/threeparttable.sty
 Package: threeparttable 2003/06/13  v 3.0
 \@tempboxb=\box28
@@ -381,10 +550,29 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \c@lofdepth=\count113
 \c@subtable=\count114
 \c@lotdepth=\count115
+=======
+(/sw/share/texmf-dist/tex/latex/threeparttable/threeparttable.sty
+Package: threeparttable 2003/06/13  v 3.0
+\@tempboxb=\box28
+)
+(./aas_macros.sty) (/sw/share/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/07/30 v2.1.4 subfigure package
+\subfigtopskip=\skip49
+\subfigcapskip=\skip50
+\subfigcaptopadj=\dimen119
+\subfigbottomskip=\skip51
+\subfigcapmargin=\dimen120
+\subfiglabelskip=\skip52
+\c@subfigure=\count108
+\c@lofdepth=\count109
+\c@subtable=\count110
+\c@lotdepth=\count111
+>>>>>>> 946e8e004308d3e8e34af21378f48d48f166a4a0
 
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
+<<<<<<< HEAD
 (/usr/local/texlive/2013/texmf-dist/tex/latex/subfigure/subfigure.cfg)
 \subfig@top=\skip54
 \subfig@bottom=\skip55
@@ -720,6 +908,286 @@ Package natbib Warning: Citation `1994MNRAS.267..333E' on page 6 undefined on i
 nput line 312.
 
 [6]
+=======
+(/sw/share/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip53
+\subfig@bottom=\skip54
+)
+(./High_resolution_imaging_requirements.aux
+
+LaTeX Warning: Label `eq:Intensity' multiply defined.
+
+)
+\openout1 = `High_resolution_imaging_requirements.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 66.
+LaTeX Font Info:    Try loading font information for OML+txmi on input line 66.
+
+ (/sw/share/texmf-dist/tex/latex/txfonts/omltxmi.fd
+File: omltxmi.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 66.
+LaTeX Font Info:    Try loading font information for OMS+txsy on input line 66.
+
+
+(/sw/share/texmf-dist/tex/latex/txfonts/omstxsy.fd
+File: omstxsy.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 66.
+LaTeX Font Info:    Try loading font information for OMX+txex on input line 66.
+
+
+(/sw/share/texmf-dist/tex/latex/txfonts/omxtxex.fd
+File: omxtxex.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 66.
+LaTeX Font Info:    Try loading font information for U+txexa on input line 66.
+
+(/sw/share/texmf-dist/tex/latex/txfonts/utxexa.fd
+File: utxexa.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Try loading font information for OT1+txr on input line 66.
+
+(/sw/share/texmf-dist/tex/latex/txfonts/ot1txr.fd
+File: ot1txr.fd 2000/12/15 v3.1
+)
+(/sw/share/texmf-dist/tex/context/base/supp-pdf.tex
+(/sw/share/texmf-dist/tex/context/base/supp-mis.tex
+loading : Context Support Macros / Miscellaneous (2004.10.26)
+\protectiondepth=\count112
+\scratchcounter=\count113
+\scratchtoks=\toks25
+\scratchdimen=\dimen121
+\scratchskip=\skip55
+\scratchmuskip=\muskip12
+\scratchbox=\box29
+\scratchread=\read1
+\scratchwrite=\write4
+\zeropoint=\dimen122
+\onepoint=\dimen123
+\onebasepoint=\dimen124
+\minusone=\count114
+\thousandpoint=\dimen125
+\onerealpoint=\dimen126
+\emptytoks=\toks26
+\nextbox=\box30
+\nextdepth=\dimen127
+\everyline=\toks27
+\!!counta=\count115
+\!!countb=\count116
+\recursecounter=\count117
+)
+loading : Context Support Macros / PDF (2004.03.26)
+\nofMPsegments=\count118
+\nofMParguments=\count119
+\MPscratchCnt=\count120
+\MPscratchDim=\dimen128
+\MPnumerator=\count121
+\everyMPtoPDFconversion=\toks28
+)
+Package hyperref Info: Link coloring ON on input line 66.
+ (/sw/share/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2003/12/03 v2.21 Cross-referencing by name of section
+\c@section@level=\count122
+)
+LaTeX Info: Redefining \ref on input line 66.
+LaTeX Info: Redefining \pageref on input line 66.
+
+(./High_resolution_imaging_requirements.out)
+(./High_resolution_imaging_requirements.out)
+\openout3 = `High_resolution_imaging_requirements.out'.
+
+LaTeX Font Info:    Try loading font information for OT1+txss on input line 68.
+
+
+(/sw/share/texmf-dist/tex/latex/txfonts/ot1txss.fd
+File: ot1txss.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
+(Font)              scaled to size 23.63593pt on input line 68.
+LaTeX Font Info:    Font shape `OT1/txss/bx/n' in size <24.88> not available
+(Font)              Font shape `OT1/txss/b/n' tried instead on input line 68.
+LaTeX Font Info:    Font shape `OT1/txss/b/n' will be
+(Font)              scaled to size 23.63593pt on input line 68.
+LaTeX Font Info:    Font shape `OT1/txss/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/txss/b/n' tried instead on input line 68.
+LaTeX Font Info:    Font shape `OT1/txss/b/n' will be
+(Font)              scaled to size 13.67995pt on input line 68.
+LaTeX Font Info:    Try loading font information for U+txsya on input line 68.
+
+(/sw/share/texmf-dist/tex/latex/txfonts/utxsya.fd
+File: utxsya.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Try loading font information for U+txsyb on input line 68.
+
+(/sw/share/texmf-dist/tex/latex/txfonts/utxsyb.fd
+File: utxsyb.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Try loading font information for U+txmia on input line 68.
+
+(/sw/share/texmf-dist/tex/latex/txfonts/utxmia.fd
+File: utxmia.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Try loading font information for U+txsyc on input line 68.
+
+(/sw/share/texmf-dist/tex/latex/txfonts/utxsyc.fd
+File: utxsyc.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Font shape `OT1/txss/bx/n' in size <12> not available
+(Font)              Font shape `OT1/txss/b/n' tried instead on input line 68.
+LaTeX Font Info:    Font shape `OT1/txss/b/n' will be
+(Font)              scaled to size 11.39996pt on input line 68.
+ [0
+
+{/sw/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./High_resolution_imag
+ing_requirements.toc)
+\tf@toc=\write5
+\openout5 = `High_resolution_imaging_requirements.toc'.
+
+
+
+Package natbib Warning: Citation `Refsdal64' on page 1 undefined on input line 
+75.
+
+
+Package natbib Warning: Citation `Suyu++10' on page 1 undefined on input line 8
+1.
+
+
+Package natbib Warning: Citation `Suyu++13' on page 1 undefined on input line 8
+1.
+
+
+Package natbib Warning: Citation `Suyu++14' on page 1 undefined on input line 8
+1.
+
+
+Package natbib Warning: Citation `Coe+Moustakas09' on page 1 undefined on input
+ line 87.
+
+
+Package natbib Warning: Citation `Linder11' on page 1 undefined on input line 8
+7.
+
+
+Package natbib Warning: Citation `Weinberg++13' on page 1 undefined on input li
+ne 87.
+
+
+Package natbib Warning: Citation `Suyu++12' on page 1 undefined on input line 8
+7.
+
+
+Package natbib Warning: Citation `Suyu++14' on page 1 undefined on input line 8
+7.
+
+
+Package natbib Warning: Citation `Riess++11' on page 1 undefined on input line 
+90.
+
+
+Package natbib Warning: Citation `Freedman++12' on page 1 undefined on input li
+ne 90.
+
+
+Package natbib Warning: Citation `Tewes++13' on page 1 undefined on input line 
+103.
+
+
+Package natbib Warning: Citation `Fassnacht++2002' on page 1 undefined on input
+ line 104.
+
+
+Package natbib Warning: Citation `Treu++13' on page 1 undefined on input line 1
+07.
+
+
+Package natbib Warning: Citation `Liao++15' on page 1 undefined on input line 1
+09.
+
+
+Package natbib Warning: Citation `Fassnacht+Cohen1998' on page 1 undefined on i
+nput line 112.
+
+
+Package natbib Warning: Citation `Eigenbrod++07' on page 1 undefined on input l
+ine 112.
+
+
+Package natbib Warning: Citation `Treu+Koopmans2002' on page 1 undefined on inp
+ut line 118.
+
+
+Package natbib Warning: Citation `Koopmans++2003' on page 1 undefined on input 
+line 118.
+
+
+Package natbib Warning: Citation `Suyu++2010' on page 1 undefined on input line
+ 118.
+
+
+Package natbib Warning: Citation `Suyu++2013' on page 1 undefined on input line
+ 118.
+
+
+Package natbib Warning: Citation `Suyu++2014' on page 1 undefined on input line
+ 118.
+
+[1]
+
+Package natbib Warning: Citation `Coe+Moustakas09' on page 2 undefined on input
+ line 130.
+
+
+Package natbib Warning: Citation `Linder11' on page 2 undefined on input line 1
+30.
+
+
+Package natbib Warning: Citation `Treu+13' on page 2 undefined on input line 13
+1.
+
+
+Package natbib Warning: Citation `Eigenbrod++05' on page 2 undefined on input l
+ine 141.
+
+
+Package natbib Warning: Citation `Linder15' on page 2 undefined on input line 1
+41.
+
+
+Package natbib Warning: Citation `Treu2010' on page 2 undefined on input line 1
+57.
+
+[2]
+
+Package natbib Warning: Citation `Fassnacht' on page 3 undefined on input line 
+253.
+
+LaTeX Font Info:    Try loading font information for OT1+txtt on input line 255
+.
+(/sw/share/texmf-dist/tex/latex/txfonts/ot1txtt.fd
+File: ot1txtt.fd 2000/12/15 v3.1
+) [3] [4]
+
+Package natbib Warning: Citation `Bennert++11' on page 5 undefined on input lin
+e 362.
+
+
+LaTeX Warning: Reference `tab:pointsource' on page 5 undefined on input line 36
+4.
+
+[5] [6]
+>>>>>>> 946e8e004308d3e8e34af21378f48d48f166a4a0
 Missing character: There is no â in font txr!
 Missing character: There is no € in font txr!
 Missing character: There is no ² in font txr!
@@ -742,6 +1210,7 @@ Missing character: There is no ² in font txr!
 Missing character: There is no â in font txr!
 Missing character: There is no € in font txr!
 Missing character: There is no ™ in font txr!
+<<<<<<< HEAD
  (./High_resolution_imaging_requirements.bbl [8] [9] [10]) [11]
 Overfull \hbox (77.23799pt too wide) in paragraph at lines 501--514
  [] 
@@ -970,6 +1439,129 @@ ut line 645.
 Package natbib Warning: There were undefined citations.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 652.
+=======
+ (./High_resolution_imaging_requirements.bbl [8]
+Underfull \vbox (badness 2846) has occurred while \output is active []
+
+ [9]
+[10]) [11]
+Overfull \hbox (77.23799pt too wide) in paragraph at lines 629--642
+ [] 
+ []
+
+<figures/wavelength_zp.png, id=293, 586.8324pt x 442.2924pt>
+File: figures/wavelength_zp.png Graphic file (type png)
+
+<use figures/wavelength_zp.png>
+<figures/PSF_montage.png, id=294, 1284.8pt x 424.58624pt>
+File: figures/PSF_montage.png Graphic file (type png)
+
+<use figures/PSF_montage.png>
+<figures/fainter_system_4QSOimages_all.png, id=295, 1927.2pt x 900.36375pt>
+File: figures/fainter_system_4QSOimages_all.png Graphic file (type png)
+
+<use figures/fainter_system_4QSOimages_all.png>
+<figures/fainter_system_2QSOimages_all.png, id=296, 1927.2pt x 900.36375pt>
+File: figures/fainter_system_2QSOimages_all.png Graphic file (type png)
+
+<use figures/fainter_system_2QSOimages_all.png>
+<figures/brighter_system_2QSOimages_all.png, id=297, 1927.2pt x 900.36375pt>
+File: figures/brighter_system_2QSOimages_all.png Graphic file (type png)
+
+<use figures/brighter_system_2QSOimages_all.png>
+<figures/brighter_system_4QSOimages_all.png, id=298, 1927.2pt x 900.36375pt>
+File: figures/brighter_system_4QSOimages_all.png Graphic file (type png)
+
+<use figures/brighter_system_4QSOimages_all.png>
+<figures/gamma_135949_4QSOimages_HST.png, id=299, 586.8324pt x 442.2924pt>
+File: figures/gamma_135949_4QSOimages_HST.png Graphic file (type png)
+
+<use figures/gamma_135949_4QSOimages_HST.png>
+<figures/gamma_135949_4QSOimages_JWST.png, id=300, 586.8324pt x 442.2924pt>
+File: figures/gamma_135949_4QSOimages_JWST.png Graphic file (type png)
+
+<use figures/gamma_135949_4QSOimages_JWST.png>
+<figures/gamma_135949_4QSOimages_Keck.png, id=301, 586.8324pt x 442.2924pt>
+File: figures/gamma_135949_4QSOimages_Keck.png Graphic file (type png)
+
+<use figures/gamma_135949_4QSOimages_Keck.png>
+<figures/gamma_135949_4QSOimages_NGAO.png, id=302, 586.8324pt x 442.2924pt>
+File: figures/gamma_135949_4QSOimages_NGAO.png Graphic file (type png)
+
+<use figures/gamma_135949_4QSOimages_NGAO.png>
+<figures/gamma_135949_4QSOimages_E_W_L.png, id=303, 586.8324pt x 442.2924pt>
+File: figures/gamma_135949_4QSOimages_E_W_L.png Graphic file (type png)
+
+<use figures/gamma_135949_4QSOimages_E_W_L.png>
+<figures/gamma_135949_4QSOimages_TMT.png, id=304, 586.8324pt x 442.2924pt>
+File: figures/gamma_135949_4QSOimages_TMT.png Graphic file (type png)
+
+<use figures/gamma_135949_4QSOimages_TMT.png>
+<figures/gamma_135949_anti_2QSOimages_HST.png, id=305, 586.8324pt x 442.2924pt>
+File: figures/gamma_135949_anti_2QSOimages_HST.png Graphic file (type png)
+<use figures/gamma_135949_anti_2QSOimages_HST.png>
+<figures/gamma_135949_anti_2QSOimages_JWST.png, id=306, 586.8324pt x 442.2924pt
+>
+File: figures/gamma_135949_anti_2QSOimages_JWST.png Graphic file (type png)
+ <use figures/gamma_135949_anti_2QSOimages_JWST.png>
+<figures/gamma_135949_anti_2QSOimages_Keck.png, id=307, 586.8324pt x 442.2924pt
+>
+File: figures/gamma_135949_anti_2QSOimages_Keck.png Graphic file (type png)
+ <use figures/gamma_135949_anti_2QSOimages_Keck.png>
+<figures/gamma_135949_anti_2QSOimages_NGAO.png, id=308, 586.8324pt x 442.2924pt
+>
+File: figures/gamma_135949_anti_2QSOimages_NGAO.png Graphic file (type png)
+ <use figures/gamma_135949_anti_2QSOimages_NGAO.png>
+<figures/gamma_135949_anti_2QSOimages_EWL.png, id=309, 586.8324pt x 442.2924pt>
+File: figures/gamma_135949_anti_2QSOimages_EWL.png Graphic file (type png)
+<use figures/gamma_135949_anti_2QSOimages_EWL.png>
+<figures/gamma_135949_anti_2QSOimages_TMT.png, id=310, 586.8324pt x 442.2924pt>
+File: figures/gamma_135949_anti_2QSOimages_TMT.png Graphic file (type png)
+<use figures/gamma_135949_anti_2QSOimages_TMT.png>
+<figures/gamma_0330_2QSOimages_HST.png, id=311, 586.8324pt x 442.2924pt>
+File: figures/gamma_0330_2QSOimages_HST.png Graphic file (type png)
+
+<use figures/gamma_0330_2QSOimages_HST.png>
+<figures/gamma_0330_2QSOimages_JWST.png, id=312, 586.8324pt x 442.2924pt>
+File: figures/gamma_0330_2QSOimages_JWST.png Graphic file (type png)
+
+<use figures/gamma_0330_2QSOimages_JWST.png>
+<figures/gamma_0330_2QSOimages_Keck.png, id=313, 586.8324pt x 442.2924pt>
+File: figures/gamma_0330_2QSOimages_Keck.png Graphic file (type png)
+
+<use figures/gamma_0330_2QSOimages_Keck.png>
+<figures/gamma_0330_2QSOimages_NGAO.png, id=314, 586.8324pt x 442.2924pt>
+File: figures/gamma_0330_2QSOimages_NGAO.png Graphic file (type png)
+
+<use figures/gamma_0330_2QSOimages_NGAO.png>
+<figures/gamma_0330_2QSOimages_E_W_L.png, id=315, 586.8324pt x 442.2924pt>
+File: figures/gamma_0330_2QSOimages_E_W_L.png Graphic file (type png)
+
+<use figures/gamma_0330_2QSOimages_E_W_L.png>
+<figures/gamma_0330_anti_4QSOimages_HST.png, id=316, 586.8324pt x 442.2924pt>
+File: figures/gamma_0330_anti_4QSOimages_HST.png Graphic file (type png)
+
+<use figures/gamma_0330_anti_4QSOimages_HST.png>
+<figures/gamma_0330_anti_4QSOimages_JWST.png, id=317, 586.8324pt x 442.2924pt>
+File: figures/gamma_0330_anti_4QSOimages_JWST.png Graphic file (type png)
+
+<use figures/gamma_0330_anti_4QSOimages_JWST.png>
+<figures/gamma_0330_anti_4QSOimages_Keck.png, id=318, 586.8324pt x 442.2924pt>
+File: figures/gamma_0330_anti_4QSOimages_Keck.png Graphic file (type png)
+
+<use figures/gamma_0330_anti_4QSOimages_Keck.png>
+<figures/gamma_0330_anti_4QSOimages_NGAO.png, id=319, 586.8324pt x 442.2924pt>
+File: figures/gamma_0330_anti_4QSOimages_NGAO.png Graphic file (type png)
+
+<use figures/gamma_0330_anti_4QSOimages_NGAO.png>
+<figures/gamma_0330_anti_4QSOimages_EWL.png, id=320, 694.5147pt x 442.2924pt>
+File: figures/gamma_0330_anti_4QSOimages_EWL.png Graphic file (type png)
+
+<use figures/gamma_0330_anti_4QSOimages_EWL.png>
+
+Package natbib Warning: There were undefined citations.
+
+>>>>>>> 946e8e004308d3e8e34af21378f48d48f166a4a0
 [12] [13 <./figures/wavelength_zp.png>] [14 <./figures/PSF_montage.png> <./figu
 res/fainter_system_4QSOimages_all.png>] [15 <./figures/fainter_system_2QSOimage
 s_all.png> <./figures/brighter_system_2QSOimages_all.png>] [16 <./figures/brigh
@@ -987,6 +1579,7 @@ res/gamma_0330_2QSOimages_E_W_L.png>] [20 <./figures/gamma_0330_anti_4QSOimages
 _HST.png> <./figures/gamma_0330_anti_4QSOimages_JWST.png> <./figures/gamma_0330
 _anti_4QSOimages_Keck.png> <./figures/gamma_0330_anti_4QSOimages_NGAO.png> <./f
 igures/gamma_0330_anti_4QSOimages_EWL.png>]
+<<<<<<< HEAD
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 652.
 
 (./High_resolution_imaging_requirements.aux
@@ -1008,10 +1601,14 @@ Package rerunfilecheck Info: Checksums for `High_resolution_imaging_requirement
 s.out':
 (rerunfilecheck)             Before: <no file>
 (rerunfilecheck)             After:  6D096433A520523C70699BCC74995192;850.
+=======
+(./High_resolution_imaging_requirements.aux)
+>>>>>>> 946e8e004308d3e8e34af21378f48d48f166a4a0
 
 LaTeX Warning: There were undefined references.
 
 
+<<<<<<< HEAD
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 652.
@@ -1043,3 +1640,31 @@ PDF statistics:
  106 named destinations out of 1000 (max. 500000)
  141 words of extra memory for PDF output out of 10000 (max. 10000000)
 
+=======
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 5085 strings out of 94499
+ 69731 string characters out of 1176073
+ 129617 words of memory out of 1500000
+ 7994 multiletter control sequences out of 10000+50000
+ 63354 words of font info for 150 fonts, out of 1200000 for 2000
+ 580 hyphenation exceptions out of 8191
+ 39i,12n,36p,1153b,422s stack positions out of 5000i,500n,6000p,200000b,5000s
+PDF statistics:
+ 368 PDF objects out of 65536
+ 104 named destinations out of 20000
+ 261 words of extra memory for PDF output out of 65536
+</sw/share/texmf-dist/fonts/type1/public/txfonts/rtxi.pfb></sw/share/texmf-di
+st/fonts/type1/public/txfonts/txex.pfb></sw/share/texmf-dist/fonts/type1/public
+/txfonts/txtt.pfb>{/sw/share/texmf-dist/fonts/enc/dvips/psnfss/8r.enc}</sw/shar
+e/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></sw/share/texmf-dist/fonts/type1
+/urw/times/utmri8a.pfb></sw/share/texmf-dist/fonts/type1/public/txfonts/txsy.pf
+b></sw/share/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></sw/share/texmf-di
+st/fonts/type1/public/txfonts/rtxmi.pfb></sw/share/texmf-dist/fonts/type1/urw/h
+elvetic/uhvb8a.pfb></sw/share/texmf-dist/fonts/type1/public/txfonts/rtxsc.pfb><
+/sw/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on High_resolution_imaging_requirements.pdf (21 pages, 5083234 b
+ytes).
+>>>>>>> 946e8e004308d3e8e34af21378f48d48f166a4a0

@@ -1,48 +1,73 @@
-This is BibTeX, Version 0.99d (TeX Live 2014)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+This is BibTeX, Version 0.99c (Web2C 7.5.4)
 The top-level auxiliary file: High_resolution_imaging_requirements.aux
 The style file: JHEP.bst
 Database file #1: rebuilt_gamma.bib
+Warning--I didn't find a database entry for "Refsdal64"
+Warning--I didn't find a database entry for "Suyu++10"
+Warning--I didn't find a database entry for "Suyu++13"
+Warning--I didn't find a database entry for "Suyu++14"
+Warning--I didn't find a database entry for "Coe+Moustakas09"
+Warning--I didn't find a database entry for "Linder11"
+Warning--I didn't find a database entry for "Weinberg++13"
+Warning--I didn't find a database entry for "Suyu++12"
+Warning--I didn't find a database entry for "Riess++11"
+Warning--I didn't find a database entry for "Freedman++12"
+Warning--I didn't find a database entry for "Tewes++13"
+Warning--I didn't find a database entry for "Fassnacht++2002"
+Warning--I didn't find a database entry for "Treu++13"
+Warning--I didn't find a database entry for "Liao++15"
+Warning--I didn't find a database entry for "Fassnacht+Cohen1998"
+Warning--I didn't find a database entry for "Eigenbrod++07"
+Warning--I didn't find a database entry for "Treu+Koopmans2002"
+Warning--I didn't find a database entry for "Koopmans++2003"
+Warning--I didn't find a database entry for "Suyu++2010"
+Warning--I didn't find a database entry for "Suyu++2013"
+Warning--I didn't find a database entry for "Suyu++2014"
+Warning--I didn't find a database entry for "Treu+13"
+Warning--I didn't find a database entry for "Eigenbrod++05"
+Warning--I didn't find a database entry for "Linder15"
+Warning--I didn't find a database entry for "Treu2010"
+Warning--I didn't find a database entry for "Fassnacht"
 Warning--empty publisher in 1968adga.book.....S
-You've used 33 entries,
+You've used 35 entries,
             2195 wiz_defined-function locations,
-            744 strings with 18539 characters,
-and the built_in function-call counts, 16455 in all, are:
-= -- 1044
-> -- 1706
+            810 strings with 18993 characters,
+and the built_in function-call counts, 16837 in all, are:
+= -- 1117
+> -- 1647
 < -- 0
-+ -- 581
-- -- 548
-* -- 1866
-:= -- 2816
-add.period$ -- 35
-call.type$ -- 33
-change.case$ -- 32
++ -- 563
+- -- 528
+* -- 1879
+:= -- 2837
+add.period$ -- 37
+call.type$ -- 35
+change.case$ -- 34
 chr.to.int$ -- 0
-cite$ -- 34
-duplicate$ -- 534
-empty$ -- 1009
-format.name$ -- 548
-if$ -- 3581
+cite$ -- 36
+duplicate$ -- 568
+empty$ -- 1077
+format.name$ -- 528
+if$ -- 3711
 int.to.chr$ -- 0
-int.to.str$ -- 33
-missing$ -- 118
-newline$ -- 104
-num.names$ -- 33
-pop$ -- 137
+int.to.str$ -- 35
+missing$ -- 126
+newline$ -- 110
+num.names$ -- 35
+pop$ -- 142
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 361
+skip$ -- 389
 stack$ -- 0
-substring$ -- 617
-swap$ -- 219
+substring$ -- 672
+swap$ -- 235
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 78
-width$ -- 35
-write$ -- 351
-(There was 1 warning)
+while$ -- 84
+width$ -- 37
+write$ -- 373
+(There were 27 warnings)
