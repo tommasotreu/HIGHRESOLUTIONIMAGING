@@ -1,5 +1,4 @@
 \documentclass[a4paper,11pt]{article}
-
 \usepackage{jcappub}
 \usepackage{txfonts}
 \usepackage{threeparttable}
@@ -21,7 +20,7 @@
 
 \affiliation[1]{Department of Physics, University of California, Santa Barbara, CA 93106, USA}
 \affiliation[2]{Physics and Astronomy Building, 430 Portola Plaza, Box 951547, Los Angeles, CA 90095-1547, USA}
-\affiliation[3]{Institute of Astronomy, UK}
+\affiliation[3]{Institute of Astronomy, University of Cambridge, Madingley Road, Cambridge CB3 0HA, UK}
 \affiliation[4]{Kavli Institute for Particle Astrophysics and Cosmology, Stanford University, 452 Lomita Mall, Stanford, CA 94305, USA}
 
 \emailAdd{xlmeng919@gmail.com}
@@ -355,12 +354,11 @@ In order to construct realistic systems for time delay measurements,
 we need to add point sources to represent the lensed quasars. As
 described in the next section this is done in the image plane, in
 order to gain computational precision and efficiency. The
-magnification at the location of the images is calculated by solving
-the lens equation using gravlens \cite{2011ascl.soft02003K}. The
-source plane magnitudes of the point sources are chosen to be somewhat
+magnification at the location of the quasar images is calculated by solving
+the lens equation using \texttt{gravlens} \cite{2011ascl.soft02003K}. The
+source-plane magnitudes of the point sources are chosen to be somewhat
 brighter then the host galaxy, as it is typically the case for medium
-luminosity AGN
-\citep[e.g.,][]{Bennert++11}, and have realistic colors for AGN at the
+luminosity AGN \citep[e.g.,][]{Bennert++11}, and have realistic colors for AGN at the
 source redshits. The adopted magnitudes are listed in
 Table~\ref{tab:pointsource}.  We note that the bright source
 configuration is too bright to be practical for TMT, given its
@@ -370,10 +368,11 @@ exposures). Realistically, observations of such bright systems would
 be completely dominated by overheads related to target acquisition and
 will only be carried out in extremely rare circumstances. Therefore we
 do not simulate TMT observations for the bright systems. Even for the
-fainter system, we elected to make the source galaxies artificially
-fainter (K26) in order to avoid saturating the central pixels while
+fainter system, we %elected
+have chosen to make the source galaxies artificially
+fainter ($K$=26) in order to avoid saturating the central pixels while
 imaging deep enough to get a good enough signal to noise ratio on the
-host galaxy. As will be shown below the exposure time requirements for
+host galaxy. As will be shown below, the exposure time requirements for
 TMT are extremely short even in these cases.
 
 %\textbf{{Question}: What are the point-source magnitudes, even if they're not specifically modelled? How were they assigned? (They are in the Table 4. For the fainter systems, they are all 24.0 for all the filters except for TMT. The magnitude of point source is 26.0 for TMT, that's because TMT has an amazing detecting ability. For the brighter systems, they are assigned with magnitude of source galaxy - 0.5 for filter K, VIS, and H; - 1.0 for filter I.)
@@ -397,7 +396,7 @@ the ratio between the inferred values and the input, we obtain the
 desired estimate of the statistical precision with which each
 parameter can be determined. As motivated in the introduction, we are
 interested primarily in the mass density profile slope
-$\gamma'$. Therefore we will only show the statistics for that
+$\gamma'$. Therefore, we will only show the statistics for that
 parameter, even though all the parameters are varied simultaneously
 during the inference. We first describe the image generating process
 in Section~\ref{ssec:image}, and then we describe the inference process in
@@ -431,15 +430,16 @@ sersic profile is described by the equation \cite{1993MNRAS.265.1013C}:
    &R(x,y,q) = \sqrt{qx^2+y^2/q}.
 \end{eqnarray}
 %
-The amplitude $I_{\mathrm{e}}$ is the intensity at the effective
+The amplitude $I_{\mathrm{e}}$ is the intensity at the effective radius
 $R_{\mathrm{eff}}$, the constant $k$ is determined so that
 $R_{\mathrm{eff}}$ is the half light radius, the S\'ersic index $n$
 controls the degree of curvature of the radial light profile, the
 $\left\{x,y\right\}$ represents the galaxy positions, and $q$ denotes
-the axis ratio. Empirically, $n$ increases with galaxy
-luminosity. Most galaxies are fitted by S\'ersic index in the range
+the axis ratio. The dependence of $k$ with $n$ is given with high accuracy by
+ \textbf{Ciotti \& Bertin (1999?).} Empirically, $n$ increases with galaxy
+luminosity, most galaxies being fitted by S\'ersic index in the range
 $0.6 \le n \le 10.0$ \cite{2006AJ....132.2685M}. We adopt $n=4$ for
-the deflectors and n=4/3, consistent with typical observed values.
+the deflectors and n=4/3 for the sources, consistent with typical observed values.
 
 \subsubsection{Mass Model}
 
@@ -448,11 +448,11 @@ lens galaxy. The deflector's mass profile is assigned within a class
 of power-law models,
 
 \begin{equation}
-\Sigma(x,y)=\Sigma_{0}(q X^{2}+q^{-1}Y^{2})^{-\gamma^{\prime}},
+\Sigma(x,y)=\Sigma_{0}(q X^{2}+q^{-1}Y^{2})^{-\gamma^{\prime}/2},
 \end{equation}
 %
 where $q$ is the axis ratio, $\gamma'$ represents the radial power-law
-slope, the $\left\{X,Y\right\}$ axes are rotated by some position
+slope, the $\left\{X,Y\right\}$ axes are rotated by the lens position
 angle w.r.to the canonical $x$ (increasing to the West) and $y$
 (increasing to the North). This means that the $\left\{X,Y\right\}$
 deflections scale as ..., where $g(\theta)$ a just function of the
@@ -460,7 +460,7 @@ relative angle west-of-north. Fast methods to compute deflections from
 power-law profiles have been given by Barkana 1998
 \cite{1998ApJ...502..531B}. Power-law models of elliptical galaxies
 (Evans 1994 \cite{1994MNRAS.267..333E}) have often been used with
-success over the years to model gravitational lenses. In utter
+success over the years to model gravitational lenses. In all
 generality, the lensing deflections are given by
 %
 \begin{equation}
@@ -492,7 +492,7 @@ circle of radius $R_E$ is exactly 1. This is also the radius of a ring
 traced by the host of the quasar when this is exactly aligned with the
 lens galaxy.
 
-Lensed image profiles are obtained by Inverse Ray Shooting:. First,
+Lensed image profiles are obtained by Inverse Ray Shooting. First,
 each pixel position in the image plane is mapped back to the source
 plane via the deflections in Eq~\ref{eq:Intensity}. Then, we exploit
 the fact that surface-brightness is preserved by lensing to assign
@@ -501,9 +501,9 @@ the smoothly varying surface brightness distribution of the source
 host galaxy, a rectangular grid in the image-plane is adopted. As
 discussed in the next section, this approximation would be too crude
 to represent properly the sharp point source associated with the
-quasar images, which are therefore added directly to the source
-plane. To conclude, the light models models are convolved with the PSF
-appropriate for each instrument.
+quasar images, which are %therefore
+ added directly to the source plane.
+ Finally, the light models models are convolved with the PSF appropriate for each instrument.
 
 \subsubsection{Point Source Model}
 
@@ -512,7 +512,7 @@ images are added to the light model by adding a PSF with appropriate
 normalization and position directly to the image plane. The
 normalization and position of the images for the center of the source
 in the source plane are computed for each configuration by solving the
-lens equation using gravlens \cite{2011ascl.soft02003K}.
+lens equation using \texttt{gravlens} \cite{2011ascl.soft02003K}.
 
 
 %\subsubsection{PSF}
@@ -552,7 +552,7 @@ of the likelihood, which in this case is simply given by
 $\mathcal{L}\propto\exp[-\chi^{2}/2].$
 
 The quasar images are not used in the inference, which is performed
-just on the lensed host. This is because, in practice the point-like
+just on the lensed host. This is because, in practice, the point-like
 images of the quasar are time variable and usually appreciably
 affected by microlensing, milli-lensing and dust lanes in the
 foreground, and therefore provide a limited amount of useful
@@ -568,21 +568,30 @@ full characterization of this source of uncertainty is beyond the
 scope of this paper and is left for future work.
 
 The inference is computationally expensive: typical run times range
-between X and Y seconds per system, XLM to specify) on a state of the
+between \textbf{X and Y seconds per system, XLM to specify}) on a state of the
 art linux desktop computer.
 
 \section{Results}
 
 Using the methods summarized in the previous section we generate N
 mock systems for each configuration, and carry out the full inference
-for each one using the python Markov Chain Monte Carlo sampler pymc.
-The results are summarized in figures.. X to Y..
+for each one using the python Markov Chain Monte Carlo sampler \texttt{pymc}.
+The results are summarized in figures\textbf{.. X to Y..}
+Table~\ref{tab:exptimes} summarizes the exposure-time requirements for HST, JWST, Keck LGSAO and NGAO
+ in order to reach 2\% uncertainties on $\gamma^{\prime}.$ \textbf{Should we provide some summary for TMT etc
+  using a different kind of metric?}
 
 \section{Summary}
 
 \section*{Acknowledgments}
 
-
+AA, and TT acknowledge support from NSF grant AST-1450141 ``Collaborative
+Research: Accurate cosmology with strong gravitational lens time
+delays''. AA, and TT gratefully acknowledge support by the
+Packard Foundation through a Packard Research Fellowship to TT.
+The work of PJM was supported by the U.S.  Department of Energy under
+contract number DE-AC02-76SF00515.\\
+\textbf{[...]}
 
 
 
@@ -691,8 +700,9 @@ $q$ denotes the axis ratio of the mass distribution. P.A. is anti-clockwise from
 \caption{Point Source Parameters}
 \begin{tabular}{lcccccccccccccc|}
 \hline \hline
-Lens Name & magnitude & magnitude & magnitude & magnitude & magnification & magnification & magnification & magnification\\
-&  (I) &  (K) &  (VIS) & (H) & (I) & (II) & (III) & (IV) \\
+%Lens Name & magnitude & magnitude & magnitude & magnitude & magnification & magnification & magnification & magnification\\
+%&  (I) &  (K) &  (VIS) & (H) & (I) & (II) & (III) & (IV) \\
+&  mag(I) &  mag(K) &  mag(VIS) & mag(H) & $\mu$(I) & $\mu$(II) & $\mu$(III) & $\mu$(IV) \\
 \hline
 fainter system$^a$   &24.0  &   24.0 &  24.0 &  24.0 &  2.84 &  3.75 & 6.59 & 2.78  \\
 fainter system$^b$   &24.0  &  24.0  &  24.0 &  24.0 &  2.78 &  2.48 &  ---   &  ---\\
@@ -703,15 +713,42 @@ brighter system$^a$ &21.7  &  21.5 & 22.9  &  21.5  & 6.09  & 8.22 & 6.86  & 7.5
 \end{tabular}
 \begin{tablenotes}
 \item 
-Magnitudes are given in the ABmag system. The source magnitude $m$ is given in the source plane so that the observed magnitude in the image plane is given by $m-2.5\log_{10} \mu$, where $\mu$ is the magnification of image (given in the table for each image). \\
+Magnitudes (in the ABmag system) and magnifications of multiple images.
+ The source magnitude `mag' is given in the source plane so that the observed magnitude in the image plane is given by
+  $\mathrm{mag}-2.5\log_{10} \mu$, where $\mu$ is the magnification of image. \\
 $^a$ This configuration yields 4 QSO images. \\
 $^b$ This configuration yields 2 QSO images. \\
-label{tab:pointsource}
+\label{tab:pointsource}
 \end{tablenotes}
 \end{center}
 \end{table*}
 % ===============================================
 
+% ===============================================
+\begin{table*}\footnotesize
+\begin{center}
+\caption{Exposure time requirements}
+\begin{tabular}{lccccc|}
+\hline \hline
+Instrument & \multicolumn{2}{c}{double} & \multicolumn{2}{c}{quad} \\
+  & faint  & bright &  faint  &  bright \\
+\hline
+  HST   & $6\times10^3$s & 360 s  & $3\times10^3$s & 150 s \\
+  JWST   & $690$s & 360 s  & $210$s & $<$60 s \\
+  Keck (LGSAO)   & $105\times10^3$s & 3600 s  & $75\times10^3$s & 2400 s \\
+  NGAO   & $18\times10^3$s & 180 s  & $3\times10^3$s & 150 s \\
+\hline
+\hline
+\end{tabular}
+\begin{tablenotes}
+\item 
+Exposure times required to attin a 2\% uncertainty on the inferred $\gamma^\prime.$
+ With 360 s of exposure, the TMT already enables percent-level precision and accuracy.
+ Euclid, WFIRST and LSST are not quoted here because their exposure times cannot be tuned arbitrarily.\\
+\end{tablenotes}
+\label{tab:exptimes}
+\end{center}
+\end{table*}
 
 % ===============================================
 \begin{figure}
@@ -729,7 +766,7 @@ label{tab:pointsource}
 \begin{center}
 \includegraphics[width=1.0\textwidth]{figures/PSF_montage.png}
 \end{center}
-\caption{The typical PSF of each instrument. The upper row, from left to right, represent HST, Keck, NGAO, and JWST. The lower row, from left to right, show TMT, Euclid, WFIRST, and LSST respectively. Realistic PSFs from stars in the field are used for HST, JWST, Keck (LGSAO \& NGAO), and TMT. On the other hand, the Gaussian PSFs are adopted for the other three survey instruments.}
+\caption{The typical PSF of each instrument. The upper row, from left to right, represent HST, Keck, NGAO, and JWST. The lower row, from left to right, show TMT, Euclid, WFIRST, and LSST respectively. Realistic PSFs from stars in the field are used for HST, JWST, Keck (LGSAO \& NGAO), and TMT. Gaussian PSFs are adopted for the other three survey instruments.}
 \label{fig:PSF_montage}
 \end{figure}
 % =================================================
