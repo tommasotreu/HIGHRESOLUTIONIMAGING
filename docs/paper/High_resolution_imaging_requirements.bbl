@@ -1,14 +1,20 @@
 \providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{10}
 
-\bibitem{2006SSRv..123..485G}
-J.~P. {Gardner}, J.~C. {Mather}, M.~{Clampin}, R.~{Doyon}, M.~A. {Greenhouse},
-  H.~B. {Hammel}, J.~B. {Hutchings}, P.~{Jakobsen}, S.~J. {Lilly}, K.~S.
-  {Long}, J.~I. {Lunine}, M.~J. {McCaughrean}, M.~{Mountain}, J.~{Nella}, G.~H.
-  {Rieke}, M.~J. {Rieke}, H.-W. {Rix}, E.~P. {Smith}, G.~{Sonneborn},
-  M.~{Stiavelli}, H.~S. {Stockman}, R.~A. {Windhorst}, and G.~S. {Wright}, {\it
-  {The James Webb Space Telescope}},  {\em \ssr} {\bf 123} (Apr., 2006)
-  485--606, [\href{http://xxx.lanl.gov/abs/astro-ph/0606175}{{\tt
-  astro-ph/0606175}}].
+\bibitem{2002ApJ...578...25K}
+C.~S. {Kochanek}, {\it {What Do Gravitational Lens Time Delays Measure?}},
+  {\em \apj} {\bf 578} (Oct., 2002) 25--32,
+  [\href{http://xxx.lanl.gov/abs/astro-ph/0205319}{{\tt astro-ph/0205319}}].
+
+\bibitem{2002MNRAS.332..951W}
+O.~{Wucknitz}, {\it {Degeneracies and scaling relations in general power-law
+  models for gravitational lenses}},  {\em \mnras} {\bf 332} (June, 2002)
+  951--961, [\href{http://xxx.lanl.gov/abs/astro-ph/0202376}{{\tt
+  astro-ph/0202376}}].
+
+\bibitem{2012MNRAS.426..868S}
+S.~H. {Suyu}, {\it {Cosmography from two-image lens systems: overcoming the
+  lens profile slope degeneracy}},  {\em \mnras} {\bf 426} (Oct., 2012)
+  868--879, [\href{http://xxx.lanl.gov/abs/1202.0287}{{\tt arXiv:1202.0287}}].
 
 \bibitem{2006PASP..118..297W}
 P.~L. {Wizinowich}, D.~{Le Mignant}, A.~H. {Bouchez}, R.~D. {Campbell},
