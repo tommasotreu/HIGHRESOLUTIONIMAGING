@@ -354,11 +354,12 @@ In order to construct realistic systems for time delay measurements,
 we need to add point sources to represent the lensed quasars. As
 described in the next section this is done in the image plane, in
 order to gain computational precision and efficiency. The
-magnification at the location of the quasar images is calculated by solving
-the lens equation using \texttt{gravlens} \cite{2011ascl.soft02003K}. The
-source-plane magnitudes of the point sources are chosen to be somewhat
-brighter then the host galaxy, as it is typically the case for medium
-luminosity AGN \citep[e.g.,][]{Bennert++11}, and have realistic colors for AGN at the
+magnification at the location of the quasar images is calculated by
+solving the lens equation using \texttt{gravlens}
+\cite{2011ascl.soft02003K}. The source-plane magnitudes of the point
+sources are chosen to be somewhat brighter then the host galaxy, as it
+is typically the case for medium luminosity AGN
+\citep[e.g.,][]{Bennert++11}, and have realistic colors for AGN at the
 source redshits. The adopted magnitudes are listed in
 Table~\ref{tab:pointsource}.  We note that the bright source
 configuration is too bright to be practical for TMT, given its
@@ -368,12 +369,11 @@ exposures). Realistically, observations of such bright systems would
 be completely dominated by overheads related to target acquisition and
 will only be carried out in extremely rare circumstances. Therefore we
 do not simulate TMT observations for the bright systems. Even for the
-fainter system, we %elected
-have chosen to make the source galaxies artificially
-fainter ($K$=26) in order to avoid saturating the central pixels while
-imaging deep enough to get a good enough signal to noise ratio on the
-host galaxy. As will be shown below, the exposure time requirements for
-TMT are extremely short even in these cases.
+fainter system, we have chosen to make the source galaxies
+artificially fainter ($K$=26) in order to avoid saturating the central
+pixels while imaging deep enough to get a sufficient signal to noise
+ratio on the host galaxy. As will be shown below, the exposure time
+requirements for TMT are extremely short even in these cases.
 
 %\textbf{{Question}: What are the point-source magnitudes, even if they're not specifically modelled? How were they assigned? (They are in the Table 4. For the fainter systems, they are all 24.0 for all the filters except for TMT. The magnitude of point source is 26.0 for TMT, that's because TMT has an amazing detecting ability. For the brighter systems, they are assigned with magnitude of source galaxy - 0.5 for filter K, VIS, and H; - 1.0 for filter I.)
 % Based on the recipe that Kai and I assembled? Also, magnitudes in the tables are not necessarily the instrument ones, how are they converted? With the XLM's template-based table from AA or something different? (For fainter systems, lens magnitude for I filter is from Ale's paper III, mag for K filter is estimated by TT based on the other colors, mag for VIS filter is evaluated by $mag(r,i,z)=-2.5*log((10^{-0.4r}+10^{-0.4i}+10^{-0.4z})/2)$ (there are r, i, z filters informations in Ale's paper III), $H_{AB}=K_{AB}$. For brighter systems, lens mag for I filter and V filter are from Auger's paper; mag for K band is determined by TT;  $H_{AB}=K_{AB}$) (For fainter systems, the source galaxy magnitude for filters are all 25.0 which is determined by TT. For brighter systems, the source galaxy magnitude for I and V filters are from Newton's paper, the source galaxy magnitude for K filter is 22.0 which is determined by TT)}
@@ -422,7 +422,7 @@ steps are described in this section.
 We use the S\'ersic profile
 \cite{1963BAAA....6...41S,1968adga.book.....S} to describe the surface
 brightness distribution of both the source and the deflector. The
-sersic profile is described by the equation \cite{1993MNRAS.265.1013C}:
+S\'ersic profile is described by the equation \cite{1993MNRAS.265.1013C}:
 %
 \begin{eqnarray}
    \label{eq:Intensity}
@@ -430,16 +430,20 @@ sersic profile is described by the equation \cite{1993MNRAS.265.1013C}:
    &R(x,y,q) = \sqrt{qx^2+y^2/q}.
 \end{eqnarray}
 %
-The amplitude $I_{\mathrm{e}}$ is the intensity at the effective radius
-$R_{\mathrm{eff}}$, the constant $k$ is determined so that
-$R_{\mathrm{eff}}$ is the half light radius, the S\'ersic index $n$
-controls the degree of curvature of the radial light profile, the
-$\left\{x,y\right\}$ represents the galaxy positions, and $q$ denotes
-the axis ratio. The dependence of $k$ with $n$ is given with high accuracy by
- \textbf{Ciotti \& Bertin (1999?).} Empirically, $n$ increases with galaxy
-luminosity, most galaxies being fitted by S\'ersic index in the range
-$0.6 \le n \le 10.0$ \cite{2006AJ....132.2685M}. We adopt $n=4$ for
-the deflectors and n=4/3 for the sources, consistent with typical observed values.
+The amplitude $I_{\mathrm{e}}$ is the intensity at the effective
+radius $R_{\mathrm{eff}}$, the constant $k$ is determined so that
+$R_{\mathrm{eff}}$ is the half light radius
+\cite{1999A&A...352..447C}, the S\'ersic index $n$ controls the degree
+of curvature of the radial light profile, the $\left\{x,y\right\}$
+represents the galaxy positions, and $q$ denotes the axis
+ratio. Empirically, $n$ increases with galaxy luminosity, most
+galaxies being fitted by S\'ersic index in the range $0.6 \le n
+\le 10.0$ \cite{2006AJ....132.2685M}. We adopt $n=4$ for the
+deflectors (typical of massive early-type galaxies) and $n=4/3$ or
+$n=4$ for the sources, consistent with typical observed values for
+blue galaxies and AGN hosts. We checked by re-running simulations with
+different $n$ for the source that our results do not depend
+significantly by this model assumption {\bf XLM to do}.
 
 \subsubsection{Mass Model}
 
@@ -492,7 +496,7 @@ circle of radius $R_E$ is exactly 1. This is also the radius of a ring
 traced by the host of the quasar when this is exactly aligned with the
 lens galaxy.
 
-Lensed image profiles are obtained by Inverse Ray Shooting. First,
+Lensed image profiles are obtained by inverse ray shooting. First,
 each pixel position in the image plane is mapped back to the source
 plane via the deflections in Eq~\ref{eq:Intensity}. Then, we exploit
 the fact that surface-brightness is preserved by lensing to assign
@@ -501,13 +505,13 @@ the smoothly varying surface brightness distribution of the source
 host galaxy, a rectangular grid in the image-plane is adopted. As
 discussed in the next section, this approximation would be too crude
 to represent properly the sharp point source associated with the
-quasar images, which are %therefore
- added directly to the source plane.
- Finally, the light models models are convolved with the PSF appropriate for each instrument.
+quasar images, which are therefore added directly to the image plane.
+Finally, the light models models are convolved with the PSF
+appropriate for each instrument.
 
 \subsubsection{Point Source Model}
 
-In order to reduce computation time and complexity, the point sources
+In order to reduce computation time and complexity, the point source
 images are added to the light model by adding a PSF with appropriate
 normalization and position directly to the image plane. The
 normalization and position of the images for the center of the source
@@ -540,6 +544,9 @@ in electrons. Realistically, when long integration times are required,
 we set the number of readouts by requiring no single exposure be
 longer then a maximum time that depends on each instrument
 configuration {\bf XLM: what's tmax for the various instruments?}.
+Examples of simulated images are shown in
+Figure~\ref{fig:fainter_4QSOimages_montage}
+to~\ref{fig:fig:brighter_2QSOimages_montage}.
 
 \section{Inferring the parameters}
 
@@ -568,18 +575,82 @@ full characterization of this source of uncertainty is beyond the
 scope of this paper and is left for future work.
 
 The inference is computationally expensive: typical run times range
-between \textbf{X and Y seconds per system, XLM to specify}) on a state of the
-art linux desktop computer.
+between \textbf{X and Y seconds per system, XLM to specify}) on a
+linux desktop computer.
 
 \section{Results}
 
-Using the methods summarized in the previous section we generate N
+The goal of this work is to investigate what combinations of
+instrument/telescope configuration and exposure time produce images of
+quality sufficient to determine $\gamma'$ with 2\% precision. 
+
+For the telescopes/instruments operated in observatory mode, we are
+able to set the exposure time to any desired level. The minimum
+exposure time required is defined as the ``target'' exposure time. In
+addition, in order to quantify how the precision on $\gamma'$ depends
+on exposure time, we also simulated images with 1/3 and 3$\times$ the
+exposure time. This is meant to provide useful guidance for designing
+future experiments. However, for some combination of lens brigthenss
+and telescope/instrument configuratio, the target exposure time is too
+short to be adopted in realistic observations. In practice, therefore
+these lenses will either not be observed with this setup or be
+observed for longer exposure time. Taking into account typical
+overheads for pointing and acquisition we evaluated that the {\it
+brighter} lenses are too bright to be observed with TMT, while a
+minimum exposure time of 360s gives more than enough signal-to-noise
+ratio for the fainter systems. Likewise the brighter systmes are
+likely too bright to be observed with JWST. We still simulated them,
+but set the minimum exposure time to 60s.
+
+For the telescopes/instruments to be operated in survey mode, we
+simulated the planned exposure time, and considered the specific
+question of whether the ensuing data quality is sufficient or not to
+meet the requirement.
+
+Using the methods summarized in the previous section we generate 10
 mock systems for each configuration, and carry out the full inference
-for each one using the python Markov Chain Monte Carlo sampler \texttt{pymc}.
-The results are summarized in figures\textbf{.. X to Y..}
-Table~\ref{tab:exptimes} summarizes the exposure-time requirements for HST, JWST, Keck LGSAO and NGAO
- in order to reach 2\% uncertainties on $\gamma^{\prime}.$ \textbf{Should we provide some summary for TMT etc
-  using a different kind of metric?}
+for each one using the python Markov Chain Monte Carlo sampler
+\texttt{pymc}.  The results are summarized 
+in~Figures~\ref{fig:gamma_fainter_4QSOimages}
+to~\ref{{fig:gamma_brighter_2QSOimages}. Table~\ref{tab:exptimes}
+summarizes the ``target'' exposure times for HST, JWST, Keck LGSAO and
+NGAO, i.e. those required in order to reach 2\% uncertainties on
+$\gamma^{\prime}. 
+
+First of all, we find that HST can deliver the desired image quality
+with exposures of a few ks at most, consistent with published work
+\cite{Suyu++13}. Conversely it seems that current AO capabilities, even
+setting aside the difficulties associated with the reconstruction of
+the PSF, are only sufficient to study the brighter systems with
+reasonable exposure times. The improvement with NGAO will be
+substantial, cutting integration times down to HST-like for both the
+bright and the faint lenses. In this case, the higher background than
+from space is compensated by the advantage of having smaller detector
+pixels, and thus better sampling of the PSF, and a larger telescope
+aperture.
+
+For TMT we concluded that 360s of exposure will be more than
+sufficient for all systems considered here and therefore TMT is likely
+to be used either to take a brief image before taking a spectrum for
+determining the deflector velocity field and source redshift, or to
+follow-up fainter systems, yet to be discovered. Similary, JWST can
+obtain images of the desired quality in just a few minutes, and
+therefore it is likely to be used mostly to take images before taking
+a spectrum or to follow-up fainter systems.
+
+For the surveys, the conclusion is that while the Euclid survey seems
+to have insufficient depth and resolution to meet our requirements on
+the targets considered here, LSST and WFIRST should be sufficient at
+least for the brigher ones. Of course, these surveys will cover vast
+fractions of the sky and will therefore provide at no additional cost
+useful images for all the brighter systems. Those will be a great
+complement to the deeper pointed observation obtained with the other
+telescopes. WFIRST is planned to have a component of GO program, so it
+could meet the imaging requirements by integrating longer than in the
+survey mode. In fact, WFIRST is expected to have imaging performance
+superior to that of WFC3 on board HST, which has already been used to
+perform studies of time delay lenses, using integration times of a few
+orbits per system ($\sim$10ks; HST-GO-12889, PI: Suyu).
 
 \section{Summary}
 
@@ -736,7 +807,7 @@ Instrument & \multicolumn{2}{c}{double} & \multicolumn{2}{c}{quad} \\
   HST   & $6\times10^3$s & 360 s  & $3\times10^3$s & 150 s \\
   JWST   & $690$s & 360 s  & $210$s & $<$60 s \\
   Keck (LGSAO)   & $105\times10^3$s & 3600 s  & $75\times10^3$s & 2400 s \\
-  NGAO   & $18\times10^3$s & 180 s  & $3\times10^3$s & 150 s \\
+  Keck (NGAO)   & $18\times10^3$s & 180 s  & $3\times10^3$s & 150 s \\
 \hline
 \hline
 \end{tabular}
@@ -778,7 +849,7 @@ Exposure times required to attain a 2\% precision on the inferred $\gamma^\prime
 \begin{center}
 \includegraphics[width=1.0\textwidth]{figures/fainter_system_4QSOimages_all.png}
 \end{center}
-\caption{Simulations of the fainter lens system with 4 QSO images. The simulated images are all 4$''$ $\times$ 4$''$. The first 4 columns, from left to right, represent HST/ACS, Keck/NIRC2+LGSAO, Keck/NIRC2+NGAO, and JWST/NIRCAM; from top to bottom, the rows correspond to 1/3 $\times$ good exposure time, good exposure time, and 3 $\times$ good exposure time. Good exposure time is defined as the exposure time that yields 2\% precision on the slope of the mass density profile of the mass model $\gamma'$. The fifth column shows simulations of 3 surveys. From top to bottom we show LSST, Euclid, and WFIRST, with the default survey exposure times (4500s, 2360s, 920s, respectively). The last column shows simulations for TMT with 2 fixed exposure times of 360 seconds and 1080 seconds.}
+\caption{Simulations of the fainter lens system with 4 QSO images. The simulated images are all 4$''$ $\times$ 4$''$. The first 4 columns, from left to right, represent HST/ACS, Keck/NIRC2+LGSAO, Keck/NIRC2+NGAO, and JWST/NIRCAM; from top to bottom, the rows correspond to 1/3 $\times$ ``target'' exposure time, ``target'' exposure time, and 3 $\times$ ``target'' exposure time. ``Target'' exposure time is defined as the exposure time that yields 2\% precision on the slope of the mass density profile of the mass model $\gamma'$. The fifth column shows simulations of 3 surveys. From top to bottom we show LSST, Euclid, and WFIRST, with the default survey exposure times (4500s, 2360s, 920s, respectively). The last column shows simulations for TMT with 2 fixed exposure times of 360 seconds and 1080 seconds.}
 \label{fig:fainter_4QSOimages_montage}
 \end{figure}
 % =================================================
@@ -794,20 +865,6 @@ Exposure times required to attain a 2\% precision on the inferred $\gamma^\prime
 \end{figure}
 % =================================================
 
-
-% ================================================
-\begin{figure}
-\begin{center}
-\includegraphics[width=1.0\textwidth]{figures/brighter_system_2QSOimages_all.png}
-\end{center}
-\caption{
-Simulations of the bright lens system with 2 QSO images. The simulated images are all 4$''$ $\times$ 4$''$. The first 3 columns, from left to right, represent HST/ACS, Keck/NIRC2+LGSAO, Keck/NIRC2+NGAO; from top to bottom, the rows correspond to 1/3 $\times$ good exposure time, good exposure time, and 3 $\times$ good exposure time. Good exposure time is defined as the exposure time that yields 2\% precision on the slope of the mass density profile of the mass model $\gamma'$. The fourth column shows JWST simulations with 3 fixed exposure times: 60, 180, 540 seconds, from top to bottom. The fifth column 
-shows simulations of 3 surveys. From top to bottom we show LSST, Euclid, and WFIRST, with the default survey exposure times (4500s, 2360s, 920s, respectively). TMT simulations are not shown since the system is considered too bright to be observed with this telescope in practice.}
-\label{fig:brighter_2QSOimages_montage}
-\end{figure}
-% =================================================
-
-
 % ================================================
 \begin{figure}
 \begin{center}
@@ -815,6 +872,19 @@ shows simulations of 3 surveys. From top to bottom we show LSST, Euclid, and WFI
 \end{center}
 \caption{Same as Fig. 4, for the bright quadruply imaged system. {\bf XLM to remake figure after masking black spot artifacts at the center.}
 \label{fig:brighter_4QSOimages_montage}}
+\end{figure}
+% =================================================
+
+
+% ================================================
+\begin{figure}
+\begin{center}
+\includegraphics[width=1.0\textwidth]{figures/brighter_system_2QSOimages_all.png}
+\end{center}
+\caption{
+Simulations of the bright lens system with 2 QSO images. The simulated images are all 4$''$ $\times$ 4$''$. The first 3 columns, from left to right, represent HST/ACS, Keck/NIRC2+LGSAO, Keck/NIRC2+NGAO; from top to bottom, the rows correspond to 1/3 $\times$ "target" exposure time, "target" exposure time, and 3 $\times$ "target" exposure time. "Target" exposure time is defined as the exposure time that yields 2\% precision on the slope of the mass density profile of the mass model $\gamma'$. The fourth column shows JWST simulations with 3 fixed exposure times: 60, 180, 540 seconds, from top to bottom. The fifth column 
+shows simulations of 3 surveys. From top to bottom we show LSST, Euclid, and WFIRST, with the default survey exposure times (4500s, 2360s, 920s, respectively). TMT simulations are not shown since the system is considered too bright to be observed with this telescope in practice.}
+\label{fig:brighter_2QSOimages_montage}
 \end{figure}
 % =================================================
 
@@ -851,6 +921,19 @@ The insert in each panel shows all 10 simulation results for each exposure time 
 \end{figure}
 % ======================================================
 
+% ==================================================
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.48\textwidth]{figures/gamma_0330_anti_4QSOimages_HST.png}
+\includegraphics[width=0.48\textwidth]{figures/gamma_0330_anti_4QSOimages_JWST.png} \\
+\includegraphics[width=0.48\textwidth]{figures/gamma_0330_anti_4QSOimages_Keck.png}
+\includegraphics[width=0.48\textwidth]{figures/gamma_0330_anti_4QSOimages_NGAO.png} \\
+\includegraphics[width=0.48\textwidth]{figures/gamma_0330_anti_4QSOimages_EWL.png}
+\end{center}
+\caption{Same as Fig.~\ref{fig:gamma_fainter_4QSOimages} for the brighter lens system with 4 images.
+\label{fig:gamma_brighter_4QSOimages}}
+\end{figure}
+% ======================================================
 
 % ==================================================
 \begin{figure}
@@ -863,21 +946,6 @@ The insert in each panel shows all 10 simulation results for each exposure time 
 \end{center}
 \caption{Same as Fig.~\ref{fig:gamma_fainter_4QSOimages} for the brighter lens system with 2 images.
 \label{fig:gamma_brighter_2QSOimages}}
-\end{figure}
-% ======================================================
-
-
-% ==================================================
-\begin{figure}
-\begin{center}
-\includegraphics[width=0.48\textwidth]{figures/gamma_0330_anti_4QSOimages_HST.png}
-\includegraphics[width=0.48\textwidth]{figures/gamma_0330_anti_4QSOimages_JWST.png} \\
-\includegraphics[width=0.48\textwidth]{figures/gamma_0330_anti_4QSOimages_Keck.png}
-\includegraphics[width=0.48\textwidth]{figures/gamma_0330_anti_4QSOimages_NGAO.png} \\
-\includegraphics[width=0.48\textwidth]{figures/gamma_0330_anti_4QSOimages_EWL.png}
-\end{center}
-\caption{Same as Fig.~\ref{fig:gamma_fainter_4QSOimages} for the brighter lens system with 4 images.
-\label{fig:gamma_brighter_4QSOimages}}
 \end{figure}
 % ======================================================
 
