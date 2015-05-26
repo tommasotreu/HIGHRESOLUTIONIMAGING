@@ -715,7 +715,7 @@ brighter system$^a$ &21.7  &  21.5 & 22.9  &  21.5  & 6.09  & 8.22 & 6.86  & 7.5
 \item 
 Magnitudes (in the ABmag system) and magnifications of multiple images.
  The source magnitude `mag' is given in the source plane so that the observed magnitude in the image plane is given by
-  $\mathrm{mag}-2.5\log_{10} \mu$, where $\mu$ is the magnification of image. \\
+  $\mathrm{mag}-2.5\log_{10} \mu$, where $\mu$ is the magnification of each image. \\
 $^a$ This configuration yields 4 QSO images. \\
 $^b$ This configuration yields 2 QSO images. \\
 \label{tab:pointsource}
@@ -742,9 +742,9 @@ Instrument & \multicolumn{2}{c}{double} & \multicolumn{2}{c}{quad} \\
 \end{tabular}
 \begin{tablenotes}
 \item 
-Exposure times required to attin a 2\% uncertainty on the inferred $\gamma^\prime.$
- With 360 s of exposure, the TMT already enables percent-level precision and accuracy.
- Euclid, WFIRST and LSST are not quoted here because their exposure times cannot be tuned arbitrarily.\\
+Exposure times required to attain a 2\% precision on the inferred $\gamma^\prime.$
+ With 360 s of exposure, the TMT already enables percent-level precision.
+ The Euclid, WFIRST and LSST surveys, are not quoted here because their exposure times are fixed. The default exposure times are sufficient to meet the 2\% requirement in the case of LSST and WFIRST, but not for Euclid.\\
 \end{tablenotes}
 \label{tab:exptimes}
 \end{center}
@@ -755,7 +755,7 @@ Exposure times required to attin a 2\% uncertainty on the inferred $\gamma^\prim
 \begin{center}
 \includegraphics[width=0.9\textwidth]{figures/wavelength_zp.png}
 \end{center}
-\caption{Zero Points in AB magnitudes of HST (blue), JWST (green), Keck $\&$ NGAO (red), TMT (cyan), Euclid (magenta), WFIRST (yellow) and LSST (orange) in units of per second. Different color bars indicate the wavelength range of each telescope used in this work.}
+\caption{Zero points in AB magnitudes for HST/ACS (blue), JWST/NIRCAM (green), Keck NIRC2  (assumed for both LGSAO and NGAO; red), TMT/IRIS (cyan), Euclid (magenta), WFIRST (yellow) and LSST (orange), corresponding to one count per second. The colored bars indicate the wavelength range of each instrumental setup considered in this work.}
 \label{fig:zp_wavelength}
 \end{figure}
 % ================================================
@@ -766,7 +766,7 @@ Exposure times required to attin a 2\% uncertainty on the inferred $\gamma^\prim
 \begin{center}
 \includegraphics[width=1.0\textwidth]{figures/PSF_montage.png}
 \end{center}
-\caption{The typical PSF of each instrument. The upper row, from left to right, represent HST, Keck, NGAO, and JWST. The lower row, from left to right, show TMT, Euclid, WFIRST, and LSST respectively. Realistic PSFs from stars in the field are used for HST, JWST, Keck (LGSAO \& NGAO), and TMT. Gaussian PSFs are adopted for the other three survey instruments.}
+\caption{Montage of the point spread functions (PSFs) of each instrument. The upper row, from left to right, represents HST/ACS, Keck/NIRC2+LGSAO, Keck/NIRC2+NGAO, and JWST/NIRCAM. The lower row, from left to right, shows TMT/IRIS, Euclid, WFIRST, and LSST, respectively. Observed or simulated PSFs are used for HST, JWST, Keck (LGSAO \& NGAO), and TMT. Gaussian PSFs are adopted for the other three survey instruments.}
 \label{fig:PSF_montage}
 \end{figure}
 % =================================================
@@ -778,7 +778,7 @@ Exposure times required to attin a 2\% uncertainty on the inferred $\gamma^\prim
 \begin{center}
 \includegraphics[width=1.0\textwidth]{figures/fainter_system_4QSOimages_all.png}
 \end{center}
-\caption{Simulated lens system results showing the fainter lens system (4 QSO images in the lens plane). The simulated image pixel scales are all 4$''$ $\times$ 4$''$. The first 4 columns, from left to right, represent HST, Keck, NGAO, and JWST; from top to bottom, correspond to 1/3 $\times$ good exposure time, good exposure time, and 3 $\times$ good exposure time ( See the definition of \textquotedblleft good exposure tine\textquotedblright\ in Section *.*). The fifth column include 3 survey detections by 3 different telescopes, from top to bottom, for LSST, Euclid, and WFIRST respectively. The last column is for TMT with 2 fixed exposure time: 360 seconds and 1080 seconds.}
+\caption{Simulations of the fainter lens system with 4 QSO images. The simulated images are all 4$''$ $\times$ 4$''$. The first 4 columns, from left to right, represent HST/ACS, Keck/NIRC2+LGSAO, Keck/NIRC2+NGAO, and JWST/NIRCAM; from top to bottom, the rows correspond to 1/3 $\times$ good exposure time, good exposure time, and 3 $\times$ good exposure time. Good exposure time is defined as the exposure time that yields 2\% precision on the slope of the mass density profile of the mass model $\gamma'$. The fifth column shows simulations of 3 surveys. From top to bottom we show LSST, Euclid, and WFIRST, with the default survey exposure times (4500s, 2360s, 920s, respectively). The last column shows simulations for TMT with 2 fixed exposure times of 360 seconds and 1080 seconds.}
 \label{fig:fainter_4QSOimages_montage}
 \end{figure}
 % =================================================
@@ -789,7 +789,7 @@ Exposure times required to attin a 2\% uncertainty on the inferred $\gamma^\prim
 \begin{center}
 \includegraphics[width=1.0\textwidth]{figures/fainter_system_2QSOimages_all.png}
 \end{center}
-\caption{Same as Fig. 2, except that the simulated lens system results showing the fainter lens system (2 QSO images in the lens plane).}
+\caption{Same as Fig. 2, for the faint double system.}
 \label{fig:fainter_2QSOimages_montage}
 \end{figure}
 % =================================================
@@ -800,7 +800,9 @@ Exposure times required to attin a 2\% uncertainty on the inferred $\gamma^\prim
 \begin{center}
 \includegraphics[width=1.0\textwidth]{figures/brighter_system_2QSOimages_all.png}
 \end{center}
-\caption{Simulated lens system results showing the brighter lens system (2 QSO images in the lens plane). The simulated image pixel scales are all 4$''$ $\times$ 4$''$. The first 3 columns, from left to right, present HST, Keck, and NGAO; from top to bottom, correspond to 1/3 $\times$ good exposure time, good exposure time, and 3 $\times$ good exposure time. The fourth column shows JWST with 3 fixed exposure time: 60 seconds, 180 seconds, and 540 seconds.The last column include 3 survey detections by 3 different telescopes, from top to bottom, for LSST, Euclid, and WFIRST respectively.}
+\caption{
+Simulations of the bright lens system with 2 QSO images. The simulated images are all 4$''$ $\times$ 4$''$. The first 3 columns, from left to right, represent HST/ACS, Keck/NIRC2+LGSAO, Keck/NIRC2+NGAO; from top to bottom, the rows correspond to 1/3 $\times$ good exposure time, good exposure time, and 3 $\times$ good exposure time. Good exposure time is defined as the exposure time that yields 2\% precision on the slope of the mass density profile of the mass model $\gamma'$. The fourth column shows JWST simulations with 3 fixed exposure times: 60, 180, 540 seconds, from top to bottom. The fifth column 
+shows simulations of 3 surveys. From top to bottom we show LSST, Euclid, and WFIRST, with the default survey exposure times (4500s, 2360s, 920s, respectively). TMT simulations are not shown since the system is considered too bright to be observed with this telescope in practice.}
 \label{fig:brighter_2QSOimages_montage}
 \end{figure}
 % =================================================
@@ -811,8 +813,8 @@ Exposure times required to attin a 2\% uncertainty on the inferred $\gamma^\prim
 \begin{center}
 \includegraphics[width=1.0\textwidth]{figures/brighter_system_4QSOimages_all.png}
 \end{center}
-\caption{Same as Fig. 4, except that the simulated lens system results showing the brighter lens system (4 QSO images in the lens plane). The black spots in the center of the simulated images using HST, Euclid and WFIRST are from the efforts of strong signal pixels, so it's a \textquotedblleft ghost\textquotedblright\ image which can be ignored.}
-\label{fig:brighter_4QSOimages_montage}
+\caption{Same as Fig. 4, for the bright quadruply imaged system. {\bf XLM to remake figure after masking black spot artifacts at the center.}
+\label{fig:brighter_4QSOimages_montage}}
 \end{figure}
 % =================================================
 
@@ -827,7 +829,8 @@ Exposure times required to attin a 2\% uncertainty on the inferred $\gamma^\prim
 \includegraphics[width=0.48\textwidth]{figures/gamma_135949_4QSOimages_E_W_L.png}
 \includegraphics[width=0.48\textwidth]{figures/gamma_135949_4QSOimages_TMT.png}
 \end{center}
-\caption{The ability of recovering mass slope with respect to different exposure time for a variety of telescopes. This figure shows the fainter lens system with 4 QSO images in the lens plane. $\gamma'_{in}$ is the input SIE mass slope. $\gamma'_{out}$ is drawn from MCMC sampling based on the simulated images given $\gamma'_{in}$. The error bar represents 1$\sigma$ confidence range. The insert in each panel shows all 10 simulation results for each exposure time with the same color coding. Note that both axes represent $\gamma'_{out}/\gamma'_{in}$ whereas error bars are only shown on the x-axis for clarity.}
+\caption{Precision on the mass density profile slope $\gamma'$ as a function of exposure time.  This figure shows the results for the fainter lens system with 4 QSO images. The quantity $\gamma'_{in}$ is the input SIE mass slope. The quantity $\gamma'_{out}$ is the output of the inference process.
+The insert in each panel shows all 10 simulation results for each exposure time with the same color coding. Note that both axes represent $\gamma'_{out}/\gamma'_{in}$ whereas error bars are only shown on the x-axis for clarity.}
 \label{fig:gamma_fainter_4QSOimages}
 \end{figure}
 % ======================================================
@@ -843,8 +846,8 @@ Exposure times required to attin a 2\% uncertainty on the inferred $\gamma^\prim
 \includegraphics[width=0.48\textwidth]{figures/gamma_135949_anti_2QSOimages_EWL.png}
 \includegraphics[width=0.48\textwidth]{figures/gamma_135949_anti_2QSOimages_TMT.png}
 \end{center}
-\caption{Same as Fig. 6, except that this figure is shown for the fainter lens system with 2 QSO images in the lens plane.}
-\label{fig:gamma_fainter_2QSOimages}
+\caption{Same as Fig.~\ref{fig:gamma_fainter_4QSOimages} for the fainter lens system with 2 images.
+\label{fig:gamma_fainter_2QSOimages}}
 \end{figure}
 % ======================================================
 
@@ -858,8 +861,8 @@ Exposure times required to attin a 2\% uncertainty on the inferred $\gamma^\prim
 \includegraphics[width=0.48\textwidth]{figures/gamma_0330_2QSOimages_NGAO.png} \\
 \includegraphics[width=0.48\textwidth]{figures/gamma_0330_2QSOimages_E_W_L.png}
 \end{center}
-\caption{Same as Fig. 6, except that this figure is shown for the brighter lens system with 2 QSO images in the lens plane.} 
-\label{fig:gamma_brighter_2QSOimages}
+\caption{Same as Fig.~\ref{fig:gamma_fainter_4QSOimages} for the brighter lens system with 2 images.
+\label{fig:gamma_brighter_2QSOimages}}
 \end{figure}
 % ======================================================
 
@@ -873,8 +876,8 @@ Exposure times required to attin a 2\% uncertainty on the inferred $\gamma^\prim
 \includegraphics[width=0.48\textwidth]{figures/gamma_0330_anti_4QSOimages_NGAO.png} \\
 \includegraphics[width=0.48\textwidth]{figures/gamma_0330_anti_4QSOimages_EWL.png}
 \end{center}
-\caption{Same as Fig. 6, except that this figure is shown for the brighter lens system with 4 QSO images in the lens plane.}
-\label{fig:gamma_brighter_4QSOimages}
+\caption{Same as Fig.~\ref{fig:gamma_fainter_4QSOimages} for the brighter lens system with 4 images.
+\label{fig:gamma_brighter_4QSOimages}}
 \end{figure}
 % ======================================================
 
@@ -882,4 +885,6 @@ Exposure times required to attin a 2\% uncertainty on the inferred $\gamma^\prim
 
 
 \subsection{Selected Realistic Lens Systems}
-For wider analysis we plan to We choose a lens from the Sloan Lens ACS Survey (SLACS; Bolton et al. 2008 \cite{2008ApJ...682..964B}; Auger et al. 2009 \cite{2009ApJ...705.1099A})
+For wider analysis we plan to We choose a lens from the Sloan Lens ACS
+Survey (SLACS; Bolton et al. 2008 \cite{2008ApJ...682..964B}; Auger et
+al. 2009 \cite{2009ApJ...705.1099A})
