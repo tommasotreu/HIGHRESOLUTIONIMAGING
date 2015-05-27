@@ -3,53 +3,52 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: High_resolution_imaging_requirements.aux
 The style file: JHEP.bst
 Database file #1: rebuilt_gamma.bib
-Repeated entry---line 1155 of file rebuilt_gamma.bib
+Repeated entry---line 1169 of file rebuilt_gamma.bib
  : @article{2012MNRAS.426..868S
  :                             ,
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "2013A&A...556A..22T"
-Warning--I didn't find a database entry for "1999A&A...352..447C"
 Warning--I didn't find a database entry for "Suyu++13"
 Warning--empty publisher in 1968adga.book.....S
-You've used 58 entries,
+You've used 59 entries,
             2195 wiz_defined-function locations,
-            931 strings with 24405 characters,
-and the built_in function-call counts, 24950 in all, are:
-= -- 1855
-> -- 2072
+            937 strings with 24508 characters,
+and the built_in function-call counts, 25322 in all, are:
+= -- 1895
+> -- 2080
 < -- 0
-+ -- 714
-- -- 656
-* -- 2666
-:= -- 4034
-add.period$ -- 60
-call.type$ -- 58
-change.case$ -- 57
++ -- 717
+- -- 658
+* -- 2698
+:= -- 4082
+add.period$ -- 61
+call.type$ -- 59
+change.case$ -- 58
 chr.to.int$ -- 0
-cite$ -- 59
-duplicate$ -- 934
-empty$ -- 1748
-format.name$ -- 656
-if$ -- 5699
+cite$ -- 60
+duplicate$ -- 952
+empty$ -- 1784
+format.name$ -- 658
+if$ -- 5796
 int.to.chr$ -- 0
-int.to.str$ -- 58
-missing$ -- 214
-newline$ -- 179
-num.names$ -- 58
-pop$ -- 222
+int.to.str$ -- 59
+missing$ -- 218
+newline$ -- 182
+num.names$ -- 59
+pop$ -- 224
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 665
+skip$ -- 682
 stack$ -- 0
-substring$ -- 1066
-swap$ -- 397
+substring$ -- 1096
+swap$ -- 406
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 139
-width$ -- 60
-write$ -- 622
+while$ -- 142
+width$ -- 61
+write$ -- 633
 (There was 1 error message)
