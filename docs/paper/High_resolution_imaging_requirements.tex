@@ -415,14 +415,14 @@ distribution of the lens galaxy. A PSF is used to convolve the light
 of lens galaxy, lensed source galaxy and point-source. Finally, we
 introduce three terms to describe the noise adding to the image,
 including counts noise, readout noise, and background noise. These
-steps are described in this section.
+steps are described in this subsection.
 
 \subsubsection{Light Model}
 
-We use the S\'ersic profile
-\cite{1963BAAA....6...41S,1968adga.book.....S} to describe the surface
+We use the S\'ersic profile (S{\'e}rsic 1963 \cite{1963BAAA....6...41S}, 1968 \cite{1968adga.book.....S}) 
+to describe the surface
 brightness distribution of both the source and the deflector. The
-S\'ersic profile is described by the equation \cite{1993MNRAS.265.1013C}:
+S\'ersic profile is described by the equation (Caon et al. 1993 \cite{1993MNRAS.265.1013C}):
 %
 \begin{eqnarray}
    \label{eq:Intensity}
@@ -432,13 +432,12 @@ S\'ersic profile is described by the equation \cite{1993MNRAS.265.1013C}:
 %
 The amplitude $I_{\mathrm{e}}$ is the intensity at the effective
 radius $R_{\mathrm{eff}}$, the constant $k$ is determined so that
-$R_{\mathrm{eff}}$ is the half light radius
-\cite{1999A&A...352..447C}, the S\'ersic index $n$ controls the degree
+$R_{\mathrm{eff}}$ is the half light radius (Ciotti \& Bertin 1999 \cite{1999A&A...352..447C}), the S\'ersic index $n$ controls the degree
 of curvature of the radial light profile, the $\left\{x,y\right\}$
 represents the galaxy positions, and $q$ denotes the axis
 ratio. Empirically, $n$ increases with galaxy luminosity, most
 galaxies being fitted by S\'ersic index in the range $0.6 \le n
-\le 10.0$ \cite{2006AJ....132.2685M}. We adopt $n=4$ for the
+\le 10.0$ (Merritt et al. 2006 \cite{2006AJ....132.2685M}). We adopt $n=4$ for the
 deflectors (typical of massive early-type galaxies) and $n=4/3$ or
 $n=4$ for the sources, consistent with typical observed values for
 blue galaxies and AGN hosts. We checked by re-running simulations with
@@ -452,10 +451,10 @@ lens galaxy. The deflector's mass profile is assigned within a class
 of power-law models,
 
 \begin{equation}
-\Sigma(x,y)=\Sigma_{0}(q X^{2}+q^{-1}Y^{2})^{-\gamma^{\prime}/2},
+\Sigma(x,y)=\Sigma_{0}(q_\mathrm{m} X^{2}+q_\mathrm{m}^{-1}Y^{2})^{-\gamma^{\prime}/2},
 \end{equation}
 %
-where $q$ is the axis ratio, $\gamma'$ represents the radial power-law
+where $q_\mathrm{m}$ is the axis ratio, $\gamma'$ represents the radial power-law
 slope, the $\left\{X,Y\right\}$ axes are rotated by the lens position
 angle w.r.to the canonical $x$ (increasing to the West) and $y$
 (increasing to the North). This means that the $\left\{X,Y\right\}$
