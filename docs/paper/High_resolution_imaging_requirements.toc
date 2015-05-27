@@ -1,13 +1,13 @@
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}
 \contentsline {section}{\numberline {2}Summary of simulated instrumental setups}{3}{section.2}
 \contentsline {section}{\numberline {3}The Lens Sample}{4}{section.3}
-\contentsline {subsection}{\numberline {3.1}Parameters of the Sample of Mock Lenses}{4}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.1}Parameters of the Sample of Mock Lenses}{5}{subsection.3.1}
 \contentsline {section}{\numberline {4}Description of the inference process}{5}{section.4}
-\contentsline {subsection}{\numberline {4.1}Image generating process}{5}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.1}Image generating process}{6}{subsection.4.1}
 \contentsline {subsubsection}{\numberline {4.1.1}Light Model}{6}{subsubsection.4.1.1}
 \contentsline {subsubsection}{\numberline {4.1.2}Mass Model}{6}{subsubsection.4.1.2}
 \contentsline {subsubsection}{\numberline {4.1.3}Point Source Model}{7}{subsubsection.4.1.3}
 \contentsline {subsubsection}{\numberline {4.1.4}Image Noise}{7}{subsubsection.4.1.4}
 \contentsline {section}{\numberline {5}Inferring the parameters}{7}{section.5}
 \contentsline {section}{\numberline {6}Results}{8}{section.6}
-\contentsline {section}{\numberline {7}Summary}{8}{section.7}
+\contentsline {section}{\numberline {7}Summary}{9}{section.7}
