@@ -3,69 +3,56 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: High_resolution_imaging_requirements.aux
 The style file: JHEP.bst
 Database file #1: rebuilt_gamma.bib
-Warning--I didn't find a database entry for "Riess++11"
-Warning--I didn't find a database entry for "Freedman++12"
-Warning--I didn't find a database entry for "Tewes++13"
-Warning--I didn't find a database entry for "Fassnacht++2002"
-Warning--I didn't find a database entry for "Treu++13"
-Warning--I didn't find a database entry for "Liao++15"
-Warning--I didn't find a database entry for "Fassnacht+Cohen1998"
-Warning--I didn't find a database entry for "Eigenbrod++07"
-Warning--I didn't find a database entry for "Treu+Koopmans2002"
-Warning--I didn't find a database entry for "Koopmans++2003"
-Warning--I didn't find a database entry for "Suyu++2010"
-Warning--I didn't find a database entry for "Suyu++2013"
-Warning--I didn't find a database entry for "Suyu++2014"
-Warning--I didn't find a database entry for "Coe+Moustakas09"
-Warning--I didn't find a database entry for "Linder11"
-Warning--I didn't find a database entry for "Treu+13"
-Warning--I didn't find a database entry for "Eigenbrod++05"
-Warning--I didn't find a database entry for "Linder15"
+Repeated entry---line 1122 of file rebuilt_gamma.bib
+ : @article{2012MNRAS.426..868S
+ :                             ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "2013A&A...556A..22T"
 Warning--I didn't find a database entry for "Treu2010"
 Warning--I didn't find a database entry for "Fassnacht"
 Warning--I didn't find a database entry for "Bennert++11"
 Warning--I didn't find a database entry for "1999A&A...352..447C"
 Warning--I didn't find a database entry for "Suyu++13"
 Warning--empty publisher in 1968adga.book.....S
-You've used 41 entries,
+You've used 54 entries,
             2195 wiz_defined-function locations,
-            853 strings with 16206 characters,
-and the built_in function-call counts, 16040 in all, are:
-= -- 1326
-> -- 1059
+            910 strings with 20181 characters,
+and the built_in function-call counts, 21344 in all, are:
+= -- 1744
+> -- 1462
 < -- 0
-+ -- 370
-- -- 329
-* -- 1609
-:= -- 2459
-add.period$ -- 43
-call.type$ -- 41
-change.case$ -- 40
++ -- 509
+- -- 455
+* -- 2175
+:= -- 3301
+add.period$ -- 56
+call.type$ -- 54
+change.case$ -- 53
 chr.to.int$ -- 0
-cite$ -- 42
-duplicate$ -- 672
-empty$ -- 1259
-format.name$ -- 329
-if$ -- 3800
+cite$ -- 55
+duplicate$ -- 878
+empty$ -- 1642
+format.name$ -- 455
+if$ -- 5035
 int.to.chr$ -- 0
-int.to.str$ -- 41
-missing$ -- 146
-newline$ -- 128
-num.names$ -- 41
-pop$ -- 165
+int.to.str$ -- 54
+missing$ -- 198
+newline$ -- 167
+num.names$ -- 54
+pop$ -- 206
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 478
+skip$ -- 632
 stack$ -- 0
-substring$ -- 791
-swap$ -- 288
+substring$ -- 1013
+swap$ -- 377
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 100
-width$ -- 43
-write$ -- 439
-(There were 24 warnings)
+while$ -- 131
+width$ -- 56
+write$ -- 580
+(There was 1 error message)
