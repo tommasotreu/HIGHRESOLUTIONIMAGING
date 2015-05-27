@@ -292,16 +292,15 @@ The survey and instrument properties are taken from Ivezic et al. 2008 \cite{200
 
 Here we introduce our sample, four groups of lens system with galaxies at redshift $z_s = 1.071$ and $2.77$ being multiply imaged by massive lens galaxies lying at $z_d = 0.351$ and $0.783$.
 
-%\subsection{}
+\subsection{Sample Seletion}
 
 We have chosen four prototypical systems for this exploration, characterized as \textbf{faint} or \textbf{bright} and \textbf{double} or \textbf{quad} depending on the photometry and image configuration. The fainter systems, in which the source at $z_s=2.77$ lensed by this high-redshift galaxy ($z_d=0.783$), have two designs according to the consisting of double or quad images. Alternatively, the source at $z_s=1.071$ lensed by the galaxy at $z_d=0.351$ also has two types, on of which is lensed into double image components, the other forms quad images, are collectively called the brighter systems. This set of four main choices covers regimes with different numbers of informative pixels, which depend on the S/N ratio and on the number of images produced by the lens.
 
-To remain as realistic as possible, the mocks are based upon lenses in the Sloan Lens ACS Survey (SLACS; Bolton et al. 2006 \cite{2006ApJ...638..703B}, Treu et al. 2006 \cite{2006ApJ...640..662T}, Koopmans et al. 2006 \cite{2006ApJ...649..599K}, Gavazzi et al. 2007 \cite{2007ApJ...667..176G}, Bolton et al. 2008a \cite{2008ApJ...682..964B}, Gavazzi et al. 2008 \cite{2008ApJ...677.1046G}, Bolton et al. 2008b \cite{2008ApJ...684..248B}, Treu et al. 2009 \cite{2009ApJ...690..670T}, Auger et al. 2009 \cite{2009ApJ...705.1099A}, Auger et al. 2010 \cite{2010ApJ...724..511A}, Newton et al. 2011 \cite{2011ApJ...734..104N}, Shu et al. 2015 \cite{2014arXiv1407.2240S}, Papers I-XII, respectively) and the Strong Lensing Legacy Survey (SL2S; More et al. 2012 \cite{2012ApJ...749...38M}, Gavazzi et al. 2012{2012ApJ...761..170G}, Ruff et al. 2011 \cite{2011ApJ...727...96R}, Sonnenfeld et al. 2013 \cite{2013ApJ...777...97S}, Sonnenfeld et al. 2013 \cite{2013ApJ...777...98S}, Sonnenfeld et al. 2015 \cite{2015ApJ...800...94S}, Papers I-V, respectively, except for the first citation) samples. 
+To remain as realistic as possible, the mocks are based upon lenses in the Sloan Lens ACS Survey (SLACS; Bolton et al. 2006 \cite{2006ApJ...638..703B}, Treu et al. 2006 \cite{2006ApJ...640..662T}, Koopmans et al. 2006 \cite{2006ApJ...649..599K}, Gavazzi et al. 2007 \cite{2007ApJ...667..176G}, Bolton et al. 2008a \cite{2008ApJ...682..964B}, Gavazzi et al. 2008 \cite{2008ApJ...677.1046G}, Bolton et al. 2008b \cite{2008ApJ...684..248B}, Treu et al. 2009 \cite{2009ApJ...690..670T}, Auger et al. 2009 \cite{2009ApJ...705.1099A}, Auger et al. 2010 \cite{2010ApJ...724..511A}, Newton et al. 2011 \cite{2011ApJ...734..104N}, Shu et al. 2015 \cite{2014arXiv1407.2240S}, Papers I-XII, respectively) and the Strong Lensing Legacy Survey (SL2S; More et al. 2012 \cite{2012ApJ...749...38M}, Gavazzi et al. 2012 \cite{2012ApJ...761..170G}, Ruff et al. 2011 \cite{2011ApJ...727...96R}, Sonnenfeld et al. 2013 \cite{2013ApJ...777...97S}, Sonnenfeld et al. 2013 \cite{2013ApJ...777...98S}, Sonnenfeld et al. 2015 \cite{2015ApJ...800...94S}, Papers I-V, respectively, except for the first citation) samples. 
 
 \subsection{Parameters of the Sample of Mock Lenses}
-
 The structural parameters of the four systems are listed in Table
-\ref{tab:SBProfile}. When not explicitly known from existing data,
+\ref{tab:SBProfile} and Table \ref{tab:lenspars}. When not explicitly known from existing data,
 mock model parameters are assigned via plausibility arguments as
 specified below. The source and deflector of the \textit{bright} lens
 system configurations are built along SLACS J0330-0020 as modelled by
@@ -311,22 +310,21 @@ al. 2011 (SLACS XI, \cite{2011ApJ...734..104N}). For the
 \textit{faint} lens system configuration, the source and deflector
 have parameters from the Sonnenfeld et al. 2013 (SL2S III,
 \cite{2013ApJ...777...97S}) model of SL2S J135949+553550 and the
-discussion with Sonnenfeld. Source and deflector magnitudes in the
-\textit{bright} case for I and V bands are from Newton et al. 2011
-(\cite{2011ApJ...734..104N}), for K band are estimated based on the
+discussion with Sonnenfeld. 
+
+Source and deflector magnitudes in the\textit{bright} case for $I$ and $V$ bands are from Newton et al. 2011 \cite{2011ApJ...734..104N}, for $K$-band are estimated based on the
 other colors, and typical spectral energy distributions (i.e. an
 early-type galaxy for the deflector and a star forming galaxy for the
 source). Meanwhile, source magnitudes in the \textit{faint} case are
-arbitrarily set to 25.0 in all bands.
-
-Deflector magnitudes in the \textit{faint} case are not directly
+arbitrarily set to 25.0 in all bands. Deflector magnitudes in the \textit{faint} case are not directly
 available from the data, so they require some extrapolations. The
-value for I band is based on Sonnenfeld et al. 2013 (SL2S III,
-\cite{2013ApJ...777...97S}), while for K and VIS bands are estimated
+value for $I$-band is based on Sonnenfeld et al. 2013 (SL2S III,
+\cite{2013ApJ...777...97S}), while for $K$ and $V$ bands are estimated
 according to their wavelength, assuming typical spectral energy
-distributions. Unknown magnitudes in $K$ band are assigned from
-$H$-band ones via $K_{AB}=H_{AB}.$ In addition, the effective
-(half-light) radius which are fitted in \textit{bright} systems are
+distributions. Unknown magnitudes in $K$-band are assigned from
+$H$-band ones via $K_{AB}=H_{AB}$.
+
+In addition, the effective(half-light) radius which are fitted in \textit{bright} systems are
 evaluated in different bands for getting a precise estimate of the
 effective radius and its uncertainties. Differently, a unique
 effective radius is asserted across bandpasses for the \textit{faint}
@@ -358,10 +356,12 @@ magnification at the location of the quasar images is calculated by
 solving the lens equation using \texttt{gravlens}
 \cite{2011ascl.soft02003K}. The source-plane magnitudes of the point
 sources are chosen to be somewhat brighter then the host galaxy, as it
-is typically the case for medium luminosity AGN
-\citep[e.g.,][]{Bennert++11}, and have realistic colors for AGN at the
+is typically the case for medium luminosity AGN 
+(e.g., Bennert et al. 2011 \cite{2011ApJ...726...59B}), and have realistic colors for AGN at the
 source redshits. The adopted magnitudes are listed in
-Table~\ref{tab:pointsource}.  We note that the bright source
+Table~\ref{tab:pointsource}.
+
+We note that the bright source
 configuration is too bright to be practical for TMT, given its
 sensitivity (the exposure time scales as $D^{-4}$, where $D$ is the
 telescope diameter, for background limited point source
