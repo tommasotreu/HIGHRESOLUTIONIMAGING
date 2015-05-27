@@ -146,6 +146,11 @@ E.~V. {Linder}, {\it {Tailoring strong lensing cosmographic observations}},
   {\em \prd} {\bf 91} (Apr., 2015) 083511,
   [\href{http://xxx.lanl.gov/abs/1502.0135}{{\tt arXiv:1502.0135}}].
 
+\bibitem{2010ARA&A..48...87T}
+T.~{Treu}, {\it {Strong Lensing by Galaxies}},  {\em \araa} {\bf 48} (Sept.,
+  2010) 87--125, [\href{http://xxx.lanl.gov/abs/1003.5567}{{\tt
+  arXiv:1003.5567}}].
+
 \bibitem{2002ApJ...578...25K}
 C.~S. {Kochanek}, {\it {What Do Gravitational Lens Time Delays Measure?}},
   {\em \apj} {\bf 578} (Oct., 2002) 25--32,
@@ -225,6 +230,50 @@ M.~{Cropper}, S.~{Pottinger}, S.-M. {Niemi}, J.~{Denniston}, R.~{Cole},
   for Euclid}},  in {\em Society of Photo-Optical Instrumentation Engineers
   (SPIE) Conference Series}, vol.~9143 of {\em Society of Photo-Optical
   Instrumentation Engineers (SPIE) Conference Series}, p.~0, Aug., 2014.
+
+\bibitem{2008arXiv0805.2366I}
+Z.~{Ivezic}, J.~A. {Tyson}, B.~{Abel}, E.~{Acosta}, R.~{Allsman},
+  Y.~{AlSayyad}, S.~F. {Anderson}, J.~{Andrew}, R.~{Angel}, G.~{Angeli},
+  R.~{Ansari}, P.~{Antilogus}, K.~T. {Arndt}, P.~{Astier}, E.~{Aubourg},
+  T.~{Axelrod}, D.~J. {Bard}, J.~D. {Barr}, A.~{Barrau}, J.~G. {Bartlett},
+  B.~J. {Bauman}, S.~{Beaumont}, A.~C. {Becker}, J.~{Becla}, C.~{Beldica},
+  S.~{Bellavia}, G.~{Blanc}, R.~D. {Blandford}, J.~S. {Bloom}, J.~{Bogart},
+  K.~{Borne}, J.~F. {Bosch}, D.~{Boutigny}, W.~N. {Brandt}, M.~E. {Brown},
+  J.~S. {Bullock}, P.~{Burchat}, D.~L. {Burke}, G.~{Cagnoli}, D.~{Calabrese},
+  S.~{Chandrasekharan}, S.~{Chesley}, E.~C. {Cheu}, J.~{Chiang}, C.~F.
+  {Claver}, A.~J. {Connolly}, K.~H. {Cook}, A.~{Cooray}, K.~R. {Covey},
+  C.~{Cribbs}, W.~{Cui}, R.~{Cutri}, G.~{Daubard}, G.~{Daues}, F.~{Delgado},
+  S.~{Digel}, P.~{Doherty}, R.~{Dubois}, G.~P. {Dubois-Felsmann}, J.~{Durech},
+  M.~{Eracleous}, H.~{Ferguson}, J.~{Frank}, M.~{Freemon}, E.~{Gangler},
+  E.~{Gawiser}, J.~C. {Geary}, P.~{Gee}, M.~{Geha}, R.~R. {Gibson}, D.~K.
+  {Gilmore}, T.~{Glanzman}, I.~{Goodenow}, W.~J. {Gressler}, P.~{Gris},
+  A.~{Guyonnet}, P.~A. {Hascall}, J.~{Haupt}, F.~{Hernandez}, C.~{Hogan},
+  D.~{Huang}, M.~E. {Huffer}, W.~R. {Innes}, S.~H. {Jacoby}, B.~{Jain},
+  J.~{Jee}, J.~G. {Jernigan}, D.~{Jevremovic}, K.~{Johns}, R.~L. {Jones},
+  C.~{Juramy-Gilles}, M.~{Juric}, S.~M. {Kahn}, J.~S. {Kalirai},
+  N.~{Kallivayalil}, B.~{Kalmbach}, J.~P. {Kantor}, M.~M. {Kasliwal},
+  R.~{Kessler}, D.~{Kirkby}, L.~{Knox}, I.~{Kotov}, V.~L. {Krabbendam},
+  S.~{Krughoff}, P.~{Kubanek}, J.~{Kuczewski}, S.~{Kulkarni}, R.~{Lambert},
+  L.~{Le Guillou}, D.~{Levine}, M.~{Liang}, K.~{Lim}, C.~{Lintott}, R.~H.
+  {Lupton}, A.~{Mahabal}, P.~{Marshall}, S.~{Marshall}, M.~{May},
+  R.~{McKercher}, M.~{Migliore}, M.~{Miller}, D.~J. {Mills}, D.~G. {Monet},
+  M.~{Moniez}, D.~R. {Neill}, J.~{Nief}, A.~{Nomerotski}, M.~{Nordby},
+  P.~{O'Connor}, J.~{Oliver}, S.~S. {Olivier}, K.~{Olsen}, S.~{Ortiz}, R.~E.
+  {Owen}, R.~{Pain}, J.~R. {Peterson}, C.~E. {Petry}, F.~{Pierfederici},
+  S.~{Pietrowicz}, R.~{Pike}, P.~A. {Pinto}, R.~{Plante}, S.~{Plate}, P.~A.
+  {Price}, M.~{Prouza}, V.~{Radeka}, J.~{Rajagopal}, A.~{Rasmussen},
+  N.~{Regnault}, S.~T. {Ridgway}, S.~{Ritz}, W.~{Rosing}, C.~{Roucelle}, M.~R.
+  {Rumore}, S.~{Russo}, A.~{Saha}, B.~{Sassolas}, T.~L. {Schalk}, R.~H.
+  {Schindler}, D.~P. {Schneider}, G.~{Schumacher}, J.~{Sebag}, G.~H.
+  {Sembroski}, L.~G. {Seppala}, I.~{Shipsey}, N.~{Silvestri}, J.~A. {Smith},
+  R.~C. {Smith}, M.~A. {Strauss}, C.~W. {Stubbs}, D.~{Sweeney}, A.~{Szalay},
+  P.~{Takacs}, J.~J. {Thaler}, R.~{Van Berg}, D.~{Vanden Berk}, K.~{Vetter},
+  F.~{Virieux}, B.~{Xin}, L.~{Walkowicz}, C.~W. {Walter}, D.~L. {Wang},
+  M.~{Warner}, B.~{Willman}, D.~{Wittman}, S.~C. {Wolff}, W.~M. {Wood-Vasey},
+  P.~{Yoachim}, H.~{Zhan}, and {for the LSST Collaboration}, {\it {LSST: from
+  Science Drivers to Reference Design and Anticipated Data Products}},  {\em
+  ArXiv e-prints} (May, 2008) [\href{http://xxx.lanl.gov/abs/0805.2366}{{\tt
+  arXiv:0805.2366}}].
 
 \bibitem{2006ApJ...638..703B}
 A.~S. {Bolton}, S.~{Burles}, L.~V.~E. {Koopmans}, T.~{Treu}, and L.~A.
@@ -318,6 +367,13 @@ A.~{More}, R.~{Cabanac}, S.~{More}, C.~{Alard}, M.~{Limousin}, J.-P. {Kneib},
   \apj} {\bf 749} (Apr., 2012) 38,
   [\href{http://xxx.lanl.gov/abs/1109.1821}{{\tt arXiv:1109.1821}}].
 
+\bibitem{2012ApJ...761..170G}
+R.~{Gavazzi}, T.~{Treu}, P.~J. {Marshall}, F.~{Brault}, and A.~{Ruff}, {\it
+  {The SL2S Galaxy-scale Gravitational Lens Sample. I. The Alignment of Mass
+  and Light in Massive Early-type Galaxies at z = 0.2-0.9}},  {\em \apj} {\bf
+  761} (Dec., 2012) 170, [\href{http://xxx.lanl.gov/abs/1202.3852}{{\tt
+  arXiv:1202.3852}}].
+
 \bibitem{2011ApJ...727...96R}
 A.~J. {Ruff}, R.~{Gavazzi}, P.~J. {Marshall}, T.~{Treu}, M.~W. {Auger}, and
   F.~{Brault}, {\it {The SL2S Galaxy-scale Lens Sample. II. Cosmic Evolution of
@@ -348,6 +404,13 @@ A.~{Sonnenfeld}, T.~{Treu}, P.~J. {Marshall}, S.~H. {Suyu}, R.~{Gavazzi}, M.~W.
 \bibitem{2011ascl.soft02003K}
 C.~R. {Keeton}, ``{GRAVLENS: Computational Methods for Gravitational
   Lensing}.'' Astrophysics Source Code Library, Feb., 2011.
+
+\bibitem{2011ApJ...726...59B}
+V.~N. {Bennert}, M.~W. {Auger}, T.~{Treu}, J.-H. {Woo}, and M.~A. {Malkan},
+  {\it {A Local Baseline of the Black Hole Mass Scaling Relations for Active
+  Galaxies. I. Methodology and Results of Pilot Study}},  {\em \apj} {\bf 726}
+  (Jan., 2011) 59, [\href{http://xxx.lanl.gov/abs/1008.4602}{{\tt
+  arXiv:1008.4602}}].
 
 \bibitem{1963BAAA....6...41S}
 J.~L. {S{\'e}rsic}, {\it {Influence of the atmospheric and instrumental
