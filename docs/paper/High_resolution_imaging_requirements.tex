@@ -603,27 +603,28 @@ to~\ref{fig:brighter_2QSOimages_montage}.
 
 The same code is used to generate the mock models and to fit them. The
 model fits the following parameters: position, half light radius, axis ratio of light, position angle, and S$\acute{e}$rsic index for the source and deflector brightness model; position, Einstein radius, the axis ratio of the mass distribution, position angle, and power-law slope for the deflector mass model; QSO positions in the image plane.
+Therefore, variables are created to describe each parameter, including some prior on what values that parameter can take. In our work, the prior on the position of the deflector mass is tried to the position of the deflector brightness. This is a very reasonable assumption in galaxy scale. By giving this prior, it helps set the mass in approximately the correct spot.
 As usual the likelihood is assessed through the
 image-plane $\chi^{2},$ by comparing the model and mock data surface
 brightness profiles.  Uncertainties are obtained via MCMC exploration
 of the likelihood, which in this case is simply given by
 $\mathcal{L}\propto\exp[-\chi^{2}/2].$
 
-The quasar images are not used in the inference, which is performed
-just on the lensed host. This is because, in practice, the point-like
-images of the quasar are time variable and usually appreciably
-affected by microlensing, milli-lensing and dust lanes in the
-foreground, and therefore provide a limited amount of useful
-information on the differences in gravitational potential. Our process
-is a faster version of the standard practice of removing the point
-images in the image plane before fitting the host galaxy
-\cite{2013ApJ...766...70S}. By not fitting the point source position we speed up
-the inference significantly, while not giving up a large amount of
-information. Clearly, our approximation does not allow us to verify
-the impact of systematic uncertainties related to the reconstruction
-and subtraction of the PSF, which may in same cases be substantial. A
-full characterization of this source of uncertainty is beyond the
-scope of this paper and is left for future work.
+%The quasar images are not used in the inference, which is performed
+%just on the lensed host. This is because, in practice, the point-like
+%images of the quasar are time variable and usually appreciably
+%affected by microlensing, milli-lensing and dust lanes in the
+%foreground, and therefore provide a limited amount of useful
+%information on the differences in gravitational potential. Our process
+%is a faster version of the standard practice of removing the point
+%images in the image plane before fitting the host galaxy
+%\cite{2013ApJ...766...70S}. By not fitting the point source position we speed up
+%the inference significantly, while not giving up a large amount of
+%information. Clearly, our approximation does not allow us to verify
+%the impact of systematic uncertainties related to the reconstruction
+%and subtraction of the PSF, which may in same cases be substantial. A
+%full characterization of this source of uncertainty is beyond the
+%scope of this paper and is left for future work.
 
 The inference is computationally expensive: typical run times range
 between \textbf{X and Y seconds per system, XLM to specify}) on a
