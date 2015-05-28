@@ -542,10 +542,10 @@ detector readouts, and $R$ is the standard deviation of the read noise
 in electrons. Realistically, when long integration times are required,
 we set the number of readouts by requiring no single exposure be
 longer then a maximum time that depends on each instrument
-configuration {\bf XLM: what's tmax for the various instruments?}.
+configuration. Considering the definite properties in different types of instruments, we pick 1000.0 seconds as the crude maximum exposure time for space telescopes (include HST and JWST), 300.0 seconds for the ground based telescopes (include Keck and TMT) appropriately. The cadenced surveys (Euclid, WFIRST, and LSST) have fixed maximum time: 590.0 seconds, 184.0 seconds, and 15.0 seconds, respectively.
 Examples of simulated images are shown in
 Figure~\ref{fig:fainter_4QSOimages_montage}
-to~\ref{fig:fig:brighter_2QSOimages_montage}.
+to~\ref{fig:brighter_2QSOimages_montage}.
 
 \section{Inferring the parameters}
 
@@ -859,7 +859,7 @@ Exposure times required to attain a 2\% precision on the inferred $\gamma^\prime
 \begin{center}
 \includegraphics[width=1.0\textwidth]{figures/fainter_system_2QSOimages_all.png}
 \end{center}
-\caption{Same as Fig. 2, for the faint double system.}
+\caption{Same as Fig. \ref{fig:fainter_4QSOimages_montage}, for the faint double system.}
 \label{fig:fainter_2QSOimages_montage}
 \end{figure}
 % =================================================
@@ -869,8 +869,9 @@ Exposure times required to attain a 2\% precision on the inferred $\gamma^\prime
 \begin{center}
 \includegraphics[width=1.0\textwidth]{figures/brighter_system_4QSOimages_all.png}
 \end{center}
-\caption{Same as Fig. 4, for the bright quadruply imaged system. {\bf XLM to remake figure after masking black spot artifacts at the center.}
-\label{fig:brighter_4QSOimages_montage}}
+\caption{Simulations of the bright lens system with 4 QSO images. The simulated images are all 4$''$ $\times$ 4$''$. The first 3 columns, from left to right, represent HST/ACS, Keck/NIRC2+LGSAO, Keck/NIRC2+NGAO; from top to bottom, the rows correspond to 1/3 $\times$ "target" exposure time, "target" exposure time, and 3 $\times$ "target" exposure time. "Target" exposure time is defined as the exposure time that yields 2\% precision on the slope of the mass density profile of the mass model $\gamma'$. The fourth column shows JWST simulations with 3 fixed exposure times: 60, 180, 540 seconds, from top to bottom. The fifth column 
+shows simulations of 3 surveys. From top to bottom we show LSST, Euclid, and WFIRST, with the default survey exposure times (4500s, 2360s, 920s, respectively). TMT simulations are not shown since the system is considered too bright to be observed with this telescope in practice. \bf {XLM to remake figure after masking black spot artifacts at the center.}}
+\label{fig:brighter_4QSOimages_montage}
 \end{figure}
 % =================================================
 
@@ -880,9 +881,7 @@ Exposure times required to attain a 2\% precision on the inferred $\gamma^\prime
 \begin{center}
 \includegraphics[width=1.0\textwidth]{figures/brighter_system_2QSOimages_all.png}
 \end{center}
-\caption{
-Simulations of the bright lens system with 2 QSO images. The simulated images are all 4$''$ $\times$ 4$''$. The first 3 columns, from left to right, represent HST/ACS, Keck/NIRC2+LGSAO, Keck/NIRC2+NGAO; from top to bottom, the rows correspond to 1/3 $\times$ "target" exposure time, "target" exposure time, and 3 $\times$ "target" exposure time. "Target" exposure time is defined as the exposure time that yields 2\% precision on the slope of the mass density profile of the mass model $\gamma'$. The fourth column shows JWST simulations with 3 fixed exposure times: 60, 180, 540 seconds, from top to bottom. The fifth column 
-shows simulations of 3 surveys. From top to bottom we show LSST, Euclid, and WFIRST, with the default survey exposure times (4500s, 2360s, 920s, respectively). TMT simulations are not shown since the system is considered too bright to be observed with this telescope in practice.}
+\caption{Same as Fig. \ref{fig:brighter_4QSOimages_montage}, for the bright double imaged system.}
 \label{fig:brighter_2QSOimages_montage}
 \end{figure}
 % =================================================
