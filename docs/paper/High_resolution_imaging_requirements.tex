@@ -602,13 +602,20 @@ to~\ref{fig:brighter_2QSOimages_montage}.
 \label{ssec:inf}
 
 The same code is used to generate the mock models and to fit them. The
-model fits the following parameters: position, half light radius, axis ratio of light, position angle, and S$\acute{e}$rsic index for the source and deflector brightness model; position, Einstein radius, the axis ratio of the mass distribution, position angle, and power-law slope for the deflector mass model; QSO positions in the image plane.
-Therefore, variables are created to describe each parameter, including some prior on what values that parameter can take. In our work, the prior on the position of the deflector mass is tried to the position of the deflector brightness. This is a very reasonable assumption in galaxy scale. By giving this prior, it helps set the mass in approximately the correct spot.
+model fits the following parameters: position, half light radius, axis ratio of light, position angle, and S$\acute{e}$rsic index for the source and deflector brightness model; position, Einstein radius, the axis ratio of the mass distribution, position angle, and power-law slope for the deflector mass model; and QSO positions in the image plane.
+Therefore, variables are created to describe each parameter, including some prior on what values that parameter can take. In our work, the prior on the position of the deflector mass is tried to the position of the deflector brightness. This is a very reasonable assumption in galaxy scale. By giving this prior, it helps set the mass in approximately the correct spot. After defining all of model parameters, then the S$\acute{e}$rsic surface brightness and power-law mass objects are created that will be evaluated to compare with the real data.
 As usual the likelihood is assessed through the
 image-plane $\chi^{2},$ by comparing the model and mock data surface
 brightness profiles.  Uncertainties are obtained via MCMC exploration
 of the likelihood, which in this case is simply given by
-$\mathcal{L}\propto\exp[-\chi^{2}/2].$
+$\mathcal{L}\propto\exp[-\chi^{2}/2]$, where the $\chi^{2}$ is defined by
+%
+\begin{equation}
+   \label{eq:chi2}
+   \chi^{2} = \left(\frac{I - M}{\mu}\right)^2 ,
+\end{equation}
+%
+and $I$ is the surface brightness with the uncertainty, $M$ is the corresponding model-predicted image value, $\mu$ is the uncertainty quoted from the image noise.
 
 %The quasar images are not used in the inference, which is performed
 %just on the lensed host. This is because, in practice, the point-like
