@@ -443,17 +443,16 @@ requirements for TMT are extremely short even in these cases.
 
 %The lens image can be decomposed into four components: source image, lens image, point-source image, and noise image. We now briefly describe the image generating progress in this section.  The .. image in Figure.. shows the light from the source and point-source as lensed by the lens galaxy. 
 
-In this section, we briefly present the progress of modeling the mock
-lens systems using defined models. By comparing the distribution of
-the ratio between the inferred values and the input, we obtain the
-desired estimate of the statistical precision with which each
-parameter can be determined. As motivated in the introduction, we are
-interested primarily in the mass density profile slope
-$\gamma'$. Therefore, we will only show the statistics for that
-parameter, even though all the parameters are varied simultaneously
-during the inference. We first describe the image generating process
-in Section~\ref{ssec:image}, and then we describe the inference process in
-Section~\ref{ssec:inf}.
+In this section, we summarize the process of modeling the mock lens
+systems. By comparing the distribution of the ratio between the
+inferred values and the input, we obtain the desired estimate of the
+statistical precision with which each parameter can be determined. As
+motivated in the introduction, we are interested primarily in the mass
+density profile slope $\gamma'$. Therefore, we will only show the
+statistics for that parameter, even though all the parameters are
+varied simultaneously during the inference. We first describe the
+image generating process in Section~\ref{ssec:image}, and then we
+describe the inference process in Section~\ref{ssec:inf}.
 
 \subsection{Image generating process}
 \label{ssec:image}
@@ -604,28 +603,46 @@ to~\ref{fig:brighter_2QSOimages_montage}.
 \label{ssec:inf}
 
 The same code is used to generate the mock models and to fit them. The
-model fits the following parameters: position, half light radius, axis ratio of light, position angle, and S$\acute{e}$rsic index for the source and deflector brightness model; position, Einstein radius, the axis ratio of the mass distribution, position angle, and power-law slope for the deflector mass model; and QSO positions in the image plane.
-Therefore, variables are created to describe each parameter, including some prior on what values that parameter can take. In our work, the prior on the position of the deflector mass is tried to the position of the deflector brightness. This is a very reasonable assumption in galaxy scale. By giving this prior, it helps set the mass in approximately the correct spot. After defining all of model parameters, then the S$\acute{e}$rsic surface brightness and power-law mass objects are created that will be evaluated to compare with the real data. For convenience, we put all of model parameters into a list and define starting proposal steps for the proposal distribution for each of the parameters. Next, we define a function to evaluate the model at given parameters and find the best amplitudes for the surface brightness components.
-As usual the likelihood is assessed through the
+model fits the following parameters: position, half light radius, axis
+ratio of light, position angle, and S$\acute{e}$rsic index for the
+source and deflector brightness model; position, Einstein radius, the
+axis ratio of the mass distribution, position angle, and power-law
+slope for the deflector mass model; and QSO positions in the image
+plane. In practice, variables are created to describe each parameter,
+including priors. Most priors are taken to be uniform. The prior on
+the position of the deflector mass is tied to the position of the
+deflector brightness, which is commonly observed in galaxy scale
+lenses. This prior helps to converge quickly to to correct
+solution. After defining all of model parameters, then the
+S$\acute{e}$rsic surface brightness and power-law mass objects are
+created that will be evaluated to compare with the real data. For
+convenience, we put all of model parameters into a list and define
+starting proposal steps for the proposal distribution for each of the
+parameters. Next, we define a function to evaluate the model at given
+parameters and find the best amplitudes for the surface brightness
+components.  As usual the likelihood is assessed through the standard
 image-plane $\chi^{2},$ by comparing the model and mock data surface
 brightness profiles.  Uncertainties are obtained via MCMC exploration
-of the likelihood, which in this case is simply given by
-$\mathcal{L}\propto\exp[-\chi^{2}/2]$, where the $\chi^{2}$ is defined by
+of the posterior. The likelihood is simply given by
+$\mathcal{L}\propto\exp[-\chi^{2}/2]$.
+% where the $\chi^{2}$ is defined%
+%by
 %
-\begin{equation}
-   \label{eq:chi2}
-   \chi^{2} = \left(\frac{I - M}{\mu}\right)^2 ,
-\end{equation}
+%\begin{equation}
+%   \label{eq:chi2}
+%   \chi^{2} = \left(\frac{I - M}{\mu}\right)^2 ,
+%\end{equation}
 %
-and $I$ is the surface brightness with the uncertainty, $M$ is the corresponding model-predicted image value, $\mu$ is the uncertainty quoted from the image noise.
+%and $I$ is the surface brightness with the uncertainty, $M$ is the corresponding model-predicted image value, $\mu$ is the uncertainty quoted from the image noise.%
 
-In practice, the point-like images of the quasar are time variable and 
-usually appreciably affected by microlensing, milli-lensing and 
-dust lanes in the foreground, and therefore provide a limited amount of useful
-information on the differences in gravitational potential. Even so, 
-we still consider the  quasar images in the inference.
-By fitting the point source position we are engaged in 
-getting results which are closer to perfect model.
+Note that the point-like images of the quasar are time variable and
+usually appreciably affected by microlensing, milli-lensing and dust
+lanes in the foreground, and therefore provide a limited amount of
+useful information on the differences in gravitational potential. Therefore we model them in the image plane and do not enforce them to have self-consistent fluxes in the source plane.
+%
+% still consider the quasar images in the inference.  By fitting
+%the point source position we are engaged in getting results which are
+%closer to perfect model.
 %The quasar images are not used in the inference, which is performed
 %just on the lensed host. This is because, in practice, the point-like
 %images of the quasar are time variable and usually appreciably
@@ -642,12 +659,12 @@ getting results which are closer to perfect model.
 %full characterization of this source of uncertainty is beyond the
 %scope of this paper and is left for future work.
 
-The fitting images with different instruments are all 4$''$ $\times$ 4$''$,
-corresponding to the pixel numbers of 80 $\times$ 80 for HST,
+The fitting images with different instruments are all 4$''$ $\times$
+4$''$, corresponding to the pixel numbers of 80 $\times$ 80 for HST,
 130 $\times$ 130 for JWST, 400 $\times$ 400 for Keck (both LGSAO and
-NGAO), 1000 $\times$ 1000 for TMT, 40 $\times$ 40 for Euclid,
-36 $\times$ 36 for WFIRST, 20 $\times$ 20 for LSST approximately.
-The inference is computationally expensive: typical run times range
+NGAO), 1000 $\times$ 1000 for TMT, 40 $\times$ 40 for Euclid, 36
+$\times$ 36 for WFIRST, 20 $\times$ 20 for LSST approximately.  The
+inference is computationally expensive: typical run times range
 between \textbf{X and Y seconds per system, XLM to specify}) on a
 linux desktop computer.
 
@@ -655,7 +672,7 @@ linux desktop computer.
 
 The goal of this work is to investigate what combinations of
 instrument/telescope configuration and exposure time produce images of
-quality sufficient to determine $\gamma'$ with 2\% precision. 
+quality sufficient to determine $\gamma'$ with 2\% precision.
 
 For the telescopes/instruments operated in observatory mode, we are
 able to set the exposure time to any desired level. The minimum
