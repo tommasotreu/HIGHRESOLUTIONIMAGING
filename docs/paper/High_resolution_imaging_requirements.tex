@@ -663,10 +663,15 @@ The fitting images with different instruments are all 4$''$ $\times$
 4$''$, corresponding to the pixel numbers of 80 $\times$ 80 for HST,
 130 $\times$ 130 for JWST, 400 $\times$ 400 for Keck (both LGSAO and
 NGAO), 1000 $\times$ 1000 for TMT, 40 $\times$ 40 for Euclid, 36
-$\times$ 36 for WFIRST, 20 $\times$ 20 for LSST approximately.  The
-inference is computationally expensive: typical run times range
-between \textbf{X and Y seconds per system, XLM to specify}) on a
-linux desktop computer.
+$\times$ 36 for WFIRST, 20 $\times$ 20 for LSST approximately. The sampling
+numbers are fixed at 60000 for each inference progress.
+The accept ratios remain stable between 20\% $\sim$ 30\%.
+Based on the parameters above mentioned, the inference is computationally expensive: typical run times range
+between 15 minutes and 4000 minutes per system on a
+linux desktop computer. In more specific terms, $\sim$ 100 minutes for HST,
+$\sim$ 150 minutes for JWST, $\sim$ 300 minutes for Keck (both LGSAO and NGAO),
+$\sim$ 4000 minutes for TMT, $\sim$ 40 minutes for Euclid and WFIRST, $\sim$ 15 minutes for LSST.
+
 
 \section{Results}
 
