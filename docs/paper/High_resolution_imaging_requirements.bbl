@@ -80,6 +80,12 @@ C.~D. {Fassnacht}, E.~{Xanthopoulos}, L.~V.~E. {Koopmans}, and D.~{Rusin}, {\it
   {\em \apj} {\bf 581} (Dec., 2002) 823--835,
   [\href{http://xxx.lanl.gov/abs/astro-ph/0208420}{{\tt astro-ph/0208420}}].
 
+\bibitem{2010MNRAS.405.2579O}
+M.~{Oguri} and P.~J. {Marshall}, {\it {Gravitationally lensed quasars and
+  supernovae in future wide-field optical imaging surveys}},  {\em \mnras} {\bf
+  405} (July, 2010) 2579--2593, [\href{http://xxx.lanl.gov/abs/1001.2037}{{\tt
+  arXiv:1001.2037}}].
+
 \bibitem{2013arXiv1306.1272T}
 T.~{Treu}, P.~J. {Marshall}, F.-Y. {Cyr-Racine}, C.~D. {Fassnacht}, C.~R.
   {Keeton}, E.~V. {Linder}, L.~A. {Moustakas}, M.~{Bradac}, E.~{Buckley-Geer},
@@ -466,5 +472,35 @@ R.~{Barkana}, {\it {Fast Calculation of a Family of Elliptical Mass
 \bibitem{1994MNRAS.267..333E}
 N.~W. {Evans}, {\it {The power-law galaxies}},  {\em \mnras} {\bf 267} (Mar.,
   1994) 333--360.
+
+\bibitem{2009astro2010S.159K}
+L.~V.~E. {Koopmans}, M.~{Barnabe}, A.~{Bolton}, M.~{Bradac}, L.~{Ciotti},
+  A.~{Congdon}, O.~{Czoske}, S.~{Dye}, A.~{Dutton}, A.~{Elliasdottir},
+  E.~{Evans}, C.~D. {Fassnacht}, N.~{Jackson}, C.~{Keeton}, J.~{Lasio},
+  L.~{Moustakas}, M.~{Meneghetti}, S.~{Myers}, C.~{Nipoti}, S.~{Suyu}, G.~{van
+  de Ven}, S.~{Vegetti}, O.~{Wucknitz}, and H.-S. {Zhao}, {\it {Strong
+  Gravitational Lensing as a Probe of Gravity, Dark-Matter and Super-Massive
+  Black Holes}},  in {\em astro2010: The Astronomy and Astrophysics Decadal
+  Survey}, vol.~2010 of {\em Astronomy}, p.~159, 2009.
+\newblock \href{http://xxx.lanl.gov/abs/0902.3186}{{\tt arXiv:0902.3186}}.
+
+\bibitem{2014SPIE.9148E..4SJ}
+L.~{Jolissaint}, S.~{Ragland}, P.~{Wizinowich}, and A.~{Bouxin}, {\it {Laser
+  guide star adaptive optics point spread function reconstruction project at W.
+  M. Keck Observatory: preliminary on-sky results}},  in {\em Society of
+  Photo-Optical Instrumentation Engineers (SPIE) Conference Series}, vol.~9148
+  of {\em Society of Photo-Optical Instrumentation Engineers (SPIE) Conference
+  Series}, p.~4, July, 2014.
+
+\bibitem{2014SPIE.9148E..10H}
+G.~{Herriot}, D.~{Andersen}, J.~{Atwood}, C.~{Boyer}, P.~{Byrnes}, K.~{Caputa},
+  B.~{Ellerbroek}, L.~{Gilles}, A.~{Hill}, Z.~{Ljusic}, J.~{Pazder},
+  M.~{Rosensteiner}, M.~{Smith}, P.~{Spano}, K.~{Szeto}, J.-P. {V{\'e}ran},
+  I.~{Wevers}, L.~{Wang}, and R.~{Wooff}, {\it {NFIRAOS: first facility AO
+  system for the Thirty Meter Telescope}},  in {\em Society of Photo-Optical
+  Instrumentation Engineers (SPIE) Conference Series}, vol.~9148 of {\em
+  Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series},
+  p.~10, July, 2014.
+\newblock \href{http://xxx.lanl.gov/abs/1408.4406}{{\tt arXiv:1408.4406}}.
 
 \end{thebibliography}\endgroup
