@@ -9,6 +9,6 @@
 \contentsline {subsubsection}{\numberline {4.1.2}Mass Model}{6}{subsubsection.4.1.2}
 \contentsline {subsubsection}{\numberline {4.1.3}Point Source Model}{7}{subsubsection.4.1.3}
 \contentsline {subsubsection}{\numberline {4.1.4}Image Noise}{7}{subsubsection.4.1.4}
-\contentsline {subsection}{\numberline {4.2}Inferring the parameters}{8}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.2}Inferring the parameters}{7}{subsection.4.2}
 \contentsline {section}{\numberline {5}Results}{8}{section.5}
 \contentsline {section}{\numberline {6}Summary}{9}{section.6}

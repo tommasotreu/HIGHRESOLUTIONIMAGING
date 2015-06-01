@@ -447,11 +447,6 @@ J.~L. {S{\'e}rsic}, {\it {Influence of the atmospheric and instrumental
 J.~L. {S{\'e}rsic}, {\em {Atlas de galaxias australes}}.
 \newblock 1968.
 
-\bibitem{1993MNRAS.265.1013C}
-N.~{Caon}, M.~{Capaccioli}, and M.~{D'Onofrio}, {\it {On the Shape of the Light
-  Profiles of Early Type Galaxies}},  {\em \mnras} {\bf 265} (Dec., 1993) 1013,
-  [\href{http://xxx.lanl.gov/abs/astro-ph/9309013}{{\tt astro-ph/9309013}}].
-
 \bibitem{1999A&A...352..447C}
 L.~{Ciotti} and G.~{Bertin}, {\it {Analytical properties of the R$^{1/m}$
   law}},  {\em \aap} {\bf 352} (Dec., 1999) 447--451,
@@ -464,14 +459,19 @@ D.~{Merritt}, A.~W. {Graham}, B.~{Moore}, J.~{Diemand}, and B.~{Terzi{\'c}},
   132} (Dec., 2006) 2685--2700,
   [\href{http://xxx.lanl.gov/abs/astro-ph/0509417}{{\tt astro-ph/0509417}}].
 
+\bibitem{1994MNRAS.267..333E}
+N.~W. {Evans}, {\it {The power-law galaxies}},  {\em \mnras} {\bf 267} (Mar.,
+  1994) 333--360.
+
 \bibitem{1998ApJ...502..531B}
 R.~{Barkana}, {\it {Fast Calculation of a Family of Elliptical Mass
   Gravitational Lens Models}},  {\em \apj} {\bf 502} (Aug., 1998) 531--537,
   [\href{http://xxx.lanl.gov/abs/astro-ph/9802002}{{\tt astro-ph/9802002}}].
 
-\bibitem{1994MNRAS.267..333E}
-N.~W. {Evans}, {\it {The power-law galaxies}},  {\em \mnras} {\bf 267} (Mar.,
-  1994) 333--360.
+\bibitem{1994A&A...284...44S}
+T.~{Schramm}, {\it {A toolbox for general elliptical gravitational lenses}},
+  {\em \aap} {\bf 284} (Apr., 1994) 44--50,
+  [\href{http://xxx.lanl.gov/abs/astro-ph/9311021}{{\tt astro-ph/9311021}}].
 
 \bibitem{2009astro2010S.159K}
 L.~V.~E. {Koopmans}, M.~{Barnabe}, A.~{Bolton}, M.~{Bradac}, L.~{Ciotti},
