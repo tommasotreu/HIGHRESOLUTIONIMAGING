@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  1 JUN 2015 16:44
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  2 JUN 2015 18:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -544,21 +544,21 @@ File: omstxr.fd 2000/12/15 v3.1
 LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/txsy/m/n' tried instead on input line 775.
  [9] (./High_resolution_imaging_requirements.bbl [10] [11] [12] [13] [14])
-[15] <figures/wavelength_zp.png, id=408, 586.8324pt x 442.2924pt>
+[15] <figures/wavelength_zp.png, id=407, 586.8324pt x 442.2924pt>
 File: figures/wavelength_zp.png Graphic file (type png)
 
 <use figures/wavelength_zp.png>
 Package pdftex.def Info: figures/wavelength_zp.png used on input line 951.
 (pdftex.def)             Requested size: 395.99731pt x 298.467pt.
 
-<figures/PSF_montage.png, id=410, 1284.8pt x 424.58624pt>
+<figures/PSF_montage.png, id=409, 1284.8pt x 424.58624pt>
 File: figures/PSF_montage.png Graphic file (type png)
 
 <use figures/PSF_montage.png>
 Package pdftex.def Info: figures/PSF_montage.png used on input line 962.
 (pdftex.def)             Requested size: 440.0pt x 145.40695pt.
 
-<figures/fainter_system_4QSOimages_all.png, id=411, 1927.2pt x 900.36375pt>
+<figures/fainter_system_4QSOimages_all.png, id=410, 1927.2pt x 900.36375pt>
 File: figures/fainter_system_4QSOimages_all.png Graphic file (type png)
 
 <use figures/fainter_system_4QSOimages_all.png>
@@ -566,7 +566,7 @@ Package pdftex.def Info: figures/fainter_system_4QSOimages_all.png used on inpu
 t line 974.
 (pdftex.def)             Requested size: 440.0pt x 205.55434pt.
 
-<figures/fainter_system_2QSOimages_all.png, id=412, 1927.2pt x 900.36375pt>
+<figures/fainter_system_2QSOimages_all.png, id=411, 1927.2pt x 900.36375pt>
 File: figures/fainter_system_2QSOimages_all.png Graphic file (type png)
 
 <use figures/fainter_system_2QSOimages_all.png>
@@ -574,7 +574,7 @@ Package pdftex.def Info: figures/fainter_system_2QSOimages_all.png used on inpu
 t line 985.
 (pdftex.def)             Requested size: 440.0pt x 205.55434pt.
 
-<figures/brighter_system_4QSOimages_all.png, id=414, 1927.2pt x 900.36375pt>
+<figures/brighter_system_4QSOimages_all.png, id=413, 1927.2pt x 900.36375pt>
 File: figures/brighter_system_4QSOimages_all.png Graphic file (type png)
 
 <use figures/brighter_system_4QSOimages_all.png>
@@ -582,7 +582,7 @@ Package pdftex.def Info: figures/brighter_system_4QSOimages_all.png used on inp
 ut line 995.
 (pdftex.def)             Requested size: 440.0pt x 205.55434pt.
 
-<figures/brighter_system_2QSOimages_all.png, id=415, 1927.2pt x 900.36375pt>
+<figures/brighter_system_2QSOimages_all.png, id=414, 1927.2pt x 900.36375pt>
 File: figures/brighter_system_2QSOimages_all.png Graphic file (type png)
 
 <use figures/brighter_system_2QSOimages_all.png>
@@ -590,7 +590,7 @@ Package pdftex.def Info: figures/brighter_system_2QSOimages_all.png used on inp
 ut line 1007.
 (pdftex.def)             Requested size: 440.0pt x 205.55434pt.
 
-<figures/gamma_135949_4QSOimages_HST.png, id=417, 586.8324pt x 442.2924pt>
+<figures/gamma_135949_4QSOimages_HST.png, id=416, 586.8324pt x 442.2924pt>
 File: figures/gamma_135949_4QSOimages_HST.png Graphic file (type png)
 
 <use figures/gamma_135949_4QSOimages_HST.png>
@@ -598,7 +598,7 @@ Package pdftex.def Info: figures/gamma_135949_4QSOimages_HST.png used on input
 line 1018.
 (pdftex.def)             Requested size: 211.19812pt x 159.1779pt.
 
-<figures/gamma_135949_4QSOimages_JWST.png, id=418, 586.8324pt x 442.2924pt>
+<figures/gamma_135949_4QSOimages_JWST.png, id=417, 586.8324pt x 442.2924pt>
 File: figures/gamma_135949_4QSOimages_JWST.png Graphic file (type png)
 
 <use figures/gamma_135949_4QSOimages_JWST.png>
@@ -606,7 +606,7 @@ Package pdftex.def Info: figures/gamma_135949_4QSOimages_JWST.png used on input
  line 1019.
 (pdftex.def)             Requested size: 211.19812pt x 159.1779pt.
 
-<figures/gamma_135949_4QSOimages_Keck.png, id=419, 586.8324pt x 442.2924pt>
+<figures/gamma_135949_4QSOimages_Keck.png, id=418, 586.8324pt x 442.2924pt>
 File: figures/gamma_135949_4QSOimages_Keck.png Graphic file (type png)
 
 <use figures/gamma_135949_4QSOimages_Keck.png>
@@ -614,7 +614,7 @@ Package pdftex.def Info: figures/gamma_135949_4QSOimages_Keck.png used on input
  line 1020.
 (pdftex.def)             Requested size: 211.19812pt x 159.1779pt.
 
-<figures/gamma_135949_4QSOimages_NGAO.png, id=420, 586.8324pt x 442.2924pt>
+<figures/gamma_135949_4QSOimages_NGAO.png, id=419, 586.8324pt x 442.2924pt>
 File: figures/gamma_135949_4QSOimages_NGAO.png Graphic file (type png)
 
 <use figures/gamma_135949_4QSOimages_NGAO.png>
@@ -622,7 +622,7 @@ Package pdftex.def Info: figures/gamma_135949_4QSOimages_NGAO.png used on input
  line 1021.
 (pdftex.def)             Requested size: 211.19812pt x 159.1779pt.
 
-<figures/gamma_135949_4QSOimages_E_W_L.png, id=421, 586.8324pt x 442.2924pt>
+<figures/gamma_135949_4QSOimages_E_W_L.png, id=420, 586.8324pt x 442.2924pt>
 File: figures/gamma_135949_4QSOimages_E_W_L.png Graphic file (type png)
 
 <use figures/gamma_135949_4QSOimages_E_W_L.png>
@@ -630,7 +630,7 @@ Package pdftex.def Info: figures/gamma_135949_4QSOimages_E_W_L.png used on inpu
 t line 1022.
 (pdftex.def)             Requested size: 211.19812pt x 159.1779pt.
 
-<figures/gamma_135949_4QSOimages_TMT.png, id=422, 586.8324pt x 442.2924pt>
+<figures/gamma_135949_4QSOimages_TMT.png, id=421, 586.8324pt x 442.2924pt>
 File: figures/gamma_135949_4QSOimages_TMT.png Graphic file (type png)
 
 <use figures/gamma_135949_4QSOimages_TMT.png>
@@ -638,14 +638,14 @@ Package pdftex.def Info: figures/gamma_135949_4QSOimages_TMT.png used on input
 line 1023.
 (pdftex.def)             Requested size: 211.19812pt x 159.1779pt.
 
-<figures/gamma_135949_anti_2QSOimages_HST.png, id=423, 586.8324pt x 442.2924pt>
+<figures/gamma_135949_anti_2QSOimages_HST.png, id=422, 586.8324pt x 442.2924pt>
 File: figures/gamma_135949_anti_2QSOimages_HST.png Graphic file (type png)
 <use figures/gamma_135949_anti_2QSOimages_HST.png>
 Package pdftex.def Info: figures/gamma_135949_anti_2QSOimages_HST.png used on i
 nput line 1035.
 (pdftex.def)             Requested size: 211.19812pt x 159.1779pt.
 
-<figures/gamma_135949_anti_2QSOimages_JWST.png, id=424, 586.8324pt x 442.2924pt
+<figures/gamma_135949_anti_2QSOimages_JWST.png, id=423, 586.8324pt x 442.2924pt
 >
 File: figures/gamma_135949_anti_2QSOimages_JWST.png Graphic file (type png)
  <use figures/gamma_135949_anti_2QSOimages_JWST.png>
@@ -653,7 +653,7 @@ Package pdftex.def Info: figures/gamma_135949_anti_2QSOimages_JWST.png used on
 input line 1036.
 (pdftex.def)             Requested size: 211.19812pt x 159.1779pt.
 
-<figures/gamma_135949_anti_2QSOimages_Keck.png, id=425, 586.8324pt x 442.2924pt
+<figures/gamma_135949_anti_2QSOimages_Keck.png, id=424, 586.8324pt x 442.2924pt
 >
 File: figures/gamma_135949_anti_2QSOimages_Keck.png Graphic file (type png)
  <use figures/gamma_135949_anti_2QSOimages_Keck.png>
@@ -661,7 +661,7 @@ Package pdftex.def Info: figures/gamma_135949_anti_2QSOimages_Keck.png used on
 input line 1037.
 (pdftex.def)             Requested size: 211.19812pt x 159.1779pt.
 
-<figures/gamma_135949_anti_2QSOimages_NGAO.png, id=426, 586.8324pt x 442.2924pt
+<figures/gamma_135949_anti_2QSOimages_NGAO.png, id=425, 586.8324pt x 442.2924pt
 >
 File: figures/gamma_135949_anti_2QSOimages_NGAO.png Graphic file (type png)
  <use figures/gamma_135949_anti_2QSOimages_NGAO.png>
@@ -669,21 +669,21 @@ Package pdftex.def Info: figures/gamma_135949_anti_2QSOimages_NGAO.png used on
 input line 1038.
 (pdftex.def)             Requested size: 211.19812pt x 159.1779pt.
 
-<figures/gamma_135949_anti_2QSOimages_EWL.png, id=427, 586.8324pt x 442.2924pt>
+<figures/gamma_135949_anti_2QSOimages_EWL.png, id=426, 586.8324pt x 442.2924pt>
 File: figures/gamma_135949_anti_2QSOimages_EWL.png Graphic file (type png)
 <use figures/gamma_135949_anti_2QSOimages_EWL.png>
 Package pdftex.def Info: figures/gamma_135949_anti_2QSOimages_EWL.png used on i
 nput line 1039.
 (pdftex.def)             Requested size: 211.19812pt x 159.1779pt.
 
-<figures/gamma_135949_anti_2QSOimages_TMT.png, id=428, 586.8324pt x 442.2924pt>
+<figures/gamma_135949_anti_2QSOimages_TMT.png, id=427, 586.8324pt x 442.2924pt>
 File: figures/gamma_135949_anti_2QSOimages_TMT.png Graphic file (type png)
 <use figures/gamma_135949_anti_2QSOimages_TMT.png>
 Package pdftex.def Info: figures/gamma_135949_anti_2QSOimages_TMT.png used on i
 nput line 1040.
 (pdftex.def)             Requested size: 211.19812pt x 159.1779pt.
 
-<figures/gamma_0330_anti_4QSOimages_HST.png, id=430, 586.8324pt x 442.2924pt>
+<figures/gamma_0330_anti_4QSOimages_HST.png, id=429, 586.8324pt x 442.2924pt>
 File: figures/gamma_0330_anti_4QSOimages_HST.png Graphic file (type png)
 
 <use figures/gamma_0330_anti_4QSOimages_HST.png>
@@ -691,7 +691,7 @@ Package pdftex.def Info: figures/gamma_0330_anti_4QSOimages_HST.png used on inp
 ut line 1050.
 (pdftex.def)             Requested size: 211.19812pt x 159.1779pt.
 
-<figures/gamma_0330_anti_4QSOimages_JWST.png, id=431, 586.8324pt x 442.2924pt>
+<figures/gamma_0330_anti_4QSOimages_JWST.png, id=430, 586.8324pt x 442.2924pt>
 File: figures/gamma_0330_anti_4QSOimages_JWST.png Graphic file (type png)
 
 <use figures/gamma_0330_anti_4QSOimages_JWST.png>
@@ -699,7 +699,7 @@ Package pdftex.def Info: figures/gamma_0330_anti_4QSOimages_JWST.png used on in
 put line 1051.
 (pdftex.def)             Requested size: 211.19812pt x 159.1779pt.
 
-<figures/gamma_0330_anti_4QSOimages_Keck.png, id=432, 586.8324pt x 442.2924pt>
+<figures/gamma_0330_anti_4QSOimages_Keck.png, id=431, 586.8324pt x 442.2924pt>
 File: figures/gamma_0330_anti_4QSOimages_Keck.png Graphic file (type png)
 
 <use figures/gamma_0330_anti_4QSOimages_Keck.png>
@@ -707,7 +707,7 @@ Package pdftex.def Info: figures/gamma_0330_anti_4QSOimages_Keck.png used on in
 put line 1052.
 (pdftex.def)             Requested size: 211.19812pt x 159.1779pt.
 
-<figures/gamma_0330_anti_4QSOimages_NGAO.png, id=433, 586.8324pt x 442.2924pt>
+<figures/gamma_0330_anti_4QSOimages_NGAO.png, id=432, 586.8324pt x 442.2924pt>
 File: figures/gamma_0330_anti_4QSOimages_NGAO.png Graphic file (type png)
 
 <use figures/gamma_0330_anti_4QSOimages_NGAO.png>
@@ -715,7 +715,7 @@ Package pdftex.def Info: figures/gamma_0330_anti_4QSOimages_NGAO.png used on in
 put line 1053.
 (pdftex.def)             Requested size: 211.19812pt x 159.1779pt.
 
-<figures/gamma_0330_anti_4QSOimages_EWL.png, id=434, 694.5147pt x 442.2924pt>
+<figures/gamma_0330_anti_4QSOimages_EWL.png, id=433, 694.5147pt x 442.2924pt>
 File: figures/gamma_0330_anti_4QSOimages_EWL.png Graphic file (type png)
 
 <use figures/gamma_0330_anti_4QSOimages_EWL.png>
@@ -723,7 +723,7 @@ Package pdftex.def Info: figures/gamma_0330_anti_4QSOimages_EWL.png used on inp
 ut line 1054.
 (pdftex.def)             Requested size: 211.19812pt x 134.49742pt.
 
-<figures/gamma_0330_2QSOimages_HST.png, id=436, 586.8324pt x 442.2924pt>
+<figures/gamma_0330_2QSOimages_HST.png, id=435, 586.8324pt x 442.2924pt>
 File: figures/gamma_0330_2QSOimages_HST.png Graphic file (type png)
 
 <use figures/gamma_0330_2QSOimages_HST.png>
@@ -731,7 +731,7 @@ Package pdftex.def Info: figures/gamma_0330_2QSOimages_HST.png used on input li
 ne 1064.
 (pdftex.def)             Requested size: 211.19812pt x 159.1779pt.
 
-<figures/gamma_0330_2QSOimages_JWST.png, id=437, 586.8324pt x 442.2924pt>
+<figures/gamma_0330_2QSOimages_JWST.png, id=436, 586.8324pt x 442.2924pt>
 File: figures/gamma_0330_2QSOimages_JWST.png Graphic file (type png)
 
 <use figures/gamma_0330_2QSOimages_JWST.png>
@@ -739,7 +739,7 @@ Package pdftex.def Info: figures/gamma_0330_2QSOimages_JWST.png used on input l
 ine 1065.
 (pdftex.def)             Requested size: 211.19812pt x 159.1779pt.
 
-<figures/gamma_0330_2QSOimages_Keck.png, id=438, 586.8324pt x 442.2924pt>
+<figures/gamma_0330_2QSOimages_Keck.png, id=437, 586.8324pt x 442.2924pt>
 File: figures/gamma_0330_2QSOimages_Keck.png Graphic file (type png)
 
 <use figures/gamma_0330_2QSOimages_Keck.png>
@@ -747,7 +747,7 @@ Package pdftex.def Info: figures/gamma_0330_2QSOimages_Keck.png used on input l
 ine 1066.
 (pdftex.def)             Requested size: 211.19812pt x 159.1779pt.
 
-<figures/gamma_0330_2QSOimages_NGAO.png, id=439, 586.8324pt x 442.2924pt>
+<figures/gamma_0330_2QSOimages_NGAO.png, id=438, 586.8324pt x 442.2924pt>
 File: figures/gamma_0330_2QSOimages_NGAO.png Graphic file (type png)
 
 <use figures/gamma_0330_2QSOimages_NGAO.png>
@@ -755,7 +755,7 @@ Package pdftex.def Info: figures/gamma_0330_2QSOimages_NGAO.png used on input l
 ine 1067.
 (pdftex.def)             Requested size: 211.19812pt x 159.1779pt.
 
-<figures/gamma_0330_2QSOimages_E_W_L.png, id=440, 586.8324pt x 442.2924pt>
+<figures/gamma_0330_2QSOimages_E_W_L.png, id=439, 586.8324pt x 442.2924pt>
 File: figures/gamma_0330_2QSOimages_E_W_L.png Graphic file (type png)
 
 <use figures/gamma_0330_2QSOimages_E_W_L.png>
@@ -810,10 +810,10 @@ c/txfonts/txtt.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/helvetic
 /uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmb8a.pf
 b></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/lo
 cal/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on High_resolution_imaging_requirements.pdf (25 pages, 5147313 b
+Output written on High_resolution_imaging_requirements.pdf (25 pages, 5147090 b
 ytes).
 PDF statistics:
- 573 PDF objects out of 1000 (max. 8388607)
+ 572 PDF objects out of 1000 (max. 8388607)
  138 named destinations out of 1000 (max. 500000)
  253 words of extra memory for PDF output out of 10000 (max. 10000000)
 
