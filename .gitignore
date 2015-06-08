@@ -1,0 +1,7 @@
+# LaTeX crap:
+*.log
+*.aux
+*.toc
+*.dvi
+*.blg
+*synctex*
