@@ -518,7 +518,7 @@ source ($D_{\mathrm{s}}$), and between the deflector and the source
 
  Power-law models of elliptical galaxies (Evans 1994 \cite{1994MNRAS.267..333E}) have often been used with
 success over the years to model gravitational lenses.
- Fast methods to compute 2D deflections from power-law profiles have been given by Barkana 1998
+ Fast methods to compute 2D deflections from elliptical power-law profiles have been given by Barkana 1998
 \cite{1998ApJ...502..531B}, as a special case of the formalism by Schramm 1990 \cite{1990A&A...231...19S} for homoeoidal profiles.
 %
 %
@@ -541,15 +541,19 @@ success over the years to model gravitational lenses.
 Lensed image profiles are obtained by inverse ray shooting. First,
 each pixel position in the image plane is mapped back to the source
 plane via its corresponding deflection angle. Then, we exploit
-the fact that surface-brightness is preserved by lensing to assign
-surface brightness to each detector pixel in the image plane. Given
-the smoothly varying surface brightness distribution of the source
-host galaxy, a rectangular grid in the image-plane is adopted. As
-discussed in the next section, this approximation would be too crude
-to represent properly the sharp point source associated with the
-quasar images, which are therefore added directly to the image plane.
-Finally, the light models models are convolved with the PSF
-appropriate for each instrument.
+the fact that surface brightness is preserved by lensing to assign
+surface brightnesses from our putative source models to each detector pixel in the image plane.
+Finally, we convolve these images with the PSF appropriate for each instrument, yielding
+mock observations of the AGN host galaxy Einstein rings.
+
+%Given
+%the smoothly varying surface brightness distribution of the source
+%host galaxy, a rectangular grid in the image-plane is adopted. As
+%discussed in the next section, this approximation would be too crude
+%to represent properly the sharp point source associated with the
+%quasar images, which are therefore added directly to the image plane.
+%Finally, the light models models are convolved with the PSF
+%appropriate for each instrument.
 
 \subsubsection{Point Source Model}
 
@@ -593,17 +597,25 @@ to~\ref{fig:brighter_2QSOimages_montage}.
 \subsection{Inferring the parameters}
 \label{ssec:inf}
 
-The same code is used to generate the mock models and to fit them. The
-model fits the following parameters: position, half light radius, axis
+The same code that is used to generate the mock models is also used to fit them. The
+modelling procedure follows previous work done with real lens data (e.g., Auger et al. 2011 
+\cite{2011MNRAS.411L...6A}, Auger et al.~2013 \cite{2013MNRAS.436..503A}, Stark et al.~2013 
+\cite{2013MNRAS.436.1040S}).
+We fit for the following non-linear parameters: position, half light radius, axis
 ratio of light, position angle, and S{\'e}rsic index for the
-source and deflector brightness model; position, Einstein radius, the
+source and deflector brightness model (12 parameters); position, Einstein radius, the
 axis ratio of the mass distribution, position angle, and power-law
-slope for the deflector mass model; and QSO positions in the image
-plane. In practice, variables are created to describe each parameter,
-including priors. Most priors are taken to be uniform. The prior on
-the position of the deflector mass is tied to the position of the
-deflector brightness, which is commonly observed in galaxy scale
-lenses.
+slope for the deflector mass model (6 parameters); and QSO positions in the image
+plane (4 parameters for two-image lenses, 8 parameters for four-image systems). We note in particular
+that due to e.g., microlensing, millilensing, and differential reddening, the
+positions and fluxes of the QSO images are not tied to the lens model and 
+they are therefore in effect treated as `foreground' stars. Most priors on the non-linear 
+parameters are taken to be uniform, but the prior on the position of the deflector 
+mass is tied to the position of the deflector surface brightness;
+the mass is generally close to coincident with the light in galaxy-scale lenses.
+The fluxes/amplitudes of each of the surface brightness components
+(the source and deflector galaxies and the QSO images) are linear parameters and are determined
+by linear inversion for any given set of proposed non-linear paramerters. 
 
 % This prior helps to converge quickly to to correct
 %solution. After defining all of model parameters, then the
@@ -618,7 +630,7 @@ lenses.
 The goodness of fit is assessed through the standard
 image-plane $\chi^{2},$ by comparing the model and mock data surface
 brightness profiles.  Uncertainties are obtained via MCMC exploration
-of the posterior. The likelihood is simply given by
+of the posterior, with the fluxes implicitly marginalized over. The likelihood is simply given by
 $\mathcal{L}\propto\exp[-\chi^{2}/2]$.
 % where the $\chi^{2}$ is defined%
 %by
@@ -630,10 +642,6 @@ $\mathcal{L}\propto\exp[-\chi^{2}/2]$.
 %
 %and $I$ is the surface brightness with the uncertainty, $M$ is the corresponding model-predicted image value, $\mu$ is the uncertainty quoted from the image noise.%
 
-The point-like images of the quasar are time variable and
-usually appreciably affected by microlensing, milli-lensing and dust
-lanes in the foreground, and therefore provide a limited amount of
-useful information on the differences in gravitational potential. Therefore, we model them in the image plane and do not enforce them to have self-consistent fluxes in the source plane.
 %
 % still consider the quasar images in the inference.  By fitting
 %the point source position we are engaged in getting results which are
@@ -654,13 +662,13 @@ useful information on the differences in gravitational potential. Therefore, we 
 %full characterization of this source of uncertainty is beyond the
 %scope of this paper and is left for future work.
 
-The fitting images with different instruments are all 4$''$ $\times$
+The mock data images for different instruments are all 4$''$ $\times$
 4$''$, corresponding to the pixel numbers of 80 $\times$ 80 for HST,
 130 $\times$ 130 for JWST, 400 $\times$ 400 for Keck (both LGSAO and
 NGAO), 1000 $\times$ 1000 for TMT, 40 $\times$ 40 for Euclid, 36
 $\times$ 36 for WFIRST, 20 $\times$ 20 for LSST approximately. The sampling
 numbers are fixed at 60000 for each inference progress.
-The accept ratios remain stable between 20\% $\sim$ 30\%.
+The acceptance ratios remain stable between 20\% $\sim$ 30\%.
 Based on the parameters above mentioned, the inference is computationally expensive: typical run times range
 between 15 minutes and 4000 minutes per system on a
 linux desktop computer. In more specific terms, $\sim$ 100 minutes for HST,
