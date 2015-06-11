@@ -101,13 +101,15 @@ accurate time delay measurements relies on a few important
 ingredients. First, monitoring of the lensed quasars is required to
 obtain time delays with a few percent uncertainties. Dedicated
 monitoring campaigns have shown that this precision is achievable with
-1-2m class telescopes at present time (Tewes et al. 2013
-\citep{2013A&A...556A..22T}), or in the radio (Fassnacht et al. 2002
+1-2m class telescopes at present time (e.g. from COMOGRAIL; Tewes et
+al. 2013 \citep{2013A&A...556A..22T}), or in the radio (Fassnacht et
+al. 2002
 \citep{2002ApJ...581..823F}). In the future, the exploitation of
-larger samples of lenses (Oguri \& Marshall 2010 \cite{2010MNRAS.405.2579O}) will require
-monitoring campaigns on 2-4m telescopes (Treu et al. 2013
+larger samples of lenses (Oguri \& Marshall 2010
+\cite{2010MNRAS.405.2579O}) will require monitoring campaigns on 2-4m
+telescopes (Treu et al. 2013
 \citep{2013arXiv1306.1272T}), or the deployment of long term
-high-cadence monitoring surveys, like the LSST (Liao et al. 2015
+high-cadence monitoring efforts, like the LSST (Liao et al. 2015
 \citep{2015ApJ...800...11L}). Second, the spectroscopic redshift of
 the source and deflector must be measured . For current samples, this
 is typically a relatively straightforward step, requiring short
@@ -292,6 +294,13 @@ The instrument/survey properties are based on WFIRST-Astrophysics Focused Telesc
 The survey and instrument properties are taken from Ivezic et al. 2008 \cite{2008arXiv0805.2366I} and the LSST Science Requirements Document \footnote{\url{http://www.lsst.org/files/docs/SRD.pdf}}. The PSF of LSST will vary over time. We adopt a Gaussian PSF with FWHM $0\farcs7$ as representative of the image quality of LSST in the i-band.
 
 \end{enumerate}
+
+We do not consider radio interferometers like ALMA or VLBI, given the
+radically different properties of the data, and the need for
+additional assumptions relating the optical/IR light to the radio
+emission. An assessment of their ability to provide sufficiently
+accurate high resolution images for cosmography is left for future
+work.
 
 %\subsection{Hubble Space Telescope}
 %\subsubsection{ACS}
@@ -682,8 +691,7 @@ linux desktop computer. In more specific terms, $\sim$ 100 minutes for HST,
 $\sim$ 150 minutes for JWST, $\sim$ 300 minutes for Keck (both LGSAO and NGAO),
 $\sim$ 4000 minutes for TMT, $\sim$ 40 minutes for Euclid and WFIRST, $\sim$ 15 minutes for LSST.
 
-
-\section{Results}
+\subsection{Exposure times}
 
 The goal of this work is to investigate what combinations of
 instrument/telescope configuration and exposure time produce images of
@@ -703,14 +711,18 @@ observed for longer exposure time. Taking into account typical
 overheads for pointing and acquisition we evaluated that the {\it
 brighter} lenses are too bright to be observed with TMT, while a
 minimum exposure time of 360s gives more than enough signal-to-noise
-ratio for the fainter systems. Likewise the brighter systmes are
-likely too bright to be observed with JWST. We still simulated them,
-but set the minimum exposure time to 60s.
+ratio for the fainter systems. Likewise the brighter systems are
+likely too bright to be observed efficiently with JWST. We still
+simulated them, but set the minimum exposure time to 60s. Of course in
+some instances it may be beneficial to obtain longer exposures with
+JWST and TMT and thus exquisite data.
 
 For the telescopes/instruments to be operated in survey mode, we
 simulated the planned exposure time, and considered the specific
 question of whether the ensuing data quality is sufficient or not to
 meet the requirement.
+
+\section{Results}
 
 Using the methods summarized in the previous section we generate 10
 mock systems for each configuration, and carry out the full inference
@@ -720,7 +732,19 @@ in~Figures~\ref{fig:gamma_fainter_4QSOimages}
 to~\ref{fig:gamma_brighter_2QSOimages}. Table~\ref{tab:exptimes}
 summarizes the ``target'' exposure times for HST, JWST, Keck LGSAO and
 NGAO, i.e. those required in order to reach 2\% uncertainties on
-$\gamma^{\prime}$. 
+$\gamma^{\prime}$.  We reiterate that this is is only the random
+component of the uncertainty, and thus it represent a lower limit to
+the total uncertainty. For this reason we have set a rather stringent
+limit of 2\%, in order to leave room for additional uncertainties,
+such as, e.g., systematic errors related to PSF reconstruction and
+modeling errors. In practice, our target exposure times should be
+considered as minimum exposure times, i.e. necessary and not
+sufficient conditions. Assessing the contribution of those additional
+sources of uncertainty requires detailed modeling of specific systems
+and instruments \cite[e.g.,][]{2014ApJ...788L..35S}, and is left for
+future work. 
+%In addition, this work is focused exclusively
+%on the high resolution imaging requirements.
 
 First of all, we find that HST can deliver the desired image quality
 with exposures of a few ks at most, consistent with published work
@@ -790,7 +814,7 @@ find that:
 \item HST can provide sufficient information with integration times of order 1-10ks, as shown by recent work based on real data
 \item Keck/LGSAO can provide sufficient information for only the brighter systems to be discovered. The critical issue will be the accuracy with which the PSF can be reconstructed. Significant effort is under way to overcome this crtical obstacle \cite{2014SPIE.9148E..4SJ}.
 \item The planned Keck/NGAO system will improve the performance of Keck to make it comparable to that of HST in terms of resolution and signal to noise ratio. provided that the PSF can be reconstructed with sufficient accuracy.
-\item JWST/NIRCAM and TMT/IRIS will be able to deliver the desired image quality with very short exposure times for any lens for which time delays are reasonably going to be available. Thus they will be ideal instruments for follow-up of time-delay lenses, especially if short imaging are followed by deeper spectroscopic observations to measure the redshift of the source and the velocity dispersion and redshift of the deflector. For TMT, and other ELTs, the abilty to reconstruct accurately the PSF of the AO system \cite{2014SPIE.9148E..10H} will be critical for time delay cosmography. 
+\item JWST/NIRCAM and TMT/IRIS will be able to deliver the desired image quality with very short exposure times for any lens for which time delays are reasonably going to be available. Thus they will be ideal instruments for follow-up of time-delay lenses, especially if short images are followed by deeper spectroscopic observations to measure the redshift of the source and the spatially resolved velocity dispersion (and redshift) of the deflector. For TMT, and other ELTs, the abilty to reconstruct accurately the PSF of the AO system \cite{2014SPIE.9148E..10H} will be critical for time delay cosmography. 
 \item The survey modes of Euclid/WFIRST/LSST will likely be too shallow and/or have insufficient resolution except for the very brightest systems in the sky. Dedicated follow-up with WFIRST in GO mode will be necessary for the fainter gravitational lens systems.
 \end{itemize}
 
