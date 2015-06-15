@@ -1,3 +1,5 @@
+% ====================================================================
+
 \documentclass[a4paper,11pt]{article}
 \usepackage{jcappub}
 \usepackage{txfonts}
@@ -10,9 +12,10 @@
 
 \def\qm{q_\mathrm{m}}
 
+% ====================================================================
 
 \title{Precision cosmology with time delay lenses: high resolution imaging requirements}
-%\title{Cosmology with time delay lenses. High resolution imaging requirements}
+
 \author[1]{Xiao-Lei Meng,}
 \author[1,2]{Tommaso Treu,}
 \author[1,2]{Adriano Agnello,}
@@ -29,74 +32,83 @@
 
 \date{Accepted . Received }
 
-% PJM is here.
+% ====================================================================
 
-\abstract{
-Lens time delays are a powerful probe of cosmology, provided that the
-gravitational potential of the main deflector can be modeled with
-sufficient precision. Recent work has shown that this can be achieved
-by detailed modeling of the host galaxies of lensed quasars. The
-distortion of the images as measured over large number of pixels
-provides tight constraints on the difference between the gravitational
-potential between the quasar image positions, and thus on cosmology in
-combination with the measured time delay. We carry out a systematic
-exploration of the high resolution imaging required to exploit the
-thousands of lensed quasars that will be discovered by current and
-upcoming surveys with the next decade. Specifically we simulate
-realistic lens systems as imaged by the Hubble Space Telescope (HST),
-James Webb Space Telescope (JWST), ground based adaptive optics images
-taken with Keck or the Thirty Meter Telescope (TMT). We compare the
-performance of these pointed observations with that of images taken by
-the Euclid-VIS, Wide-Field Infrared Survey Telescope (WFIRST) and
-Large Synoptic Survey Telescope (LSST) surveys. We use as our metric
-the precision with which the slope $\gamma'$ of the total mass density
-profile $\rho_{tot}\propto r^{-\gamma'}$ for the main deflector can be
-measured. Ideally, we require that the statistical error on $\gamma'$
-be less than 0.02, thus being subdominant with respect to other
-sources of random and systematic uncertainties. We find that survey
-data will likely have sufficient depth and resolution to meet the
-target only for the brighter gravitational lens systems, comparable to
-those discovered by the SDSS survey. For fainter systems, that will be
-discovered by current and future surveys, targeted follow-up will be
-required. However, the exposure time per target will be of order a few
-minutes per system with upcoming facilitites, such as JWST, the Keck
-Next Generation Adaptive Optics System, and TMT, thus making the
-follow-up of hundreds of systems a pratical and efficient cosmological
-probe.}
+\abstract{ Lens time delays are a powerful probe of cosmology,
+provided that the gravitational potential of the main deflector can be
+modeled with sufficient precision. Recent work has shown that this can
+be achieved by detailed modeling of the host galaxies of lensed
+quasars, which appear as ``Einstein Rings'' in high resolution images.
+The distortion of these arcs and counter-arcs, as measured over a
+large number of pixels, provides tight constraints on the difference
+between the gravitational potential between the quasar image
+positions, and thus on cosmology in combination with the measured time
+delay. We carry out a systematic exploration of the high resolution
+imaging required to exploit the thousands of lensed quasars that will
+be discovered by current and upcoming surveys with the next decade.
+Specifically, we simulate realistic lens systems as imaged by the
+Hubble Space Telescope (HST), James Webb Space Telescope (JWST), and
+ground based adaptive optics images taken with Keck or the Thirty
+Meter Telescope (TMT). We compare the performance of these pointed
+observations with that of images taken by the Euclid (VIS), Wide-Field
+Infrared Survey Telescope (WFIRST) and Large Synoptic Survey Telescope
+(LSST) surveys. We use as our metric the precision with which the
+slope $\gamma'$ of the total mass density profile $\rho_{tot}\propto
+r^{-\gamma'}$ for the main deflector can be measured. Ideally, we
+require that the statistical error on $\gamma'$ be less than 0.02,
+such that it is subdominant to other sources of random and systematic
+uncertainties. We find that survey data will likely have sufficient
+depth and resolution to meet the target only for the brighter
+gravitational lens systems, comparable to those discovered by the SDSS
+survey. For fainter systems, that will be discovered by current and
+future surveys, targeted follow-up will be required. However, the
+exposure time required with upcoming facilitites such as JWST, the
+Keck Next Generation Adaptive Optics System, and TMT, will only be of
+order a few minutes per system, thus making the follow-up of hundreds
+of systems a practical and efficient cosmological probe.}
 
 \keywords{}
+
+% ====================================================================
 
 \begin{document}
 \newcommand\farcs{\hbox{$.\!\!^{\prime\prime}$}}
 \maketitle
 \flushbottom
 
+% ====================================================================
 
 \section{Introduction}
-%\textbf{[TT to put introfirst here; introduce `informative pixels' that will be referred to in Sect.s 2 and 3; mention that we're basically observing how radial magnification changes across the lens, so that we need to understand how that is affected by PSF, pixel-size, and S/N ratio.]}
 
-In the past few years, gravitational time delays (Refsdal 1964 \citep{1964MNRAS.128..307R})
-have emerged as a powerful and cost effective cosmological
-probe. Studies based on blind analysis have shown that a single system
-consisting of multiple images of a background quasar (at redshift
-$z_s$) lensed by a foreground massive elliptical galaxy at redshift
-$z_d$ can be used to measure the so-called time delay distance with an
-uncertainty of 6-7\% (Suyu et al. 2010 \citep{2010ApJ...711..201S}, 2013 \citep{2013ApJ...766...70S}, 2014 \citep{2014ApJ...788L..35S}). The time
-delay distance $D_{\Delta t}$ gives a direct measurement of the Hubble
-constant and allows one to break some the main degeneracies in the
-interpretation of cosmic microwave background data, thus providing
-tight constraints on parameters such as curvature and dark energy
-equation of state
-(Coe \& Moustakas 2009 \citep{2009ApJ...706...45C}, Linder 2011 \citep{2011PhRvD..84l3529L}, Weinberg 2013 \citep{2013PhR...530...87W}, Suyu 2012 \citep{2012MNRAS.426..868S}, Suyu et al. 2014 \citep{2014ApJ...788L..35S}). The
-time delay distance measurement of H$_0$ is comparable in terms of
-information content to that obtained via the cosmic distance ladder
-(Riess et al. 2011 \citep{2011ApJ...730..119R}, Freedman et al. 2012 \citep{2012ApJ...758...24F}), in that is based on absolute distances and completely
-independent on the properties of the universe at $z>z_s$. Importantly,
-time delay distances are independent of the local distance ladder and
-thus provide a crucial test of any potential systematic
-uncertainties. Furthermore, being independent, the cosmic distance
-ladder and time delay distance constraints on H$_0$ can be
-statistically combined for additional gains in precision.
+In the past few years, gravitational time delays (Refsdal 1964
+\citep{1964MNRAS.128..307R}) have emerged as a powerful and cost
+effective cosmological probe. Studies based on blind analysis have
+shown that a single system consisting of multiple images of a
+background quasar (at redshift $z_{\rm s}$) lensed by a foreground
+massive elliptical galaxy at redshift $z_{\rm d}$ can be used to
+measure the so-called time delay distance with an uncertainty of 5-7\%
+(Suyu et al. 2010 \citep{2010ApJ...711..201S}, 2013
+\citep{2013ApJ...766...70S}, 2014 \citep{2014ApJ...788L..35S}). The
+time delay distance $D_{\Delta t}$ gives a direct measurement of the
+Hubble constant and allows one to break some of the main degeneracies
+in the interpretation of cosmic microwave background data, thus
+providing tight constraints on parameters such as curvature and dark
+energy equation of state (Coe \& Moustakas 2009
+\citep{2009ApJ...706...45C}, Linder 2011 \citep{2011PhRvD..84l3529L},
+Weinberg 2013 \citep{2013PhR...530...87W}, Suyu 2012
+\citep{2012MNRAS.426..868S}, Suyu et al. 2014
+\citep{2014ApJ...788L..35S}). The time delay distance measurement of
+H$_0$ is comparable in terms of information content to that obtained
+via the cosmic distance ladder (Riess et al. 2011
+\citep{2011ApJ...730..119R}, Freedman et al. 2012
+\citep{2012ApJ...758...24F}), in that is based on absolute distances
+and completely independent of the properties of the early universe
+($z>z_{\rm s}$). Importantly, time delay distances are independent of
+the {\it local} distance ladder, and thus provide a crucial test of
+any potential systematic uncertainties. Furthermore, being
+independent, the cosmic distance ladder and time delay distance
+constraints on H$_0$ can be statistically combined for additional
+gains in precision.
 
 From an observational point of view, the attainment of precise and
 accurate time delay measurements relies on a few important
@@ -105,18 +117,16 @@ obtain time delays with a few percent uncertainties. Dedicated
 monitoring campaigns have shown that this precision is achievable with
 1-2m class telescopes at present time (e.g. from COMOGRAIL; Tewes et
 al. 2013 \citep{2013A&A...556A..22T}), or in the radio (Fassnacht et
-al. 2002
-\citep{2002ApJ...581..823F}). In the future, the exploitation of
-larger samples of lenses (Oguri \& Marshall 2010
+al. 2002 \citep{2002ApJ...581..823F}). In the future, the exploitation
+of larger samples of lenses (Oguri \& Marshall 2010
 \cite{2010MNRAS.405.2579O}) will require monitoring campaigns on 2-4m
-telescopes (Treu et al. 2013
-\citep{2013arXiv1306.1272T}), or the deployment of long term
-high-cadence monitoring efforts, like the LSST (Liao et al. 2015
-\citep{2015ApJ...800...11L}). Second, the spectroscopic redshift of
-the source and deflector must be measured . For current samples, this
-is typically a relatively straightforward step, requiring short
-exposures on 4-10m class telescopes (Fassnacht
-\& Cohen 1998 \citep{1998AJ....115..377F}, Eigenbrod et al. 2007
+telescopes (Treu et al. 2013 \citep{2013arXiv1306.1272T}), or the
+deployment of long term high-cadence monitoring efforts, like the LSST
+(Liao et al. 2015 \citep{2015ApJ...800...11L}). Second, the
+spectroscopic redshift of the source and deflector must be measured.
+For current samples, this is typically a relatively straightforward
+step, requiring short exposures on 4-10m class telescopes (Fassnacht \&
+Cohen 1998 \citep{1998AJ....115..377F}, Eigenbrod et al. 2007
 \citep{2007A&A...465...51E}).  Third, the gravitational potential of
 the main deflector needs to be constrained by the data so that the
 uncertainty on its difference between the location of the images is
@@ -132,32 +142,46 @@ inhomogenous mass distribution along the line of sight need to be
 taken into account. Recent work has shown that the line of sight
 effects can be sufficiently characterized by measuring the properties
 of galaxies and weak lensing signal in the field of the main
-deflector, and comparing with simulated lines of sight (Suyu et
-al. 2010 \citep{2010ApJ...711..201S}, 2013
-\citep{2013ApJ...766...70S}, 2014 \citep{2014ApJ...788L..35S}, Greene
-et al. 2013 \citep{2013ApJ...768...39G}, Collett et al. 2013
+deflector, and comparing with simulated lines of sight (Suyu et al.
+2010 \citep{2010ApJ...711..201S}, 2013 \citep{2013ApJ...766...70S},
+2014 \citep{2014ApJ...788L..35S}, Greene et al. 2013
+\citep{2013ApJ...768...39G}, Collett et al. 2013
 \citep{2013MNRAS.432..679C}).
 
 However, whereas current samples have been limited to a few lenses,
-current and onging surveys (add references to DES, PANSTARRS, HSC,
-ATLAS) will discover 100s of lenses. These large samples will be
-extremely powerful cosmographic probes
-(Coe \& Moustakas 2009 \citep{2009ApJ...706...45C}, Linder 2011 \citep{2011PhRvD..84l3529L}), provided that sufficient follow-up
-data will be available (Treu et al. 2013 \citep{2013arXiv1306.1272T}). In this paper we carry out a
-feasibility study for future time delay surveys, focusing on the
-high-resolution imaging requirements. Specifically, we aim to
-investigate whether sufficient information will be available from
-survey data, or whether dedicated follow-up will be necessary. If
-dedicated follow-up will be necessary, we aim to provide an estimate
-of the amount of time that will be required per system. The
-multi-pronged nature of time delay lens follow-up makes it natural to
-follow the approach of addressing each component of the follow-up
-independently. The monitoring and spectroscopic follow-up requirements
-are described, e.g., by Eigenbrod et al. 2005 \cite{2005A&A...436...25E}, Linder 2015 \cite{2015PhRvD..91h3511L}.
+current and ongoing surveys---such as the Dark Energy Survey (DES),
+PanSTARRS1, HyperSuprimeCam (HSC)--- should together discover hundreds
+of lensed quasars suitable for monitoring and follow-up (Oguri \&
+Marshall 2010 \cite{2010MNRAS.405.2579O}). During the next decade, the
+Large Synoptic Survey Telescope (LSST), Euclid, and the Wide-Field
+Infrared Survey Telescope (WFIRST) will come online, and enable the
+detection and measurement of an order of magnitude more, with LSST
+likely to provide  high accuracy time delays for several hundred
+systems (Liao et al. 2015 \cite{2015ApJ...800...11L}). These large
+samples will be extremely powerful cosmographic probes (Coe \&
+Moustakas 2009 \citep{2009ApJ...706...45C}, Linder 2011
+\citep{2011PhRvD..84l3529L}), provided that sufficient follow-up data
+are available (Treu et al. 2013 \citep{2013arXiv1306.1272T}). In this
+paper we carry out a feasibility study for cosmology with future time
+delay lenses, focusing on the  high-resolution imaging follow-up
+requirements. (The multi-pronged nature of time delay lens follow-up
+makes it natural to follow the approach of addressing each component
+of the follow-up independently. The monitoring and spectroscopic
+follow-up requirements are described, for example, by Eigenbrod et al.
+2005 \cite{2005A&A...436...25E} and Linder 2015
+\cite{2015PhRvD..91h3511L}). Specifically, we aim to answer the
+following questions:
+\begin{itemize}
+    \item Will sufficient information be available from the survey
+            data itself, or will dedicated follow-up be necessary?
+    \item If dedicated follow-up is necessary, approximately how much
+            exposure time will be required per system, to enable
+            precision cosmography?
+\end{itemize}
 
 In order to make the problem tractable and the results general, we
-need a single simple metric to evaluate the quality of imaging
-data. In short, we need to quantify our ability to measure how the
+need a single simple metric to evaluate the quality of imaging data.
+In short, we need to quantify our ability to measure how the
 deflection angle (i.e. the derivative of the lensing potential) varies
 between the images, and thus how the extended images of the quasar
 host galaxy are stretched across the image. In practice, our ability
@@ -183,21 +207,25 @@ $\gamma'=2$ (the so-called isothermal profile) the deflection angle is
 constant across the image and therefore all the images will appear to
 have the same radial magnification. If the profile is
 steeper/shallower, radial magnification will vary across the image,
-thus giving rise to images of different widths. 
+thus giving rise to images of different widths.
 
 Naturally, for a real measurement it is important to explore different
 profiles and the role of the choice of the profile in the
-uncertainties. However, our goal is to estimate minimal requirements
-on the data quality. If the data quality is insufficient to constrain
-$\gamma'$ it will also be insufficient to constrain more flexibile
-models. Likewise, systematic errors not considered in this paper, such
-as those arising from incomplete knowledge of the PSF, will only
-increase the error budget \citep[e.g.,][]{2015arXiv150602720A}
-although perhaps not critically in good conditions
-\citep[e.g.,][]{2007ApJ...671.1196M,2012MNRAS.424.2800L}. Thus, in order to leave room for
-additional sources of uncertainty in the error budget, we set a rather
-stringent requirement of 0.02 uncertainty of $\gamma'$ (corresponding
-approximately to 2\% per system on time delay distance). In other
+uncertainties (see e.g. Suyu et al 2014 and references therein
+\cite{2014ApJ...788L..35S}). However, our goal is to estimate minimal
+requirements on the data quality. If the data quality is insufficient
+to constrain $\gamma'$ it will also be insufficient to constrain more
+flexible models. Likewise, systematic errors not considered in this
+paper, such as those arising from incomplete knowledge of the PSF,
+will only increase the error budget
+\citep[e.g.,][]{2015arXiv150602720A} although perhaps not critically
+in good conditions
+\citep[e.g.,][]{2007ApJ...671.1196M,2012MNRAS.424.2800L}. Thus, in
+order to leave room for additional sources of uncertainty in the error
+budget, we set a rather stringent requirement of 0.02 uncertainty of
+$\gamma'$ (corresponding approximately to 2\% per system on time delay
+distance), in tests where the mock data are generated using the same
+model as is used in the inference of the lens parameters. In other
 words, our target corresponds to the requirement that the {\it
 statistical} error arising from the image quality be subdominant with
 respect to those arising from modeling uncertainties, time delays, and
@@ -214,6 +242,9 @@ findings are independent of any cosmology, we adopt a spatially flat
 $\Lambda$CDM cosmology with $\Omega_{\rm{m}} = 0.3$, $\Omega_{\Lambda}
 = 0.7$, and the Hubble constant $H_{0} = 70~\rm km~s^{-1}~Mpc^{-1}$
 when calculating distances.
+
+
+% ====================================================================
 
 \section{Summary of simulated instrumental setups}
 
@@ -326,7 +357,7 @@ work.
 
 \section{The Lens Sample}
 
-In this section we introduce our sample, taken to be illustrative of the kind of systems to be discovered in the next decade. 
+In this section we introduce our sample, taken to be illustrative of the kind of systems to be discovered in the next decade.
 
 \subsection{Sample Seletion}
 
@@ -335,7 +366,7 @@ characterized as \textbf{faint} or \textbf{bright} and \textbf{double}
 or \textbf{quad} depending on the photometry and image
 configuration. This set of four main choices covers regimes with
 different numbers of pixels above a certaint S/N, which in turn depend
-on the number of images produced by the lens. 
+on the number of images produced by the lens.
 
 
 The brighter lenses are selected to be representative of the majority
@@ -376,7 +407,7 @@ Ruff et al. 2011 \cite{2011ApJ...727...96R}, Sonnenfeld et al. 2013
 first citation) samples.
 
 As in the real-systems used as inspiration, the sources are set at
-$z_s = 1.071$ and $2.77$ and the deflectors are set at $z_d = 0.351$
+$z_{\rm s} = 1.071$ and $2.77$ and the deflectors are set at $z_{\rm d} = 0.351$
 and $0.783$, respectively for the bright and faint systems. The
 redshifts are typical of what we expect to find in future sample, and
 a different choice within a realistic range would not have changed any
@@ -627,8 +658,8 @@ to~\ref{fig:brighter_2QSOimages_montage}.
 \label{ssec:inf}
 
 The same code that is used to generate the mock models is also used to fit them. The
-modelling procedure follows previous work done with real lens data (e.g., Auger et al. 2011 
-\cite{2011MNRAS.411L...6A}, Auger et al.~2013 \cite{2013MNRAS.436..503A}, Stark et al.~2013 
+modelling procedure follows previous work done with real lens data (e.g., Auger et al. 2011
+\cite{2011MNRAS.411L...6A}, Auger et al.~2013 \cite{2013MNRAS.436..503A}, Stark et al.~2013
 \cite{2013MNRAS.436.1040S}).
 We fit for the following non-linear parameters: position, half light radius, axis
 ratio of light, position angle, and S{\'e}rsic index for the
@@ -637,14 +668,14 @@ axis ratio of the mass distribution, position angle, and power-law
 slope for the deflector mass model (6 parameters); and QSO positions in the image
 plane (4 parameters for two-image lenses, 8 parameters for four-image systems). We note in particular
 that due to e.g., microlensing, millilensing, and differential reddening, the
-positions and fluxes of the QSO images are not tied to the lens model and 
-they are therefore in effect treated as `foreground' stars. Most priors on the non-linear 
-parameters are taken to be uniform, but the prior on the position of the deflector 
+positions and fluxes of the QSO images are not tied to the lens model and
+they are therefore in effect treated as `foreground' stars. Most priors on the non-linear
+parameters are taken to be uniform, but the prior on the position of the deflector
 mass is tied to the position of the deflector surface brightness;
 the mass is generally close to coincident with the light in galaxy-scale lenses.
 The fluxes/amplitudes of each of the surface brightness components
 (the source and deflector galaxies and the QSO images) are linear parameters and are determined
-by linear inversion for any given set of proposed non-linear paramerters. 
+by linear inversion for any given set of proposed non-linear paramerters.
 
 % This prior helps to converge quickly to to correct
 %solution. After defining all of model parameters, then the
@@ -755,7 +786,7 @@ considered as minimum exposure times, i.e. necessary and not
 sufficient conditions. Assessing the contribution of those additional
 sources of uncertainty requires detailed modeling of specific systems
 and instruments \cite[e.g.,][]{2014ApJ...788L..35S}, and is left for
-future work. 
+future work.
 %In addition, this work is focused exclusively
 %on the high resolution imaging requirements.
 
@@ -828,7 +859,7 @@ and hence H$_0$. We find that:
 \item HST can provide sufficient information with integration times of order 1-10ks, as shown by recent work based on real data
 \item Keck/LGSAO can provide sufficient information for only the brighter systems to be discovered. The critical issue will be the accuracy with which the PSF can be reconstructed. Significant effort is under way to overcome this critical obstacle \cite{2014SPIE.9148E..4SJ}.
 \item The planned Keck/NGAO system will improve the performance of Keck to make it comparable to that of HST in terms of resolution and signal to noise ratio, provided that the PSF can be reconstructed with sufficient accuracy.
-\item JWST/NIRCAM and TMT/IRIS will be able to deliver the desired image quality with very short exposure times for any lens for which time delays are reasonably going to be available. Thus they will be ideal instruments for follow-up of time-delay lenses, especially if short images are followed by deeper spectroscopic observations to measure the redshift of the source and the spatially resolved velocity dispersion (and redshift) of the deflector. For TMT, and other ELTs, the abilty to reconstruct accurately the PSF of the AO system \cite{2014SPIE.9148E..10H} will be critical for time delay cosmography. 
+\item JWST/NIRCAM and TMT/IRIS will be able to deliver the desired image quality with very short exposure times for any lens for which time delays are reasonably going to be available. Thus they will be ideal instruments for follow-up of time-delay lenses, especially if short images are followed by deeper spectroscopic observations to measure the redshift of the source and the spatially resolved velocity dispersion (and redshift) of the deflector. For TMT, and other ELTs, the abilty to reconstruct accurately the PSF of the AO system \cite{2014SPIE.9148E..10H} will be critical for time delay cosmography.
 \item The survey modes of Euclid/WFIRST/LSST will likely be too shallow and/or have insufficient resolution except for the very brightest systems in the sky. Dedicated follow-up with WFIRST in GO mode will be necessary for the fainter gravitational lens systems.
 \end{itemize}
 
@@ -1048,7 +1079,7 @@ Exposure times required to attain a 2\% precision on the inferred $\gamma^\prime
 \begin{center}
 \includegraphics[width=1.0\textwidth]{figures/brighter_system_4QSOimages_all.png}
 \end{center}
-\caption{Simulations of the bright lens system with 4 QSO images. The simulated images are all 4$''$ $\times$ 4$''$. The first 3 columns, from left to right, represent HST/ACS, Keck/NIRC2+LGSAO, Keck/NIRC2+NGAO; from top to bottom, the rows correspond to 1/3 $\times$ "target" exposure time, "target" exposure time, and 3 $\times$ "target" exposure time. "Target" exposure time is defined as the exposure time that yields 2\% precision on the slope of the mass density profile of the mass model $\gamma'$. The fourth column shows JWST simulations with 3 fixed exposure times: 60, 180, 540 seconds, from top to bottom. The fifth column 
+\caption{Simulations of the bright lens system with 4 QSO images. The simulated images are all 4$''$ $\times$ 4$''$. The first 3 columns, from left to right, represent HST/ACS, Keck/NIRC2+LGSAO, Keck/NIRC2+NGAO; from top to bottom, the rows correspond to 1/3 $\times$ "target" exposure time, "target" exposure time, and 3 $\times$ "target" exposure time. "Target" exposure time is defined as the exposure time that yields 2\% precision on the slope of the mass density profile of the mass model $\gamma'$. The fourth column shows JWST simulations with 3 fixed exposure times: 60, 180, 540 seconds, from top to bottom. The fifth column
 shows simulations of 3 surveys. From top to bottom we show LSST, Euclid, and WFIRST, with the default survey exposure times (4500s, 2360s, 920s, respectively). TMT simulations are not shown since the system is considered too bright to be observed with this telescope in practice.}
 \label{fig:brighter_4QSOimages_montage}
 \end{figure}
@@ -1069,11 +1100,11 @@ shows simulations of 3 surveys. From top to bottom we show LSST, Euclid, and WFI
 % ==================================================
 \begin{figure}
 \begin{center}
-\includegraphics[width=0.49\textwidth]{figures/gamma_hist_135949_4QSO_HST.png} 
+\includegraphics[width=0.49\textwidth]{figures/gamma_hist_135949_4QSO_HST.png}
 \includegraphics[width=0.49\textwidth]{figures/gamma_hist_135949_4QSO_JWST.png} \\
-\includegraphics[width=0.49\textwidth]{figures/gamma_hist_135949_4QSO_Keck.png} 
+\includegraphics[width=0.49\textwidth]{figures/gamma_hist_135949_4QSO_Keck.png}
 \includegraphics[width=0.49\textwidth]{figures/gamma_hist_135949_4QSO_NGAO.png} \\
-\includegraphics[width=0.49\textwidth]{figures/gamma_hist_135949_4QSO_TMT.png} 
+\includegraphics[width=0.49\textwidth]{figures/gamma_hist_135949_4QSO_TMT.png}
 \includegraphics[width=0.49\textwidth]{figures/gamma_hist_135949_4QSO_EWL.png}
 \end{center}
 \caption{Precision on the mass density profile slope $\gamma'$ as a function of exposure time.  This figure shows the results for the fainter lens system with 4 QSO images. The quantity $\gamma'_{in}$ is the input SIE mass slope. The quantity $\gamma'_{out}$ is the output of the inference process.

@@ -5,3 +5,6 @@
 *.dvi
 *.blg
 *synctex*
+
+# Don't check in PDF (for now):
+High_resolution_imaging_requirements.pdf
