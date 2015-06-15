@@ -171,18 +171,19 @@ We choose to adopt as our metric the slope $\gamma'$ of the total mass
 density profile of the form $\rho_{\rm tot}\propto r^{-\gamma'}$ as
 measured by fitting elliptical power law models to the data. This
 profile is the simplest one that provides a realistic description of
-galaxy scale lenses (Treu 2010 \citep{2010ARA&A..48...87T}), and the uncertainty $\gamma'$
-has been shown to be approximately proportional to the uncertainty on
-the gravitational potential differences and thus the time delay
-distance
-(Kochanek 2002 \citep{2002ApJ...578...25K}, Wucknitz 2002 \citep{2002MNRAS.332..951W}, Suyu 2012 \citep{2012MNRAS.426..868S}).
-Intuitively, $\gamma'$ is directly related to the variations of the
-lensing potential. In fact, if $\gamma'=2$ (the so-called isothermal
-profile) the deflection angle is constant across the image and
-therefore all the images will appear to have the same radial
-magnification. If the profile is steeper/shallower, radial
-magnification will vary across the image, thus giving rise to images
-of different widths.
+galaxy scale lenses (Treu 2010 \citep{2010ARA&A..48...87T}), and the
+uncertainty $\gamma'$ has been shown to be approximately proportional
+to the uncertainty on the gravitational potential differences and thus
+the time delay distance, and the Hubble constatn (Kochanek 2002
+\citep{2002ApJ...578...25K}, Wucknitz 2002
+\citep{2002MNRAS.332..951W}, Suyu 2012
+\citep{2012MNRAS.426..868S}).  Intuitively, $\gamma'$ is directly
+related to the variations of the lensing potential. In fact, if
+$\gamma'=2$ (the so-called isothermal profile) the deflection angle is
+constant across the image and therefore all the images will appear to
+have the same radial magnification. If the profile is
+steeper/shallower, radial magnification will vary across the image,
+thus giving rise to images of different widths. 
 
 Naturally, for a real measurement it is important to explore different
 profiles and the role of the choice of the profile in the
@@ -325,7 +326,7 @@ work.
 
 \section{The Lens Sample}
 
-Here we introduce our sample, four groups of lens system with galaxies at redshift $z_s = 1.071$ and $2.77$ being multiply imaged by massive lens galaxies lying at $z_d = 0.351$ and $0.783$.
+In this section we introduce our sample, taken to be illustrative of the kind of systems to be discovered in the next decade. 
 
 \subsection{Sample Seletion}
 
@@ -334,7 +335,8 @@ characterized as \textbf{faint} or \textbf{bright} and \textbf{double}
 or \textbf{quad} depending on the photometry and image
 configuration. This set of four main choices covers regimes with
 different numbers of pixels above a certaint S/N, which in turn depend
-on the number of images produced by the lens.
+on the number of images produced by the lens. 
+
 
 The brighter lenses are selected to be representative of the majority
 of currently known lenses, selected from the Sloan Digital Sky Survey,
@@ -373,6 +375,14 @@ Ruff et al. 2011 \cite{2011ApJ...727...96R}, Sonnenfeld et al. 2013
 \cite{2015ApJ...800...94S}, Papers I-V, respectively, except for the
 first citation) samples.
 
+As in the real-systems used as inspiration, the sources are set at
+$z_s = 1.071$ and $2.77$ and the deflectors are set at $z_d = 0.351$
+and $0.783$, respectively for the bright and faint systems. The
+redshifts are typical of what we expect to find in future sample, and
+a different choice within a realistic range would not have changed any
+of our conclusions.
+
+
 \subsection{Parameters of the Sample of Mock Lenses}
 
 The structural parameters of the four systems are listed in Table
@@ -399,26 +409,21 @@ directly available from the data, so they require some
 extrapolations. The value for $I$-band is based on Sonnenfeld et
 al. 2013 (SL2S III,
 \cite{2013ApJ...777...97S}), while for $K$ and $V$ bands are estimated
-with K-corrections from typical spectral energy
-distributions. Unknown magnitudes in $K$-band are assigned from
-$H$-band ones via $K_{AB}=H_{AB}$.
+with K-corrections from typical spectral energy distributions. Unknown
+magnitudes in $K$-band are assigned from $H$-band ones via
+$K_{AB}=H_{AB}$. We note that the host galaxies of type-1 AGNs at
+these redshifts are generally brighter than the magnitudes adopted
+here (Bennert et al. 2011; \cite{2011ApJ...742..107B}), so our
+assumptions are quite conservative.
 
-The effective (half-light) radii to be fitted in \textit{bright} systems are
-evaluated separately in different bands, to get a precise estimate of the
-effective radius and its uncertainties. Differently, a unique
-effective radius is asserted across bandpasses for the \textit{faint}
-systems. Neglecting colour gradients in this case does not affect the
-ability to recover the masss density profile in any significant way
+The effective (half-light) radii to be fitted in \textit{bright}
+systems are evaluated separately in different bands, to get a precise
+estimate of the effective radius and its uncertainties. Differently, a
+unique effective radius is asserted across bandpasses for the
+\textit{faint} systems. Neglecting colour gradients in this case does
+not affect the ability to recover the masss density profile in any
+significant way
 \cite{2013ApJ...777...97S}.
-
-%On the other hand, this fixed
-%effective radius value in all bands facilitates avoiding observational
-%contamination from the lensed source to the most degree. The
-%distinction of fitting quality between precise method (different
-%effective radius in different bands) and robust method (unique
-%effective radius in all bands) is discussed in Sonnenfeld's work.
-%In most cases, the typical difference in
-%the $\chi^{2}$ values between the two methods is of order 10\%.
 
 For both the \textit{faint} and the \textit{bright} systems, the source positions are
 assigned so as to map the source in either two or four images. This
@@ -439,19 +444,19 @@ is typically the case for medium luminosity AGN
 source redshits. The adopted magnitudes are listed in
 Table~\ref{tab:pointsource}.
 
-We note that the \textit{bright} source
-configuration is too bright to be practical for TMT, given its
-sensitivity -- the exposure time scales as $D^{-4}$, where $D$ is the
-telescope diameter, for background limited point source
-exposures \textbf{[AA: keep or excise?]}. Realistically, observations of such bright systems would
-be completely dominated by overheads related to target acquisition and
-will only be carried out in extremely rare circumstances. Therefore we
-do not simulate TMT observations for the bright systems. Even for the
-fainter system, we have chosen to make the source galaxies
-artificially fainter ($K$=26) in order to avoid saturating the central
-pixels while imaging deep enough to get a sufficient signal to noise
-ratio on the host galaxy. As will be shown below, the exposure time
-requirements for TMT are extremely short even in these cases.
+We note that the \textit{bright} source configuration is too bright to
+be practical for TMT, given its sensitivity -- the exposure time
+scales as $D^{-4}$, where $D$ is the telescope diameter, for
+background limited point source exposures. Realistically, observations
+of such bright systems would be completely dominated by overheads
+related to target acquisition and will only be carried out in
+extremely rare circumstances. Therefore we do not simulate TMT
+observations for the bright systems. Even for the fainter system, we
+have chosen to make the source galaxies artificially fainter ($K$=26)
+in order to avoid saturating the central pixels while imaging deep
+enough to get a sufficient signal to noise ratio on the host
+galaxy. As will be shown below, the exposure time requirements for TMT
+are extremely short even in these cases.
 
 %\textbf{{Question}: What are the point-source magnitudes, even if they're not specifically modelled? How were they assigned? (They are in the Table 4. For the fainter systems, they are all 24.0 for all the filters except for TMT. The magnitude of point source is 26.0 for TMT, that's because TMT has an amazing detecting ability. For the brighter systems, they are assigned with magnitude of source galaxy - 0.5 for filter K, VIS, and H; - 1.0 for filter I.)
 % Based on the recipe that Kai and I assembled? Also, magnitudes in the tables are not necessarily the instrument ones, how are they converted? With the XLM's template-based table from AA or something different? (For fainter systems, lens magnitude for I filter is from Ale's paper III, mag for K filter is estimated by TT based on the other colors, mag for VIS filter is evaluated by $mag(r,i,z)=-2.5*log((10^{-0.4r}+10^{-0.4i}+10^{-0.4z})/2)$ (there are r, i, z filters informations in Ale's paper III), $H_{AB}=K_{AB}$. For brighter systems, lens mag for I filter and V filter are from Auger's paper; mag for K band is determined by TT;  $H_{AB}=K_{AB}$) (For fainter systems, the source galaxy magnitude for filters are all 25.0 which is determined by TT. For brighter systems, the source galaxy magnitude for I and V filters are from Newton's paper, the source galaxy magnitude for K filter is 22.0 which is determined by TT)}
@@ -815,8 +820,9 @@ law mass density profile. In order to guarantee that the images be
 sufficient to constrain the Fermat potential to a level so that the
 random uncertainties are subdominant with respect to other sources of
 uncertainty, we consider it necessary for them to contain enough
-information to constrain $\gamma'$ with 2\% precision or better. We
-find that:
+information to constrain $\gamma'$ with 2\% precision or better, which
+corresponds approximately to a 2\% precision on time delay distance
+and hence H$_0$. We find that:
 
 \begin{itemize}
 \item HST can provide sufficient information with integration times of order 1-10ks, as shown by recent work based on real data
@@ -837,7 +843,7 @@ gratefully acknowledge support by the Packard Foundation through a
 Packard Research Fellowship to TT.  The work of PJM was supported by
 the U.S.  Department of Energy under contract number
 DE-AC02-76SF00515.\\
-\textbf{[...]}
+%\textbf{[...]}
 
 
 \bibliographystyle{JHEP}
@@ -859,7 +865,7 @@ Telescope & Instrument & Filter & Zero Point & Readout Noise & Background Noise 
   NGAO   & NIRC2  &   $K^\prime$&  28.04  & 5.75   &      26    &     0.010     \\
   TMT    & IRIS   &   $K^\prime$&  31.10  & 2.00   &      21    &     0.004  \\
   Euclid & VIS    &   $r+i+z$   &  25.58  & 4.50   &    0.43    &     0.100   \\
-  WFIRST & DRM(?) &   F184      &  26.18  & 5.00   &    0.11    &     0.110   \\
+  WFIRST & ---    &   F184      &  26.18  & 5.00   &    0.11    &     0.110   \\
   LSST   & ---    &   $I$       &  28.35  & 5.00   &      68    &     0.200  \\
 \hline
 \hline
@@ -867,7 +873,7 @@ Telescope & Instrument & Filter & Zero Point & Readout Noise & Background Noise 
 \begin{tablenotes}
 \item
 Observational facilities (telescopes and instruments) considered in this work.
- Zero points are given in the ABmag system. The VIS imager of Euclid spans the whole $r+i+z$ wavelength range. The Keck 10-m telescope is considered both with the current (LGSAO) and next-generation (NGAO) adaptive optics capabilities.\\
+ Zero points are given in the ABmag system. The VIS imager of Euclid spans the whole $r+i+z$ wavelength range. The background and exposure time of Euclid will vary across the sky. Our fiducial values are representative of the average performance. The Keck 10-m telescope is considered both with the current (LGSAO) and next-generation (NGAO) adaptive optics capabilities.\\
 \end{tablenotes}
 \label{tab:telescopes parameters}
 \end{center}
