@@ -1021,7 +1021,7 @@ Exposure times required to attain a 2\% precision on the inferred $\gamma^\prime
 \begin{center}
 \includegraphics[width=1.0\textwidth]{figures/fainter_system_4QSOimages_all.png}
 \end{center}
-\caption{Simulations of the fainter lens system with 4 QSO images. The simulated images are all 4$''$ $\times$ 4$''$. The first 4 columns, from left to right, represent HST/ACS, Keck/NIRC2+LGSAO, Keck/NIRC2+NGAO, and JWST/NIRCAM; from top to bottom, the rows correspond to 1/3 $\times$ ``target'' exposure time, ``target'' exposure time, and 3 $\times$ ``target'' exposure time. ``Target'' exposure time is defined as the exposure time that yields 2\% precision on the slope of the mass density profile of the mass model $\gamma'$. The fifth column shows simulations of 3 surveys. From top to bottom we show LSST, Euclid, and WFIRST, with the default survey exposure times (4500s, 2360s, 920s, respectively). The last column shows simulations for TMT with 2 fixed exposure times of 360 seconds and 1080 seconds.}
+\caption{Simulations of the fainter lens system with 4 QSO images. The simulated images are all 4$''$ $\times$ 4$''$. The first 4 columns, from left to right, represent HST/ACS, Keck/NIRC2+LGSAO, Keck/NIRC2+NGAO, JWST/NIRCAM, and TMT; from top to bottom, the rows correspond to 1/3 $\times$ ``target'' exposure time, ``target'' exposure time, and 3 $\times$ ``target'' exposure time. ``Target'' exposure time is defined as the exposure time that yields 2\% precision on the slope of the mass density profile of the mass model $\gamma'$. The fifth column shows simulations of 3 surveys. From top to bottom we show LSST, Euclid, and WFIRST, with the default survey exposure times (4500s, 2360s, 920s, respectively).}
 \label{fig:fainter_4QSOimages_montage}
 \end{figure}
 % =================================================
@@ -1042,8 +1042,8 @@ Exposure times required to attain a 2\% precision on the inferred $\gamma^\prime
 \begin{center}
 \includegraphics[width=1.0\textwidth]{figures/brighter_system_4QSOimages_all.png}
 \end{center}
-\caption{Simulations of the bright lens system with 4 QSO images. The simulated images are all 4$''$ $\times$ 4$''$. The first 3 columns, from left to right, represent HST/ACS, Keck/NIRC2+LGSAO, Keck/NIRC2+NGAO; from top to bottom, the rows correspond to 1/3 $\times$ "target" exposure time, "target" exposure time, and 3 $\times$ "target" exposure time. "Target" exposure time is defined as the exposure time that yields 2\% precision on the slope of the mass density profile of the mass model $\gamma'$. The fourth column shows JWST simulations with 3 fixed exposure times: 60, 180, 540 seconds, from top to bottom. The fifth column
-shows simulations of 3 surveys. From top to bottom we show LSST, Euclid, and WFIRST, with the default survey exposure times (4500s, 2360s, 920s, respectively). TMT simulations are not shown since the system is considered too bright to be observed with this telescope in practice. \bf {XLM to remake figure after masking black spot artifacts at the center.}}
+\caption{Simulations of the bright lens system with 4 QSO images. The simulated images are all 4$''$ $\times$ 4$''$. The first 3 columns, from left to right, represent HST/ACS, Keck/NIRC2+LGSAO, Keck/NIRC2+NGAO; from top to bottom, the rows correspond to 1/3 $\times$ "target" exposure time, "target" exposure time, and 3 $\times$ "target" exposure time. "Target" exposure time is defined as the exposure time that yields 2\% precision on the slope of the mass density profile of the mass model $\gamma'$. The fourth column shows JWST simulations with 3 fixed exposure times: 60, 180, 540 seconds, from top to bottom. The fifth column 
+shows simulations of 3 surveys. From top to bottom we show LSST, Euclid, and WFIRST, with the default survey exposure times (4500s, 2360s, 920s, respectively). TMT simulations are not shown since the system is considered too bright to be observed with this telescope in practice.}
 \label{fig:brighter_4QSOimages_montage}
 \end{figure}
 % =================================================
@@ -1063,12 +1063,12 @@ shows simulations of 3 surveys. From top to bottom we show LSST, Euclid, and WFI
 % ==================================================
 \begin{figure}
 \begin{center}
-\includegraphics[width=0.48\textwidth]{figures/gamma_135949_4QSOimages_HST.png}
-\includegraphics[width=0.48\textwidth]{figures/gamma_135949_4QSOimages_JWST.png} \\
-\includegraphics[width=0.48\textwidth]{figures/gamma_135949_4QSOimages_Keck.png}
-\includegraphics[width=0.48\textwidth]{figures/gamma_135949_4QSOimages_NGAO.png} \\
-\includegraphics[width=0.48\textwidth]{figures/gamma_135949_4QSOimages_E_W_L.png}
-\includegraphics[width=0.48\textwidth]{figures/gamma_135949_4QSOimages_TMT.png}
+\includegraphics[width=0.49\textwidth]{figures/gamma_hist_135949_4QSO_HST.png} 
+\includegraphics[width=0.49\textwidth]{figures/gamma_hist_135949_4QSO_JWST.png} \\
+\includegraphics[width=0.49\textwidth]{figures/gamma_hist_135949_4QSO_Keck.png} 
+\includegraphics[width=0.49\textwidth]{figures/gamma_hist_135949_4QSO_NGAO.png} \\
+\includegraphics[width=0.49\textwidth]{figures/gamma_hist_135949_4QSO_TMT.png} 
+\includegraphics[width=0.49\textwidth]{figures/gamma_hist_135949_4QSO_EWL.png}
 \end{center}
 \caption{Precision on the mass density profile slope $\gamma'$ as a function of exposure time.  This figure shows the results for the fainter lens system with 4 QSO images. The quantity $\gamma'_{in}$ is the input SIE mass slope. The quantity $\gamma'_{out}$ is the output of the inference process.
 The insert in each panel shows all 10 simulation results for each exposure time with the same color coding. Note that both axes represent $\gamma'_{out}/\gamma'_{in}$ whereas error bars are only shown on the x-axis for clarity.}
@@ -1080,12 +1080,12 @@ The insert in each panel shows all 10 simulation results for each exposure time 
 % ==================================================
 \begin{figure}
 \begin{center}
-\includegraphics[width=0.48\textwidth]{figures/gamma_135949_anti_2QSOimages_HST.png}
-\includegraphics[width=0.48\textwidth]{figures/gamma_135949_anti_2QSOimages_JWST.png} \\
-\includegraphics[width=0.48\textwidth]{figures/gamma_135949_anti_2QSOimages_Keck.png}
-\includegraphics[width=0.48\textwidth]{figures/gamma_135949_anti_2QSOimages_NGAO.png} \\
-\includegraphics[width=0.48\textwidth]{figures/gamma_135949_anti_2QSOimages_EWL.png}
-\includegraphics[width=0.48\textwidth]{figures/gamma_135949_anti_2QSOimages_TMT.png}
+\includegraphics[width=0.49\textwidth]{figures/gamma_hist_135949anti_2QSO_HST.png}
+\includegraphics[width=0.49\textwidth]{figures/gamma_hist_135949anti_2QSO_JWST.png} \\
+\includegraphics[width=0.49\textwidth]{figures/gamma_hist_135949anti_2QSO_Keck.png}
+\includegraphics[width=0.49\textwidth]{figures/gamma_hist_135949anti_2QSO_NGAO.png} \\
+\includegraphics[width=0.49\textwidth]{figures/gamma_hist_135949anti_2QSO_TMT.png}
+\includegraphics[width=0.49\textwidth]{figures/gamma_hist_135949anti_2QSO_EWL.png}
 \end{center}
 \caption{Same as Fig.~\ref{fig:gamma_fainter_4QSOimages} for the fainter lens system with 2 images.
 \label{fig:gamma_fainter_2QSOimages}}
