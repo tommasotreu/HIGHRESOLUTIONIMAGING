@@ -1,15 +1,15 @@
-\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
-\BOOKMARK [1][-]{section.2}{Summary of simulated instrumental setups}{}% 2
-\BOOKMARK [1][-]{section.3}{The Lens Sample}{}% 3
-\BOOKMARK [2][-]{subsection.3.1}{Sample Seletion}{section.3}% 4
-\BOOKMARK [2][-]{subsection.3.2}{Parameters of the Sample of Mock Lenses}{section.3}% 5
-\BOOKMARK [1][-]{section.4}{Description of the inference process}{}% 6
-\BOOKMARK [2][-]{subsection.4.1}{Image generating process}{section.4}% 7
-\BOOKMARK [3][-]{subsubsection.4.1.1}{Light Model}{subsection.4.1}% 8
-\BOOKMARK [3][-]{subsubsection.4.1.2}{Mass Model}{subsection.4.1}% 9
-\BOOKMARK [3][-]{subsubsection.4.1.3}{Point Source Model}{subsection.4.1}% 10
-\BOOKMARK [3][-]{subsubsection.4.1.4}{Image Noise}{subsection.4.1}% 11
-\BOOKMARK [2][-]{subsection.4.2}{Inferring the parameters}{section.4}% 12
-\BOOKMARK [2][-]{subsection.4.3}{Exposure times}{section.4}% 13
-\BOOKMARK [1][-]{section.5}{Results}{}% 14
-\BOOKMARK [1][-]{section.6}{Summary}{}% 15
+\BOOKMARK [1][-]{section.1}{Introduction}{}
+\BOOKMARK [1][-]{section.2}{Summary of simulated instrumental setups}{}
+\BOOKMARK [1][-]{section.3}{The Lens Sample}{}
+\BOOKMARK [2][-]{subsection.3.1}{Sample Seletion}{section.3}
+\BOOKMARK [2][-]{subsection.3.2}{Parameters of the Sample of Mock Lenses}{section.3}
+\BOOKMARK [1][-]{section.4}{Description of the inference process}{}
+\BOOKMARK [2][-]{subsection.4.1}{Image generating process}{section.4}
+\BOOKMARK [3][-]{subsubsection.4.1.1}{Light Model}{subsection.4.1}
+\BOOKMARK [3][-]{subsubsection.4.1.2}{Mass Model}{subsection.4.1}
+\BOOKMARK [3][-]{subsubsection.4.1.3}{Point Source Model}{subsection.4.1}
+\BOOKMARK [3][-]{subsubsection.4.1.4}{Image Noise}{subsection.4.1}
+\BOOKMARK [2][-]{subsection.4.2}{Inferring the parameters}{section.4}
+\BOOKMARK [2][-]{subsection.4.3}{Exposure times}{section.4}
+\BOOKMARK [1][-]{section.5}{Results}{}
+\BOOKMARK [1][-]{section.6}{Summary}{}
