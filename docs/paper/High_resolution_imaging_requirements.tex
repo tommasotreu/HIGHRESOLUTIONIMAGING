@@ -218,9 +218,10 @@ to constrain $\gamma'$ it will also be insufficient to constrain more
 flexible models. Likewise, systematic errors not considered in this
 paper, such as those arising from incomplete knowledge of the PSF,
 will only increase the error budget
-\citep[e.g.,][]{2015arXiv150602720A} although perhaps not critically
+(e.g., Agnello et al. 2015 \citep{2015arXiv150602720A}) although perhaps not critically
 in good conditions
-\citep[e.g.,][]{2007ApJ...671.1196M,2012MNRAS.424.2800L}. Thus, in
+(e.g., Marshall et al. 2007 \citep{2007ApJ...671.1196M}, 
+Lagattuta et al. 2012 \citep{2012MNRAS.424.2800L}). Thus, in
 order to leave room for additional sources of uncertainty in the error
 budget, we set a rather stringent requirement of 0.02 uncertainty of
 $\gamma'$ (corresponding approximately to 2\% per system on time delay
@@ -283,9 +284,10 @@ configuration that is closer to the $I$-band in the optical and the
 $K'$-band in the near infrared \footnote{Clearly, for survey
 telescopes such as LSST one can further increase the precision on
 $\gamma'$ by considering multiple bands at once, when they are
-available \cite{2011ApJ...734..104N,2013MNRAS.436..503A}. However, the
+available (Newton et al. 2011 \citep{2011ApJ...734..104N}, 
+Auger et al. 2013 \citep{2013MNRAS.436..503A}). However, the
 multifilter analysis is beyond the scope of this paper, which is
-concerned with comparison across instruments/telescopes.} A brief
+concerned with comparison across instruments/telescopes.}. A brief
 description of each setup follows.
 
 \begin{enumerate}
@@ -378,7 +380,7 @@ the next decade (Oguri \& Marshall 2010
 measure time delay distances in the next decade will span
 approximately the range covered by our sample. Note that some known
 lensed quasars are significantly brighter than any of the systems
-simulated here \cite[e.g.,][]{1992MNRAS.259P...1P}. Even though we
+simulated here (e.g., Patnaik et al. 1992 \cite{1992MNRAS.259P...1P}). Even though we
 expect more of those to be discovered in the near future and they will
 be useful, they will not represent the majority of the systems in
 future large samples, nor present any major challenge for follow-up,
@@ -454,7 +456,7 @@ unique effective radius is asserted across bandpasses for the
 \textit{faint} systems. Neglecting colour gradients in this case does
 not affect the ability to recover the masss density profile in any
 significant way
-\cite{2013ApJ...777...97S}.
+(Sonnenfeld et al. 2013 \cite{2013ApJ...777...97S}).
 
 For both the \textit{faint} and the \textit{bright} systems, the source positions are
 assigned so as to map the source in either two or four images. This
@@ -483,7 +485,7 @@ of such bright systems would be completely dominated by overheads
 related to target acquisition and will only be carried out in
 extremely rare circumstances. Therefore we do not simulate TMT
 observations for the bright systems. Even for the fainter system, we
-have chosen to make the source galaxies artificially fainter ($K$=26)
+have chosen to make the source galaxies artificially fainter ($K$=26.0)
 in order to avoid saturating the central pixels while imaging deep
 enough to get a sufficient signal to noise ratio on the host
 galaxy. As will be shown below, the exposure time requirements for TMT
@@ -541,7 +543,7 @@ S\'ersic profile is described by %the equation (Caon et al. 1993 \cite{1993MNRAS
 %
 The amplitude $I_{\mathrm{e}}$ is the intensity at the effective
 radius $R_{\mathrm{eff}}$, the S\'ersic index $n$ controls the degree
-of curvature of the radial light profile,, the constant $k$ is determined so that
+of curvature of the radial light profile, the constant $k$ is determined so that
 $R_{\mathrm{eff}}$ is the half light radius (Ciotti \& Bertin 1999 \cite{1999A&A...352..447C}),
  and $q$ denotes the axis ratio. Empirically, $n$ increases with galaxy luminosity, most
 galaxies being fitted by S\'ersic index in the range $0.6 \le n
@@ -746,16 +748,15 @@ able to set the exposure time to any desired level. The minimum
 exposure time required is defined as the ``target'' exposure time. In
 addition, in order to quantify how the precision on $\gamma'$ depends
 on exposure time, we also simulated images with 1/3 and 3$\times$ the
-exposure time. This is meant to provide useful guidance for designing
+target exposure time. This is meant to provide useful guidance for designing
 future experiments. However, for some combination of lens brigthenss
 and telescope/instrument configuration, the target exposure time is too
 short to be adopted in realistic observations. In practice, therefore
 these lenses will either not be observed with this setup or be
 observed for longer exposure time. Taking into account typical
 overheads for pointing and acquisition we evaluated that the {\it
-brighter} lenses are too bright to be observed with TMT, while a
-minimum exposure time of 360s gives more than enough signal-to-noise
-ratio for the fainter systems. Likewise the brighter systems are
+brighter} lenses are too bright to be observed with TMT. 
+Likewise the brighter systems are
 likely too bright to be observed efficiently with JWST. We still
 simulated them, but set the minimum exposure time to 60s. Of course in
 some instances it may be beneficial to obtain longer exposures with
@@ -768,14 +769,15 @@ meet the requirement.
 
 \section{Results}
 
-Using the methods summarized in the previous section we generate 10
-mock systems for each configuration, and carry out the full inference
+Using the methods summarized in the previous section we generate 30
+mock systems for most configurations and 10 mock systems for TMT with 
+the view of saving computing time, and carry out the full inference
 for each one using the python Markov Chain Monte Carlo sampler
 \texttt{pymc}.  The results are summarized
 in~Figures~\ref{fig:gamma_fainter_4QSOimages}
 to~\ref{fig:gamma_brighter_2QSOimages}. Table~\ref{tab:exptimes}
 summarizes the ``target'' exposure times for HST, JWST, Keck LGSAO and
-NGAO, i.e. those required in order to reach 2\% uncertainties on
+NGAO, TMT, i.e. those required in order to reach 2\% uncertainties on
 $\gamma^{\prime}$.  We reiterate that this is is only the random
 component of the uncertainty, and thus it represent a lower limit to
 the total uncertainty. For this reason we have set a rather stringent
@@ -785,14 +787,14 @@ modeling errors. In practice, our target exposure times should be
 considered as minimum exposure times, i.e. necessary and not
 sufficient conditions. Assessing the contribution of those additional
 sources of uncertainty requires detailed modeling of specific systems
-and instruments \cite[e.g.,][]{2014ApJ...788L..35S}, and is left for
+and instruments (e.g., Suyu et al. 2014 \cite{2014ApJ...788L..35S}), and is left for
 future work.
 %In addition, this work is focused exclusively
 %on the high resolution imaging requirements.
 
 First of all, we find that HST can deliver the desired image quality
 with exposures of a few ks at most, consistent with published work
-\cite{2013ApJ...766...70S}. Conversely,
+(Suyu et al. 2013 \cite{2013ApJ...766...70S}). Conversely,
 it seems that current AO capabilities -- even setting aside the
 difficulties associated with the reconstruction of the PSF -- are only
 sufficient to study the brighter systems, for reasonable exposure
@@ -802,7 +804,7 @@ lenses. In this case, the higher background than from space is
 compensated by the advantage of having smaller detector pixels, and
 thus better sampling of the PSF, and a larger telescope aperture.
 
-For TMT we concluded that 360s of exposure will be more than
+For TMT we concluded that 1200s of exposure will be more than
 sufficient for all systems considered here and therefore TMT is likely
 to be used either to take a brief image before taking a spectrum for
 determining the deflector velocity field and source redshift, or to
@@ -817,7 +819,8 @@ the targets considered here, LSST and WFIRST should be sufficient at
 least for the brigher ones. Of course, these surveys will cover vast
 fractions of the sky and will therefore provide at no additional cost
 useful images for all the brighter systems
-\cite{2009astro2010S.159K}. Those will be a great complement to the
+(Koopmans et al. 2009 \cite{2009astro2010S.159K}). 
+Those will be a great complement to the
 deeper pointed observation obtained with the other telescopes. WFIRST
 is planned to have a component of GO program, so it could meet the
 imaging requirements by integrating longer than in the survey mode. In
@@ -836,7 +839,8 @@ provided that images of sufficient resolution and signal to noise
 ratio are available. In anticipation of the hundreds or thousands of
 lensed quasars that are going to be discovered in the next decade from
 ground based low resolution imaging surveys
-\cite{2010MNRAS.405.2579O}, we study the requirements for high
+(Oguri \& Marshall 2010 \cite{2010MNRAS.405.2579O}), 
+we study the requirements for high
 resolution imaging follow-up. We consider a range of
 instrument/telescope configurations spanning from currently available
 systems (HST/ACS and Keck/LGSAO/NIRC2) to planned observatories and
@@ -856,10 +860,10 @@ corresponds approximately to a 2\% precision on time delay distance
 and hence H$_0$. We find that:
 
 \begin{itemize}
-\item HST can provide sufficient information with integration times of order 1-10ks, as shown by recent work based on real data
-\item Keck/LGSAO can provide sufficient information for only the brighter systems to be discovered. The critical issue will be the accuracy with which the PSF can be reconstructed. Significant effort is under way to overcome this critical obstacle \cite{2014SPIE.9148E..4SJ,2014SPIE.9148E..0SR}.
+\item HST can provide sufficient information with integration times of order 1-10ks, as shown by recent work based on real data.
+\item Keck/LGSAO can provide sufficient information for only the brighter systems to be discovered. The critical issue will be the accuracy with which the PSF can be reconstructed. Significant effort is under way to overcome this critical obstacle (Jolissaint et al. 2014 \cite{2014SPIE.9148E..4SJ}, Ragland et al. 2014 \cite{2014SPIE.9148E..0SR}).
 \item The planned Keck/NGAO system will improve the performance of Keck to make it comparable to that of HST, provided that the PSF can be reconstructed with sufficient accuracy.
-\item JWST/NIRCAM and TMT/IRIS will be able to deliver the desired image quality with very short exposure times for any lens for which time delays are reasonably going to be available. Thus they will be ideal instruments for follow-up of time-delay lenses, especially if short images are followed by deeper spectroscopic observations to measure the redshift of the source and the spatially resolved velocity dispersion (and redshift) of the deflector. For TMT, and other ELTs, the abilty to reconstruct accurately the PSF of the AO system \cite{2014SPIE.9148E..10H} will be critical for time delay cosmography.
+\item JWST/NIRCAM and TMT/IRIS will be able to deliver the desired image quality with very short exposure times for any lens for which time delays are reasonably going to be available. Thus they will be ideal instruments for follow-up of time-delay lenses, especially if short images are followed by deeper spectroscopic observations to measure the redshift of the source and the spatially resolved velocity dispersion (and redshift) of the deflector. For TMT, and other ELTs, the abilty to reconstruct accurately the PSF of the AO system (Herriot et al. \cite{2014SPIE.9148E..10H}) will be critical for time delay cosmography.
 \item The survey modes of Euclid/WFIRST/LSST will likely be too shallow and/or have insufficient resolution except for the very brightest systems in the sky. Dedicated follow-up with WFIRST in GO mode will be necessary for the fainter gravitational lens systems.
 \end{itemize}
 
