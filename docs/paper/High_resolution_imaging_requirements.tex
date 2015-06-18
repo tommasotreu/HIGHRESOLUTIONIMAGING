@@ -486,11 +486,11 @@ of such bright systems would be completely dominated by overheads
 related to target acquisition and will only be carried out in
 extremely rare circumstances. Therefore we do not simulate TMT
 observations for the bright systems. Even for the fainter system, we
-have chosen to make the source galaxies artificially fainter ($K$=26.0)
-in order to avoid saturating the central pixels while imaging deep
-enough to get a sufficient signal to noise ratio on the host
-galaxy. As will be shown below, the exposure time requirements for TMT
-are extremely short even in these cases.
+have chosen to make the source galaxies artificially fainter
+($K$=26.0) in order to avoid saturating the central pixels while
+imaging deep enough to get a sufficient signal to noise ratio on the
+host galaxy. As will be shown below, the exposure time requirements
+for TMT are short even in these cases.
 
 %\textbf{{Question}: What are the point-source magnitudes, even if they're not specifically modelled? How were they assigned? (They are in the Table 4. For the fainter systems, they are all 24.0 for all the filters except for TMT. The magnitude of point source is 26.0 for TMT, that's because TMT has an amazing detecting ability. For the brighter systems, they are assigned with magnitude of source galaxy - 0.5 for filter K, VIS, and H; - 1.0 for filter I.)
 % Based on the recipe that Kai and I assembled? Also, magnitudes in the tables are not necessarily the instrument ones, how are they converted? With the XLM's template-based table from AA or something different? (For fainter systems, lens magnitude for I filter is from Ale's paper III, mag for K filter is estimated by TT based on the other colors, mag for VIS filter is evaluated by $mag(r,i,z)=-2.5*log((10^{-0.4r}+10^{-0.4i}+10^{-0.4z})/2)$ (there are r, i, z filters informations in Ale's paper III), $H_{AB}=K_{AB}$. For brighter systems, lens mag for I filter and V filter are from Auger's paper; mag for K band is determined by TT;  $H_{AB}=K_{AB}$) (For fainter systems, the source galaxy magnitude for filters are all 25.0 which is determined by TT. For brighter systems, the source galaxy magnitude for I and V filters are from Newton's paper, the source galaxy magnitude for K filter is 22.0 which is determined by TT)}
@@ -749,19 +749,18 @@ able to set the exposure time to any desired level. The minimum
 exposure time required is defined as the ``target'' exposure time. In
 addition, in order to quantify how the precision on $\gamma'$ depends
 on exposure time, we also simulated images with 1/3 and 3$\times$ the
-target exposure time. This is meant to provide useful guidance for designing
-future experiments. However, for some combination of lens brigthenss
-and telescope/instrument configuration, the target exposure time is too
-short to be adopted in realistic observations. In practice, therefore
-these lenses will either not be observed with this setup or be
-observed for longer exposure time. Taking into account typical
-overheads for pointing and acquisition we evaluated that the {\it
-brighter} lenses are too bright to be observed with TMT. 
-Likewise the brighter systems are
-likely too bright to be observed efficiently with JWST. We still
-simulated them, but set the minimum exposure time to 60s. Of course in
-some instances it may be beneficial to obtain longer exposures with
-JWST and TMT and thus exquisite data.
+target exposure time. This is meant to provide useful guidance for
+designing future experiments. However, for some combination of lens
+brigthenss and telescope/instrument configuration, the target exposure
+time is too short to be adopted in realistic observations. In
+practice, therefore these lenses will either not be observed with this
+setup or be observed for longer exposure time. Taking into account
+typical overheads for pointing and acquisition we evaluated that the
+brighter lenses are too bright to be observed with TMT.  Likewise the
+brighter systems are likely too bright to be observed efficiently with
+JWST. We still simulated them, but set the minimum exposure time to
+60s. Of course in some instances it may be beneficial to obtain longer
+exposures with JWST and TMT and thus exquisite data.
 
 For the telescopes/instruments to be operated in survey mode, we
 simulated the planned exposure time, and considered the specific
@@ -807,12 +806,12 @@ thus better sampling of the PSF, and a larger telescope aperture.
 
 For TMT we concluded that 1200s of exposure will be more than
 sufficient for all systems considered here and therefore TMT is likely
-to be used either to take a brief image before taking a spectrum for
-determining the deflector velocity field and source redshift, or to
-follow-up fainter systems, yet to be discovered. Similary, JWST can
-obtain images of the desired quality in just a few minutes, and
-therefore it is likely to be used mostly to take images before taking
-a spectrum or to follow-up fainter systems.
+to be used either in 'snapshot mode' or to take an image before taking
+a spectrum for determining the deflector velocity field and source
+redshift, or to follow-up fainter systems, yet to be
+discovered. Similary, JWST can obtain images of the desired quality in
+just a few minutes, and therefore it is likely to be used mostly to
+take images before taking a spectrum or to follow-up fainter systems.
 
 For the surveys, the conclusion is that while the Euclid survey seems
 to have insufficient depth and resolution to meet our requirements on
@@ -864,7 +863,7 @@ and hence H$_0$. We find that:
 \item HST can provide sufficient information with integration times of order 1-10ks, as shown by recent work based on real data.
 \item Keck/LGSAO can provide sufficient information for only the brighter systems to be discovered. The critical issue will be the accuracy with which the PSF can be reconstructed. Significant effort is under way to overcome this critical obstacle (Jolissaint et al. 2014 \cite{2014SPIE.9148E..4SJ}, Ragland et al. 2014 \cite{2014SPIE.9148E..0SR}).
 \item The planned Keck/NGAO system will improve the performance of Keck to make it comparable to that of HST, provided that the PSF can be reconstructed with sufficient accuracy.
-\item JWST/NIRCAM and TMT/IRIS will be able to deliver the desired image quality with very short exposure times for any lens for which time delays are reasonably going to be available. Thus they will be ideal instruments for follow-up of time-delay lenses, especially if short images are followed by deeper spectroscopic observations to measure the redshift of the source and the spatially resolved velocity dispersion (and redshift) of the deflector. For TMT, and other ELTs, the abilty to reconstruct accurately the PSF of the AO system (Herriot et al. \cite{2014SPIE.9148E..10H}) will be critical for time delay cosmography.
+\item JWST/NIRCAM and TMT/IRIS will be able to deliver the desired image quality with short exposure times for any lens for which time delays are reasonably going to be available. Thus they will be ideal instruments for follow-up of time-delay lenses, especially if short images are followed by deeper spectroscopic observations to measure the redshift of the source and the spatially resolved velocity dispersion (and redshift) of the deflector. For TMT, and other ELTs, the abilty to reconstruct accurately the PSF of the AO system (Herriot et al. \cite{2014SPIE.9148E..10H}) will be critical for time delay cosmography.
 \item The survey modes of Euclid/WFIRST/LSST will likely be too shallow and/or have insufficient resolution except for the very brightest systems in the sky. Dedicated follow-up with WFIRST in GO mode will be necessary for the fainter gravitational lens systems.
 \end{itemize}
 
