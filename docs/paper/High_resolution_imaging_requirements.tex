@@ -486,7 +486,7 @@ of such bright systems would be completely dominated by overheads
 related to target acquisition and will only be carried out in
 extremely rare circumstances. Therefore we do not simulate TMT
 observations for the bright systems. Even for the fainter system, we
-have chosen to make the source galaxies artificially fainter
+have chosen to make the AGN artificially fainter
 ($K$=26.0) in order to avoid saturating the central pixels while
 imaging deep enough to get a sufficient signal to noise ratio on the
 host galaxy. As will be shown below, the exposure time requirements
@@ -645,7 +645,7 @@ read out. As usual, the variance of noise per pixel is given by
 \end{equation}
 %
 where $C$ is the signal from clean lens system in electrons per second
-per pixel, $t$ is the integration time in seconds, $B_{\mathrm{sky}}$
+per pixel, $t$ is the integration time in seconds, $B$
 is the sum of the sky background and detector dark current in
 electrons per second per pixel, $N_{\mathrm{read}}$ is the number of
 detector readouts, and $R$ is the standard deviation of the read noise
@@ -779,7 +779,7 @@ to~\ref{fig:gamma_brighter_2QSOimages}. Table~\ref{tab:exptimes}
 summarizes the ``target'' exposure times for HST, JWST, Keck LGSAO and
 NGAO, TMT, i.e. those required in order to reach 2\% uncertainties on
 $\gamma^{\prime}$.  We reiterate that this is is only the random
-component of the uncertainty, and thus it represent a lower limit to
+component of the uncertainty, and thus it represents a lower limit to
 the total uncertainty. For this reason we have set a rather stringent
 limit of 2\%, in order to leave room for additional uncertainties,
 such as, e.g., systematic errors related to PSF reconstruction and
@@ -999,7 +999,7 @@ brighter system$^a$ &21.7  &  21.5 & 22.9  &  21.5  & 6.09  & 8.22 & 6.86  & 7.5
 \item
 Magnitudes (in the ABmag system) and magnifications of multiple images.
  The source magnitude `mag' is given in the source plane so that the observed magnitude in the image plane is given by
-  $\mathrm{mag}-2.5\log_{10} \mu$, where $\mu$ is the magnification of each image. \\
+  $\mathrm{mag}-2.5\log_{10} \mu$, where $\mu$ is the magnification of each image. We just consider TMT observations for the fainter system, and make the point source artificially fainter ($K$=26.0) in order to avoid saturating.\\
 $^a$ This configuration yields 4 QSO images. \\
 $^b$ This configuration yields 2 QSO images. \\
 \label{tab:pointsource}
