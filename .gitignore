@@ -4,6 +4,7 @@
 *.toc
 *.dvi
 *.blg
+*.out
 *synctex*
 
 # Don't check in PDF (for now):

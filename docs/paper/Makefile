@@ -2,7 +2,7 @@
 all: paper
 
 clean:
-	rm -f *.aux *.log *.dvi *.blg *.out *.bbl *.toc
+	rm -f *.aux *.log *.dvi *.blg *.out *.toc
 
 paper: High_resolution_imaging_requirements.pdf
 
