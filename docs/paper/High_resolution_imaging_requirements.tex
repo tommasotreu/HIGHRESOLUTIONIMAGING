@@ -358,15 +358,13 @@ adopt a Gaussian function with FWHM $0\farcs15$.
 \item The Large Synoptic Survey Telescope (LSST) is designed to
 repeatedly image the entire visible Southern sky in six optical and
 near infrared bands (out to $\sim$ 1 micron) every few nights for ten
-years
-
-
-The
+years. The
 survey and instrument properties are taken from Ivezic et al. 2008
 \cite{2008arXiv0805.2366I} and the LSST Science Requirements Document
 \footnote{\url{http://www.lsst.org/files/docs/SRD.pdf}}. The PSF of
 LSST will vary over time. We adopt a Gaussian PSF with FWHM $0\farcs7$
-as representative of the image quality of LSST in the i-band.
+as representative of the stacked image quality of LSST in the i-band,
+and consider the full depth survey images in our analysis.
 
 \end{enumerate}
 
@@ -393,7 +391,8 @@ work.
 
 \section{The Lens Sample}
 
-In this section we introduce our sample, taken to be illustrative of the kind of systems to be discovered in the next decade.
+In this section we introduce our sample, taken to be illustrative of
+the kind of systems to be discovered in the next decade.
 
 \subsection{Sample Seletion}
 
@@ -401,7 +400,7 @@ We have chosen four prototypical systems for this exploration,
 characterized as \textbf{faint} or \textbf{bright} and \textbf{double}
 or \textbf{quad} depending on the photometry and image
 configuration. This set of four main choices covers regimes with
-different numbers of pixels above a certaint S/N, which in turn depend
+different numbers of pixels above a certain S/N, which in turn depend
 on the number of images produced by the lens.
 
 
@@ -585,7 +584,8 @@ galaxies being fitted by S\'ersic index in the range $0.6 \le n
 deflectors, typical of massive early-type galaxies, and $n=4/3$ or
 $n=4$ for the sources, consistent with typical observed values for
 blue galaxies and AGN hosts. We checked by re-running simulations with
-different $n$ for the source that our results do not depend
+these different choices for the source S\'ersic index
+that our results do not depend
 significantly on this model assumption.
 
 \subsubsection{Mass Model}
@@ -606,17 +606,19 @@ The \textit{critical density} $\Sigma_{cr}$ is defined by
 \Sigma_{\mathrm{cr}} = \frac{c^{2}D_{\mathrm{s}}}{4\pi G D_{\mathrm{d}} D_{\mathrm{ds}}}
 \end{equation}
 %
-in terms of the relative distances to the deflector ($D_{\mathrm{d}}$), to the
-source ($D_{\mathrm{s}}$), and between the deflector and the source
-($D_{\mathrm{ds}}$). The Einstein radius $R_{\rm{E}}$ is chosen such that, in the spherical limit ($\qm=1$),
- it encloses a mean surface density equal to $\Sigma_{cr}.$ This is also the radius of a ring traced by the host of
- the quasar when this is exactly aligned with the lens galaxy.
-
- Power-law models of elliptical galaxies (Evans 1994 \cite{1994MNRAS.267..333E}) have often been used with
-success over the years to model gravitational lenses.
- Fast methods to compute 2D deflections from elliptical power-law profiles have been given by Barkana 1998
-\cite{1998ApJ...502..531B}, as a special case of the formalism by Schramm 1990 \cite{1990A&A...231...19S} for homoeoidal profiles.
-%
+in terms of the relative distances to the deflector
+($D_{\mathrm{d}}$), to the source ($D_{\mathrm{s}}$), and between the
+deflector and the source ($D_{\mathrm{ds}}$). The Einstein radius
+$R_{\rm{E}}$ is chosen such that, in the spherical limit ($\qm=1$), it
+encloses a mean surface density equal to $\Sigma_{cr}.$ This is also
+the radius of a ring traced by the host of  the quasar when this is
+exactly aligned with the lens galaxy.  Power-law models of elliptical
+galaxies (Evans 1994 \cite{1994MNRAS.267..333E}) have often been used
+with success over the years to model gravitational lenses. Fast
+methods to compute 2D deflections from elliptical power-law profiles
+have been given by Barkana 1998 \cite{1998ApJ...502..531B}, as a
+special case of the formalism by Schramm 1990
+\cite{1990A&A...231...19S} for homoeoidal profiles. %
 %
 % Then, in our power-law case the deflections can
 %be rewritten conveniently as
@@ -685,15 +687,24 @@ detector readouts, and $R$ is the standard deviation of the read noise
 in electrons. Realistically, when long integration times are required,
 we set the number of readouts by requiring no single exposure be
 longer then a maximum time that depends on each instrument
-configuration. Considering the definite properties in different types of instruments, we pick 1000.0 seconds as the crude maximum exposure time for space telescopes (HST and JWST), 300.0 seconds for the ground based telescopes (Keck and TMT) appropriately. The cadenced surveys (Euclid, WFIRST, and LSST) have fixed maximum time: 590.0 seconds, 184.0 seconds, and 15.0 seconds, respectively.
-Examples of simulated images are shown in
+configuration. Considering the definite properties in different types
+of instruments, we pick 1000.0 seconds as the crude maximum exposure
+time for space telescopes (HST and JWST), 300.0 seconds for the ground
+based telescopes (Keck and TMT) appropriately. Each of the surveys we
+model  (Euclid, WFIRST, and LSST) have fixed maximum exposure times
+(590 seconds, 184 seconds, and 15~seconds, respectively) which
+we use to compute the read noise per exposure. We then emulate  the
+stacking of each survey's exposures to reach the approximate expected
+total exposure time (2360, 920 and 4500~seconds, for Euclid, WFIRST,
+and LSST, respectively).  Examples of simulated images are shown in
 Figure~\ref{fig:fainter_4QSOimages_montage}
 to~\ref{fig:brighter_2QSOimages_montage}.
 
 \subsection{Inferring the parameters}
 \label{ssec:inf}
 
-The same code that is used to generate the mock models is also used to fit them. The
+The same code that is used to generate the mock Einstein Ring images
+is also used to fit them. The
 modelling procedure follows previous work done with real lens data (e.g., Auger et al. 2011
 \cite{2011MNRAS.411L...6A}, Auger et al.~2013 \cite{2013MNRAS.436..503A}, Stark et al.~2013
 \cite{2013MNRAS.436.1040S}).
@@ -797,10 +808,10 @@ simulated them, but set the minimum exposure time to 60s. Of course in
 some instances it may be beneficial to obtain longer exposures with
 JWST and TMT and thus exquisite data.
 
-For the telescopes/instruments to be operated in survey mode, we
-simulated the planned exposure time, and considered the specific
-question of whether the ensuing data quality is sufficient or not to
-meet the requirement.
+For the survey telescopes, we simulated the planned exposure time as
+described above, and then  simply considered the specific question of
+whether the ensuing data quality is sufficient to meet the requirement
+or not.
 
 \section{Results}
 
@@ -827,7 +838,7 @@ future work.
 %on the high resolution imaging requirements.
 
 First of all, we find that HST can deliver the desired image quality
-with exposures of a few ks at most, consistent with published work
+with exposures of a few kiloseconds at most, consistent with published work
 \cite{2013ApJ...766...70S}. Conversely,
 it seems that current AO capabilities -- even setting aside the
 difficulties associated with the reconstruction of the PSF -- are only
@@ -850,11 +861,11 @@ a spectrum or to follow-up fainter systems.
 For the surveys, the conclusion is that while the Euclid survey seems
 to have insufficient depth and resolution to meet our requirements on
 the targets considered here, LSST and WFIRST should be sufficient at
-least for the brigher ones. Of course, these surveys will cover vast
-fractions of the sky and will therefore provide at no additional cost
-useful images for all the brighter systems
+least for the brighter ones. Of course, these surveys will cover vast
+fractions of the sky and will therefore provide
+useful images for all the brighter systems at no additional cost
 \cite{2009astro2010S.159K}. Those will be a great complement to the
-deeper pointed observation obtained with the other telescopes. WFIRST
+deeper pointed observations obtained with the other telescopes. WFIRST
 is planned to have a component of GO program, so it could meet the
 imaging requirements by integrating longer than in the survey mode. In
 fact, WFIRST is expected to have imaging performance superior to that
@@ -869,7 +880,7 @@ cosmography. Transforming measured time delays into time distances
 requires modeling the gravitational potential of the main deflector
 with sufficient accuracy. Recent work has shown that this is possible
 provided that images of sufficient resolution and signal to noise
-ratio are available. In anticipation of the hundreds or thousands of
+ratio are available. In anticipation of the hundreds to thousands of
 lensed quasars that are going to be discovered in the next decade from
 ground based low resolution imaging surveys
 \cite{2010MNRAS.405.2579O}, we study the requirements for high
@@ -892,12 +903,40 @@ corresponds approximately to a 2\% precision on time delay distance
 and hence H$_0$. We find that:
 
 \begin{itemize}
-\item HST can provide sufficient information with integration times of order 1-10ks, as shown by recent work based on real data
-\item Keck/LGSAO can provide sufficient information for only the brighter systems to be discovered. The critical issue will be the accuracy with which the PSF can be reconstructed. Significant effort is under way to overcome this critical obstacle \cite{2014SPIE.9148E..4SJ}.
-\item The planned Keck/NGAO system will improve the performance of Keck to make it comparable to that of HST in terms of resolution and signal to noise ratio, provided that the PSF can be reconstructed with sufficient accuracy.
-\item JWST/NIRCAM and TMT/IRIS will be able to deliver the desired image quality with very short exposure times for any lens for which time delays are reasonably going to be available. Thus they will be ideal instruments for follow-up of time-delay lenses, especially if short images are followed by deeper spectroscopic observations to measure the redshift of the source and the spatially resolved velocity dispersion (and redshift) of the deflector. For TMT, and other ELTs, the abilty to reconstruct accurately the PSF of the AO system \cite{2014SPIE.9148E..10H} will be critical for time delay cosmography.
-\item The survey modes of Euclid/WFIRST/LSST will likely be too shallow and/or have insufficient resolution except for the very brightest systems in the sky. Dedicated follow-up with WFIRST in GO mode will be necessary for the fainter gravitational lens systems.
+
+\item Our simulations show that HST can provide sufficient information
+with integration times of order 1-10ks, consistent with recent work
+based on real data.
+
+\item Keck/LGSAO can provide sufficient information for the brighter
+systems to be discovered. The critical issue will be the accuracy with
+which the PSF can be reconstructed. Significant effort is under way to
+overcome this obstacle \cite{2014SPIE.9148E..4SJ}.
+
+\item The planned Keck/NGAO system will improve the performance of
+Keck to make it comparable to that of HST in terms of resolution and
+signal to noise ratio, again provided that the PSF can be
+reconstructed with sufficient accuracy.
+
+\item JWST/NIRCAM and TMT/IRIS will be able to deliver the desired
+image quality with very short exposure times for any lens for which
+time delays are reasonably going to be available. Thus they will be
+ideal instruments for follow-up of time-delay lenses, especially if
+short images are followed by deeper spectroscopic observations to
+measure the redshift of the source and the spatially resolved velocity
+dispersion (and redshift) of the deflector. For TMT, and other ELTs,
+the abilty to reconstruct accurately the PSF of the AO system
+\cite{2014SPIE.9148E..10H} will be critical for time delay
+cosmography.
+
+\item The survey modes of Euclid, WFIRST, and LSST will likely be too
+shallow, and/or have insufficient resolution, except for the very
+brightest systems in the sky. Dedicated follow-up with WFIRST in GO
+mode will be necessary for the fainter gravitational lens systems.
+
 \end{itemize}
+
+
 
 \section*{Acknowledgments}
 
