@@ -321,26 +321,52 @@ observed PSF is used for the current AO system. The simulated PSF and
 performance characteristics of NGAO were kindly provided by the
 NGAO team.
 
-\item The infrared imager and spectrograph IRIS (Larkin et al. 2010 \citep{2010SPIE.7735E..29L}) working behind adaptive optics on the thirty Meter Telescope (TMT) is selected to represent the performance of the extremely large telescopes that will be operational in the next decade. IRIS is expected to be close to diffraction limited in the $K'$ band. The simulated PSF and performance characteristics of TMT-IRIS have been obtained from the IRIS team, from the TMT Exposure Time Calculator (ETC) \footnote{\url{http://tmt.mtk.nao.ac.jp/ETC_readme.html}} and from the paper by Do et al. (2014) \citep{2014AJ....147...93D}.
+\item The infrared imager and spectrograph IRIS (Larkin et al. 2010
+\citep{2010SPIE.7735E..29L}) working behind adaptive optics on the
+Thirty Meter Telescope (TMT) is selected to represent the performance
+of the extremely large telescopes that will be operational in the next
+decade. IRIS is expected to be close to diffraction limited in the
+$K'$ band. The simulated PSF and performance characteristics of
+TMT-IRIS have been obtained from the IRIS team, from the TMT Exposure
+Time Calculator (ETC)
+\footnote{\url{http://tmt.mtk.nao.ac.jp/ETC_readme.html}} and from the
+paper by Do et al. (2014) \citep{2014AJ....147...93D}.
 
-\item Euclid is a space survey telescope planned to be launched by the European Space Agency. Euclid has two instruments: a high-resolution visible imager, and a NIR imaging instrument.
-%It aims to investigate the nature of dark energy, dark matter, and gravity by using cosmological probes, such as weak gravitational lensing and baryon acoustic oscillations (Laureijs et al. 2011).
-We study the performance of the high-resolution visible imager, the
-more suitable to detailed gravitational lensing work, with the
-standard survey parameters.  The instrument properties are taken from
-Schweitzer et al. 2010
-\cite{2010SPIE.7731E..1KS}, Penny et al. 2013
+\item Euclid is a space survey telescope planned to be launched by the
+European Space Agency. Euclid has two instruments: a high-resolution
+visible imager, and a NIR imaging spectrograph. We study the
+performance of the high-resolution visible imager, the more suitable
+to detailed gravitational lensing work, with the standard survey
+parameters.  The instrument properties are taken from Schweitzer et
+al. 2010 \cite{2010SPIE.7731E..1KS}, Penny et al. 2013
 \cite{2013MNRAS.434....2P} and Cropper et al. 2014
-\cite{2014SPIE.9143E..0JC}.
-Since the PSF is proprietary to the Euclid team, we adopt for simplicity a Gaussian function with full width half maximum $0\farcs18$.
-%The readout noise depends on the number of non-destructive reads. The pixel size is $0.1^{\prime\prime}$/pixel.
+\cite{2014SPIE.9143E..0JC}. Since the PSF is proprietary to the Euclid
+team, we adopt for simplicity a Gaussian function with full width half
+maximum $0\farcs18$.
 
-\item We study the survey mode of the 2.4m WFIRST space mission, focusing on the HLS Imaging Survey in the F184W filter.
-%. As a wild field of view and low-resolution spectroscopy observatory, WFIRST with the infrared detector technology is expected to contribute to the following goals in astrophysics: planetary systems in the Milky Way; reionization epoch history by high redshift quasars at $z>10$; and the study of dark energy and modifications to Einstein's gravity (Green et al. 2012 \cite{2012arXiv1208.4012G}). We are interested in the HLS Imaging survey, F184W filter. The pixel size is $0.11^{\prime\prime}$/pixel.
-The instrument/survey properties are based on WFIRST-Astrophysics Focused Telescope Assets Final Report (by the Science Definition Team (ADT) and WFIRST Project) and WFIRST ETC \footnote{\url{http://wfirst-web.ipac.caltech.edu/wfDepc/wfDepc.jsp?etc}}. Since the final PSF was not available at the time of this writing we adopt a Gaussian function with FWHM $0\farcs15$.
+\item We study the survey mode of the 2.4m WFIRST space mission,
+focusing on the 2000 square degree HLS Imaging Survey in the F184W
+filter. The
+instrument and survey properties are based on the WFIRST-AFTA
+design reference mission, as
+prepared by the Science Definition Team in their final report  (Spergel et al. 2013 \cite{2013arXiv1305.5422S}),
+and by WFIRST Project) and WFIRST ETC.
+\footnote{\url{http://wfirst-web.ipac.caltech.edu/wfDepc/wfDepc.jsp?etc}}
+Since the final PSF was not available at the time of this writing we
+adopt a Gaussian function with FWHM $0\farcs15$.
 
-\item The Large Synoptic Survey Telescope (LSST) is designed to imaging surveys in the optical bands (out to $\sim$ 1 micron). %It is dedicated with dramatic advances across main astrophysics themes: the nature of dark energy and dark matter; optical sky survey to get the data products such as gamma-ray burst, optical bursters, gravitational micro-lensing, new populations of novae and supernova, stellar tidal disruptions and so on; the structure of the Milky Way; and the Solar System exploring (Ivezic et al. 2008 \cite{2008arXiv0805.2366I}).
-The survey and instrument properties are taken from Ivezic et al. 2008 \cite{2008arXiv0805.2366I} and the LSST Science Requirements Document \footnote{\url{http://www.lsst.org/files/docs/SRD.pdf}}. The PSF of LSST will vary over time. We adopt a Gaussian PSF with FWHM $0\farcs7$ as representative of the image quality of LSST in the i-band.
+\item The Large Synoptic Survey Telescope (LSST) is designed to
+repeatedly image the entire visible Southern sky in six optical and
+near infrared bands (out to $\sim$ 1 micron) every few nights for ten
+years
+
+
+The
+survey and instrument properties are taken from Ivezic et al. 2008
+\cite{2008arXiv0805.2366I} and the LSST Science Requirements Document
+\footnote{\url{http://www.lsst.org/files/docs/SRD.pdf}}. The PSF of
+LSST will vary over time. We adopt a Gaussian PSF with FWHM $0\farcs7$
+as representative of the image quality of LSST in the i-band.
 
 \end{enumerate}
 
