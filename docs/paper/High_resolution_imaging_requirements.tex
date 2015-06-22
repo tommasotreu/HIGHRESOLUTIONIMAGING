@@ -290,26 +290,36 @@ description of each setup follows.
 
 \begin{enumerate}
 
-\item  The Advanced Camera for Surveys (ACS) is chosen as our reference optical imager on board the Hubble Space Telescope (HST). In the chosen F814W filter its performance is comparable to those of WFC3 (slightly higher sensitivity and coarser pixel size). For simplicity, we neglect charge transfer inefficiency effects, assuming that they are negligible or can be corrected to the desired level. The PSF is simulated using the Tiny Tim software (Krist 1993 \cite{1993ASPC...52..536K})
-%Its properties are taken from Space
-%    Telescope Science Institute and HST Exposure Time Calculator
-%    website \footnote{\url{http://etc.stsci.edu}}.
+\item  We take the Advanced Camera for Surveys (ACS) as our reference
+optical imager on board the Hubble Space Telescope (HST). Its
+properties are taken from the Space Telescope Science Institute HST
+Exposure Time Calculator. \footnote{\url{http://etc.stsci.edu}} In the
+chosen F814W filter its performance is comparable to those of WFC3
+(slightly higher sensitivity and coarser pixel size). For simplicity,
+we neglect charge transfer inefficiency effects, assuming that they
+are negligible or can be corrected to the desired level. The PSF is
+simulated using the Tiny Tim software (Krist 1993
+\cite{1993ASPC...52..536K})
 
-\item The Near Infrared Camera (NIRCAM) on board the James Webb Space Telescope (JWST) is chosen as the next space based imaging capability. We select the broad F200W filter, where the image quality is virtually diffraction limited.
+\item The Near Infrared Camera (NIRCAM) on board the James Webb Space
+Telescope (JWST) is chosen as the next space based imaging capability.
+We select the broad F200W filter, where the image quality is virtually
+diffraction limited.  We use the instrument properties as given by the
+JWST Exposure Time Calculator.\footnote{\url{http://jwstetc.stsci.edu}}
 
-% infrared-optimized space telescope which obtains four instruments:
-% near-infrared camera, mid-infrared instrument, near-infrared
-% multi-object spectrograph, and a tunable filter imager. Its
-% scientific goals include exploring planetary systems, star evolution,
-% galaxy-scale theme, and remote dark ages (Gardner et al. 2006
-% \cite{2006SSRv..123..485G}). We determinate instrument properties by
-% JWST Exposure Time Calculator
-% \footnote{\url{http://jwstetc.stsci.edu}}. F200W band is selected to
-% consider. The pixel size is $0.032^{\prime\prime}$/pixel. Zero point,
-% readout noise, and background noise are calculated from count rates
-% at fixed exposure time.
-
-\item The current and planned adaptive optics systems (hereafter LGSAO \& NGAO; Wizinowich et al. \citep{2006PASP..118..297W}, \citep{2010SPIE.7736E..0KW}, respectively) at the W.M.Keck Observatory are chosen to represent current and upcoming AO performance on 8-10m class telescopes. We consider the current instrument NIRC2, although further gains might be possible with an instrument upgrade in conjuction with the AO system upgrade. We adopt the typical configuration used for studies of gravitational lens systems (Fassnacht \& Cohen 1998 \citep{1998AJ....115..377F}): $K'$ filter, MCDS readout mode, read number $N=16$, and narrow camera mode. A real observed PSF is used for the current AO system. The simulated PSF and performance characteristics of NGAO have been kindly provided by the NGAO team.
+\item The current and planned adaptive optics systems (hereafter LGSAO \&
+NGAO; Wizinowich et al. \citep{2006PASP..118..297W},
+\citep{2010SPIE.7736E..0KW}, respectively) at the W.M.Keck Observatory
+are chosen to represent current and upcoming AO performance on 8-10m
+class telescopes. We consider the current instrument NIRC2, although
+further gains might be possible with an instrument upgrade in
+conjuction with the AO system upgrade. We adopt the typical
+configuration used for studies of gravitational lens systems
+(Fassnacht \& Cohen 1998 \citep{1998AJ....115..377F}): $K'$ filter,
+MCDS readout mode, read number $N=16$, and narrow camera mode. A real
+observed PSF is used for the current AO system. The simulated PSF and
+performance characteristics of NGAO were kindly provided by the
+NGAO team.
 
 \item The infrared imager and spectrograph IRIS (Larkin et al. 2010 \citep{2010SPIE.7735E..29L}) working behind adaptive optics on the thirty Meter Telescope (TMT) is selected to represent the performance of the extremely large telescopes that will be operational in the next decade. IRIS is expected to be close to diffraction limited in the $K'$ band. The simulated PSF and performance characteristics of TMT-IRIS have been obtained from the IRIS team, from the TMT Exposure Time Calculator (ETC) \footnote{\url{http://tmt.mtk.nao.ac.jp/ETC_readme.html}} and from the paper by Do et al. (2014) \citep{2014AJ....147...93D}.
 
