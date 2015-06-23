@@ -12,4 +12,5 @@ If you have comments on this research, please send us your feedback [here](https
 ### License, credit etc
 
 All content is Copyright 2015 The Authors. If you make use of the ideas and results presented here in your own research, please cite the paper as "Meng et al 2015, JCAP submitted" and provide the URL of this repository: https://github.com/tommasotreu/HIGHRESOLUTIONIMAGING
-The code we used to generate the simulated images and then infer the lens model is viewable here, but not yet licensed for distribution. We are working on tidying up this software, and will add a license for its re-use soon. 
+
+The code we used to generate the simulated images and then infer the lens models is distributed here under the MIT license. This means that you can do whatever you like with it, but cannot blame us if it doesn't work. If you do make use of this code in your own research, please cite it as (Auger et al 2011, 2013).
