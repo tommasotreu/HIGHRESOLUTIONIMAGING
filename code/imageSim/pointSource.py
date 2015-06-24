@@ -1,3 +1,17 @@
+"""
+This file is distributed as part of the pylens/imageSim library under
+the MIT License (http://opensource.org/licenses/MIT). Its use is
+encouraged but not supported by the authors.
+
+Copyright Matthew W. Auger and Xiao-Lei Meng, 2011, 2013, 2015
+
+If you use this code in your research, please cite one or more of the
+following papers:
+
+Auger et al (2011) http://adsabs.harvard.edu/abs/2011MNRAS.411L...6A
+Auger et al (2013) http://adsabs.harvard.edu/abs/2013MNRAS.436..503A
+Meng et al (2015)  http://arxiv.org/abs/1506.XXXXX
+"""
 import numpy,time
 from scipy import interpolate,ndimage
 """
