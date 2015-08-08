@@ -149,6 +149,30 @@ T.~E. {Collett}, P.~J. {Marshall}, M.~W. {Auger}, S.~{Hilbert}, S.~H. {Suyu},
   2013) 679--692, [\href{http://xxx.lanl.gov/abs/1303.6564}{{\tt
   arXiv:1303.6564}}].
 
+\bibitem{FGS85}
+E.~E. {Falco}, M.~V. {Gorenstein}, and I.~I. {Shapiro}, {\it {On
+  model-dependent bounds on H(0) from gravitational images Application of Q0957
+  + 561A,B}},  {\em \apjl} {\bf 289} (Feb., 1985) L1--L4.
+
+\bibitem{SS13}
+P.~{Schneider} and D.~{Sluse}, {\it {Mass-sheet degeneracy, power-law models
+  and external convergence: Impact on the determination of the Hubble constant
+  from gravitational lensing}},  {\em \aap} {\bf 559} (Nov., 2013) A37,
+  [\href{http://xxx.lanl.gov/abs/1306.0901}{{\tt arXiv:1306.0901}}].
+
+\bibitem{SS14}
+P.~{Schneider} and D.~{Sluse}, {\it {Source-position transformation: an
+  approximate invariance in strong gravitational lensing}},  {\em \aap} {\bf
+  564} (Apr., 2014) A103, [\href{http://xxx.lanl.gov/abs/1306.4675}{{\tt
+  arXiv:1306.4675}}].
+
+\bibitem{Xu15}
+D.~{Xu}, D.~{Sluse}, P.~{Schneider}, V.~{Springel}, M.~{Vogelsberger},
+  D.~{Nelson}, and L.~{Hernquist}, {\it {Lens galaxies in the Illustris
+  simulation: power-law models and the bias of the Hubble constant from
+  time-delays}},  {\em ArXiv e-prints} (July, 2015)
+  [\href{http://xxx.lanl.gov/abs/1507.0793}{{\tt arXiv:1507.0793}}].
+
 \bibitem{2005A&A...436...25E}
 A.~{Eigenbrod}, F.~{Courbin}, C.~{Vuissoz}, G.~{Meylan}, P.~{Saha}, and
   S.~{Dye}, {\it {COSMOGRAIL: The COSmological MOnitoring of GRAvItational
@@ -185,22 +209,13 @@ A.~{Agnello}, A.~{Sonnenfeld}, S.~H. {Suyu}, T.~{Treu}, C.~D. {Fassnacht},
   MNRAS, submitted, ArXiv:1506.02720} (June, 2015)
   [\href{http://xxx.lanl.gov/abs/1506.0272}{{\tt arXiv:1506.0272}}].
 
-\bibitem{2007ApJ...671.1196M}
-P.~J. {Marshall}, T.~{Treu}, J.~{Melbourne}, R.~{Gavazzi}, K.~{Bundy}, S.~M.
-  {Ammons}, A.~S. {Bolton}, S.~{Burles}, J.~E. {Larkin}, D.~{Le Mignant}, D.~C.
-  {Koo}, L.~V.~E. {Koopmans}, C.~E. {Max}, L.~A. {Moustakas}, E.~{Steinbring},
-  and S.~A. {Wright}, {\it {Superresolving Distant Galaxies with Gravitational
-  Telescopes: Keck Laser Guide Star Adaptive Optics and Hubble Space Telescope
-  Imaging of the Lens System SDSS J0737+3216}},  {\em \apj} {\bf 671} (Dec.,
-  2007) 1196--1211, [\href{http://xxx.lanl.gov/abs/0710.0637}{{\tt
-  arXiv:0710.0637}}].
-
-\bibitem{2012MNRAS.424.2800L}
-D.~J. {Lagattuta}, S.~{Vegetti}, C.~D. {Fassnacht}, M.~W. {Auger}, L.~V.~E.
-  {Koopmans}, and J.~P. {McKean}, {\it {SHARP - I. A high-resolution multiband
-  view of the infrared Einstein ring of JVAS B1938+666}},  {\em \mnras} {\bf
-  424} (Aug., 2012) 2800--2810, [\href{http://xxx.lanl.gov/abs/1206.1681}{{\tt
-  arXiv:1206.1681}}].
+\bibitem{2015arXiv150605147R}
+C.~E. {Rusu}, M.~{Oguri}, Y.~{Minowa}, M.~{Iye}, N.~{Inada}, S.~{Oya},
+  I.~{Kayo}, Y.~{Hayano}, M.~{Hattori}, Y.~{Saito}, M.~{Ito}, T.-S. {Pyo},
+  H.~{Terada}, H.~{Takami}, and M.~{Watanabe}, {\it {Subaru Telescope adaptive
+  optics observations of gravitationally lensed quasars in the Sloan Digital
+  Sky Survey}},  {\em ArXiv e-prints} (June, 2015)
+  [\href{http://xxx.lanl.gov/abs/1506.0514}{{\tt arXiv:1506.0514}}].
 
 \bibitem{2011ApJ...734..104N}
 E.~R. {Newton}, P.~J. {Marshall}, T.~{Treu}, M.~W. {Auger}, R.~{Gavazzi}, A.~S.
