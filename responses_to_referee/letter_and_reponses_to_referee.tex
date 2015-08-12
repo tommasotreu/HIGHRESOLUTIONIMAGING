@@ -41,14 +41,11 @@ COMMENT:
 \\
 (1) First of all, the definition of $\gamma'$ is unclear. Abstract and Introduction say $\rho_{tot} \propto r^{-\gamma'}$ and an isothermal profile corresponds to $\gamma'$ = 2. However this is inconsistent with Eq. (4.3) in which $\gamma'$ = 1 reduces to an isothermal case. This is important because the  interpretation of $\gamma_{out}/\gamma_{in}$ shown e.g., Fig. 7 is different between $\gamma'$ = 2 and $\gamma'$ = 1 (as $\bigtriangleup \gamma'$ = 0.02 translates into $\bigtriangleup (\gamma'_{out}/\gamma'_{in})$ = 0.01 and 0.02, respectively).
 \\
-
 RESPONSE:
 \\
 We thank the referee for catching this. We have fixed the inconsistent
 definition in Eq 4.3 and switched to absolute errors on $\gamma'$
 throughout in order to avoid any confusion.
-
-----------------------------------------------------------------------
 \\
 COMMENT:
 \\
@@ -65,10 +62,10 @@ this effect.
 RESPONSE:
 \\
 We have simulated the effect of using a Moffat profile in the case of
-WFIRST. This is the most promising of the surveys where we were
+WFIRST. This is the most promising of the surveys where we are
 adopting Gaussian PSFs, and therefore the most likely where our
 conclusions could have been affected negatively. As one can see from
-the additional Table~5, the broader wings of a Moffat PSF decrease
+the additional Table~6, the broader wings of a Moffat PSF decrease
 only slightly the precision on $\gamma'$. We thank the referee for
 pushing us to this further test, which improves our paper.
 
@@ -105,7 +102,6 @@ pushing us to this further test, which improves our paper.
 %\end{center}
 %\end{table*}
 
-----------------------------------------------------------------------
 \\
 COMMENT
 \\
@@ -120,16 +116,27 @@ RESPONSE:
 \\
 COMMENT:
 \\
-(4) Throughout the paper the authors ignore the PSF uncertainty and assume the perfect knowledge about the PSF. While I understand the authors’ point that by doing so the results represent a lower limit of the total uncertainty, I’d like to see a more extensive discussion on how the PSF uncertainty would propagate into $\gamma'$, given the critical importance of accurate PSF characterizations for AO observations. In Introduction the authors mention Marshall et al. and Lagattuta et al., but these papers are not very relevant in this context as systems studied in those papers are more like galaxy-galaxy strong lensing. In the case of quasar lensing, there must be a degeneracy between the PSF wing (from quasar images) and surface brightness profile of a lensed host galaxy, which has to be carefully addressed. Agnello et al. mentioned in the paper did not fully take account of the PSF uncertainty. In a recent paper by Rusu et al. (2015) adopted a parametrized PSF model and marginalized over PSF parameters when deriving physical parameters, and thus should be helpful in discussing potential impacts of PSF uncertainties and possible future extensions of the present paper to address the propagation of PSF uncertainties to the final result.
+(4) Throughout the paper the authors ignore the PSF uncertainty and assume the perfect knowledge about the PSF. While I understand the authors' point that by doing so the results represent a lower limit of the total uncertainty, I'd like to see a more extensive discussion on how the PSF uncertainty would propagate into $\gamma'$, given the critical importance of accurate PSF characterizations for AO observations. In Introduction the authors mention Marshall et al. and Lagattuta et al., but these papers are not very relevant in this context as systems studied in those papers are more like galaxy-galaxy strong lensing. In the case of quasar lensing, there must be a degeneracy between the PSF wing (from quasar images) and surface brightness profile of a lensed host galaxy, which has to be carefully addressed. Agnello et al. mentioned in the paper did not fully take account of the PSF uncertainty. In a recent paper by Rusu et al. (2015) adopted a parametrized PSF model and marginalized over PSF parameters when deriving physical parameters, and thus should be helpful in discussing potential impacts of PSF uncertainties and possible future extensions of the present paper to address the propagation of PSF uncertainties to the final result.
 \\
-
 RESPONSE:
 \\ 
---------------------------------------------------------------------
+This is of course an important issue. One, however, that cannot be
+quantitatively addressed using studies in the literature (The Rusu et
+al paper for example does not attempt to determine $\gamma'$, and
+furthermore the situation with Subaru might be completely different
+from Keck or TMT). Addressing the issue quantitatively would require a
+full suite of simulations that would be specific for every instrument
+configruration and well beyond the scope of the aims of this
+paper. While we agree that this is a worthwile enterprise we think
+that this is best left for a future follow-up paper, so as not to
+detract from the main goal of this paper, that is the estimation of
+the random uncertainties. We clarified our goal of focusing on the
+random component of the error at several points in the paper, starting
+from the introduction and adding a full paragraph at the end.
 \\
 COMMENT:
 \\
-(5) In Sec. 3.1: “... of currently known lenses, selected from the Sloan Digital Sky Survey,” The current largest quasar lens sample comes from the SDSS Quasar Lens Search, containing more than 50 quasar lenses. It would be informative to give a quantitative description of the SQLS sample (typical magnitudes, quad/double ratio, etc), citing references.
+(5) In Sec. 3.1: ``... of currently known lenses, selected from the Sloan Digital Sky Survey,'' The current largest quasar lens sample comes from the SDSS Quasar Lens Search, containing more than 50 quasar lenses. It would be informative to give a quantitative description of the SQLS sample (typical magnitudes, quad/double ratio, etc), citing references.
 \\
 
 RESPONSE:
@@ -174,23 +181,23 @@ COMMENT:
 \\
 (9) Is the quasar always placed at the center of the host galaxy? This may sound obvious, but looking at Fig. 4 lensed quasar host appears to be offseted from the quasar image. Of course this is not impossible, as a nice example was given in Agnello et al., but this kind of configuration is also not very common.
 \\
-
 RESPONSE:
 \\
 Yes, the quasar is always at the center of the galaxy, within numerical accuracy. The quasar images are added directly in the image plane and their position, given the center of the host galaxy in the source plane, are compute using gravlens. The configuration in Figure 4 happens because the host surface brightness profile crosses into the inner caustic very close to the center of the galaxy, but not exactly.
-
-----------------------------------------------------------------
 \\
 COMMENT:
 \\
 (10) It looks like lensing galaxies are not shown in Figs. 3-6, I guess this is just to better show quasar images and host galaxies. If so this point should be clearly mentioned in the paper. In practice a lensing galaxy is fitted simultaneously (if I understand correctly), so it may be helpful to show simulated images with lensing galaxies as well.
 \\
-
 RESPONSE:
 \\
-
-
----------------------------------------------------------------
+Yes, the referee is correct that the lensing galaxy is fitted
+simultaneously. Unfortunately, it is difficult to render the host
+galaxy at the same time as the host on a b/w image. So the images with
+the lens galaxies are not very informative, and would take up a lot of
+space, effectively doubling the real estate covered by figures
+3-6. For the sake of conciseness we prefer to only show the figures
+that contain the most information.
 \\
 COMMENT:
 \\
@@ -204,7 +211,13 @@ RESPONSE:
 \\
 COMMENT:
 \\
-(12) In Sec. 4.3 and 5 there are sentences like “determine $\gamma'$ with 2\% precision”. This is related to my first comment, suppose that the input $\gamma'$ value is 2, “2\% precision” is different from $\gamma'$ uncertainties of 0.02. If one wants to determine H0 with 2\% accuracy, $\gamma'$ has to be deter- mined with an accuracy of 0.02, which corresponds to 1\% precision of $\gamma'$ determination for the fiducial $\gamma'$ value of 2. Please clarify.
+(12) In Sec. 4.3 and 5 there are sentences like ``determine $\gamma'$
+with 2\% precision''. This is related to my first comment, suppose
+that the input $\gamma'$ value is 2, ``2\% precision'' is different
+from $\gamma'$ uncertainties of 0.02. If one wants to determine H0
+with 2\% accuracy, $\gamma'$ has to be deter- mined with an accuracy
+of 0.02, which corresponds to 1\% precision of $\gamma'$ determination
+for the fiducial $\gamma'$ value of 2. Please clarify.
 \\
 
 RESPONSE:
@@ -214,7 +227,7 @@ RESPONSE:
 \\
 COMMENT:
 \\
-(13) In Sec. 5: “we generate 30 mock systems” These mock systems refer to different noise realizations of the same input image?
+(13) In Sec. 5: ``we generate 30 mock systems'' These mock systems refer to different noise realizations of the same input image?
 \\
 
 RESPONSE:
@@ -224,23 +237,26 @@ RESPONSE:
 \\
 COMMENT:
 \\
-(14) Figs. 7-10: I don’t quite understand the insert in each panel. If I read the caption literally, x and y axes refer to the same quantity and therefore all the points lie exactly on the $y = x$ line? Then what information does this plot carry?
+(14) Figs. 7-10: I don't quite understand the insert in each panel. If
+I read the caption literally, x and y axes refer to the same quantity
+and therefore all the points lie exactly on the $y = x$ line? Then
+what information does this plot carry?
 \\
-
 RESPONSE:
+We have removed the inset with redundant information.
 \\
-
-----------------------------------------------------------------
 \\
 COMMENT:
 \\
-(15) It would be very useful to add a summary table that lists all the estimated uncertainties on $\gamma'$, as it is sort of painful to read off those values from the Figures.
+(15) It would be very useful to add a summary table that lists all the
+estimated uncertainties on $\gamma'$, as it is sort of painful to read
+off those values from the Figures.
 \\
 
 RESPONSE:
 \\
+We have added the table.
 
----------------------------------------------------------
 
 
 
