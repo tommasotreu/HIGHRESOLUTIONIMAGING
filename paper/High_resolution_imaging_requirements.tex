@@ -613,14 +613,16 @@ significantly on this model assumption.
 The lens mass profile is assigned within a class of power-law models,
 %
 \begin{equation}
-\Sigma(x,y)=\Sigma_{cr}\frac{2-\gamma^{\prime}}{1+\qm}\left(\frac{\sqrt{ X^{2}+\qm^{-2}Y^{2}}}{R_{\rm E}}\right)^{-\gamma^{\prime}},
+\Sigma(x,y)=\Sigma_{cr}\frac{3-\gamma^{\prime}}{1+\qm}\left(\frac{\sqrt{ X^{2}+\qm^{-2}Y^{2}}}{R_{\rm E}}\right)^{1-\gamma^{\prime}},
 \end{equation}
 %
-where $q_\mathrm{m}$ is the axis ratio, $\gamma^{\prime}$ is the radial power-law
-slope, the $\left\{X,Y\right\}$ principal axes are rotated by the lens position
-angle w.r.to the canonical $x$ (increasing to the West) and $y$
-(increasing to the North).  Within this functional family, the deflections scale as $R^{1-\gamma^{\prime}}$ with distance from the lens.
-The \textit{critical density} $\Sigma_{cr}$ is defined by
+where $q_\mathrm{m}$ is the axis ratio, $\gamma^{\prime}$ is the
+radial power-law slope, the $\left\{X,Y\right\}$ principal axes are
+rotated by the lens position angle w.r.to the canonical $x$
+(increasing to the West) and $y$ (increasing to the North).  Within
+this functional family, the deflections scale as
+$R^{2-\gamma^{\prime}}$ with distance from the lens.  The
+\textit{critical density} $\Sigma_{cr}$ is defined by
 %
 \begin{equation}
 \Sigma_{\mathrm{cr}} = \frac{c^{2}D_{\mathrm{s}}}{4\pi G D_{\mathrm{d}} D_{\mathrm{ds}}}
@@ -806,7 +808,7 @@ $\sim$ 4000 minutes for TMT, $\sim$ 40 minutes for Euclid and WFIRST, $\sim$ 15 
 
 The goal of this work is to investigate what combinations of
 instrument/telescope configuration and exposure time produce images of
-quality sufficient to determine $\gamma'$ with 2\% precision.
+quality sufficient to determine $\gamma'$ with 0.02 precision.
 
 For the telescopes/instruments operated in observatory mode, we are
 able to set the exposure time to any desired level. The minimum
@@ -841,11 +843,11 @@ for each one using the python Markov Chain Monte Carlo sampler
 in~Figures~\ref{fig:gamma_fainter_4QSOimages}
 to~\ref{fig:gamma_brighter_2QSOimages}. Table~\ref{tab:exptimes}
 summarizes the ``target'' exposure times for HST, JWST, Keck LGSAO and
-NGAO, TMT, i.e. those required in order to reach 2\% uncertainties on
+NGAO, TMT, i.e. those required in order to reach 0.02 uncertainties on
 $\gamma^{\prime}$.  We reiterate that this is is only the random
 component of the uncertainty, and thus it represents a lower limit to
 the total uncertainty. For this reason we have set a rather stringent
-limit of 2\%, in order to leave room for additional uncertainties,
+limit of 0.02, in order to leave room for additional uncertainties,
 such as, e.g., systematic errors related to PSF reconstruction and
 modeling errors.  In practice, our target exposure times should be
 considered as minimum exposure times, i.e. necessary and not
@@ -905,9 +907,8 @@ with sufficient accuracy. Recent work has shown that this is possible
 provided that images of sufficient resolution and signal to noise
 ratio are available. In anticipation of the hundreds to thousands of
 lensed quasars that are going to be discovered in the next decade from
-ground based low resolution imaging surveys
-(Oguri \& Marshall 2010 \cite{2010MNRAS.405.2579O}),
-we study the requirements for high
+ground based low resolution imaging surveys (Oguri \& Marshall 2010
+\cite{2010MNRAS.405.2579O}), we study the requirements for high
 resolution imaging follow-up. We consider a range of
 instrument/telescope configurations spanning from currently available
 systems (HST/ACS and Keck/LGSAO/NIRC2) to planned observatories and
@@ -922,9 +923,9 @@ law mass density profile. In order to guarantee that the images be
 sufficient to constrain the Fermat potential to a level so that the
 random uncertainties are subdominant with respect to other sources of
 uncertainty, we consider it necessary for them to contain enough
-information to constrain $\gamma'$ with 2\% precision or better, which
-corresponds approximately to a 2\% precision on time delay distance
-and hence H$_0$. We find that:
+information to constrain $\gamma'$ with 0.02 precision or better,
+which corresponds approximately to a 2\% precision on time delay
+distance and hence H$_0$. We find that:
 
 \begin{itemize}
 
@@ -1144,13 +1145,40 @@ Instrument & \multicolumn{2}{c}{double} & \multicolumn{2}{c}{quad} \\
 \end{tabular}
 \begin{tablenotes}
 \item
-Exposure times required to attain a 2\% precision on the inferred $\gamma^\prime.$
+Exposure times required to attain a 0.02 precision on the inferred $\gamma^\prime.$
  %With 360 s of exposure, the TMT already enables percent-level precision.
- The Euclid, WFIRST and LSST surveys, are not quoted here because their exposure times are fixed. The default exposure times are sufficient to meet the 2\% requirement in the case of LSST and WFIRST, but not for Euclid.\\
+ The Euclid, WFIRST and LSST surveys, are not quoted here because their exposure times are fixed. The default exposure times are sufficient to meet the 0.02 requirement in the case of LSST and WFIRST, but not for Euclid.\\
 \end{tablenotes}
 \label{tab:exptimes}
 \end{center}
 \end{table*}
+
+\begin{table*}\footnotesize
+\begin{center}
+\caption{Precision on the $\gamma'$ with Gaussian and Moffat PSF for WFIRST}
+\begin{tabular}{lcccccccccccccc|}
+\hline \hline
+Lens Name & Gaussian & Moffat & Moffat & Moffat & Moffat
+\\
+& & ($\beta$=1.5) & ($\beta$=3.0) & ($\beta$=4.5) & ($\beta$=6.0) \\
+\hline
+fainter system$^a$ & 0.021 & 0.032 & 0.028 & 0.025 & 0.023 \\
+fainter system$^b$ & 0.023 & 0.036 & 0.035 & 0.033 & 0.030 \\
+brighter system$^b$ & 0.0044 & 0.0065 & 0.0062 & 0.0048 & 0.0044 \\
+brighter system$^a$ & 0.0016 & 0.0022 & 0.0017 & 0.0017 & 0.0015 \\
+\hline
+\hline
+\end{tabular}
+\begin{tablenotes}
+\item
+Precision on the mass density profile slope $\gamma'$ with Gaussian and Moffat PSFs for WFIRST. This table represents the results for fainter and brighter systems with 4 and 2 QSO images. It is shown that as $\beta$ increases the Moffat PSF tends to approximate the core of the Gaussian PSF. \\
+$^a$ This configuration yields 4 QSO images. \\
+$^b$ This configuration yields 2 QSO images. \\
+\label{tab:moffat}
+\end{tablenotes}
+\end{center}
+\end{table*}
+
 
 % ===============================================
 \begin{figure}
