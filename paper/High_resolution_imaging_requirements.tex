@@ -371,10 +371,10 @@ Science Definition Team and WFIRST Project, Spergel et al. 2013
 \cite{2013arXiv1305.5422S}) and the WFIRST ETC.
 \footnote{\url{http://wfirst-web.ipac.caltech.edu/wfDepc/wfDepc.jsp?etc}}
 Since the final PSF was not available at the time of this writing we
-adopt a Gaussian function with FWHM $0\farcs15$. As an additional
+adopt a Gaussian function with FWHM $0\farcs15$. {\bf As an additional
 test, in order to investigate the sensitivity of our estimates to the
 choice of the PSF, we repeat the simulations assuming a Moffat (1969;
-\cite{1969A&A.....3..455M}) PSF, with different shape parameters.
+\cite{1969A&A.....3..455M}) PSF, with different shape parameters.}
 
 \item The Large Synoptic Survey Telescope (LSST) is designed to
 repeatedly image the entire visible Southern sky in six optical and
@@ -843,7 +843,7 @@ for each one using the python Markov Chain Monte Carlo sampler
 in~Figures~\ref{fig:gamma_fainter_4QSOimages}
 to~\ref{fig:gamma_brighter_2QSOimages}. Table~\ref{tab:exptimes}
 summarizes the ``target'' exposure times for HST, JWST, Keck LGSAO and
-NGAO, TMT, i.e. those required in order to reach 0.02 uncertainties on
+NGAO, TMT, i.e. those required in order to reach 0.02 uncertainty on
 $\gamma^{\prime}$.  We reiterate that this is is only the random
 component of the uncertainty, and thus it represents a lower limit to
 the total uncertainty. For this reason we have set a rather stringent
@@ -1002,16 +1002,17 @@ out such a systematic investigation in the near future.}
 
 \section*{Acknowledgments}
 
-We are grateful to F.~Courbin, T.~Do, R.~Gavazzi, C.~Hirata,
-J.~Larkin, M.~Meneghetti, P.~Wizinowich, and S.A.~Wright for useful
-conversations about planned instruments and telescopes, and
-P.Schneider for comments on this manuscript. AA, and TT acknowledge
-support from NSF grant AST-1450141 ``Collaborative Research: Accurate
-cosmology with strong gravitational lens time delays''. AA, and TT
-gratefully acknowledge support by the Packard Foundation through a
-Packard Research Fellowship to TT.  The work of PJM was supported by
-the U.S.  Department of Energy under contract number
-DE-AC02-76SF00515.\\
+We thank the anonymous referee for helping us improve the paper with a
+constructive report.  We are grateful to F.~Courbin, T.~Do,
+R.~Gavazzi, C.~Hirata, J.~Larkin, M.~Meneghetti, P.~Wizinowich, and
+S.A.~Wright for useful conversations about planned instruments and
+telescopes, and P.Schneider for comments on this manuscript. AA, and
+TT acknowledge support from NSF grant AST-1450141 ``Collaborative
+Research: Accurate cosmology with strong gravitational lens time
+delays''. AA, and TT gratefully acknowledge support by the Packard
+Foundation through a Packard Research Fellowship to TT.  The work of
+PJM was supported by the U.S.  Department of Energy under contract
+number DE-AC02-76SF00515.\\
 %\textbf{[...]}
 
 
@@ -1224,7 +1225,7 @@ $^b$ This configuration yields 2 QSO images. \\
 \begin{center}
 \includegraphics[width=1.0\textwidth]{figures/fainter_system_4QSOimages_all.png}
 \end{center}
-\caption{Simulations of the fainter lens system with 4 QSO images. The simulated images are all 4$''$ $\times$ 4$''$. The first 5 columns, from left to right, represent HST/ACS, Keck/NIRC2+LGSAO, Keck/NIRC2+NGAO, JWST/NIRCAM, and TMT; from top to bottom, the rows correspond to 1/3 $\times$ ``target'' exposure time, ``target'' exposure time, and 3 $\times$ ``target'' exposure time. ``Target'' exposure time is defined as the exposure time that yields 2\% precision on the slope of the mass density profile of the mass model $\gamma'$. The sixth column shows simulations of 3 surveys. From top to bottom we show LSST, Euclid, and WFIRST, with the default survey exposure times (4500s, 2360s, 920s, respectively).}
+\caption{Simulations of the fainter lens system with 4 QSO images. The simulated images are all 4$''$ $\times$ 4$''$. The first 5 columns, from left to right, represent HST/ACS, Keck/NIRC2+LGSAO, Keck/NIRC2+NGAO, JWST/NIRCAM, and TMT; from top to bottom, the rows correspond to 1/3 $\times$ ``target'' exposure time, ``target'' exposure time, and 3 $\times$ ``target'' exposure time. ``Target'' exposure time is defined as the exposure time that yields 0.02 precision on the slope of the mass density profile of the mass model $\gamma'$. The sixth column shows simulations of 3 surveys. From top to bottom we show LSST, Euclid, and WFIRST, with the default survey exposure times (4500s, 2360s, 920s, respectively).}
 \label{fig:fainter_4QSOimages_montage}
 \end{figure}
 % =================================================
@@ -1245,8 +1246,12 @@ $^b$ This configuration yields 2 QSO images. \\
 \begin{center}
 \includegraphics[width=1.0\textwidth]{figures/brighter_system_4QSOimages_all.png}
 \end{center}
-\caption{Simulations of the bright lens system with 4 QSO images. The simulated images are all 4$''$ $\times$ 4$''$. The first 3 columns, from left to right, represent HST/ACS, Keck/NIRC2+LGSAO, Keck/NIRC2+NGAO; from top to bottom, the rows correspond to 1/3 $\times$ "target" exposure time, "target" exposure time, and 3 $\times$ "target" exposure time. "Target" exposure time is defined as the exposure time that yields 2\% precision on the slope of the mass density profile of the mass model $\gamma'$. The fourth column shows JWST simulations with 3 fixed exposure times: 60, 180, 540 seconds, from top to bottom. The fifth column
-shows simulations of 3 surveys. From top to bottom we show LSST, Euclid, and WFIRST, with the default survey exposure times (4500s, 2360s, 920s, respectively). TMT simulations are not shown since the system is considered too bright to be observed with this telescope in practice.}
+\caption{Simulations of the bright lens system with 4 QSO images. The simulated images are all 4$''$ $\times$ 4$''$. The first 3 columns, from left to right, represent HST/ACS, Keck/NIRC2+LGSAO, Keck/NIRC2+NGAO; from top to bottom, the rows correspond to 1/3 $\times$ "target" exposure time, "target" exposure time, and 3 $\times$ "target" exposure time. "Target" exposure time is defined as the exposure time that yields 0.02 precision on the slope of the mass density profile of the mass model $\gamma'$. The fourth column shows JWST simulations with 3 fixed exposure times: 60, 180, 540 seconds, from top to bottom. The fifth column
+shows simulations of 3 surveys. From top to bottom we show LSST,
+Euclid, and WFIRST, with the default survey exposure times (4500s,
+2360s, 920s, respectively). TMT simulations are not shown since the
+system is considered too bright to be observed with this telescope in
+practice.}
 \label{fig:brighter_4QSOimages_montage}
 \end{figure}
 % =================================================
@@ -1273,9 +1278,13 @@ shows simulations of 3 surveys. From top to bottom we show LSST, Euclid, and WFI
 \includegraphics[width=0.49\textwidth]{figures/gamma_hist_135949_4QSO_TMT.png}
 \includegraphics[width=0.49\textwidth]{figures/gamma_hist_135949_4QSO_EWL.png}
 \end{center}
-\caption{Precision on the mass density profile slope $\gamma'$ as a function of exposure time.  This figure shows the results for the fainter lens system with 4 QSO images. The quantity $\gamma'_{in}$ is the input SIE mass slope. The quantity $\gamma'_{out}$ is the output of the inference process.
-The insert in each panel shows all 30 simulation results (10 simulation results for TMT) for each exposure time with the same color coding. Note that both axes represent $\gamma'_{out}/\gamma'_{in}$ whereas error bars are only shown on the x-axis for clarity.
-The histogram in each panel represents the distribution of inferred mass slope more directly.}
+\caption{Precision on the mass density profile slope $\gamma'$ as a function of exposure time.  This figure shows the results for the fainter lens system with 4 QSO images. The input SIE mass slope is 2. The quantity $\gamma'_{out}$ is the output of the inference process.
+%The insert in each panel shows all 30 simulation results (10
+%simulation results for TMT) for each exposure time with the same color
+%coding. Note that both axes represent $\gamma'_{out}/\gamma'_{in}$
+%whereas error bars are only shown on the x-axis for clarity. 
+The histogram in each panel represents the distribution of inferred
+mass slope $\gamma'$ more directly.}
 \label{fig:gamma_fainter_4QSOimages}
 \end{figure}
 % ======================================================
