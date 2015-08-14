@@ -50,6 +50,11 @@ S.~H. {Suyu}, {\it {Cosmography from two-image lens systems: overcoming the
   lens profile slope degeneracy}},  {\em \mnras} {\bf 426} (Oct., 2012)
   868--879, [\href{http://xxx.lanl.gov/abs/1202.0287}{{\tt arXiv:1202.0287}}].
 
+\bibitem{2001ApJ...547...50K}
+C.~S. {Kochanek}, C.~R. {Keeton}, and B.~A. {McLeod}, {\it {The Importance of
+  Einstein Rings}},  {\em \apj} {\bf 547} (Jan., 2001) 50--59,
+  [\href{http://xxx.lanl.gov/abs/astro-ph/0006116}{{\tt astro-ph/0006116}}].
+
 \bibitem{2011ApJ...730..119R}
 A.~G. {Riess}, L.~{Macri}, S.~{Casertano}, H.~{Lampeitl}, H.~C. {Ferguson},
   A.~V. {Filippenko}, S.~W. {Jha}, W.~{Li}, and R.~{Chornock}, {\it {A 3\%
@@ -372,6 +377,23 @@ Z.~{Ivezic}, J.~A. {Tyson}, B.~{Abel}, E.~{Acosta}, R.~{Allsman},
 A.~R. {Patnaik}, I.~W.~A. {Browne}, D.~{Walsh}, F.~H. {Chaffee}, and C.~B.
   {Foltz}, {\it {B1422+231 - A new gravitationally lensed system at Z = 3.62}},
    {\em \mnras} {\bf 259} (Nov., 1992) 1P--4P.
+
+\bibitem{2006AJ....132..999O}
+M.~{Oguri}, N.~{Inada}, B.~{Pindor}, M.~A. {Strauss}, G.~T. {Richards}, J.~F.
+  {Hennawi}, E.~L. {Turner}, R.~H. {Lupton}, D.~P. {Schneider}, M.~{Fukugita},
+  and J.~{Brinkmann}, {\it {The Sloan Digital Sky Survey Quasar Lens Search. I.
+  Candidate Selection Algorithm}},  {\em \aj} {\bf 132} (Sept., 2006)
+  999--1013, [\href{http://xxx.lanl.gov/abs/astro-ph/0605571}{{\tt
+  astro-ph/0605571}}].
+
+\bibitem{2012AJ....143..119I}
+N.~{Inada}, M.~{Oguri}, M.-S. {Shin}, I.~{Kayo}, M.~A. {Strauss},
+  T.~{Morokuma}, C.~E. {Rusu}, M.~{Fukugita}, C.~S. {Kochanek}, G.~T.
+  {Richards}, D.~P. {Schneider}, D.~G. {York}, N.~A. {Bahcall}, J.~A.
+  {Frieman}, P.~B. {Hall}, and R.~L. {White}, {\it {The Sloan Digital Sky
+  Survey Quasar Lens Search. V. Final Catalog from the Seventh Data Release}},
+  {\em \aj} {\bf 143} (May, 2012) 119,
+  [\href{http://xxx.lanl.gov/abs/1203.1087}{{\tt arXiv:1203.1087}}].
 
 \bibitem{2006ApJ...638..703B}
 A.~S. {Bolton}, S.~{Burles}, L.~V.~E. {Koopmans}, T.~{Treu}, and L.~A.
