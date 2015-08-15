@@ -208,7 +208,7 @@ are described later in Sec. 4, so at this point readers have no idea what these 
 
 RESPONSE:
 
-As the referee pointed out, we clarified the meanings of these parameters 
+As the referee pointed out, we have clarified the meanings of these parameters 
 and reminded the readers that there will be additional details about them 
 in the next section.
 
@@ -224,7 +224,7 @@ Rusu et al. (2015) mentioned above also added several more quasar lens systems w
 
 RESPONSE:
 
-Thanks a lot for the referee's comment. We investigated previous work of 
+Thanks a lot for the referee's comment. We have investigated previous work of 
 lensed quasar hosts and added their results in the last but one paragraph. 
 These results reinforce the fact that the assumption in this paper is typical.
 
@@ -237,9 +237,14 @@ RESPONSE:
 
 Yes, the quasar is always at the center of the galaxy, within numerical accuracy. The quasar images are added directly in the image plane and their position, given the center of the host galaxy in the source plane, are compute using gravlens. The configuration in Figure 4 happens because the host surface brightness profile crosses into the inner caustic very close to the center of the galaxy, but not exactly.
 
+
 COMMENT:
 
-(10) It looks like lensing galaxies are not shown in Figs. 3-6, I guess this is just to better show quasar images and host galaxies. If so this point should be clearly mentioned in the paper. In practice a lensing galaxy is fitted simultaneously (if I understand correctly), so it may be helpful to show simulated images with lensing galaxies as well.
+(10) It looks like lensing galaxies are not shown in Figs. 3-6, 
+I guess this is just to better show quasar images and host galaxies. 
+If so this point should be clearly mentioned in the paper. 
+In practice a lensing galaxy is fitted simultaneously (if I understand correctly), 
+so it may be helpful to show simulated images with lensing galaxies as well.
 
 RESPONSE:
 
@@ -251,15 +256,21 @@ space, effectively doubling the real estate covered by figures
 3-6. For the sake of conciseness we prefer to only show the figures
 that contain the most information.
 
+
 COMMENT:
 
-(11) In the non-linear fitting described in Sec. 4.2, is the sky level not included as a fitting parameter? Or the sky level is fixed to the true value during fitting?
+(11) In the non-linear fitting described in Sec. 4.2, is the sky level 
+not included as a fitting parameter? Or the sky level is fixed to the true value during fitting?
 
 
 RESPONSE:
 
+In fitting process in our work, the non-linear parameters contain
+ the necessary parameters for source and deflector brightness model, 
+ the deflector mass model, and point source's position in the image plane. 
+ The sky level is fixed to the true value in this process. Thanks for this comment from the referee, 
+ we have added a sentence to illustrate this point in the first paragraph in Section 4.2.
 
----------------------------------------------------------------
 
 COMMENT:
 
@@ -278,15 +289,21 @@ inconsistency. The confusion was due to the two definitions of
 $\gamma'$ given in the previous version of the text. We have now fixed
 this throughout the manuscript.
 
+
 COMMENT:
 
-(13) In Sec. 5: ``we generate 30 mock systems'' These mock systems refer to different noise realizations of the same input image?
-
+(13) In Sec. 5: ``we generate 30 mock systems'' These mock systems 
+refer to different noise realizations of the same input image?
 
 RESPONSE:
 
+Yes. For each exposure time with each instrument, we generate 30 mock systems 
+for most configurations and 10 mock systems for TMT 
+with the view of saving computing time. In each mock system, 
+we use the standard normal distribution of the noise. So, for the 30 mock systems, 
+they have different noise realizations with the same other input values. We have 
+added an explication about this problem in the first paragraph of Section 5.
 
----------------------------------------------------------------
 
 COMMENT:
 
