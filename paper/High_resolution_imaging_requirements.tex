@@ -765,7 +765,8 @@ ratio of light, position angle, and S{\'e}rsic index for the
 source and deflector brightness model (12 parameters); position, Einstein radius, the
 axis ratio of the mass distribution, position angle, and power-law
 slope for the deflector mass model (6 parameters); and QSO positions in the image
-plane (4 parameters for two-image lenses, 8 parameters for four-image systems). We note in particular
+plane (4 parameters for two-image lenses, 8 parameters for four-image systems). 
+{\bf The sky level is fixed to the true value in this process.} We note in particular
 that due to e.g., microlensing, millilensing, and differential reddening, the
 positions and fluxes of the QSO images are not tied to the lens model and
 they are therefore in effect treated as `foreground' stars. Most priors on the non-linear
@@ -867,7 +868,10 @@ or not.
 
 Using the methods summarized in the previous section we generate 30
 mock systems for most configurations and 10 mock systems for TMT with
-the view of saving computing time, and carry out the full inference
+the view of saving computing time. {\bf Each of them has 
+the standard normal distribution of the noise. So, for the 30 mock systems, 
+they have different noise realizations with the same other input values.} 
+Then we carry out the full inference
 for each one using the python Markov Chain Monte Carlo sampler
 \texttt{pymc}.  The results are summarized
 in~Figures~\ref{fig:gamma_fainter_4QSOimages}
