@@ -874,7 +874,7 @@ they have different noise realizations with the same other input values.}
 Then we carry out the full inference
 for each one using the python Markov Chain Monte Carlo sampler
 \texttt{pymc}.  The results are summarized
-in~Figures~\ref{fig:gamma_fainter_4QSOimages}
+in{\bf ~Table~\ref{tab:estimated_uncertainties} and} ~Figures~\ref{fig:gamma_fainter_4QSOimages}
 to~\ref{fig:gamma_brighter_2QSOimages}. Table~\ref{tab:exptimes}
 summarizes the ``target'' exposure times for HST, JWST, Keck LGSAO and
 NGAO, TMT, i.e. those required in order to reach 0.02 uncertainty on
@@ -1180,6 +1180,47 @@ $^b$ This configuration yields 2 QSO images. \\
 % ===============================================
 \begin{table*}\footnotesize
 \begin{center}
+\caption{Estimated uncertainties on $\gamma'$}
+\begin{tabular}{lcccccccccccccc|}
+\hline \hline
+& & HST & JWST & LGSAO & NGAO & TMT & Euclid & WFIRST & LSST \\
+\hline
+fainter system$^a$ & 1/3$\times$target  & 0.037 & 0.048 & 0.035 & 0.033 & 0.035 & --- & --- & ---\\
+&                        target  & 0.019 & 0.020 & 0.022 & 0.020 & 0.021 & --- & --- & ---\\
+&                      3$\times$target  & 0.010 & 0.010 & 0.013 & 0.011 & 0.011 & --- & --- & ---\\
+&                       survey  & ---      & ---       & ---      & ---      & ---      & 0.034 & 0.021 & 0.038 \\
+\hline
+fainter system$^b$ & 1/3$\times$target & 0.034 & 0.035 & 0.042 & 0.046 & 0.034 & --- & --- & ---\\
+&                         target & 0.020 & 0.019 & 0.022 & 0.022 & 0.020 & --- & --- & ---\\
+&                       3$\times$target & 0.011 & 0.009 & 0.014 & 0.014 & 0.009 & --- & --- & ---\\
+&                        survey & ---      & ---      & ---       & ---       & ---      & 0.051 & 0.023 & 0.042\\
+\hline
+brighter system$^b$ & 1/3$\times$target & 0.037 & 0.013$^*$ & 0.052 & 0.034 & --- & --- & --- & ---\\
+&                                       target & 0.019 & 0.006$^*$ & 0.022 & 0.020 & --- & --- & --- & ---\\
+&                                      3$\times$target & 0.010 & 0.004$^*$ & 0.009 & 0.011 & --- & --- & --- & ---\\
+&                                        survey & ---     & ---             & ---       & ---      & --- & 0.0107 & 0.0044 & 0.0025\\
+\hline
+brighter system$^a$ & 1/3$\times$target & 0.042 & 0.0087$^*$ & 0.042 & 0.041 & --- & --- & --- & ---\\
+&                                       target & 0.019 & 0.0046$^*$ & 0.022 & 0.020 & --- & --- & --- & ---\\
+&                                      3$\times$target & 0.011 & 0.0032$^*$ & 0.011 & 0.011 & --- & --- & --- & ---\\
+&                                        survey & ---     & ---               & ---       & ---     & ---  & 0.0036 & 0.0016 & 0.0007\\
+\hline \hline
+\end{tabular}
+\begin{tablenotes}
+\item
+The estimated uncertainties on $\gamma'$ for each instrument.
+``target" represents target exposure time which is defined getting 2\% precision on the slope of the mass density profile of the mass model. $*$ means the estimated uncertainties with artificial exposure time 60s, 180s, and 540s for JWST in brighter systems.\\
+$^a$ This configuration yields 4 QSO images. \\
+$^b$ This configuration yields 2 QSO images. \\
+\label{tab:estimated_uncertainties}
+\end{tablenotes}
+\end{center}
+\end{table*}
+% ===============================================
+
+% ===============================================
+\begin{table*}\footnotesize
+\begin{center}
 \caption{Exposure time requirements}
 \begin{tabular}{lccccc|}
 \hline \hline
@@ -1280,7 +1321,7 @@ $^b$ This configuration yields 2 QSO images. \\
 \begin{center}
 \includegraphics[width=1.0\textwidth]{figures/brighter_system_4QSOimages_all.png}
 \end{center}
-\caption{Simulations of the bright lens system with 4 QSO images. The simulated images are all 4$''$ $\times$ 4$''$. The first 3 columns, from left to right, represent HST/ACS, Keck/NIRC2+LGSAO, Keck/NIRC2+NGAO; from top to bottom, the rows correspond to 1/3 $\times$ "target" exposure time, "target" exposure time, and 3 $\times$ "target" exposure time. "Target" exposure time is defined as the exposure time that yields 0.02 precision on the slope of the mass density profile of the mass model $\gamma'$. The fourth column shows JWST simulations with 3 fixed exposure times: 60, 180, 540 seconds, from top to bottom. The fifth column
+\caption{Simulations of the bright lens system with 4 QSO images. The simulated images are all 4$''$ $\times$ 4$''$. The first 3 columns, from left to right, represent HST/ACS, Keck/NIRC2+LGSAO, Keck/NIRC2+NGAO; from top to bottom, the rows correspond to 1/3 $\times$ ``target" exposure time, ``target" exposure time, and 3 $\times$ ``target" exposure time. ``Target" exposure time is defined as the exposure time that yields 0.02 precision on the slope of the mass density profile of the mass model $\gamma'$. The fourth column shows JWST simulations with 3 fixed exposure times: 60, 180, 540 seconds, from top to bottom. The fifth column
 shows simulations of 3 surveys. From top to bottom we show LSST,
 Euclid, and WFIRST, with the default survey exposure times (4500s,
 2360s, 920s, respectively). TMT simulations are not shown since the
