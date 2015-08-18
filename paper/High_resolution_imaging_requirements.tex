@@ -98,12 +98,9 @@ energy equation of state (Coe \& Moustakas 2009
 \citep{2009ApJ...706...45C}, Linder 2011 \citep{2011PhRvD..84l3529L},
 Weinberg 2013 \citep{2013PhR...530...87W}, Suyu 2012
 \citep{2012MNRAS.426..868S}, Suyu et al. 2014
-\citep{2014ApJ...788L..35S}). {\bf The importance of Einstein ring images 
-of the host galaxies also be emphasized in breaking the lens model degeneracies 
-to determine the mass distributions of lens (Kochanek et al. 2001 \citep{2001ApJ...547...50K}).} 
-The time delay distance measurement of
-H$_0$ is comparable in terms of information content to that obtained
-via the cosmic distance ladder (Riess et al. 2011
+\citep{2014ApJ...788L..35S}).  The time delay distance
+measurement of H$_0$ is comparable in terms of information content to
+that obtained via the cosmic distance ladder (Riess et al. 2011
 \citep{2011ApJ...730..119R}, Freedman et al. 2012
 \citep{2012ApJ...758...24F}), in that is based on absolute distances
 and completely independent of the properties of the early universe
@@ -137,7 +134,8 @@ the main deflector needs to be constrained by the data so that the
 uncertainty on its difference between the location of the images is
 also of order 3\%. This goal can be achieved by studying the extended
 structure of the lensed quasar host galaxy, and the stellar kinematics
-of the deflector galaxy (Treu \& Koopmans 2002
+of the deflector galaxy ({\bf Kochanek et al. 2001
+\citep{2001ApJ...547...50K}, Treu \& Koopmans 2002
 \citep{2002MNRAS.337L...6T}, Koopmans et al. 2003
 \citep{2003ApJ...599...70K}, Suyu et al. 2010
 \citep{2010ApJ...711..201S}, Suyu et al. 2013
@@ -427,10 +425,26 @@ produced by the lens.
 
 
 The brighter lenses are selected to be representative of the majority
-of currently known lenses, selected from the Sloan Digital Sky Survey,
-while the fainter lenses are selected to be representative of the
-fainter systems to be discovered in current and future surveys within
-the next decade (Oguri \& Marshall 2010
+of currently known lenses, selected from the Sloan Digital Sky
+Survey. {\bf For reference, the current largest quasar lens sample
+comes from the SDSS Quasar Lens Search (SQLS; Oguri et al. 2006
+\cite{2006AJ....132..999O}; Inada et al. 2012
+\cite{2012AJ....143..119I}).  The well-defined statistical quasar lens
+sample of it consists 26 lensed quasars which are selected from SDSS
+Data Release 7 (DR7) quasar catalog with Galactic extinction-corrected
+i-band magnitudes ($15.0 \leq i \leq19.1$) in the low redshift ($0.6 <
+z < 2.2$), adopting morphological (image separations of $1'' < \theta
+< 20''$) and color ($i$-band magnitude difference between two images
+should be smaller than 1.25 mag) selection algorithms.  Among the 26
+lensed quasars, the number of the quad and double images are 4 and 21
+respectively, the remaining is a 5-image cluster lens.  Meanwhile, 36
+additional lensed quasars are identified from the DR7 quasar catalog,
+which contains 4 quad-image systems, 30 double-image systems, the rest
+two are 5-image and 3-image cluster systems. }
+
+The fainter lenses are selected to be representative of the fainter
+systems to be discovered in current and future surveys within the next
+decade (Oguri \& Marshall 2010
 \cite{2010MNRAS.405.2579O}). We expect that the systems to be used to
 measure time delay distances in the next decade will span
 approximately the range covered by our sample. Note that some known
@@ -439,27 +453,15 @@ simulated here (e.g., Patnaik et al. 1992 \cite{1992MNRAS.259P...1P}). Even thou
 expect more of those to be discovered in the near future and they will
 be useful, they will not represent the majority of the systems in
 future large samples, nor present any major challenge for follow-up,
-so we do not consider them here. {\bf Actually, in addition to strongly lensed galaxies, 
-strongly lensed quasars are also searched for. The current largest quasar lens sample 
-comes from the SDSS Quasar Lens Search (SQLS; 
-Oguri et al. 2006 \cite{2006AJ....132..999O}; Inada et al. 2012 \cite{2012AJ....143..119I}). 
-The well-defined statistical quasar lens sample of it consists 
-26 lensed quasars which are selected from SDSS Data Release 7 (DR7) quasar catalog
- with Galactic extinction-corrected i-band magnitudes ($15.0 \leq i \leq19.1$) 
- in the low redshift ($0.6 < z < 2.2$), 
- adopting morphological (image separations of $1'' < \theta < 20''$) 
- and color ($i$-band magnitude difference between two images 
- should be smaller than 1.25 mag) selection algorithms. 
- Among the 26 lensed quasars, the number of the quad and double images 
- are 4 and 21 respectively, the remaining is a 5-image cluster lens. 
- Meanwhile, 36 additional lensed quasars are identified from the DR7 quasar catalog, 
- which contains 4 quad-image systems, 30 double-image systems, 
- the rest two are 5-image and 3-image cluster systems. 
- Many of the additional systems were discovered with the outside magnitude, redshift, 
- and image separation selection algorithms to quasars 
- compare with the statistical lens sample. 
- Due to the lacking of some crucial parameter values of host and lens galaxies, 
- we do not use SQLS to perform our mock simulations.}
+so we do not consider them here. 
+
+{\bf Actually, in addition to strongly lensed galaxies, strongly
+lensed quasars are also searched for.  Many of the additional
+systems were discovered with the outside magnitude, redshift, and
+image separation selection algorithms to quasars compare with the
+statistical lens sample.  Due to the lacking of some crucial parameter
+values of host and lens galaxies, we do not use SQLS to perform our
+mock simulations.}
 
 To remain as realistic as possible, the brighter mocks are based upon
 lenses in the Sloan Lens ACS Survey (SLACS; Bolton et al. 2006
@@ -552,14 +554,15 @@ magnification at the location of the quasar images is calculated by
 solving the lens equation using \texttt{gravlens}
 \cite{2011ascl.soft02003K}. The source-plane magnitudes of the point
 sources are chosen to be somewhat brighter then the host galaxy, as it
-is typically the case for medium luminosity AGN
-(e.g., Bennert et al. 2011 \cite{2011ApJ...726...59B}), and have realistic colors for AGN at the
-source redshits. {\bf In previous work (Peng et al. 2006a \cite{2006ApJ...640..114P}; 
-Peng et al. 2006b \cite{2006NewAR..50..689P}; Rusu et al. 2015 \cite{2015arXiv150605147R}), 
-though in some special cases the AGNs are fainter than their host galaxies, 
-the AGNs are 0 to 3 magnitudes brighter than the host in the bands we choose.}
-The adopted magnitudes are listed in
-Table~\ref{tab:pointsource}.
+is typically the case for medium luminosity AGN (e.g., Bennert et
+al. 2011 \cite{2011ApJ...726...59B}), and have realistic colors for
+AGN at the source redshits. {\bf In previous work (Peng et al. 2006a
+\cite{2006ApJ...640..114P}; Peng et al. 2006b
+\cite{2006NewAR..50..689P}; Rusu et al. 2015
+\cite{2015arXiv150605147R}), in general the AGNs are found to be  0 to 3 magnitudes
+brighter than the host in the bands considered by our study, although
+there are a few exceptions where the host is brighter than the AGN.}
+The adopted magnitudes are listed in Table~\ref{tab:pointsource}.
 
 We note that the \textit{bright} source configuration is too bright to
 be practical for TMT, given its sensitivity -- the exposure time
@@ -868,11 +871,10 @@ or not.
 
 Using the methods summarized in the previous section we generate 30
 mock systems for most configurations and 10 mock systems for TMT with
-the view of saving computing time. {\bf Each of them has 
-the standard normal distribution of the noise. So, for the 30 mock systems, 
-they have different noise realizations with the same other input values.} 
-Then we carry out the full inference
-for each one using the python Markov Chain Monte Carlo sampler
+the view of saving computing time. {\bf The mock systems have the same
+true parameters, but different noise realizations.}  Then we carry out
+the full inference for each one using the python Markov Chain Monte
+Carlo sampler
 \texttt{pymc}.  The results are summarized
 in{\bf ~Table~\ref{tab:estimated_uncertainties} and} ~Figures~\ref{fig:gamma_fainter_4QSOimages}
 to~\ref{fig:gamma_brighter_2QSOimages}. Table~\ref{tab:exptimes}
@@ -1208,8 +1210,8 @@ brighter system$^a$ & 1/3$\times$target & 0.042 & 0.0087$^*$ & 0.042 & 0.041 & -
 \end{tabular}
 \begin{tablenotes}
 \item
-The estimated uncertainties on $\gamma'$ for each instrument.
-``target" represents target exposure time which is defined getting 2\% precision on the slope of the mass density profile of the mass model. $*$ means the estimated uncertainties with artificial exposure time 60s, 180s, and 540s for JWST in brighter systems.\\
+Estimated uncertainties on $\gamma'$ for each instrument.
+``target" represents target exposure time which is defined as that reaching 0.02 precision on the slope of the mass density profile of the mass model. $*$ means the estimated uncertainties with artificial exposure time 60s, 180s, and 540s for JWST in brighter systems.\\
 $^a$ This configuration yields 4 QSO images. \\
 $^b$ This configuration yields 2 QSO images. \\
 \label{tab:estimated_uncertainties}
@@ -1247,7 +1249,7 @@ Exposure times required to attain a 0.02 precision on the inferred $\gamma^\prim
 
 \begin{table*}\footnotesize
 \begin{center}
-\caption{Precision on the $\gamma'$ with Gaussian and Moffat PSF for WFIRST}
+\caption{Precision on $\gamma'$ with Gaussian and Moffat PSF for WFIRST}
 \begin{tabular}{lcccccccccccccc|}
 \hline \hline
 Lens Name & Gaussian & Moffat & Moffat & Moffat & Moffat
