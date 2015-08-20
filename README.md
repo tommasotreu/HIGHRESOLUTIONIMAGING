@@ -4,6 +4,8 @@ Xiao-Lei Meng, Tommaso Treu, Adriano Agnello, Matthew W. Auger, Kai Liao, Philip
 
 Gravitational lens time delays are a powerful probe of cosmology, provided that the gravitational potential of the main deflector can be modeled with sufficient precision. Recent work has shown that this can be achieved by detailed modeling of the host galaxies of lensed quasars, which appear as “Einstein Rings” in high resolution images. The distortion of these arcs and counter-arcs, as measured over a large number of pixels, provides tight constraints on the difference between the gravitational potential between the quasar image positions, and thus on cosmology in combination with the measured time delay. In this paper, to be submitted to JCAP, we carry out a systematic exploration of the high resolution imaging required to exploit the thousands of lensed quasars that will be discovered by current and upcoming surveys within the next decade.
 
+This paper have been submitted to arXiv (arXiv:1506.07640). You can read the arXiv version **[here](http://arxiv.org/abs/1506.07640)**.
+
 You can read the most up to date version of the paper **[here](https://github.com/tommasotreu/HIGHRESOLUTIONIMAGING/blob/master/docs/paper/High_resolution_imaging_requirements.pdf)**.
 
 If you have comments on this research, please send us your feedback **[here](https://github.com/tommasotreu/HIGHRESOLUTIONIMAGING/issues)**.
