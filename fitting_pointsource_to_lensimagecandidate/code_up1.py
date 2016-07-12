@@ -99,6 +99,7 @@ cutw = math.floor(imsizes[1])
 file = file[:,cuts-1:cuts+cutw-1,cuts-1:cuts+cutw-1]
 imsizes = np.linspace(file.shape[1],file.shape[1],num=nof)
 
+#This is the pixel size in arcseconds for DECamera
 pixsizes = np.linspace(0.263,0.263,num=nof)
 ##------------------------------------------------------
 
@@ -133,7 +134,8 @@ for zz in xrange(nof):
         bcknoise = (bcknoisesum)**0.5
 ##--------------------------------------------------------
 
-#from the raw data cutouts above,build the "smoothed" data and an estimate of the noise maps. To do so, you'll use a convolution with a 3-by-3 smoothing kernel "smint". 
+#from the raw data cutouts above,build the "smoothed" data and an estimate of the noise maps. To do so, you'll use a convolution with a 3-by-3 smoothing kernel "smint".
+#Adriano chose kernel shape
 #-----------------------------------
 smint = np.zeros((3,3))
 smint = np.array([[1./64., 3./32., 1./64.],[3./32.,9./16.,3./32.],[1./64.,3./32.,1./64.]])
