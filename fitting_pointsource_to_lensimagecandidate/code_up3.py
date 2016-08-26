@@ -14,7 +14,8 @@ from pyavm import AVM
 #the following part has benn checked.
 #--------------------------
 #the following lines are used to load the cutouts of a target with name 3038925090_?.fits
-datapath = '/home/xlmeng/my_works/fitting_pointsource_to_lensimagecandidate/writtenby_me/dependent/Image/'
+#datapath = '/home/xlmeng/my_works/fitting_pointsource_to_lensimagecandidate/writtenby_me/dependent/Image/'
+datapath = './'
 idd = '3115345303'
 nameg = idd+'_g.fits'
 namer = idd+'_r.fits'
